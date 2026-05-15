@@ -225,7 +225,17 @@ function Logo({ h = 32 }) {
 }
 
 function PointSpacePortfolio() {
-  const [lang, setLang] = useState("fr");
+  const [lang, setLang] = useState(() => {
+  const browserLang = navigator.language.toLowerCase();
+
+  if (
+    browserLang.startsWith("fr")
+  ) {
+    return "fr";
+  }
+
+  return "en";
+});
   const [form, setForm] = useState({ prenom: "", nom: "", email: "", message: "" });
   const [menuOpen, setMenuOpen] = useState(false);
   const [showFloat, setShowFloat] = useState(false);
