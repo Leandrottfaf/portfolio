@@ -190,7 +190,7 @@ function Img({ label, h = 220, style = {} }) {
     <div className="ps-gallery-img" style={{ width: "100%", height: h, background: `linear-gradient(145deg, ${C.greenCard}, rgba(0,42,27,0.5))`, border: `1px dashed ${C.goldBorder}`, borderRadius: 6, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, boxSizing: "border-box", position: "relative", overflow: "hidden", ...style }}>
       <div style={{ position: "absolute", inset: 0, background: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(222,176,71,0.03) 35px, rgba(222,176,71,0.03) 36px)` }} />
       <span style={{ fontSize: 24, opacity: 0.25, zIndex: 1 }}>📐</span>
-      <span style={{ color: C.creamSoft, fontSize: 11, fontFamily: "'DM Mono', monospace", zIndex: 1, textAlign: "center", padding: "0 12px" }}>{label}</span>
+      <span style={{ color: C.creamSoft, fontSize: 11, fontFamily: "'Neue Haas', sans-serif", zIndex: 1, textAlign: "center", padding: "0 12px" }}>{label}</span>
     </div>
   );
 }
@@ -207,7 +207,7 @@ function Svc({ svc, reverse, mob }) {
       <div style={{ flex: "1 1 280px", minWidth: 0 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
           <span style={{ fontSize: mob ? 20 : 26, color: C.gold, filter: "drop-shadow(0 0 8px rgba(222,176,71,0.2))" }}>{svc.icon}</span>
-          <h3 style={{ margin: 0, fontSize: mob ? 20 : 24, color: C.cream, fontFamily: "'Playfair Display', serif", fontWeight: 700 }}>{svc.title}</h3>
+          <h3 style={{ margin: 0, fontSize: mob ? 20 : 24, color: C.cream, fontFamily: "'Neue Haas', sans-serif", fontWeight: 700 }}>{svc.title}</h3>
         </div>
         <p style={{ color: C.creamSoft, fontSize: mob ? 14 : 15, lineHeight: 1.75, margin: "0 0 16px" }}>{svc.desc}</p>
         <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
@@ -403,7 +403,7 @@ function PointSpacePortfolio() {
   useEffect(() => { const h = () => setShowFloat(window.scrollY > 500); window.addEventListener("scroll", h, { passive: true }); return () => window.removeEventListener("scroll", h); }, []);
 
   return (
-    <div style={{ background: C.green, color: C.cream, fontFamily: "'DM Sans', 'Segoe UI', sans-serif", minHeight: "100vh", lineHeight: 1.65, overflowX: "hidden", position: "relative" }}>
+    <div style={{ background: C.green, color: C.cream, fontFamily: "'Neue Haas', sans-serif", minHeight: "100vh", lineHeight: 1.65, overflowX: "hidden", position: "relative" }}>
       <style>{CSS}</style>
       <div style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none", opacity: 0.035, background: "url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')" }} />
 
@@ -448,7 +448,7 @@ function PointSpacePortfolio() {
         {/* HERO */}
         <section style={{ paddingTop: mob ? 44 : 80, paddingBottom: mob ? 40 : 64 }}>
           <p className="ps-hero-enter ps-hero-enter-d1" style={{ textTransform: "uppercase", fontSize: 11, letterSpacing: 4, color: C.gold, fontWeight: 600, marginBottom: 16 }}>{t.hero.tag}</p>
-          <h1 className="ps-hero-enter ps-hero-enter-d2" style={{ fontSize: mob ? 30 : tab ? 38 : 48, fontFamily: "'Playfair Display', serif", fontWeight: 800, lineHeight: 1.12, margin: "0 0 20px", maxWidth: 720 }}>
+          <h1 className="ps-hero-enter ps-hero-enter-d2" style={{ fontSize: mob ? 30 : tab ? 38 : 48, fontFamily: "'Neue Haas', sans-serif", fontWeight: 800, lineHeight: 1.12, margin: "0 0 20px", maxWidth: 720 }}>
             {t.hero.title[0]}<span style={{ color: C.gold }}>{t.hero.title[1]}</span>{t.hero.title[2]}
           </h1>
           <p className="ps-hero-enter ps-hero-enter-d3" style={{ color: C.creamSoft, fontSize: mob ? 14 : 16, lineHeight: 1.85, maxWidth: 620, marginBottom: 36 }}>{t.hero.desc}</p>
@@ -459,7 +459,7 @@ function PointSpacePortfolio() {
           <div className="ps-hero-enter ps-hero-enter-d4" style={{ display: "flex", gap: mob ? 8 : 16, flexWrap: "wrap", marginBottom: mob ? 28 : 48 }}>
             {t.metrics.map((m, i) => (
               <div key={i} className="ps-metric" style={{ flex: mob ? "1 1 calc(50% - 4px)" : "1 1 140px", textAlign: "center", padding: mob ? "22px 12px" : "30px 16px", background: C.goldDim, borderRadius: 10, border: `1px solid ${C.goldBorder}`, boxSizing: "border-box" }}>
-                <div style={{ fontSize: mob ? 30 : 42, fontWeight: 800, color: C.gold, fontFamily: "'Playfair Display', serif", letterSpacing: -1 }}>{m.value}</div>
+                <div style={{ fontSize: mob ? 30 : 42, fontWeight: 800, color: C.gold, fontFamily: "'Neue Haas', sans-serif", letterSpacing: -1 }}>{m.value}</div>
                 <div style={{ fontSize: mob ? 10 : 12, color: C.cream, marginTop: 6, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase" }}>{m.label}</div>
               </div>
             ))}
@@ -511,7 +511,7 @@ function PointSpacePortfolio() {
         <section id="services" style={{ padding: mob ? "36px 0 24px" : "64px 0 24px", scrollMarginTop: 60 }}>
           <Reveal>
             <p style={{ textTransform: "uppercase", fontSize: 11, letterSpacing: 4, color: C.gold, fontWeight: 600, marginBottom: 8 }}>{t.svcHead.tag}</p>
-            <h2 style={{ fontSize: mob ? 26 : 34, fontFamily: "'Playfair Display', serif", fontWeight: 700, margin: "0 0 8px" }}>{t.svcHead.title}</h2>
+            <h2 style={{ fontSize: mob ? 26 : 34, fontFamily: "'Neue Haas', sans-serif", fontWeight: 700, margin: "0 0 8px" }}>{t.svcHead.title}</h2>
             <p style={{ color: C.creamSoft, fontSize: mob ? 14 : 15, marginBottom: 16, maxWidth: 560 }}>{t.svcHead.desc}</p>
           </Reveal>
           {t.services.map((svc, i) => <Svc key={i} svc={svc} reverse={!mob && i % 2 === 1} mob={mob} />)}
@@ -523,7 +523,7 @@ function PointSpacePortfolio() {
         <section id="matterport" style={{ padding: mob ? "36px 0" : "64px 0", scrollMarginTop: 60 }}>
           <Reveal>
             <p style={{ textTransform: "uppercase", fontSize: 11, letterSpacing: 4, color: C.gold, fontWeight: 600, marginBottom: 8 }}>{t.showcase.tag}</p>
-            <h2 style={{ fontSize: mob ? 26 : 34, fontFamily: "'Playfair Display', serif", fontWeight: 700, margin: "0 0 12px" }}>{t.showcase.title}</h2>
+            <h2 style={{ fontSize: mob ? 26 : 34, fontFamily: "'Neue Haas', sans-serif", fontWeight: 700, margin: "0 0 12px" }}>{t.showcase.title}</h2>
             <p style={{ color: C.creamSoft, fontSize: mob ? 14 : 15, marginBottom: mob ? 24 : 36, maxWidth: 580 }}>{t.showcase.desc}</p>
           </Reveal>
 
@@ -533,7 +533,7 @@ function PointSpacePortfolio() {
               <div style={{ width: "100%", height: mob ? 240 : 420, background: `linear-gradient(160deg, ${C.greenCard}, rgba(0,42,27,0.4))`, borderRadius: 12, border: `1px solid ${C.goldBorder}`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 14, boxSizing: "border-box", position: "relative", overflow: "hidden" }}>
                 <div style={{ position: "absolute", inset: 0, background: `radial-gradient(circle at 30% 40%, rgba(222,176,71,0.05), transparent 60%)` }} />
                 <span style={{ fontSize: mob ? 44 : 60, opacity: 0.15, zIndex: 1 }}>🏠</span>
-                <span style={{ color: C.creamSoft, fontSize: mob ? 12 : 14, fontFamily: "'DM Mono', monospace", zIndex: 1, textAlign: "center", padding: "0 16px" }}>{t.showcase.featured}</span>
+                <span style={{ color: C.creamSoft, fontSize: mob ? 12 : 14, fontFamily: "'Neue Haas', sans-serif", zIndex: 1, textAlign: "center", padding: "0 16px" }}>{t.showcase.featured}</span>
                 <span style={{ color: C.creamSoft, fontSize: mob ? 11 : 12, zIndex: 1, maxWidth: 400, textAlign: "center", lineHeight: 1.5, padding: "0 16px" }}>{t.showcase.featuredDesc}</span>
               </div>
               <div style={{ display: "flex", gap: 14, marginTop: 16, flexWrap: "wrap", alignItems: "center" }}>
@@ -541,7 +541,7 @@ function PointSpacePortfolio() {
                 {/* QR */}
                 <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 16px", background: C.greenCard, borderRadius: 8, border: `1px dashed ${C.goldBorder}` }}>
                   <span style={{ fontSize: 20, opacity: 0.3 }}>⊟</span>
-                  <span style={{ color: C.creamSoft, fontSize: 11, fontFamily: "'DM Mono', monospace" }}>{t.showcase.qr}</span>
+                  <span style={{ color: C.creamSoft, fontSize: 11, fontFamily: "'Neue Haas', sans-serif" }}>{t.showcase.qr}</span>
                 </div>
               </div>
             </div>
@@ -555,7 +555,7 @@ function PointSpacePortfolio() {
                   <div style={{ height: mob ? 120 : 180, background: `linear-gradient(145deg, rgba(0,83,49,0.4), rgba(0,42,27,0.5))`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, position: "relative" }}>
                     <div style={{ position: "absolute", inset: 0, background: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(222,176,71,0.03) 35px, rgba(222,176,71,0.03) 36px)` }} />
                     <span style={{ fontSize: 28, opacity: 0.2, zIndex: 1 }}>◎</span>
-                    <span style={{ color: C.creamSoft, fontSize: 10, fontFamily: "'DM Mono', monospace", zIndex: 1 }}>{proj.type}</span>
+                    <span style={{ color: C.creamSoft, fontSize: 10, fontFamily: "'Neue Haas', sans-serif", zIndex: 1 }}>{proj.type}</span>
                   </div>
                   <div style={{ padding: mob ? "14px 16px" : "18px 22px" }}>
                     <div style={{ fontSize: mob ? 15 : 16, fontWeight: 700, color: C.cream, marginBottom: 4 }}>{proj.title}</div>
@@ -574,7 +574,7 @@ function PointSpacePortfolio() {
         <section id="portfolio" style={{ padding: mob ? "36px 0" : "64px 0", scrollMarginTop: 60 }}>
           <Reveal>
             <p style={{ textTransform: "uppercase", fontSize: 11, letterSpacing: 4, color: C.gold, fontWeight: 600, marginBottom: 8 }}>{t.gallery.tag}</p>
-            <h2 style={{ fontSize: mob ? 26 : 34, fontFamily: "'Playfair Display', serif", fontWeight: 700, margin: "0 0 12px" }}>{t.gallery.title}</h2>
+            <h2 style={{ fontSize: mob ? 26 : 34, fontFamily: "'Neue Haas', sans-serif", fontWeight: 700, margin: "0 0 12px" }}>{t.gallery.title}</h2>
             <p style={{ color: C.creamSoft, fontSize: mob ? 14 : 15, marginBottom: mob ? 24 : 36 }}>{t.gallery.desc}</p>
           </Reveal>
           <div style={{ display: "grid", gridTemplateColumns: mob ? "repeat(2, 1fr)" : tab ? "repeat(3, 1fr)" : "repeat(4, 1fr)", gap: mob ? 10 : 16 }}>
@@ -594,7 +594,7 @@ function PointSpacePortfolio() {
         {/* WHY */}
         <section style={{ padding: mob ? "36px 0" : "64px 0" }}>
           <Reveal>
-            <h2 style={{ fontSize: mob ? 24 : 30, fontFamily: "'Playfair Display', serif", fontWeight: 700, margin: "0 0 28px", textAlign: "center" }}>
+            <h2 style={{ fontSize: mob ? 24 : 30, fontFamily: "'Neue Haas', sans-serif", fontWeight: 700, margin: "0 0 28px", textAlign: "center" }}>
               {t.why.title[0]}<span style={{ color: C.gold }}>{t.why.title[1]}</span>{t.why.title[2]}
             </h2>
           </Reveal>
@@ -617,7 +617,7 @@ function PointSpacePortfolio() {
         <section id="contact" style={{ padding: mob ? "36px 0 48px" : "64px 0 80px", scrollMarginTop: 60 }}>
           <Reveal>
             <p style={{ textTransform: "uppercase", fontSize: 11, letterSpacing: 4, color: C.gold, fontWeight: 600, marginBottom: 8 }}>{t.contact.tag}</p>
-            <h2 style={{ fontSize: mob ? 26 : 34, fontFamily: "'Playfair Display', serif", fontWeight: 700, margin: "0 0 12px" }}>{t.contact.title}</h2>
+            <h2 style={{ fontSize: mob ? 26 : 34, fontFamily: "'Neue Haas', sans-serif", fontWeight: 700, margin: "0 0 12px" }}>{t.contact.title}</h2>
             <p style={{ color: C.creamSoft, fontSize: mob ? 14 : 15, marginBottom: mob ? 28 : 40, maxWidth: 500 }}>{t.contact.desc}</p>
           </Reveal>
           <Reveal delay={0.1}>
