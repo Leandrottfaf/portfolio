@@ -569,18 +569,78 @@ function PointSpacePortfolio() {
           {/* Featured tour embed */}
           <Reveal delay={0.1}>
             <div style={{ marginBottom: 28 }}>
-              <div style={{ width: "100%", height: mob ? 240 : 420, background: `linear-gradient(160deg, ${C.greenCard}, rgba(0,42,27,0.4))`, borderRadius: 12, border: `1px solid ${C.goldBorder}`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 14, boxSizing: "border-box", position: "relative", overflow: "hidden" }}>
-                <div style={{ position: "absolute", inset: 0, background: `radial-gradient(circle at 30% 40%, rgba(222,176,71,0.05), transparent 60%)` }} />
-                <span style={{ fontSize: mob ? 44 : 60, opacity: 0.15, zIndex: 1 }}>🏠</span>
-                <span style={{ color: C.creamSoft, fontSize: mob ? 12 : 14, fontFamily: "'Neue Haas', sans-serif", zIndex: 1, textAlign: "center", padding: "0 16px" }}>{t.showcase.featured}</span>
-                <span style={{ color: C.creamSoft, fontSize: mob ? 11 : 12, zIndex: 1, maxWidth: 400, textAlign: "center", lineHeight: 1.5, padding: "0 16px" }}>{t.showcase.featuredDesc}</span>
+              <div
+                style={{
+                  width: "100%",
+                  borderRadius: 12,
+                  overflow: "hidden",
+                  border: `1px solid ${C.goldBorder}`,
+                  boxShadow: "0 20px 60px rgba(0,0,0,0.35)"
+                }}
+              >
+                <iframe
+                  src="https://my.matterport.com/show/?m=iBW6cSr7qmh"
+                  width="100%"
+                  height={mob ? "320" : "620"}
+                  allow="xr-spatial-tracking; gyroscope; accelerometer; fullscreen"
+                  allowFullScreen
+                  style={{
+                    border: "none",
+                    display: "block"
+                  }}
+                />
               </div>
-              <div style={{ display: "flex", gap: 14, marginTop: 16, flexWrap: "wrap", alignItems: "center" }}>
-                <span className="ps-btn-gold" style={{ padding: "13px 28px", background: C.gold, color: C.green, borderRadius: 6, fontWeight: 700, fontSize: 14, display: "inline-block" }}>{t.showcase.cta}</span>
-                {/* QR */}
-                <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 16px", background: C.greenCard, borderRadius: 8, border: `1px dashed ${C.goldBorder}` }}>
+            
+              <div
+                style={{
+                  display: "flex",
+                  gap: 14,
+                  marginTop: 16,
+                  flexWrap: "wrap",
+                  alignItems: "center"
+                }}
+              >
+                <a
+                  href="https://my.matterport.com/show/?m=iBW6cSr7qmh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ps-btn-gold"
+                  style={{
+                    padding: "13px 28px",
+                    background: C.gold,
+                    color: C.green,
+                    borderRadius: 6,
+                    fontWeight: 700,
+                    fontSize: 14,
+                    display: "inline-block",
+                    textDecoration: "none"
+                  }}
+                >
+                  {t.showcase.cta}
+                </a>
+            
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 10,
+                    padding: "8px 16px",
+                    background: C.greenCard,
+                    borderRadius: 8,
+                    border: `1px dashed ${C.goldBorder}`
+                  }}
+                >
                   <span style={{ fontSize: 20, opacity: 0.3 }}>⊟</span>
-                  <span style={{ color: C.creamSoft, fontSize: 11, fontFamily: "'Neue Haas', sans-serif" }}>{t.showcase.qr}</span>
+            
+                  <span
+                    style={{
+                      color: C.creamSoft,
+                      fontSize: 11,
+                      fontFamily: "'Neue Haas', sans-serif"
+                    }}
+                  >
+                    {t.showcase.qr}
+                  </span>
                 </div>
               </div>
             </div>
