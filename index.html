@@ -249,7 +249,22 @@ function PointSpacePortfolio() {
       </div>
 
       {/* NAV */}
-      <nav style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: navPad, borderBottom: `1px solid ${C.border}`, position: "sticky", top: 0, background: C.greenGlass, zIndex: 100, backdropFilter: "blur(16px) saturate(1.4)" }}>
+      <nav style={{
+        borderBottom: `1px solid ${C.border}`,
+        position: "sticky",
+        top: 0,
+        background: C.greenGlass,
+        zIndex: 100,
+        backdropFilter: "blur(16px) saturate(1.4)"
+      }}>
+        <div style={{
+          maxWidth: 1120,
+          margin: "0 auto",
+          padding: navPad,
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center"
+        }}>
         <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           <Logo h={mob ? 28 : 34} />
         </div>
@@ -259,11 +274,13 @@ function PointSpacePortfolio() {
         </div>}
         {mob && <div style={{ display: "flex", alignItems: "center", gap: 10 }}><LangToggle lang={lang} set={setLang} /><div onClick={() => setMenuOpen(!menuOpen)}><Hamburger open={menuOpen} /></div></div>}
       </nav>
+      </div>
+      </nav>
       {mob && menuOpen && <div style={{ position: "sticky", top: 52, zIndex: 99, background: C.greenLight, borderBottom: `1px solid ${C.border}`, padding: "8px 20px", display: "flex", flexDirection: "column", gap: 2 }}>
         {navLinks.map((l) => <span key={l.id} onClick={() => { scrollTo(l.id); setMenuOpen(false); }} style={{ color: C.cream, fontSize: 15, fontWeight: 500, padding: "12px 8px", borderRadius: 6, cursor: "pointer", display: "block" }}>{l.l}</span>)}
       </div>}
 
-      <div style={{ maxWidth: 1060, margin: "0 auto", padding: pad, position: "relative", zIndex: 1 }}>
+      <div style={{ maxWidth: 1120, margin: "0 auto", padding: pad, position: "relative", zIndex: 1 }}>
 
         {/* HERO */}
         <section style={{ paddingTop: mob ? 44 : 80, paddingBottom: mob ? 40 : 64 }}>
