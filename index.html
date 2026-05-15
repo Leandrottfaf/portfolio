@@ -566,7 +566,7 @@ function PointSpacePortfolio() {
             <p style={{ color: C.creamSoft, fontSize: mob ? 14 : 15, marginBottom: mob ? 24 : 36, maxWidth: 580 }}>{t.showcase.desc}</p>
           </Reveal>
 
-          {/* Featured tour embed */}
+         {/* Featured tour embed */}
           <Reveal delay={0.1}>
             <div style={{ marginBottom: 28 }}>
               <div
@@ -590,16 +590,8 @@ function PointSpacePortfolio() {
                   }}
                 />
               </div>
-            
-              <div
-                style={{
-                  display: "flex",
-                  gap: 14,
-                  marginTop: 16,
-                  flexWrap: "wrap",
-                  alignItems: "center"
-                }}
-              >
+          
+              <div style={{ display: "flex", gap: 14, marginTop: 16, flexWrap: "wrap", alignItems: "center" }}>
                 <a
                   href="https://my.matterport.com/show/?m=iBW6cSr7qmh"
                   target="_blank"
@@ -618,8 +610,11 @@ function PointSpacePortfolio() {
                 >
                   {t.showcase.cta}
                 </a>
-            
-                <div
+          
+                <a
+                  href="https://api.qrserver.com/v1/create-qr-code/?size=900x900&data=https%3A%2F%2Fmy.matterport.com%2Fshow%2F%3Fm%3DiBW6cSr7qmh"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -627,21 +622,26 @@ function PointSpacePortfolio() {
                     padding: "8px 16px",
                     background: C.greenCard,
                     borderRadius: 8,
-                    border: `1px dashed ${C.goldBorder}`
+                    border: `1px dashed ${C.goldBorder}`,
+                    textDecoration: "none"
                   }}
                 >
-                  <span style={{ fontSize: 20, opacity: 0.3 }}>⊟</span>
-            
-                  <span
+                  <img
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https%3A%2F%2Fmy.matterport.com%2Fshow%2F%3Fm%3DiBW6cSr7qmh"
+                    alt="QR code for Matterport tour"
                     style={{
-                      color: C.creamSoft,
-                      fontSize: 11,
-                      fontFamily: "'Neue Haas', sans-serif"
+                      width: 38,
+                      height: 38,
+                      borderRadius: 4,
+                      background: C.cream,
+                      padding: 3
                     }}
-                  >
+                  />
+          
+                  <span style={{ color: C.creamSoft, fontSize: 11, fontFamily: "'Neue Haas', sans-serif" }}>
                     {t.showcase.qr}
                   </span>
-                </div>
+                </a>
               </div>
             </div>
           </Reveal>
