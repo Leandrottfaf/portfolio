@@ -777,14 +777,27 @@ function PointSpacePortfolio() {
         borderRadius: 16,
         padding: 24,
         textAlign: "center",
-        maxWidth: 360,
-        width: "100%"
+        maxWidth: 320,
+        width: "100%",
+        boxShadow: "0 24px 80px rgba(0,0,0,0.45)"
       }}
     >
+
+      <div
+        style={{
+          fontSize: 16,
+          fontWeight: 700,
+          color: C.green,
+          marginBottom: 14
+        }}
+      >
+        Scan to open on mobile
+      </div>
+      
       <img
         src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=https%3A%2F%2Fmy.matterport.com%2Fshow%2F%3Fm%3DiBW6cSr7qmh"
         alt="QR code for Matterport tour"
-        style={{ width: 260, height: 260, maxWidth: "100%" }}
+        style={{ width: 220, height: 220, maxWidth: "100%" }}
       />
 
       <button
