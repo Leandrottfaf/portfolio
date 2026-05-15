@@ -185,18 +185,22 @@ function Svc({ svc, reverse, mob }) {
         <a href={svc.link} target="_blank" rel="noopener noreferrer" className="ps-link" style={{ display: "inline-block", marginTop: 18, color: C.gold, fontSize: 13, textDecoration: "none", borderBottom: `1px solid ${C.goldBorder}`, paddingBottom: 3, fontWeight: 600, letterSpacing: 0.3 }}>{svc.cta}</a>
       </div>
       <div style={{ flex: "1 1 280px", minWidth: 0, width: "100%" }}>
-       <img
-          src="/portfolio/images/scan-warehouse.png"
-          alt="3D scanning warehouse"
-          style={{
-            width: "100%",
-            height: mob ? 180 : 280,
-            objectFit: "cover",
-            borderRadius: 10,
-            border: `1px solid ${C.goldBorder}`,
-            display: "block"
-          }}
-        />
+        {svc.title === "3D Scanning" || svc.title === "Numérisation 3D" ? (
+          <img
+            src="/portfolio/images/scan-warehouse.png"
+            alt="3D scanning warehouse"
+            style={{
+              width: "100%",
+              height: mob ? 180 : 280,
+              objectFit: "cover",
+              borderRadius: 10,
+              border: `1px solid ${C.goldBorder}`,
+              display: "block"
+            }}
+          />
+        ) : (
+          <Img label={`Image — ${svc.title}`} h={mob ? 180 : 280} />
+        )}
       </div>
     </div>
   );
