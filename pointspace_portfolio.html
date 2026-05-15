@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pointSpace — Portfolio de services</title>
+  <meta name="description" content="pointSpace accompagne les propriétaires, gestionnaires et équipes de projet grâce à la numérisation 3D, la mise en plan, la modélisation BIM, l'analyse du bâtiment, le mesurage BOMA et les visites virtuelles." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: #004227; font-family: 'DM Sans', 'Segoe UI', sans-serif; overflow-x: hidden; }
+    #root { min-height: 100vh; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+
+const C = {
+  green: "#004227", greenLight: "#005a36", greenCard: "#00533180", greenGlass: "rgba(0,66,39,0.92)",
+  gold: "#deb047", goldHover: "#e8c060", goldDim: "rgba(222,176,71,0.12)", goldBorder: "rgba(222,176,71,0.25)",
+  cream: "#f5f0e6", creamSoft: "rgba(245,240,230,0.7)", creamFaint: "rgba(245,240,230,0.12)", border: "rgba(245,240,230,0.08)",
+};
+
+function useScreen() {
+  const [w, setW] = useState(window.innerWidth);
+  useEffect(() => { const h = () => setW(window.innerWidth); window.addEventListener("resize", h); return () => window.removeEventListener("resize", h); }, []);
+  return { mob: w < 640, tab: w >= 640 && w < 1024 };
+}
+
+function useFadeIn(threshold = 0.15) {
+  const ref = useRef(null);
+  const [vis, setVis] = useState(false);
+  useEffect(() => { const el = ref.current; if (!el) return; const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVis(true); o.unobserve(el); } }, { threshold }); o.observe(el); return () => o.disconnect(); }, [threshold]);
+  return { ref, style: { opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(32px)", transition: "opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1)" } };
+}
+
+function scrollTo(id) { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); }
+
+const T = {
+  fr: {
+    nav: { services: "Services", vr: "Visites VR", portfolio: "Portfolio", contact: "Contact" },
+    hero: { tag: "Impact prouvé en chiffres", title: ["De la capture terrain à la documentation ", "finale", "."], desc: "pointSpace accompagne les propriétaires, gestionnaires et équipes de projet grâce à la numérisation 3D, la mise en plan, la modélisation BIM, l'analyse du bâtiment, le mesurage BOMA et les visites virtuelles.", cta1: "Planifier une discussion", cta2: "Voir les services", imgLabel: "Image hero — nuage de points, scan LiDAR ou intérieur de bâtiment" },
+    metrics: [{ value: "400+", label: "Projets livrés" }, { value: "50+", label: "Clients servis" }, { value: "10+", label: "Services" }, { value: "6+", label: "Années d'expérience" }],
+    svcHead: { tag: "Nos services", title: "Solutions complètes de numérisation", desc: "Chaque service répond à un besoin spécifique de documentation, gestion ou coordination." },
+    services: [
+      { title: "Numérisation 3D", desc: "Relevés LiDAR précis pour documenter l'état réel de vos bâtiments et infrastructures.", bullets: ["Relevés rapides et précis", "Documentation complète de l'existant", "Base fiable pour les projets futurs"], icon: "⬡", link: "https://www.pointspace.ca/fr-ca/services/numerisation-LiDAR-3D", cta: "En savoir plus →" },
+      { title: "Mise en plan 2D/3D", desc: "Plans techniques clairs pour mieux gérer vos espaces, équipements et installations.", bullets: ["Plans 2D et 3D structurés", "Support à la gestion des espaces", "Documentation adaptée au projet"], icon: "▤", link: "https://www.pointspace.ca/fr-ca/services/mise-en-plan", cta: "En savoir plus →" },
+      { title: "Modélisation BIM", desc: "Modèles numériques fiables pour améliorer la coordination, la rénovation et la gestion du bâtiment.", bullets: ["Modèles BIM structurés", "Meilleure coordination entre équipes", "Support conception et gestion"], icon: "⧉", link: "https://www.pointspace.ca/fr-ca/services/modélisation-bim", cta: "En savoir plus →" },
+      { title: "Analyse du bâtiment", desc: "Contrôle géométrique rigoureux pour évaluer la planéité, la verticalité et les déformations.", bullets: ["Analyse planéité et verticalité", "Détection des déformations", "Données visuelles claires"], icon: "◈", link: "https://www.pointspace.ca/fr-ca/services/analyse-du-bâtiment", cta: "En savoir plus →" },
+      { title: "Certificat BOMA", desc: "Mesurage conforme aux normes BOMA pour obtenir des superficies fiables et standardisées.", bullets: ["Superficies fiables et documentées", "Conforme aux standards BOMA", "Support gestionnaires immobiliers"], icon: "⊞", link: "https://www.pointspace.ca/fr-ca/services/mise-en-plan-boma", cta: "En savoir plus →" },
+      { title: "Visites virtuelles", desc: "Exploration immersive de vos espaces grâce aux visites virtuelles Matterport.", bullets: ["Consultation à distance", "Documentation visuelle immersive", "Communication avec les parties prenantes"], icon: "◎", link: "https://www.pointspace.ca/fr-ca/services/visites-virtuelles-matterport", cta: "En savoir plus →" },
+    ],
+    showcase: {
+      tag: "Explorez nos captures",
+      title: "Voyez par vous-même",
+      desc: "Naviguez à travers nos captures réelles. Cliquez sur un projet pour l'explorer en immersion complète.",
+      featured: "Visite virtuelle — Projet vedette",
+      featuredDesc: "Explorez cet espace capturé par Matterport. Naviguez librement en 360° comme si vous y étiez.",
+      cta: "Ouvrir en plein écran",
+      projects: [
+        { title: "Bureau — Espace commercial", type: "Visite Matterport", desc: "Capture 360° d'un espace de bureaux à Montréal" },
+        { title: "Bâtiment industriel", type: "Visite Matterport", desc: "Visite immersive d'un site industriel à Longueuil" },
+      ],
+      explore: "Explorer →",
+      qr: "Scanner pour ouvrir sur mobile",
+    },
+    gallery: { tag: "Portfolio", title: "Exemples de livrables", desc: "Aperçu des différents types de livrables produits par pointSpace.", items: ["Nuage de points", "Plan 2D", "Modèle BIM", "Analyse de déviation", "Plan BOMA", "Visite virtuelle", "Photo de site", "Scan vs Modèle"] },
+    why: { title: ["Pourquoi ", "pointSpace", " ?"], cards: [{ icon: "⬡", t: "Précision", d: "Données mesurées, pas estimées." }, { icon: "⧉", t: "Intégration", d: "Livrables compatibles Revit, CAD, STEP." }, { icon: "◎", t: "Expérience", d: "400+ projets réalisés au Québec." }] },
+    contact: { tag: "Prochaine étape", title: "Discutons de vos besoins", desc: "Notre équipe peut vous proposer une solution adaptée à votre projet.", fields: { prenom: "Prénom", nom: "Nom de famille", email: "E-mail", message: "Message" }, send: "Envoyer un message", lbl: "Contact", hq: "Siège social", sat: "Bureau satellite", web: "Web" },
+    footer: "© Technologie pointSpace, tous droits réservés 2025.",
+    floatingCta: "Contactez-nous",
+  },
+  en: {
+    nav: { services: "Services", vr: "VR Tours", portfolio: "Portfolio", contact: "Contact" },
+    hero: { tag: "Proven impact in numbers", title: ["From field capture to final ", "documentation", "."], desc: "pointSpace supports owners, managers, and project teams with 3D scanning, drafting, BIM modeling, building analysis, BOMA measurement, and virtual tours.", cta1: "Schedule a discussion", cta2: "View services", imgLabel: "Hero image — point cloud, LiDAR scan, or building interior" },
+    metrics: [{ value: "400+", label: "Projects delivered" }, { value: "50+", label: "Clients served" }, { value: "10+", label: "Services" }, { value: "6+", label: "Years of experience" }],
+    svcHead: { tag: "Our services", title: "Complete scanning solutions", desc: "Each service addresses a specific documentation, management, or coordination need." },
+    services: [
+      { title: "3D Scanning", desc: "Precise LiDAR surveys to document the actual condition of your buildings and infrastructure.", bullets: ["Fast and accurate surveys", "Complete as-built documentation", "Reliable foundation for future projects"], icon: "⬡", link: "https://www.pointspace.ca/services/numerisation-LiDAR-3D", cta: "Learn more →" },
+      { title: "2D/3D Drafting", desc: "Clear technical drawings to better manage your spaces, equipment, and facilities.", bullets: ["Structured 2D and 3D plans", "Space management support", "Project-adapted documentation"], icon: "▤", link: "https://www.pointspace.ca/services/mise-en-plan", cta: "Learn more →" },
+      { title: "BIM Modeling", desc: "Reliable digital models to improve coordination, renovation, and building management.", bullets: ["Structured BIM models", "Better team coordination", "Design and management support"], icon: "⧉", link: "https://www.pointspace.ca/services/modélisation-bim", cta: "Learn more →" },
+      { title: "Building Analysis", desc: "Rigorous geometric control to assess flatness, verticality, and deformations.", bullets: ["Flatness and verticality analysis", "Deformation detection", "Easy-to-interpret visual data"], icon: "◈", link: "https://www.pointspace.ca/services/analyse-du-bâtiment", cta: "Learn more →" },
+      { title: "BOMA Measurement", desc: "BOMA-compliant measurement for reliable standardized floor areas.", bullets: ["Reliable documented areas", "BOMA-compliant measurement", "Support for property managers"], icon: "⊞", link: "https://www.pointspace.ca/services/mise-en-plan-boma", cta: "Learn more →" },
+      { title: "Virtual Tours", desc: "Immersive exploration of your spaces through Matterport virtual tours.", bullets: ["Remote consultation", "Immersive visual documentation", "Better stakeholder communication"], icon: "◎", link: "https://www.pointspace.ca/services/visites-virtuelles-matterport", cta: "Learn more →" },
+    ],
+    showcase: {
+      tag: "Explore our captures",
+      title: "See it for yourself",
+      desc: "Navigate through our real captures. Click on a project to explore it in full immersion.",
+      featured: "Virtual tour — Featured project",
+      featuredDesc: "Explore this Matterport-captured space. Navigate freely in 360° as if you were there.",
+      cta: "Open full screen",
+      projects: [
+        { title: "Office — Commercial space", type: "Matterport Tour", desc: "360° capture of an office space in Montreal" },
+        { title: "Industrial building", type: "Matterport Tour", desc: "Immersive tour of an industrial site in Longueuil" },
+      ],
+      explore: "Explore →",
+      qr: "Scan to open on mobile",
+    },
+    gallery: { tag: "Portfolio", title: "Deliverable examples", desc: "Overview of the different types of deliverables produced by pointSpace.", items: ["Point cloud", "2D Plan", "BIM Model", "Deviation analysis", "BOMA Plan", "Virtual tour", "Site photo", "Scan vs Model"] },
+    why: { title: ["Why ", "pointSpace", "?"], cards: [{ icon: "⬡", t: "Precision", d: "Measured data, not estimates." }, { icon: "⧉", t: "Integration", d: "Deliverables compatible with Revit, CAD, STEP." }, { icon: "◎", t: "Experience", d: "400+ projects completed in Quebec." }] },
+    contact: { tag: "Next step", title: "Let's discuss your needs", desc: "Our team can propose a solution tailored to your project.", fields: { prenom: "First name", nom: "Last name", email: "E-mail", message: "Message" }, send: "Send message", lbl: "Contact", hq: "Head office", sat: "Satellite office", web: "Web" },
+    footer: "© pointSpace Technology, all rights reserved 2025.",
+    floatingCta: "Contact us",
+  },
+};
+
+const CSS = `
+  @keyframes fadeUp { from { opacity:0; transform:translateY(28px) } to { opacity:1; transform:translateY(0) } }
+  .ps-hero-enter { animation: fadeUp 0.9s cubic-bezier(.22,1,.36,1) both; }
+  .ps-hero-enter-d1 { animation-delay: 0.1s; }
+  .ps-hero-enter-d2 { animation-delay: 0.25s; }
+  .ps-hero-enter-d3 { animation-delay: 0.4s; }
+  .ps-hero-enter-d4 { animation-delay: 0.55s; }
+  .ps-hero-enter-d5 { animation-delay: 0.7s; }
+  .ps-btn-gold { transition: all 0.25s ease; cursor:pointer; }
+  .ps-btn-gold:hover { background: ${C.goldHover} !important; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(222,176,71,0.25); }
+  .ps-btn-outline { transition: all 0.25s ease; cursor:pointer; }
+  .ps-btn-outline:hover { border-color: ${C.gold} !important; color: ${C.gold} !important; }
+  .ps-card { transition: all 0.35s cubic-bezier(.22,1,.36,1); }
+  .ps-card:hover { transform: translateY(-4px); border-color: ${C.goldBorder} !important; box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+  .ps-link { transition: all 0.2s ease; cursor:pointer; }
+  .ps-link:hover { color: ${C.goldHover} !important; border-color: ${C.gold} !important; }
+  .ps-nav-link { transition: opacity 0.2s; cursor:pointer; }
+  .ps-nav-link:hover { opacity: 1 !important; }
+  .ps-gallery-item { transition: all 0.35s cubic-bezier(.22,1,.36,1); overflow:hidden; }
+  .ps-gallery-item:hover { transform: translateY(-3px); border-color: ${C.goldBorder} !important; }
+  .ps-gallery-item:hover .ps-gallery-img { transform: scale(1.05); }
+  .ps-gallery-img { transition: transform 0.5s cubic-bezier(.22,1,.36,1); }
+  .ps-input { transition: border-color 0.2s; }
+  .ps-input:focus { border-color: ${C.gold} !important; }
+  .ps-scan-card { transition: all 0.25s ease; cursor:pointer; }
+  .ps-scan-card:hover { transform: translateY(-3px); border-color: ${C.goldBorder} !important; box-shadow: 0 8px 28px rgba(0,0,0,0.25); }
+  .ps-metric { transition: all 0.3s ease; }
+  .ps-metric:hover { transform: translateY(-2px); border-color: ${C.gold} !important; }
+  @keyframes floatPulse { 0%,100%{ box-shadow: 0 4px 20px rgba(222,176,71,0.3); } 50%{ box-shadow: 0 6px 32px rgba(222,176,71,0.45); } }
+  .ps-floating-cta { animation: floatPulse 3s ease-in-out infinite; transition: transform 0.25s ease; cursor:pointer; }
+  .ps-floating-cta:hover { transform: translateY(-2px) scale(1.03); }
+  * { scrollbar-width: thin; scrollbar-color: ${C.greenLight} ${C.green}; }
+`;
+
+function Img({ label, h = 220, style = {} }) {
+  return (
+    <div className="ps-gallery-img" style={{ width: "100%", height: h, background: `linear-gradient(145deg, ${C.greenCard}, rgba(0,42,27,0.5))`, border: `1px dashed ${C.goldBorder}`, borderRadius: 6, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, boxSizing: "border-box", position: "relative", overflow: "hidden", ...style }}>
+      <div style={{ position: "absolute", inset: 0, background: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(222,176,71,0.03) 35px, rgba(222,176,71,0.03) 36px)` }} />
+      <span style={{ fontSize: 24, opacity: 0.25, zIndex: 1 }}>📐</span>
+      <span style={{ color: C.creamSoft, fontSize: 11, fontFamily: "'DM Mono', monospace", zIndex: 1, textAlign: "center", padding: "0 12px" }}>{label}</span>
+    </div>
+  );
+}
+
+function Reveal({ children, delay = 0 }) {
+  const f = useFadeIn();
+  return <div ref={f.ref} style={{ ...f.style, transitionDelay: `${delay}s` }}>{children}</div>;
+}
+
+function Svc({ svc, reverse, mob }) {
+  const f = useFadeIn();
+  return (
+    <div ref={f.ref} style={{ ...f.style, display: "flex", flexDirection: mob ? "column" : reverse ? "row-reverse" : "row", gap: mob ? 24 : 48, alignItems: "center", padding: mob ? "36px 0" : "56px 0", borderBottom: `1px solid ${C.border}` }}>
+      <div style={{ flex: "1 1 280px", minWidth: 0 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
+          <span style={{ fontSize: mob ? 20 : 26, color: C.gold, filter: "drop-shadow(0 0 8px rgba(222,176,71,0.2))" }}>{svc.icon}</span>
+          <h3 style={{ margin: 0, fontSize: mob ? 20 : 24, color: C.cream, fontFamily: "'Playfair Display', serif", fontWeight: 700 }}>{svc.title}</h3>
+        </div>
+        <p style={{ color: C.creamSoft, fontSize: mob ? 14 : 15, lineHeight: 1.75, margin: "0 0 16px" }}>{svc.desc}</p>
+        <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+          {svc.bullets.map((b, i) => (
+            <li key={i} style={{ color: C.cream, fontSize: mob ? 13 : 14, padding: "5px 0", display: "flex", alignItems: "flex-start", gap: 10 }}>
+              <span style={{ color: C.gold, fontSize: 6, marginTop: 7, flexShrink: 0 }}>◆</span>{b}
+            </li>
+          ))}
+        </ul>
+        <a href={svc.link} target="_blank" rel="noopener noreferrer" className="ps-link" style={{ display: "inline-block", marginTop: 18, color: C.gold, fontSize: 13, textDecoration: "none", borderBottom: `1px solid ${C.goldBorder}`, paddingBottom: 3, fontWeight: 600, letterSpacing: 0.3 }}>{svc.cta}</a>
+      </div>
+      <div style={{ flex: "1 1 280px", minWidth: 0, width: "100%" }}>
+        <Img label={`Image — ${svc.title}`} h={mob ? 180 : 280} />
+      </div>
+    </div>
+  );
+}
+
+function Hamburger({ open }) {
+  const bar = (r, o, y) => ({ width: 20, height: 2, background: C.cream, borderRadius: 1, transition: "all 0.3s ease", transform: r, opacity: o, position: "absolute", top: y });
+  return <div style={{ width: 20, height: 16, position: "relative", cursor: "pointer", padding: 6 }}><div style={bar(open ? "rotate(45deg)" : "none", 1, open ? 7 : 0)} /><div style={bar("none", open ? 0 : 1, 7)} /><div style={bar(open ? "rotate(-45deg)" : "none", 1, open ? 7 : 14)} /></div>;
+}
+
+function LangToggle({ lang, set }) {
+  return (
+    <div style={{ display: "flex", background: "rgba(0,83,49,0.5)", borderRadius: 20, padding: 3, border: `1px solid ${C.border}` }}>
+      {["fr", "en"].map((l) => (
+        <button key={l} onClick={() => set(l)} style={{ padding: "5px 14px", borderRadius: 17, border: "none", cursor: "pointer", fontSize: 11, fontWeight: 700, letterSpacing: 0.5, textTransform: "uppercase", background: lang === l ? C.gold : "transparent", color: lang === l ? C.green : C.creamSoft, transition: "all 0.25s ease" }}>{l.toUpperCase()}</button>
+      ))}
+    </div>
+  );
+}
+
+function Logo({ h = 32 }) {
+  return (
+    <svg viewBox="0 0 369 167" xmlns="http://www.w3.org/2000/svg" style={{ height: h, width: "auto", display: "block" }}>
+      <path fill="#e3ab35" fillRule="evenodd" d="m209.2,39.3c0-.54-.18-.99-.55-1.35-.36-.37-.82-.55-1.35-.55s-.97.18-1.3.55c-.37.37-.55.82-.55,1.35v29.2c0,.54.18.98.55,1.35.37.33.8.51,1.3.55.53-.03.98-.21,1.35-.55.37-.37.55-.82.55-1.35v-29.2m-14.9,0c-.04-.54-.22-.99-.55-1.35-.37-.37-.82-.55-1.35-.55s-.96.18-1.3.55c-.37.37-.55.82-.55,1.35v29.2c0,.54.18.98.55,1.35.33.33.77.51,1.3.55.54-.03.99-.21,1.35-.55.33-.37.52-.82.55-1.35v-29.2m-14.9,0c-.03-.54-.21-.99-.55-1.35-.37-.37-.82-.55-1.35-.55s-.98.18-1.35.55c-.33.37-.52.82-.55,1.35v29.2c.03.54.21.98.55,1.35.37.33.82.51,1.35.55.54-.03.98-.21,1.35-.55.33-.37.52-.82.55-1.35v-29.2m-14.95.9c0-.53-.18-.98-.55-1.35-.33-.34-.76-.52-1.3-.55-.54.03-.99.21-1.35.55-.33.36-.52.82-.55,1.35v29.2c.03.54.22.99.55,1.35.37.33.82.52,1.35.55.53-.04.96-.22,1.3-.55.37-.37.55-.82.55-1.35v-29.2m-14.9,2.75c0-.53-.18-.98-.55-1.35-.33-.34-.77-.52-1.3-.55-.53.03-.98.21-1.35.55-.37.36-.55.82-.55,1.35v29.2c0,.54.18.99.55,1.35.36.37.82.55,1.35.55s.97-.18,1.3-.55c.37-.37.55-.82.55-1.35v-29.2m-14.9,4.6c0-.54-.18-.99-.55-1.35-.37-.33-.82-.51-1.35-.55-.54.04-.96.22-1.3.55-.37.37-.55.82-.55,1.35v29.2c0,.54.18.98.55,1.35.34.33.77.51,1.3.55.54,0,.98-.18,1.35-.55.33-.37.51-.82.55-1.35v-29.2m-14.9,6.45c-.03-.53-.21-.98-.55-1.35-.37-.36-.82-.55-1.35-.55s-.98.18-1.35.55c-.33.37-.52.82-.55,1.35v29.2c.03.53.22.97.55,1.3.37.37.82.55,1.35.55s.98-.18,1.35-.55c.34-.33.52-.77.55-1.3v-29.2m-14.95,8.25c0-.53-.18-.98-.55-1.35-.33-.33-.77-.51-1.3-.55-.53.03-.98.21-1.35.55-.34.37-.52.82-.55,1.35v29.2c.03.53.22.99.55,1.35.36.33.82.52,1.35.55.53-.04.97-.22,1.3-.55.37-.37.55-.82.55-1.35v-29.2m-13.5,42.05c0,.53-.18.98-.55,1.35-.34.34-.77.52-1.3.55-.53-.03-.99-.22-1.35-.55-.37-.36-.55-.82-.55-1.35v-29.2c0-.54.18-.99.55-1.35.37-.33.82-.52,1.35-.55.53.04.97.22,1.3.55.36.37.55.82.55,1.35v29.2"/>
+      <path fill="#ede7da" fillRule="evenodd" d="m215.55,38.65c0-.53-.18-.96-.55-1.3-.37-.37-.8-.55-1.3-.55-.53,0-.98.18-1.35.55-.37.33-.55.76-.55,1.3v29.2c0,.53.18.98.55,1.35.36.37.82.55,1.35.55s.97-.18,1.3-.55c.37-.37.55-.82.55-1.35v-29.2m-14.9,0c-.03-.53-.21-.96-.55-1.3-.37-.37-.82-.55-1.35-.55s-.97.18-1.3.55c-.37.33-.55.76-.55,1.3v29.2c0,.53.18.98.55,1.35.34.37.77.55,1.3.55s.98-.18,1.35-.55c.33-.37.51-.82.55-1.35v-29.2m-14.9,0c-.03-.53-.21-.96-.55-1.3-.37-.37-.82-.55-1.35-.55s-.98.18-1.35.55c-.33.33-.52.76-.55,1.3v29.2c.03.53.22.98.55,1.35.37.37.82.55,1.35.55s.98-.18,1.35-.55c.34-.37.52-.82.55-1.35v-29.2m-14.95-.9c0-.54-.18-.98-.55-1.35-.33-.33-.77-.51-1.3-.55-.53.03-.98.21-1.35.55-.34.37-.52.82-.55,1.35v29.2c.03.54.21.99.55,1.35.36.33.82.51,1.35.55.54-.04.97-.22,1.3-.55.37-.37.55-.82.55-1.35v-29.2m-14.9-2.75c0-.54-.18-.98-.55-1.35-.34-.36-.77-.55-1.3-.55s-.98.18-1.35.55c-.37.37-.55.82-.55,1.35v29.2c0,.54.18.99.55,1.35.37.33.82.51,1.35.55.53-.04.97-.22,1.3-.55.36-.37.55-.82.55-1.35v-29.2m-14.9-4.6c0-.53-.18-.98-.55-1.35-.37-.34-.82-.52-1.35-.55-.54.04-.97.21-1.3.55-.37.37-.55.82-.55,1.35v29.2c0,.53.18.98.55,1.35.33.34.76.52,1.3.55.53-.04.98-.21,1.35-.55.34-.37.52-.82.55-1.35v-29.2m-14.9-6.45c-.04-.53-.22-.96-.55-1.3-.37-.36-.82-.55-1.35-.55s-.98.18-1.35.55c-.34.34-.52.77-.55,1.3v29.25c.03.54.22.97.55,1.3.36.37.82.55,1.35.55s.98-.18,1.35-.55c.33-.33.52-.77.55-1.3v-29.25m-14.95-8.25c0-.53-.18-.98-.55-1.35-.34-.34-.77-.52-1.3-.55-.53.03-.99.21-1.35.55-.33.36-.51.82-.55,1.35v29.2c.04.54.22.99.55,1.35.37.33.82.52,1.35.55.53-.04.97-.22,1.3-.55.36-.37.55-.82.55-1.35V15.7m-14.9,16.35c0,.53-.18.98-.55,1.35-.33.34-.76.52-1.3.55-.53-.03-.98-.21-1.35-.55-.37-.36-.55-.82-.55-1.35V2.85c0-.54.18-.99.55-1.35.37-.37.82-.55,1.35-.55s.97.18,1.3.55c.37.37.55.82.55,1.35v29.2"/>
+      <path fill="#ede7da" d="m6.88,145.35c2.61,1.3,5.52,1.95,8.73,1.95,7.84,0,11.77-4.71,11.77-14.14,0-8.22-3.9-12.33-11.69-12.33-3.35,0-6.29.29-8.81.86v23.66ZM.23,116.84c5.01-1.03,10.19-1.55,15.55-1.55,12.1,0,18.16,5.98,18.16,17.95,0,13.21-6.09,19.81-18.27,19.81-3.02,0-5.95-.6-8.78-1.8v15.47H.23v-49.89Zm58.91,30.83c7.55,0,11.33-4.55,11.33-13.64s-3.78-13.34-11.33-13.34-11.33,4.45-11.33,13.34,3.77,13.64,11.33,13.64h0Zm-17.99-13.48c0-12.59,5.99-18.89,17.99-18.89s17.98,6.3,17.98,18.89-6,18.84-17.98,18.84-17.93-6.28-17.99-18.84h0Z"/>
+      <path fill="#ede7da" d="m92.76,115.29v37.77h-6.66v-37.77h6.66Z"/>
+      <path fill="#ede7da" d="m103.51,153.06v-37.77h4.5l1.19,4.83c4.58-3.22,9.19-4.83,13.81-4.83,8.7,0,13.05,4.69,13.05,14.06v23.7h-6.64v-23.81c0-5.6-2.8-8.41-8.39-8.41-3.81,0-7.43,1.59-10.86,4.78v27.44h-6.66Z"/>
+      <path fill="#ede7da" d="m146.81,109.18h4.17l1.44,6.11h8.78v5.39h-7.73v21.69c0,3.53,1.52,5.3,4.56,5.3h3.17v5.39h-4.89c-6.34,0-9.5-3.39-9.5-10.17v-33.7Z"/>
+      <path fill="#ede7da" d="m170.97,151.26v-6.11c5.39,1.92,11.22,2.88,17.48,2.88,8.84,0,13.27-3.24,13.27-9.72,0-5.51-3.26-8.27-9.78-8.27h-7.33c-10.77,0-16.16-4.68-16.16-14.03,0-9.83,6.89-14.75,20.69-14.75,5.99,0,11.56.73,16.72,2.17v6.11c-5.16-1.91-10.73-2.88-16.72-2.88-9.36,0-14.03,3.12-14.03,9.34,0,5.52,3.16,8.28,9.5,8.28h7.33c10.96,0,16.44,4.67,16.44,14.02,0,10.07-6.64,15.11-19.92,15.11-6.26,0-12.09-.72-17.48-2.16h0Z"/>
+      <path fill="#ede7da" d="m224.09,145.35c2.61,1.3,5.52,1.95,8.73,1.95,7.84,0,11.77-4.71,11.77-14.14,0-8.22-3.9-12.33-11.69-12.33-3.36,0-6.29.29-8.81.86v23.66Zm-6.66-28.52c5.01-1.03,10.19-1.55,15.55-1.55,12.1,0,18.16,5.98,18.16,17.95,0,13.21-6.09,19.81-18.27,19.81-3.02,0-5.95-.6-8.78-1.8v15.47h-6.66v-49.89Z"/>
+      <path fill="#ede7da" d="m258.36,141.29c0-7.74,5.11-11.61,15.33-11.61,3.76,0,7.04.24,9.84.72v-3.56c0-4.1-3.39-6.16-10.17-6.16-3.89,0-7.87.61-11.94,1.81v-5.41c4.07-1.19,8.05-1.8,11.94-1.8,11.22,0,16.83,4.03,16.83,12.09v25.67h-3.38l-2.66-2.66c-3.29,1.77-7.16,2.66-11.59,2.66-9.47,0-14.2-3.92-14.2-11.77h0Zm15.33-6.22c-5.78,0-8.67,2.04-8.67,6.11,0,4.32,2.52,6.48,7.55,6.48,4.6,0,8.26-.98,10.97-2.95v-8.92c-2.64-.48-5.92-.72-9.84-.72h0Z"/>
+      <path fill="#ede7da" d="m329.8,151.98c-3.12.72-6.48,1.08-10.08,1.08-13.67,0-20.5-6.53-20.5-19.59,0-12.11,6.83-18.17,20.5-18.17,3.59,0,6.95.36,10.08,1.08v5.39c-3.12-.72-6.25-1.08-9.36-1.08-9.71,0-14.56,4.26-14.56,12.78,0,9.47,4.85,14.2,14.56,14.2,3.11,0,6.23-.36,9.36-1.08v5.39Z"/>
+      <path fill="#ede7da" d="m368.12,136.09h-25.42c0,7.72,4.87,11.58,14.61,11.58,3.32,0,6.65-.36,9.98-1.08v5.39c-3.34.72-7.39,1.08-12.16,1.08-12.73,0-19.09-6.44-19.09-19.31s6.03-18.45,18.09-18.45,16.21,6.93,13.98,20.8h0Zm-25.42-5.55h19.34c.34-6.61-2.65-9.92-8.98-9.92s-9.93,3.31-10.36,9.92h0Z"/>
+    </svg>
+  );
+}
+
+export default function PointSpacePortfolio() {
+  const [lang, setLang] = useState("fr");
+  const [form, setForm] = useState({ prenom: "", nom: "", email: "", message: "" });
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [showFloat, setShowFloat] = useState(false);
+  const { mob, tab } = useScreen();
+  const t = T[lang];
+  const pad = mob ? "0 20px" : tab ? "0 36px" : "0 40px";
+  const navPad = mob ? "14px 20px" : tab ? "16px 36px" : "18px 56px";
+  const navLinks = [{ id: "services", l: t.nav.services }, { id: "matterport", l: t.nav.vr }, { id: "portfolio", l: t.nav.portfolio }, { id: "contact", l: t.nav.contact }];
+
+  useEffect(() => { const h = () => setShowFloat(window.scrollY > 500); window.addEventListener("scroll", h, { passive: true }); return () => window.removeEventListener("scroll", h); }, []);
+
+  return (
+    <div style={{ background: C.green, color: C.cream, fontFamily: "'DM Sans', 'Segoe UI', sans-serif", minHeight: "100vh", lineHeight: 1.65, overflowX: "hidden", position: "relative" }}>
+      <style>{CSS}</style>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet" />
+      <div style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none", opacity: 0.035, background: "url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')" }} />
+
+      {/* FLOATING CTA */}
+      <div className="ps-floating-cta" onClick={() => scrollTo("contact")} style={{ position: "fixed", bottom: mob ? 20 : 32, right: mob ? 20 : 32, zIndex: 200, background: C.gold, color: C.green, padding: mob ? "12px 20px" : "14px 28px", borderRadius: 50, fontWeight: 700, fontSize: mob ? 13 : 14, letterSpacing: 0.3, display: "flex", alignItems: "center", gap: 8, opacity: showFloat ? 1 : 0, pointerEvents: showFloat ? "auto" : "none", transition: "opacity 0.4s ease, transform 0.25s ease" }}>
+        <span style={{ fontSize: 16 }}>✉</span>{t.floatingCta}
+      </div>
+
+      {/* NAV */}
+      <nav style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: navPad, borderBottom: `1px solid ${C.border}`, position: "sticky", top: 0, background: C.greenGlass, zIndex: 100, backdropFilter: "blur(16px) saturate(1.4)" }}>
+        <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          <Logo h={mob ? 28 : 34} />
+        </div>
+        {!mob && <div style={{ display: "flex", gap: tab ? 16 : 28, alignItems: "center", fontSize: 13, fontWeight: 500 }}>
+          {navLinks.map((l) => <span key={l.id} className="ps-nav-link" onClick={() => scrollTo(l.id)} style={{ color: C.cream, opacity: 0.6, letterSpacing: 0.3 }}>{l.l}</span>)}
+          <LangToggle lang={lang} set={setLang} />
+        </div>}
+        {mob && <div style={{ display: "flex", alignItems: "center", gap: 10 }}><LangToggle lang={lang} set={setLang} /><div onClick={() => setMenuOpen(!menuOpen)}><Hamburger open={menuOpen} /></div></div>}
+      </nav>
+      {mob && menuOpen && <div style={{ position: "sticky", top: 52, zIndex: 99, background: C.greenLight, borderBottom: `1px solid ${C.border}`, padding: "8px 20px", display: "flex", flexDirection: "column", gap: 2 }}>
+        {navLinks.map((l) => <span key={l.id} onClick={() => { scrollTo(l.id); setMenuOpen(false); }} style={{ color: C.cream, fontSize: 15, fontWeight: 500, padding: "12px 8px", borderRadius: 6, cursor: "pointer", display: "block" }}>{l.l}</span>)}
+      </div>}
+
+      <div style={{ maxWidth: 1060, margin: "0 auto", padding: pad, position: "relative", zIndex: 1 }}>
+
+        {/* HERO */}
+        <section style={{ paddingTop: mob ? 44 : 80, paddingBottom: mob ? 40 : 64 }}>
+          <p className="ps-hero-enter ps-hero-enter-d1" style={{ textTransform: "uppercase", fontSize: 11, letterSpacing: 4, color: C.gold, fontWeight: 600, marginBottom: 16 }}>{t.hero.tag}</p>
+          <h1 className="ps-hero-enter ps-hero-enter-d2" style={{ fontSize: mob ? 30 : tab ? 38 : 48, fontFamily: "'Playfair Display', serif", fontWeight: 800, lineHeight: 1.12, margin: "0 0 20px", maxWidth: 720 }}>
+            {t.hero.title[0]}<span style={{ color: C.gold }}>{t.hero.title[1]}</span>{t.hero.title[2]}
+          </h1>
+          <p className="ps-hero-enter ps-hero-enter-d3" style={{ color: C.creamSoft, fontSize: mob ? 14 : 16, lineHeight: 1.85, maxWidth: 620, marginBottom: 36 }}>{t.hero.desc}</p>
+          <div className="ps-hero-enter ps-hero-enter-d4" style={{ display: "flex", gap: 14, marginBottom: mob ? 32 : 52, flexWrap: "wrap" }}>
+            <span className="ps-btn-gold" onClick={() => scrollTo("contact")} style={{ padding: mob ? "12px 24px" : "13px 32px", background: C.gold, color: C.green, borderRadius: 6, fontWeight: 700, fontSize: 14, display: "inline-block" }}>{t.hero.cta1}</span>
+            <span className="ps-btn-outline" onClick={() => scrollTo("services")} style={{ padding: mob ? "12px 24px" : "13px 32px", background: "transparent", color: C.cream, borderRadius: 6, fontWeight: 600, fontSize: 14, border: `1px solid ${C.creamFaint}`, display: "inline-block" }}>{t.hero.cta2}</span>
+          </div>
+          <div className="ps-hero-enter ps-hero-enter-d4" style={{ display: "flex", gap: mob ? 8 : 16, flexWrap: "wrap", marginBottom: mob ? 28 : 48 }}>
+            {t.metrics.map((m, i) => (
+              <div key={i} className="ps-metric" style={{ flex: mob ? "1 1 calc(50% - 4px)" : "1 1 140px", textAlign: "center", padding: mob ? "22px 12px" : "30px 16px", background: C.goldDim, borderRadius: 10, border: `1px solid ${C.goldBorder}`, boxSizing: "border-box" }}>
+                <div style={{ fontSize: mob ? 30 : 42, fontWeight: 800, color: C.gold, fontFamily: "'Playfair Display', serif", letterSpacing: -1 }}>{m.value}</div>
+                <div style={{ fontSize: mob ? 10 : 12, color: C.cream, marginTop: 6, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase" }}>{m.label}</div>
+              </div>
+            ))}
+          </div>
+          <div className="ps-hero-enter ps-hero-enter-d5"><Img label={t.hero.imgLabel} h={mob ? 200 : 380} /></div>
+        </section>
+
+        <div style={{ height: 1, background: `linear-gradient(90deg, transparent, ${C.goldBorder}, transparent)`, margin: "0 0 8px" }} />
+
+        {/* SERVICES */}
+        <section id="services" style={{ padding: mob ? "36px 0 24px" : "64px 0 24px", scrollMarginTop: 60 }}>
+          <Reveal>
+            <p style={{ textTransform: "uppercase", fontSize: 11, letterSpacing: 4, color: C.gold, fontWeight: 600, marginBottom: 8 }}>{t.svcHead.tag}</p>
+            <h2 style={{ fontSize: mob ? 26 : 34, fontFamily: "'Playfair Display', serif", fontWeight: 700, margin: "0 0 8px" }}>{t.svcHead.title}</h2>
+            <p style={{ color: C.creamSoft, fontSize: mob ? 14 : 15, marginBottom: 16, maxWidth: 560 }}>{t.svcHead.desc}</p>
+          </Reveal>
+          {t.services.map((svc, i) => <Svc key={i} svc={svc} reverse={!mob && i % 2 === 1} mob={mob} />)}
+        </section>
+
+        <div style={{ height: 1, background: `linear-gradient(90deg, transparent, ${C.goldBorder}, transparent)` }} />
+
+        {/* MATTERPORT SHOWCASE — "see it for yourself" */}
+        <section id="matterport" style={{ padding: mob ? "36px 0" : "64px 0", scrollMarginTop: 60 }}>
+          <Reveal>
+            <p style={{ textTransform: "uppercase", fontSize: 11, letterSpacing: 4, color: C.gold, fontWeight: 600, marginBottom: 8 }}>{t.showcase.tag}</p>
+            <h2 style={{ fontSize: mob ? 26 : 34, fontFamily: "'Playfair Display', serif", fontWeight: 700, margin: "0 0 12px" }}>{t.showcase.title}</h2>
+            <p style={{ color: C.creamSoft, fontSize: mob ? 14 : 15, marginBottom: mob ? 24 : 36, maxWidth: 580 }}>{t.showcase.desc}</p>
+          </Reveal>
+
+          {/* Featured tour embed */}
+          <Reveal delay={0.1}>
+            <div style={{ marginBottom: 28 }}>
+              <div style={{ width: "100%", height: mob ? 240 : 420, background: `linear-gradient(160deg, ${C.greenCard}, rgba(0,42,27,0.4))`, borderRadius: 12, border: `1px solid ${C.goldBorder}`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 14, boxSizing: "border-box", position: "relative", overflow: "hidden" }}>
+                <div style={{ position: "absolute", inset: 0, background: `radial-gradient(circle at 30% 40%, rgba(222,176,71,0.05), transparent 60%)` }} />
+                <span style={{ fontSize: mob ? 44 : 60, opacity: 0.15, zIndex: 1 }}>🏠</span>
+                <span style={{ color: C.creamSoft, fontSize: mob ? 12 : 14, fontFamily: "'DM Mono', monospace", zIndex: 1, textAlign: "center", padding: "0 16px" }}>{t.showcase.featured}</span>
+                <span style={{ color: C.creamSoft, fontSize: mob ? 11 : 12, zIndex: 1, maxWidth: 400, textAlign: "center", lineHeight: 1.5, padding: "0 16px" }}>{t.showcase.featuredDesc}</span>
+              </div>
+              <div style={{ display: "flex", gap: 14, marginTop: 16, flexWrap: "wrap", alignItems: "center" }}>
+                <span className="ps-btn-gold" style={{ padding: "13px 28px", background: C.gold, color: C.green, borderRadius: 6, fontWeight: 700, fontSize: 14, display: "inline-block" }}>{t.showcase.cta}</span>
+                {/* QR */}
+                <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 16px", background: C.greenCard, borderRadius: 8, border: `1px dashed ${C.goldBorder}` }}>
+                  <span style={{ fontSize: 20, opacity: 0.3 }}>⊟</span>
+                  <span style={{ color: C.creamSoft, fontSize: 11, fontFamily: "'DM Mono', monospace" }}>{t.showcase.qr}</span>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Additional project scans */}
+          <Reveal delay={0.2}>
+            <div style={{ display: "flex", gap: mob ? 12 : 20, flexWrap: "wrap" }}>
+              {t.showcase.projects.map((proj, i) => (
+                <div key={i} className="ps-scan-card" style={{ flex: "1 1 280px", background: C.greenCard, borderRadius: 12, border: `1px solid ${C.border}`, overflow: "hidden" }}>
+                  <div style={{ height: mob ? 120 : 180, background: `linear-gradient(145deg, rgba(0,83,49,0.4), rgba(0,42,27,0.5))`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, position: "relative" }}>
+                    <div style={{ position: "absolute", inset: 0, background: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(222,176,71,0.03) 35px, rgba(222,176,71,0.03) 36px)` }} />
+                    <span style={{ fontSize: 28, opacity: 0.2, zIndex: 1 }}>◎</span>
+                    <span style={{ color: C.creamSoft, fontSize: 10, fontFamily: "'DM Mono', monospace", zIndex: 1 }}>{proj.type}</span>
+                  </div>
+                  <div style={{ padding: mob ? "14px 16px" : "18px 22px" }}>
+                    <div style={{ fontSize: mob ? 15 : 16, fontWeight: 700, color: C.cream, marginBottom: 4 }}>{proj.title}</div>
+                    <div style={{ fontSize: 13, color: C.creamSoft, lineHeight: 1.5, marginBottom: 12 }}>{proj.desc}</div>
+                    <span style={{ color: C.gold, fontSize: 13, fontWeight: 600 }}>{t.showcase.explore}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </section>
+
+        <div style={{ height: 1, background: `linear-gradient(90deg, transparent, ${C.goldBorder}, transparent)` }} />
+
+        {/* GALLERY */}
+        <section id="portfolio" style={{ padding: mob ? "36px 0" : "64px 0", scrollMarginTop: 60 }}>
+          <Reveal>
+            <p style={{ textTransform: "uppercase", fontSize: 11, letterSpacing: 4, color: C.gold, fontWeight: 600, marginBottom: 8 }}>{t.gallery.tag}</p>
+            <h2 style={{ fontSize: mob ? 26 : 34, fontFamily: "'Playfair Display', serif", fontWeight: 700, margin: "0 0 12px" }}>{t.gallery.title}</h2>
+            <p style={{ color: C.creamSoft, fontSize: mob ? 14 : 15, marginBottom: mob ? 24 : 36 }}>{t.gallery.desc}</p>
+          </Reveal>
+          <div style={{ display: "grid", gridTemplateColumns: mob ? "repeat(2, 1fr)" : tab ? "repeat(3, 1fr)" : "repeat(4, 1fr)", gap: mob ? 10 : 16 }}>
+            {t.gallery.items.map((item, i) => (
+              <Reveal key={i} delay={i * 0.05}>
+                <div className="ps-gallery-item" style={{ background: C.greenCard, borderRadius: 10, overflow: "hidden", border: `1px solid ${C.border}` }}>
+                  <Img label={item} h={mob ? 100 : 160} style={{ borderRadius: 0, border: "none" }} />
+                  <div style={{ padding: mob ? "10px 12px" : "14px 18px" }}><span style={{ fontSize: mob ? 11 : 13, fontWeight: 600, color: C.cream }}>{item}</span></div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        <div style={{ height: 1, background: `linear-gradient(90deg, transparent, ${C.goldBorder}, transparent)` }} />
+
+        {/* WHY */}
+        <section style={{ padding: mob ? "36px 0" : "64px 0" }}>
+          <Reveal>
+            <h2 style={{ fontSize: mob ? 24 : 30, fontFamily: "'Playfair Display', serif", fontWeight: 700, margin: "0 0 28px", textAlign: "center" }}>
+              {t.why.title[0]}<span style={{ color: C.gold }}>{t.why.title[1]}</span>{t.why.title[2]}
+            </h2>
+          </Reveal>
+          <div style={{ display: "flex", gap: mob ? 12 : 20, flexWrap: "wrap", justifyContent: "center" }}>
+            {t.why.cards.map((c, i) => (
+              <Reveal key={i} delay={i * 0.1}>
+                <div className="ps-card" style={{ flex: "1 1 240px", maxWidth: mob ? "100%" : 300, width: mob ? "100%" : undefined, textAlign: "center", padding: mob ? 22 : 32, background: C.greenCard, borderRadius: 12, border: `1px solid ${C.border}`, boxSizing: "border-box" }}>
+                  <div style={{ fontSize: mob ? 28 : 36, color: C.gold, marginBottom: 12, filter: "drop-shadow(0 0 10px rgba(222,176,71,0.15))" }}>{c.icon}</div>
+                  <div style={{ fontSize: mob ? 16 : 17, fontWeight: 700, marginBottom: 8 }}>{c.t}</div>
+                  <div style={{ fontSize: mob ? 13 : 14, color: C.creamSoft, lineHeight: 1.6 }}>{c.d}</div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        <div style={{ height: 1, background: `linear-gradient(90deg, transparent, ${C.goldBorder}, transparent)` }} />
+
+        {/* CONTACT */}
+        <section id="contact" style={{ padding: mob ? "36px 0 48px" : "64px 0 80px", scrollMarginTop: 60 }}>
+          <Reveal>
+            <p style={{ textTransform: "uppercase", fontSize: 11, letterSpacing: 4, color: C.gold, fontWeight: 600, marginBottom: 8 }}>{t.contact.tag}</p>
+            <h2 style={{ fontSize: mob ? 26 : 34, fontFamily: "'Playfair Display', serif", fontWeight: 700, margin: "0 0 12px" }}>{t.contact.title}</h2>
+            <p style={{ color: C.creamSoft, fontSize: mob ? 14 : 15, marginBottom: mob ? 28 : 40, maxWidth: 500 }}>{t.contact.desc}</p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div style={{ display: "flex", gap: mob ? 28 : 48, flexDirection: mob ? "column" : "row", flexWrap: "wrap" }}>
+              <div style={{ flex: "1 1 280px", minWidth: 0 }}>
+                {["prenom", "nom", "email"].map((k) => (
+                  <div key={k} style={{ marginBottom: 18 }}>
+                    <label style={{ display: "block", fontSize: 11, fontWeight: 600, marginBottom: 7, color: C.creamSoft, textTransform: "uppercase", letterSpacing: 1.2 }}>{t.contact.fields[k]}</label>
+                    <input type={k === "email" ? "email" : "text"} className="ps-input" value={form[k]} onChange={(e) => setForm({ ...form, [k]: e.target.value })} style={{ width: "100%", padding: "12px 16px", background: "rgba(0,83,49,0.4)", border: `1px solid ${C.border}`, borderRadius: 6, color: C.cream, fontSize: 14, outline: "none", boxSizing: "border-box" }} />
+                  </div>
+                ))}
+                <div style={{ marginBottom: 18 }}>
+                  <label style={{ display: "block", fontSize: 11, fontWeight: 600, marginBottom: 7, color: C.creamSoft, textTransform: "uppercase", letterSpacing: 1.2 }}>{t.contact.fields.message}</label>
+                  <textarea rows={4} className="ps-input" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} style={{ width: "100%", padding: "12px 16px", background: "rgba(0,83,49,0.4)", border: `1px solid ${C.border}`, borderRadius: 6, color: C.cream, fontSize: 14, outline: "none", resize: "vertical", boxSizing: "border-box" }} />
+                </div>
+                <button className="ps-btn-gold" style={{ padding: "14px 36px", background: C.gold, color: C.green, border: "none", borderRadius: 6, fontWeight: 700, fontSize: 15, cursor: "pointer", width: mob ? "100%" : "auto" }}>{t.contact.send}</button>
+              </div>
+              <div style={{ flex: mob ? "1 1 100%" : "0 0 280px", minWidth: 0 }}>
+                <div className="ps-card" style={{ padding: mob ? 22 : 28, background: C.greenCard, borderRadius: 12, border: `1px solid ${C.border}` }}>
+                  {[{ lbl: t.contact.lbl, lines: ["Louis Dallaire", "ldallaire@pointspace.ca", "(514) 606-9604"] }, { lbl: t.contact.hq, lines: ["2211 Rue de la Métropole", "Longueuil, QC, J4G 1S5"] }, { lbl: t.contact.sat, lines: ["3700, rue Saint-Patrick, unité 312", "Montréal, QC, H4E 1A2"] }].map((block, bi) => (
+                    <div key={bi} style={{ marginBottom: 20 }}>
+                      <div style={{ fontSize: 10, textTransform: "uppercase", letterSpacing: 1.5, color: C.gold, marginBottom: 6, fontWeight: 600 }}>{block.lbl}</div>
+                      {block.lines.map((line, li) => <div key={li} style={{ fontSize: 13, color: li === 0 && bi === 0 ? C.cream : C.creamSoft, fontWeight: li === 0 && bi === 0 ? 600 : 400, lineHeight: 1.7 }}>{line}</div>)}
+                    </div>
+                  ))}
+                  <div>
+                    <div style={{ fontSize: 10, textTransform: "uppercase", letterSpacing: 1.5, color: C.gold, marginBottom: 6, fontWeight: 600 }}>{t.contact.web}</div>
+                    <a href="https://www.pointspace.ca" target="_blank" rel="noopener noreferrer" className="ps-link" style={{ color: C.gold, fontSize: 13, textDecoration: "none", borderBottom: "1px solid transparent", paddingBottom: 1 }}>pointspace.ca</a>
+                    <span style={{ margin: "0 10px", color: C.border }}>|</span>
+                    <a href="https://ca.linkedin.com/company/pointspace" target="_blank" rel="noopener noreferrer" className="ps-link" style={{ color: C.gold, fontSize: 13, textDecoration: "none", borderBottom: "1px solid transparent", paddingBottom: 1 }}>LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </section>
+      </div>
+
+      <footer style={{ padding: mob ? "20px 20px" : "28px 56px", borderTop: `1px solid ${C.border}`, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8, fontSize: 12, color: C.creamSoft, position: "relative", zIndex: 1 }}>
+        <span>{t.footer}</span>
+        <Logo h={22} />
+      </footer>
+    </div>
+  );
+}
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<PointSpacePortfolio />);
+  </script>
+</body>
+</html>
