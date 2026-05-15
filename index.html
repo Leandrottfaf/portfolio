@@ -198,6 +198,19 @@ function Svc({ svc, reverse, mob }) {
               display: "block"
             }}
           />
+        ) : svc.title === "2D/3D Drafting" || svc.title === "Mise en plan 2D/3D" ? (
+          <img
+            src="/portfolio/images/drafting-render.png"
+            alt="2D and 3D drafting"
+            style={{
+              width: "100%",
+              height: mob ? 180 : 280,
+              objectFit: "cover",
+              borderRadius: 10,
+              border: `1px solid ${C.goldBorder}`,
+              display: "block"
+            }}
+          />
         ) : (
           <Img label={`Image — ${svc.title}`} h={mob ? 180 : 280} />
         )}
