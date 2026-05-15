@@ -273,7 +273,6 @@ function PointSpacePortfolio() {
           <LangToggle lang={lang} set={setLang} />
         </div>}
         {mob && <div style={{ display: "flex", alignItems: "center", gap: 10 }}><LangToggle lang={lang} set={setLang} /><div onClick={() => setMenuOpen(!menuOpen)}><Hamburger open={menuOpen} /></div></div>}
-      </nav>
       </div>
       </nav>
       {mob && menuOpen && <div style={{ position: "sticky", top: 52, zIndex: 99, background: C.greenLight, borderBottom: `1px solid ${C.border}`, padding: "8px 20px", display: "flex", flexDirection: "column", gap: 2 }}>
