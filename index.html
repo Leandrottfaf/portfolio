@@ -646,27 +646,66 @@ function PointSpacePortfolio() {
             </div>
           </Reveal>
 
-          {/* Additional project scans */}
-          <Reveal delay={0.2}>
-            <div style={{ display: "flex", gap: mob ? 12 : 20, flexWrap: "wrap" }}>
-              {t.showcase.projects.map((proj, i) => (
-                <div key={i} className="ps-scan-card" style={{ flex: "1 1 280px", background: C.greenCard, borderRadius: 12, border: `1px solid ${C.border}`, overflow: "hidden" }}>
-                  <div style={{ height: mob ? 120 : 180, background: `linear-gradient(145deg, rgba(0,83,49,0.4), rgba(0,42,27,0.5))`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, position: "relative" }}>
-                    <div style={{ position: "absolute", inset: 0, background: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(222,176,71,0.03) 35px, rgba(222,176,71,0.03) 36px)` }} />
-                    <span style={{ fontSize: 28, opacity: 0.2, zIndex: 1 }}>◎</span>
-                    <span style={{ color: C.creamSoft, fontSize: 10, fontFamily: "'Neue Haas', sans-serif", zIndex: 1 }}>{proj.type}</span>
+          {/* Additional tours teaser */}
+            <Reveal delay={0.2}>
+              <div
+                style={{
+                  marginTop: 8,
+                  padding: mob ? "18px 18px" : "22px 26px",
+                  background: "rgba(0,83,49,0.6)",
+                  border: `1px solid ${C.goldBorder}`,
+                  borderRadius: 12,
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: mob ? "flex-start" : "center",
+                  flexDirection: mob ? "column" : "row",
+                  gap: 16
+                }}
+              >
+                <div>
+                  <div
+                    style={{
+                      fontSize: mob ? 16 : 18,
+                      fontWeight: 700,
+                      color: C.cream,
+                      marginBottom: 4
+                    }}
+                  >
+                    More virtual tours available on request
                   </div>
-                  <div style={{ padding: mob ? "14px 16px" : "18px 22px" }}>
-                    <div style={{ fontSize: mob ? 15 : 16, fontWeight: 700, color: C.cream, marginBottom: 4 }}>{proj.title}</div>
-                    <div style={{ fontSize: 13, color: C.creamSoft, lineHeight: 1.5, marginBottom: 12 }}>{proj.desc}</div>
-                    <span style={{ color: C.gold, fontSize: 13, fontWeight: 600 }}>{t.showcase.explore}</span>
+            
+                  <div
+                    style={{
+                      fontSize: 13,
+                      color: C.creamSoft,
+                      lineHeight: 1.6,
+                      maxWidth: 620
+                    }}
+                  >
+                    pointSpace can provide immersive Matterport captures for offices, industrial spaces,
+                    commercial properties, and project documentation.
                   </div>
                 </div>
-              ))}
-            </div>
-          </Reveal>
-        </section>
-
+            
+                <span
+                  onClick={() => scrollTo("contact")}
+                  className="ps-btn-gold"
+                  style={{
+                    padding: "11px 22px",
+                    background: C.gold,
+                    color: C.green,
+                    borderRadius: 6,
+                    fontWeight: 700,
+                    fontSize: 13,
+                    cursor: "pointer",
+                    whiteSpace: "nowrap"
+                  }}
+                >
+                  Request a tour
+                </span>
+              </div>
+            </Reveal>
+          </section>
         <div style={{ height: 1, background: `linear-gradient(90deg, transparent, ${C.goldBorder}, transparent)` }} />
 
         {/* GALLERY */}
