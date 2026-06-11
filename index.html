@@ -82,84 +82,12 @@ function useFadeIn(threshold = 0.15) {
 
 function scrollTo(id) { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); }
 
-const METRIC_COUNT_DURATION = 1050;
-const METRIC_COUNT_DURATION_SMALL = 1500;
-
-function parseMetricValue(value) {
-  const m = value.match(/^(\d+)M\+$/);
-  if (m) return { end: parseInt(m[1], 10), suffix: "M+" };
-  const p = value.match(/^(\d+)\+$/);
-  if (p) return { end: parseInt(p[1], 10), suffix: "+" };
-  return { end: 0, suffix: "" };
-}
-
-function formatMetricValue(n, suffix) {
-  return suffix === "M+" ? `${n}M+` : `${n}${suffix}`;
-}
-
-function isSmallSteppedMetric(end, suffix) {
-  return suffix === "+" && end <= 10;
-}
-
-function MetricValue({ value, active }) {
-  const reduceMotion = useRef(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
-  const { end, suffix } = parseMetricValue(value);
-  const animated = useRef(false);
-  const [display, setDisplay] = useState(() => (active || reduceMotion.current) ? value : formatMetricValue(0, suffix));
-
-  useEffect(() => {
-    if (animated.current) return;
-    if (!active) return;
-    if (reduceMotion.current) {
-      setDisplay(value);
-      animated.current = true;
-      return;
-    }
-    animated.current = true;
-    const stepped = isSmallSteppedMetric(end, suffix);
-    const duration = stepped ? METRIC_COUNT_DURATION_SMALL : METRIC_COUNT_DURATION;
-    const start = performance.now();
-    let raf;
-    const tick = (now) => {
-      const t = Math.min((now - start) / duration, 1);
-      let current;
-      if (stepped) {
-        current = Math.min(end, Math.floor(t * (end + 1)));
-      } else {
-        const eased = 1 - Math.pow(1 - t, 3);
-        current = Math.round(eased * end);
-      }
-      setDisplay(formatMetricValue(current, suffix));
-      if (t < 1) raf = requestAnimationFrame(tick);
-      else setDisplay(value);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [active, value, end, suffix]);
-
-  return display;
-}
-
 function HeroMetrics({ metrics, mob }) {
-  const ref = useRef(null);
-  const [active, setActive] = useState(() => window.matchMedia("(prefers-reduced-motion: reduce)").matches);
-
-  useEffect(() => {
-    if (active) return;
-    const el = ref.current;
-    if (!el) return;
-    const o = new IntersectionObserver(([e]) => {
-      if (e.isIntersecting) { setActive(true); o.unobserve(el); }
-    }, { threshold: 0.15 });
-    o.observe(el);
-    return () => o.disconnect();
-  }, [active]);
-
   return (
-    <div ref={ref} className="ps-hero-enter ps-hero-enter-d4" style={{ display: "flex", gap: mob ? 8 : 16, flexWrap: "wrap", marginBottom: mob ? 28 : 48 }}>
+    <div style={{ display: "flex", gap: mob ? 8 : 16, flexWrap: "wrap", marginBottom: mob ? 28 : 48 }}>
       {metrics.map((m, i) => (
         <div key={i} className="ps-metric" style={{ flex: mob ? "1 1 calc(50% - 4px)" : "1 1 140px", textAlign: "center", padding: mob ? "22px 12px" : "30px 16px", background: C.goldDim, borderRadius: 10, border: `1px solid ${C.goldBorder}`, boxSizing: "border-box" }}>
-          <div style={{ fontSize: mob ? 30 : 42, fontWeight: 800, color: C.gold, fontFamily: "'Neue Haas', sans-serif", letterSpacing: -1 }}><MetricValue value={m.value} active={active} /></div>
+          <div style={{ fontSize: mob ? 30 : 42, fontWeight: 800, color: C.gold, fontFamily: "'Neue Haas', sans-serif", letterSpacing: -1 }}>{m.value}</div>
           <div style={{ fontSize: mob ? 10 : 12, color: C.cream, marginTop: 6, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase" }}>{m.label}</div>
         </div>
       ))}
