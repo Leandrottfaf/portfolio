@@ -157,7 +157,7 @@ function HeroMetrics({ metrics, mob }) {
 const T = {
   fr: {
     nav: { services: "Services", vr: "Visites VR", portfolio: "Portfolio", contact: "Contact" },
-    hero: { tag: "Impact prouvé en chiffres", title: ["De la capture terrain à la documentation ", "finale", "."], desc: "pointSpace accompagne les propriétaires, gestionnaires et équipes de projet grâce à la numérisation 3D, la mise en plan, la modélisation BIM, l'analyse du bâtiment, le mesurage BOMA et les visites virtuelles.", cta1: "Planifier une discussion", cta2: "Voir les services", imgLabel: "Image hero — nuage de points, scan LiDAR ou intérieur de bâtiment" },
+    hero: { tag: "Impact prouvé en chiffres", title: ["De la capture terrain à la documentation ", "finale", "."], desc: "pointSpace accompagne les propriétaires, gestionnaires et équipes de projet grâce à la numérisation 3D, la mise en plan, la modélisation BIM, l'analyse du bâtiment, le mesurage BOMA et les visites virtuelles.", cta1: "Planifier une discussion", cta2: "Voir les services", imgLabel: "Image hero — nuage de points, scan LiDAR ou intérieur de bâtiment", videoCaption: "Capture du réel → documentation BIM prête à l'emploi" },
     metrics: [{ value: "400+", label: "Projets livrés" }, { value: "50+", label: "Clients servis" }, { value: "10M+", label: "pi² documentés" }, { value: "6+", label: "Années d'expérience" }],
     svcHead: { tag: "Nos services", title: "Solutions complètes de numérisation", desc: "Chaque service répond à un besoin spécifique de documentation, gestion ou coordination." },
     services: [
@@ -190,7 +190,7 @@ const T = {
   },
   en: {
     nav: { services: "Services", vr: "VR Tours", portfolio: "Portfolio", contact: "Contact" },
-    hero: { tag: "Proven impact in numbers", title: ["From field capture to final ", "documentation", "."], desc: "pointSpace supports owners, managers, and project teams with 3D scanning, drafting, BIM modeling, building analysis, BOMA measurement, and virtual tours.", cta1: "Schedule a discussion", cta2: "View services", imgLabel: "Hero image — point cloud, LiDAR scan, or building interior" },
+    hero: { tag: "Proven impact in numbers", title: ["From field capture to final ", "documentation", "."], desc: "pointSpace supports owners, managers, and project teams with 3D scanning, drafting, BIM modeling, building analysis, BOMA measurement, and virtual tours.", cta1: "Schedule a discussion", cta2: "View services", imgLabel: "Hero image — point cloud, LiDAR scan, or building interior", videoCaption: "Reality capture → BIM-ready documentation" },
     metrics: [{ value: "400+", label: "Projects delivered" }, { value: "50+", label: "Clients served" }, { value: "10M+", label: "Sq. ft. documented" }, { value: "6+", label: "Years of experience" }],
     svcHead: { tag: "Our services", title: "Complete scanning solutions", desc: "Each service addresses a specific documentation, management, or coordination need." },
     services: [
@@ -583,10 +583,11 @@ function PointSpacePortfolio() {
               }}
             >
                <video
+                  autoPlay
                   muted
                   loop
                   playsInline
-                  controls
+                  preload="metadata"
                   style={{
                     width: "100%",
                     height: "100%",
@@ -606,6 +607,27 @@ function PointSpacePortfolio() {
                   pointerEvents: "none"
                 }}
               />
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: mob ? 12 : 16,
+                  left: mob ? 12 : 16,
+                  zIndex: 1,
+                  maxWidth: mob ? "calc(100% - 24px)" : "70%",
+                  padding: mob ? "8px 12px" : "10px 14px",
+                  background: "rgba(0,0,0,0.42)",
+                  border: `1px solid ${C.goldBorder}`,
+                  borderRadius: 6,
+                  color: C.creamSoft,
+                  fontSize: mob ? 10 : 12,
+                  fontWeight: 500,
+                  letterSpacing: 0.4,
+                  lineHeight: 1.45,
+                  pointerEvents: "none"
+                }}
+              >
+                {t.hero.videoCaption}
+              </div>
             </div>
                     </div>
         </section>
