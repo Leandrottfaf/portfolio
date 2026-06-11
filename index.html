@@ -83,6 +83,7 @@ function useFadeIn(threshold = 0.15) {
 function scrollTo(id) { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); }
 
 const METRIC_COUNT_DURATION = 1050;
+const METRIC_COUNT_DURATION_SMALL = 1500;
 
 function parseMetricValue(value) {
   const m = value.match(/^(\d+)M\+$/);
@@ -94,6 +95,10 @@ function parseMetricValue(value) {
 
 function formatMetricValue(n, suffix) {
   return suffix === "M+" ? `${n}M+` : `${n}${suffix}`;
+}
+
+function isSmallSteppedMetric(end, suffix) {
+  return suffix === "+" && end <= 10;
 }
 
 function MetricValue({ value, active }) {
@@ -111,12 +116,20 @@ function MetricValue({ value, active }) {
       return;
     }
     animated.current = true;
+    const stepped = isSmallSteppedMetric(end, suffix);
+    const duration = stepped ? METRIC_COUNT_DURATION_SMALL : METRIC_COUNT_DURATION;
     const start = performance.now();
     let raf;
     const tick = (now) => {
-      const t = Math.min((now - start) / METRIC_COUNT_DURATION, 1);
-      const eased = 1 - Math.pow(1 - t, 3);
-      setDisplay(formatMetricValue(Math.round(eased * end), suffix));
+      const t = Math.min((now - start) / duration, 1);
+      let current;
+      if (stepped) {
+        current = Math.min(end, Math.floor(t * (end + 1)));
+      } else {
+        const eased = 1 - Math.pow(1 - t, 3);
+        current = Math.round(eased * end);
+      }
+      setDisplay(formatMetricValue(current, suffix));
       if (t < 1) raf = requestAnimationFrame(tick);
       else setDisplay(value);
     };
