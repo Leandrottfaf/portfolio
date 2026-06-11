@@ -82,11 +82,83 @@ function useFadeIn(threshold = 0.15) {
 
 function scrollTo(id) { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); }
 
+const METRIC_COUNT_DURATION = 1050;
+
+function parseMetricValue(value) {
+  const m = value.match(/^(\d+)M\+$/);
+  if (m) return { end: parseInt(m[1], 10), suffix: "M+" };
+  const p = value.match(/^(\d+)\+$/);
+  if (p) return { end: parseInt(p[1], 10), suffix: "+" };
+  return { end: 0, suffix: "" };
+}
+
+function formatMetricValue(n, suffix) {
+  return suffix === "M+" ? `${n}M+` : `${n}${suffix}`;
+}
+
+function MetricValue({ value, active }) {
+  const reduceMotion = useRef(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  const { end, suffix } = parseMetricValue(value);
+  const animated = useRef(false);
+  const [display, setDisplay] = useState(() => (active || reduceMotion.current) ? value : formatMetricValue(0, suffix));
+
+  useEffect(() => {
+    if (animated.current) return;
+    if (!active) return;
+    if (reduceMotion.current) {
+      setDisplay(value);
+      animated.current = true;
+      return;
+    }
+    animated.current = true;
+    const start = performance.now();
+    let raf;
+    const tick = (now) => {
+      const t = Math.min((now - start) / METRIC_COUNT_DURATION, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      setDisplay(formatMetricValue(Math.round(eased * end), suffix));
+      if (t < 1) raf = requestAnimationFrame(tick);
+      else setDisplay(value);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [active, value, end, suffix]);
+
+  return display;
+}
+
+function HeroMetrics({ metrics, mob }) {
+  const ref = useRef(null);
+  const [active, setActive] = useState(() => window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+
+  useEffect(() => {
+    if (active) return;
+    const el = ref.current;
+    if (!el) return;
+    const o = new IntersectionObserver(([e]) => {
+      if (e.isIntersecting) { setActive(true); o.unobserve(el); }
+    }, { threshold: 0.15 });
+    o.observe(el);
+    return () => o.disconnect();
+  }, [active]);
+
+  return (
+    <div ref={ref} className="ps-hero-enter ps-hero-enter-d4" style={{ display: "flex", gap: mob ? 8 : 16, flexWrap: "wrap", marginBottom: mob ? 28 : 48 }}>
+      {metrics.map((m, i) => (
+        <div key={i} className="ps-metric" style={{ flex: mob ? "1 1 calc(50% - 4px)" : "1 1 140px", textAlign: "center", padding: mob ? "22px 12px" : "30px 16px", background: C.goldDim, borderRadius: 10, border: `1px solid ${C.goldBorder}`, boxSizing: "border-box" }}>
+          <div style={{ fontSize: mob ? 30 : 42, fontWeight: 800, color: C.gold, fontFamily: "'Neue Haas', sans-serif", letterSpacing: -1 }}><MetricValue value={m.value} active={active} /></div>
+          <div style={{ fontSize: mob ? 10 : 12, color: C.cream, marginTop: 6, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase" }}>{m.label}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 const T = {
   fr: {
     nav: { services: "Services", vr: "Visites VR", portfolio: "Portfolio", contact: "Contact" },
     hero: { tag: "Impact prouvé en chiffres", title: ["De la capture terrain à la documentation ", "finale", "."], desc: "pointSpace accompagne les propriétaires, gestionnaires et équipes de projet grâce à la numérisation 3D, la mise en plan, la modélisation BIM, l'analyse du bâtiment, le mesurage BOMA et les visites virtuelles.", cta1: "Planifier une discussion", cta2: "Voir les services", imgLabel: "Image hero — nuage de points, scan LiDAR ou intérieur de bâtiment" },
-    metrics: [{ value: "400+", label: "Projets livrés" }, { value: "50+", label: "Clients servis" }, { value: "10+", label: "Services" }, { value: "6+", label: "Années d'expérience" }],
+    metrics: [{ value: "400+", label: "Projets livrés" }, { value: "50+", label: "Clients servis" }, { value: "10M+", label: "pi² documentés" }, { value: "6+", label: "Années d'expérience" }],
     svcHead: { tag: "Nos services", title: "Solutions complètes de numérisation", desc: "Chaque service répond à un besoin spécifique de documentation, gestion ou coordination." },
     services: [
       { title: "Numérisation 3D", desc: "Relevés LiDAR précis pour documenter l'état réel de vos bâtiments et infrastructures.", bullets: ["Relevés rapides et précis", "Documentation complète de l'existant", "Base fiable pour les projets futurs"], icon: "⬡", link: "https://www.pointspace.ca/fr-ca/services/numerisation-LiDAR-3D", cta: "En savoir plus →" },
@@ -119,7 +191,7 @@ const T = {
   en: {
     nav: { services: "Services", vr: "VR Tours", portfolio: "Portfolio", contact: "Contact" },
     hero: { tag: "Proven impact in numbers", title: ["From field capture to final ", "documentation", "."], desc: "pointSpace supports owners, managers, and project teams with 3D scanning, drafting, BIM modeling, building analysis, BOMA measurement, and virtual tours.", cta1: "Schedule a discussion", cta2: "View services", imgLabel: "Hero image — point cloud, LiDAR scan, or building interior" },
-    metrics: [{ value: "400+", label: "Projects delivered" }, { value: "50+", label: "Clients served" }, { value: "10+", label: "Services" }, { value: "6+", label: "Years of experience" }],
+    metrics: [{ value: "400+", label: "Projects delivered" }, { value: "50+", label: "Clients served" }, { value: "10M+", label: "Sq. ft. documented" }, { value: "6+", label: "Years of experience" }],
     svcHead: { tag: "Our services", title: "Complete scanning solutions", desc: "Each service addresses a specific documentation, management, or coordination need." },
     services: [
       { title: "3D Scanning", desc: "Precise LiDAR surveys to document the actual condition of your buildings and infrastructure.", bullets: ["Fast and accurate surveys", "Complete as-built documentation", "Reliable foundation for future projects"], icon: "⬡", link: "https://www.pointspace.ca/services/LiDAR-3D-Scanning", cta: "Learn more →" },
@@ -496,14 +568,7 @@ function PointSpacePortfolio() {
             <span className="ps-btn-gold" onClick={() => scrollTo("contact")} style={{ padding: mob ? "12px 24px" : "13px 32px", background: C.gold, color: C.green, borderRadius: 6, fontWeight: 700, fontSize: 14, display: "inline-block" }}>{t.hero.cta1}</span>
             <span className="ps-btn-outline" onClick={() => scrollTo("services")} style={{ padding: mob ? "12px 24px" : "13px 32px", background: "transparent", color: C.cream, borderRadius: 6, fontWeight: 600, fontSize: 14, border: `1px solid ${C.creamFaint}`, display: "inline-block" }}>{t.hero.cta2}</span>
           </div>
-          <div className="ps-hero-enter ps-hero-enter-d4" style={{ display: "flex", gap: mob ? 8 : 16, flexWrap: "wrap", marginBottom: mob ? 28 : 48 }}>
-            {t.metrics.map((m, i) => (
-              <div key={i} className="ps-metric" style={{ flex: mob ? "1 1 calc(50% - 4px)" : "1 1 140px", textAlign: "center", padding: mob ? "22px 12px" : "30px 16px", background: C.goldDim, borderRadius: 10, border: `1px solid ${C.goldBorder}`, boxSizing: "border-box" }}>
-                <div style={{ fontSize: mob ? 30 : 42, fontWeight: 800, color: C.gold, fontFamily: "'Neue Haas', sans-serif", letterSpacing: -1 }}>{m.value}</div>
-                <div style={{ fontSize: mob ? 10 : 12, color: C.cream, marginTop: 6, fontWeight: 600, letterSpacing: 1, textTransform: "uppercase" }}>{m.label}</div>
-              </div>
-            ))}
-          </div>
+          <HeroMetrics metrics={t.metrics} mob={mob} />
           <div className="ps-hero-enter ps-hero-enter-d5">
             <div
               style={{
