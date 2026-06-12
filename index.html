@@ -213,51 +213,6 @@ function Reveal({ children, delay = 0 }) {
   return <div ref={f.ref} style={{ ...f.style, transitionDelay: `${delay}s` }}>{children}</div>;
 }
 
-function VirtualTourTeaser({ mob, fr }) {
-  const badge = fr ? "Visite Matterport" : "Matterport Tour";
-  const label = fr ? "Aperçu interactif" : "Interactive preview";
-  return (
-    <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: mob ? "stretch" : "center", gap: 10 }}>
-      <div
-        onClick={() => scrollTo("matterport")}
-        style={{
-          width: "100%",
-          maxWidth: mob ? "100%" : 340,
-          margin: mob ? 0 : "0 auto",
-          borderRadius: 12,
-          border: `1px solid ${C.goldBorder}`,
-          background: "rgba(0,0,0,0.22)",
-          overflow: "hidden",
-          boxShadow: "0 8px 24px rgba(0,0,0,0.18)",
-          cursor: "pointer",
-          transition: "border-color 0.25s ease, transform 0.25s ease"
-        }}
-        onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.transform = "translateY(-2px)"; }}
-        onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.goldBorder; e.currentTarget.style.transform = "translateY(0)"; }}
-      >
-        <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "8px 12px", background: "rgba(0,0,0,0.35)", borderBottom: `1px solid ${C.border}` }}>
-          <div style={{ display: "flex", gap: 5 }}>
-            {[0, 1, 2].map((i) => <span key={i} style={{ width: 7, height: 7, borderRadius: "50%", background: "rgba(245,240,230,0.18)" }} />)}
-          </div>
-          <div style={{ flex: 1, fontSize: 10, color: C.creamSoft, background: "rgba(255,255,255,0.06)", borderRadius: 4, padding: "4px 8px", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>my.matterport.com</div>
-        </div>
-        <div style={{ position: "relative", height: mob ? 150 : 170 }}>
-          <img
-            src="/portfolio/images/matterport-digifab-preview.jpg"
-            alt={fr ? "Aperçu de visite Matterport" : "Matterport virtual tour preview"}
-            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", opacity: 0.82 }}
-          />
-          <div style={{ position: "absolute", top: 10, left: 10, padding: "4px 9px", borderRadius: 4, background: "rgba(0,0,0,0.55)", border: `1px solid ${C.goldBorder}`, color: C.gold, fontSize: 9, fontWeight: 700, letterSpacing: 0.8, textTransform: "uppercase" }}>{badge}</div>
-          <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(0,0,0,0.15)" }}>
-            <div style={{ width: 44, height: 44, borderRadius: "50%", background: "rgba(0,0,0,0.45)", border: `2px solid ${C.gold}`, display: "flex", alignItems: "center", justifyContent: "center", color: C.gold, fontSize: 16, paddingLeft: 3, boxShadow: "0 6px 18px rgba(0,0,0,0.35)" }}>▶</div>
-          </div>
-        </div>
-      </div>
-      <p style={{ margin: 0, textAlign: "center", fontSize: 11, color: C.creamSoft, letterSpacing: 0.4, textTransform: "uppercase", fontWeight: 500 }}>{label}</p>
-    </div>
-  );
-}
-
 function Svc({ svc, reverse, mob }) {
   const f = useFadeIn();
   return (
@@ -338,15 +293,26 @@ function Svc({ svc, reverse, mob }) {
               width: "100%",
               height: mob ? 180 : 280,
               objectFit: "contain",
-              background: "#f3f3f3",
-              padding: 16,
+              background: C.greenCard,
+              padding: mob ? 10 : 12,
               borderRadius: 10,
               border: `1px solid ${C.goldBorder}`,
               display: "block"
             }}
           />
         ) : svc.title === "Virtual Tours" || svc.title === "Visites virtuelles" ? (
-          <VirtualTourTeaser mob={mob} fr={svc.title === "Visites virtuelles"} />
+          <img
+            src="/portfolio/images/matterport-digifab-preview.jpg"
+            alt="Matterport virtual tour interior preview"
+            style={{
+              width: "100%",
+              height: mob ? 180 : 280,
+              objectFit: "cover",
+              borderRadius: 10,
+              border: `1px solid ${C.goldBorder}`,
+              display: "block"
+            }}
+          />
         ) : (
           <Img label={`Image — ${svc.title}`} h={mob ? 180 : 280} />
         )}
