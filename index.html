@@ -123,7 +123,7 @@ const T = {
       explore: "Explorer →",
       qr: "Scanner pour ouvrir sur mobile",
     },
-    gallery: { tag: "Portfolio", title: "Exemples de livrables", desc: "Aperçu des différents types de livrables produits par pointSpace.", items: ["Nuage de points", "Plan 2D", "Modèle BIM", "Analyse de déviation", "Plan BOMA", "Visite virtuelle", "Photo de site", "Scan vs Modèle"] },
+    gallery: { tag: "Portfolio", title: "Exemples de livrables", desc: "Aperçu des différents types de livrables produits par pointSpace." },
     why: { title: ["Pourquoi ", "pointSpace", " ?"], cards: [{ icon: "⬡", t: "Précision", d: "Données mesurées, pas estimées." }, { icon: "⧉", t: "Intégration", d: "Livrables compatibles Revit, CAD, STEP." }, { icon: "◎", t: "Expérience", d: "400+ projets réalisés au Québec." }] },
     contact: { tag: "Prochaine étape", title: "Discutons de vos besoins", desc: "Notre équipe peut vous proposer une solution adaptée à votre projet.", fields: { prenom: "Prénom", nom: "Nom de famille", email: "E-mail", message: "Message" }, send: "Envoyer un message", lbl: "Contact", hq: "Siège social", sat: "Bureau satellite", web: "Web" },
     footer: "© Technologie pointSpace, tous droits réservés 2025.",
@@ -156,13 +156,24 @@ const T = {
       explore: "Explore →",
       qr: "Scan to open on mobile",
     },
-    gallery: { tag: "Portfolio", title: "Deliverable examples", desc: "Overview of the different types of deliverables produced by pointSpace.", items: ["Point cloud", "2D Plan", "BIM Model", "Deviation analysis", "BOMA Plan", "Virtual tour", "Site photo", "Scan vs Model"] },
+    gallery: { tag: "Portfolio", title: "Deliverable examples", desc: "Overview of the different types of deliverables produced by pointSpace." },
     why: { title: ["Why ", "pointSpace", "?"], cards: [{ icon: "⬡", t: "Precision", d: "Measured data, not estimates." }, { icon: "⧉", t: "Integration", d: "Deliverables compatible with Revit, CAD, STEP." }, { icon: "◎", t: "Experience", d: "400+ projects completed in Quebec." }] },
     contact: { tag: "Next step", title: "Let's discuss your needs", desc: "Our team can propose a solution tailored to your project.", fields: { prenom: "First name", nom: "Last name", email: "E-mail", message: "Message" }, send: "Send message", lbl: "Contact", hq: "Head office", sat: "Satellite office", web: "Web" },
     footer: "© pointSpace Technology, all rights reserved 2025.",
     floatingCta: "Contact us",
   },
 };
+
+const GALLERY_ITEMS = [
+  { en: "Point cloud", fr: "Nuage de points", src: "/portfolio/images/gallery/point-cloud-industrial.jpg" },
+  { en: "2D Plan", fr: "Plan 2D", src: "/portfolio/images/gallery/gare-windsor-plan-annotated.jpg", contain: true },
+  { en: "BIM Model", fr: "Modèle BIM", src: "/portfolio/images/gallery/interplast-bim-mep.jpg" },
+  { en: "Deviation analysis", fr: "Analyse de déviation", src: "/portfolio/images/gallery/building-analysis-overlay.jpg" },
+  { en: "BOMA Plan", fr: "Plan BOMA", src: "/portfolio/images/gallery/boma-warehouse-plan.jpg", contain: true },
+  { en: "Virtual tour", fr: "Visite virtuelle", src: "/portfolio/images/gallery/matterport-interior.jpg" },
+  { en: "Site photo", fr: "Photo de site", src: "/portfolio/images/gallery/site-scan-field.jpg" },
+  { en: "Scan vs Model", fr: "Scan vs Modèle", src: "/portfolio/images/gallery/scan-vs-model-render.jpg" },
+];
 
 const CSS = `
   @keyframes fadeUp { from { opacity:0; transform:translateY(28px) } to { opacity:1; transform:translateY(0) } }
@@ -252,7 +263,7 @@ function Svc({ svc, reverse, mob }) {
       <div style={{ flex: "1 1 280px", minWidth: 0, width: "100%" }}>
         {svc.title === "3D Scanning" || svc.title === "Numérisation 3D" ? (
           <img
-            src="/portfolio/images/scan-warehouse.png"
+            src="/portfolio/images/services/scan-warehouse.jpg"
             alt="3D scanning warehouse"
             style={{
               width: "100%",
@@ -265,12 +276,14 @@ function Svc({ svc, reverse, mob }) {
           />
         ) : svc.title === "2D/3D Drafting" || svc.title === "Mise en plan 2D/3D" ? (
           <img
-            src="/portfolio/images/drafting-render.png"
-            alt="2D and 3D drafting"
+            src="/portfolio/images/services/gare-windsor-floor-plan.jpg"
+            alt="2D and 3D drafting floor plan"
             style={{
               width: "100%",
               height: mob ? 180 : 280,
-              objectFit: "cover",
+              objectFit: "contain",
+              background: C.greenCard,
+              padding: mob ? 10 : 12,
               borderRadius: 10,
               border: `1px solid ${C.goldBorder}`,
               display: "block"
@@ -278,7 +291,7 @@ function Svc({ svc, reverse, mob }) {
           />
         ) : svc.title === "BIM Modeling" || svc.title === "Modélisation BIM" ? (
           <img
-            src="/portfolio/images/bim-modeling.jpg"
+            src="/portfolio/images/services/bim-modeling.jpg"
             alt="BIM modeling"
             style={{
               width: "100%",
@@ -291,8 +304,8 @@ function Svc({ svc, reverse, mob }) {
           />
         ) : svc.title === "Building Analysis" || svc.title === "Analyse du bâtiment" ? (
           <img
-            src="/portfolio/images/building-analysis.png"
-            alt="Building analysis"
+            src="/portfolio/images/services/interplast-pointcloud.jpg"
+            alt="Building analysis point cloud"
             style={{
               width: "100%",
               height: mob ? 180 : 280,
@@ -304,7 +317,7 @@ function Svc({ svc, reverse, mob }) {
           />
         ) : svc.title === "BOMA Measurement" || svc.title === "Mesurage BOMA" || svc.title === "Certificat BOMA" ? (
           <img
-            src="/portfolio/images/boma-floor-area-analysis.png"
+            src="/portfolio/images/services/gare-windsor-boma-plan.jpg"
             alt="BOMA measurement plan"
             style={{
               width: "100%",
@@ -671,11 +684,23 @@ function PointSpacePortfolio() {
             <p style={{ color: C.creamSoft, fontSize: mob ? 14 : 15, marginBottom: mob ? 24 : 36 }}>{t.gallery.desc}</p>
           </Reveal>
           <div style={{ display: "grid", gridTemplateColumns: mob ? "repeat(2, 1fr)" : tab ? "repeat(3, 1fr)" : "repeat(4, 1fr)", gap: mob ? 10 : 16 }}>
-            {t.gallery.items.map((item, i) => (
+            {GALLERY_ITEMS.map((item, i) => (
               <Reveal key={i} delay={i * 0.05}>
                 <div className="ps-gallery-item" style={{ background: C.greenCard, borderRadius: 10, overflow: "hidden", border: `1px solid ${C.border}` }}>
-                  <Img label={item} h={mob ? 100 : 160} style={{ borderRadius: 0, border: "none" }} />
-                  <div style={{ padding: mob ? "10px 12px" : "14px 18px" }}><span style={{ fontSize: mob ? 11 : 13, fontWeight: 600, color: C.cream }}>{item}</span></div>
+                  <div style={{ height: mob ? 100 : 160, overflow: "hidden", background: item.contain ? C.greenCard : "#02150d" }}>
+                    <img
+                      src={item.src}
+                      alt={lang === "fr" ? item.fr : item.en}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: item.contain ? "contain" : "cover",
+                        display: "block",
+                        padding: item.contain ? (mob ? 6 : 8) : 0
+                      }}
+                    />
+                  </div>
+                  <div style={{ padding: mob ? "10px 12px" : "14px 18px" }}><span style={{ fontSize: mob ? 11 : 13, fontWeight: 600, color: C.cream }}>{lang === "fr" ? item.fr : item.en}</span></div>
                 </div>
               </Reveal>
             ))}
