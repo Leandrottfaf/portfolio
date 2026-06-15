@@ -107,7 +107,7 @@ const T = {
       { title: "Modélisation BIM", desc: "Modèles numériques fiables pour améliorer la coordination, la rénovation et la gestion du bâtiment.", bullets: ["Modèles BIM structurés", "Meilleure coordination entre équipes", "Support conception et gestion"], icon: "⧉", link: "https://www.pointspace.ca/fr-ca/services/modélisation-bim", cta: "En savoir plus →" },
       { title: "Analyse du bâtiment", desc: "Contrôle géométrique rigoureux pour évaluer la planéité, la verticalité et les déformations.", bullets: ["Analyse planéité et verticalité", "Détection des déformations", "Données visuelles claires"], icon: "◈", link: "https://www.pointspace.ca/fr-ca/services/analyse-du-bâtiment", cta: "En savoir plus →" },
       { title: "Certificat BOMA", desc: "Mesurage conforme aux normes BOMA pour obtenir des superficies fiables et standardisées.", bullets: ["Superficies fiables et documentées", "Conforme aux standards BOMA", "Support gestionnaires immobiliers"], icon: "⊞", link: "https://www.pointspace.ca/fr-ca/services/mise-en-plan-boma", cta: "En savoir plus →" },
-      { title: "Visites virtuelles", desc: "Exploration immersive de vos espaces grâce aux visites virtuelles Matterport.", bullets: ["Consultation à distance", "Documentation visuelle immersive", "Communication avec les parties prenantes"], icon: "◎", link: "https://www.pointspace.ca/fr-ca/services/visites-virtuelles-matterport", cta: "En savoir plus →" },
+      { title: "Visites virtuelles", desc: "Exploration immersive de vos espaces grâce aux visites virtuelles Matterport.", bullets: ["Consultation à distance", "Documentation visuelle immersive", "Communication avec les parties prenantes"], icon: "◎", link: "https://www.pointspace.ca/fr-ca/services/visites-virtuelles-matterport", cta: "Explorer la visite ci-dessous ↓" },
     ],
     showcase: {
       tag: "Explorez nos captures",
@@ -140,7 +140,7 @@ const T = {
       { title: "BIM Modeling", desc: "Reliable digital models to improve coordination, renovation, and building management.", bullets: ["Structured BIM models", "Better team coordination", "Design and management support"], icon: "⧉", link: "https://www.pointspace.ca/services/scan-to-bim", cta: "Learn more →" },
       { title: "Building Analysis", desc: "Rigorous geometric control to assess flatness, verticality, and deformations.", bullets: ["Flatness and verticality analysis", "Deformation detection", "Easy-to-interpret visual data"], icon: "◈", link: "https://www.pointspace.ca/services/building-analysis", cta: "Learn more →" },
       { title: "BOMA Measurement", desc: "BOMA-compliant measurement for reliable standardized floor areas.", bullets: ["Reliable documented areas", "BOMA-compliant measurement", "Support for property managers"], icon: "⊞", link: "https://www.pointspace.ca/services/BOMA_As-Built_Digital_Plans", cta: "Learn more →" },
-      { title: "Virtual Tours", desc: "Immersive exploration of your spaces through Matterport virtual tours.", bullets: ["Remote consultation", "Immersive visual documentation", "Better stakeholder communication"], icon: "◎", link: "https://www.pointspace.ca/services/Matterport-3D-Virtual-Tours", cta: "Learn more →" },
+      { title: "Virtual Tours", desc: "Immersive exploration of your spaces through Matterport virtual tours.", bullets: ["Remote consultation", "Immersive visual documentation", "Better stakeholder communication"], icon: "◎", link: "https://www.pointspace.ca/services/Matterport-3D-Virtual-Tours", cta: "Explore the tour below ↓" },
     ],
     showcase: {
       tag: "Explore our captures",
@@ -215,23 +215,40 @@ function Reveal({ children, delay = 0 }) {
 
 function Svc({ svc, reverse, mob }) {
   const f = useFadeIn();
+  const isVirtualTour = svc.title === "Virtual Tours" || svc.title === "Visites virtuelles";
+  const textBlock = (
+    <>
+      <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
+        <span style={{ fontSize: mob ? 20 : 26, color: C.gold, filter: "drop-shadow(0 0 8px rgba(222,176,71,0.2))" }}>{svc.icon}</span>
+        <h3 style={{ margin: 0, fontSize: mob ? 20 : 24, color: C.cream, fontFamily: "'Neue Haas', sans-serif", fontWeight: 700 }}>{svc.title}</h3>
+      </div>
+      <p style={{ color: C.creamSoft, fontSize: mob ? 14 : 15, lineHeight: 1.75, margin: "0 0 16px" }}>{svc.desc}</p>
+      <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+        {svc.bullets.map((b, i) => (
+          <li key={i} style={{ color: C.cream, fontSize: mob ? 13 : 14, padding: "5px 0", display: "flex", alignItems: "flex-start", gap: 10 }}>
+            <span style={{ color: C.gold, fontSize: 6, marginTop: 7, flexShrink: 0 }}>◆</span>{b}
+          </li>
+        ))}
+      </ul>
+      {isVirtualTour ? (
+        <span onClick={() => scrollTo("matterport")} className="ps-link" style={{ display: "inline-block", marginTop: 18, color: C.gold, fontSize: 13, textDecoration: "none", borderBottom: `1px solid ${C.goldBorder}`, paddingBottom: 3, fontWeight: 600, letterSpacing: 0.3 }}>{svc.cta}</span>
+      ) : (
+        <a href={svc.link} target="_blank" rel="noopener noreferrer" className="ps-link" style={{ display: "inline-block", marginTop: 18, color: C.gold, fontSize: 13, textDecoration: "none", borderBottom: `1px solid ${C.goldBorder}`, paddingBottom: 3, fontWeight: 600, letterSpacing: 0.3 }}>{svc.cta}</a>
+      )}
+    </>
+  );
+
+  if (isVirtualTour) {
+    return (
+      <div ref={f.ref} style={{ ...f.style, padding: mob ? "36px 0 28px" : "48px 0 36px", borderBottom: `1px solid ${C.border}`, marginBottom: mob ? 4 : 8 }}>
+        <div style={{ maxWidth: mob ? "100%" : 720 }}>{textBlock}</div>
+      </div>
+    );
+  }
+
   return (
     <div ref={f.ref} style={{ ...f.style, display: "flex", flexDirection: mob ? "column" : reverse ? "row-reverse" : "row", gap: mob ? 24 : 48, alignItems: "center", padding: mob ? "36px 0" : "56px 0", borderBottom: `1px solid ${C.border}` }}>
-      <div style={{ flex: "1 1 280px", minWidth: 0 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
-          <span style={{ fontSize: mob ? 20 : 26, color: C.gold, filter: "drop-shadow(0 0 8px rgba(222,176,71,0.2))" }}>{svc.icon}</span>
-          <h3 style={{ margin: 0, fontSize: mob ? 20 : 24, color: C.cream, fontFamily: "'Neue Haas', sans-serif", fontWeight: 700 }}>{svc.title}</h3>
-        </div>
-        <p style={{ color: C.creamSoft, fontSize: mob ? 14 : 15, lineHeight: 1.75, margin: "0 0 16px" }}>{svc.desc}</p>
-        <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-          {svc.bullets.map((b, i) => (
-            <li key={i} style={{ color: C.cream, fontSize: mob ? 13 : 14, padding: "5px 0", display: "flex", alignItems: "flex-start", gap: 10 }}>
-              <span style={{ color: C.gold, fontSize: 6, marginTop: 7, flexShrink: 0 }}>◆</span>{b}
-            </li>
-          ))}
-        </ul>
-        <a href={svc.link} target="_blank" rel="noopener noreferrer" className="ps-link" style={{ display: "inline-block", marginTop: 18, color: C.gold, fontSize: 13, textDecoration: "none", borderBottom: `1px solid ${C.goldBorder}`, paddingBottom: 3, fontWeight: 600, letterSpacing: 0.3 }}>{svc.cta}</a>
-      </div>
+      <div style={{ flex: "1 1 280px", minWidth: 0 }}>{textBlock}</div>
       <div style={{ flex: "1 1 280px", minWidth: 0, width: "100%" }}>
         {svc.title === "3D Scanning" || svc.title === "Numérisation 3D" ? (
           <img
@@ -295,19 +312,6 @@ function Svc({ svc, reverse, mob }) {
               objectFit: "contain",
               background: C.greenCard,
               padding: mob ? 10 : 12,
-              borderRadius: 10,
-              border: `1px solid ${C.goldBorder}`,
-              display: "block"
-            }}
-          />
-        ) : svc.title === "Virtual Tours" || svc.title === "Visites virtuelles" ? (
-          <img
-            src="/portfolio/images/matterport-digifab-preview.jpg"
-            alt="Matterport virtual tour interior preview"
-            style={{
-              width: "100%",
-              height: mob ? 180 : 280,
-              objectFit: "cover",
               borderRadius: 10,
               border: `1px solid ${C.goldBorder}`,
               display: "block"
