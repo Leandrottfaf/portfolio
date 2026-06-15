@@ -165,15 +165,67 @@ const T = {
 };
 
 const GALLERY_ITEMS = [
-  { en: "Point cloud", fr: "Nuage de points", src: "/portfolio/images/gallery/point-cloud-industrial.jpg" },
-  { en: "2D Plan", fr: "Plan 2D", src: "/portfolio/images/gallery/gare-windsor-plan-annotated.jpg", contain: true },
-  { en: "BIM Model", fr: "Modèle BIM", src: "/portfolio/images/gallery/interplast-bim-mep.jpg" },
-  { en: "Deviation analysis", fr: "Analyse de déviation", src: "/portfolio/images/gallery/building-analysis-overlay.jpg" },
-  { en: "BOMA Plan", fr: "Plan BOMA", src: "/portfolio/images/gallery/boma-warehouse-plan.jpg", contain: true },
-  { en: "Virtual tour", fr: "Visite virtuelle", src: "/portfolio/images/gallery/matterport-interior.jpg" },
-  { en: "Site photo", fr: "Photo de site", src: "/portfolio/images/gallery/site-scan-field.jpg" },
-  { en: "Scan vs Model", fr: "Scan vs Modèle", src: "/portfolio/images/gallery/scan-vs-model-render.jpg" },
+  { en: "Point cloud", fr: "Nuage de points", src: "/portfolio/images/gallery/point-cloud-industrial.jpg", mode: "model", hMob: 112, hDesk: 200, span: 2 },
+  { en: "2D Plan", fr: "Plan 2D", src: "/portfolio/images/gallery/gare-windsor-plan-annotated.jpg", mode: "document", hMob: 112, hDesk: 188 },
+  { en: "BIM Model", fr: "Modèle BIM", src: "/portfolio/images/gallery/interplast-bim-mep.jpg", mode: "model", hMob: 112, hDesk: 188 },
+  { en: "Deviation analysis", fr: "Analyse de déviation", src: "/portfolio/images/gallery/building-analysis-overlay.jpg", mode: "model", hMob: 112, hDesk: 188 },
+  { en: "BOMA Plan", fr: "Plan BOMA", src: "/portfolio/images/gallery/boma-warehouse-plan.jpg", mode: "document", hMob: 112, hDesk: 188 },
+  { en: "Virtual tour", fr: "Visite virtuelle", src: "/portfolio/images/gallery/matterport-interior.jpg", mode: "photo", objectPosition: "center 55%", hMob: 112, hDesk: 200, span: 2 },
+  { en: "Site photo", fr: "Photo de site", src: "/portfolio/images/gallery/site-scan-field.jpg", mode: "photo", objectPosition: "72% center", hMob: 112, hDesk: 188 },
+  { en: "Scan vs Model", fr: "Scan vs Modèle", src: "/portfolio/images/gallery/scan-vs-model-render.jpg", mode: "model", hMob: 112, hDesk: 188 },
 ];
+
+const SERVICE_IMAGES = {
+  "3D Scanning": { src: "/portfolio/images/services/scan-warehouse.jpg", alt: "3D scanning warehouse", mode: "photo", objectPosition: "72% center" },
+  "Numérisation 3D": { src: "/portfolio/images/services/scan-warehouse.jpg", alt: "Numérisation 3D en entrepôt", mode: "photo", objectPosition: "72% center" },
+  "2D/3D Drafting": { src: "/portfolio/images/services/gare-windsor-floor-plan.jpg", alt: "2D and 3D drafting floor plan", mode: "document" },
+  "Mise en plan 2D/3D": { src: "/portfolio/images/services/gare-windsor-floor-plan.jpg", alt: "Plan d'étage technique", mode: "document" },
+  "BIM Modeling": { src: "/portfolio/images/services/bim-modeling.jpg", alt: "BIM modeling", mode: "model" },
+  "Modélisation BIM": { src: "/portfolio/images/services/bim-modeling.jpg", alt: "Modélisation BIM", mode: "model" },
+  "Building Analysis": { src: "/portfolio/images/services/interplast-pointcloud.jpg", alt: "Building analysis point cloud", mode: "model" },
+  "Analyse du bâtiment": { src: "/portfolio/images/services/interplast-pointcloud.jpg", alt: "Analyse du bâtiment — nuage de points", mode: "model" },
+  "BOMA Measurement": { src: "/portfolio/images/services/gare-windsor-boma-plan.jpg", alt: "BOMA measurement plan", mode: "document" },
+  "Mesurage BOMA": { src: "/portfolio/images/services/gare-windsor-boma-plan.jpg", alt: "Plan de mesurage BOMA", mode: "document" },
+  "Certificat BOMA": { src: "/portfolio/images/services/gare-windsor-boma-plan.jpg", alt: "Certificat BOMA — plan d'étage", mode: "document" },
+};
+
+const IMG_SURFACE = "#02150d";
+const IMG_DOC_SURFACE = "#f3f0e8";
+
+function ImagePreview({ src, alt, mode = "photo", height, objectPosition = "center", compact = false }) {
+  const frame = {
+    width: "100%",
+    height,
+    borderRadius: compact ? 0 : 10,
+    border: compact ? "none" : `1px solid ${C.goldBorder}`,
+    overflow: "hidden",
+    boxSizing: "border-box"
+  };
+
+  if (mode === "photo") {
+    return (
+      <div style={{ ...frame, background: IMG_SURFACE }}>
+        <img className={compact ? "ps-gallery-img" : undefined} src={src} alt={alt} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition, display: "block" }} />
+      </div>
+    );
+  }
+
+  if (mode === "model") {
+    return (
+      <div style={{ ...frame, background: IMG_SURFACE, display: "flex", alignItems: "center", justifyContent: "center", padding: compact ? 6 : 10 }}>
+        <img className={compact ? "ps-gallery-img" : undefined} src={src} alt={alt} style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition, display: "block" }} />
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ ...frame, background: C.greenCard, padding: compact ? 5 : 8 }}>
+      <div style={{ width: "100%", height: "100%", background: IMG_DOC_SURFACE, borderRadius: compact ? 4 : 6, display: "flex", alignItems: "center", justifyContent: "center", padding: compact ? 3 : 5, boxSizing: "border-box" }}>
+        <img className={compact ? "ps-gallery-img" : undefined} src={src} alt={alt} style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center", display: "block" }} />
+      </div>
+    </div>
+  );
+}
 
 const CSS = `
   @keyframes fadeUp { from { opacity:0; transform:translateY(28px) } to { opacity:1; transform:translateY(0) } }
@@ -261,77 +313,10 @@ function Svc({ svc, reverse, mob }) {
     <div ref={f.ref} style={{ ...f.style, display: "flex", flexDirection: mob ? "column" : reverse ? "row-reverse" : "row", gap: mob ? 24 : 48, alignItems: "center", padding: mob ? "36px 0" : "56px 0", borderBottom: `1px solid ${C.border}` }}>
       <div style={{ flex: "1 1 280px", minWidth: 0 }}>{textBlock}</div>
       <div style={{ flex: "1 1 280px", minWidth: 0, width: "100%" }}>
-        {svc.title === "3D Scanning" || svc.title === "Numérisation 3D" ? (
-          <img
-            src="/portfolio/images/services/scan-warehouse.jpg"
-            alt="3D scanning warehouse"
-            style={{
-              width: "100%",
-              height: mob ? 180 : 280,
-              objectFit: "cover",
-              borderRadius: 10,
-              border: `1px solid ${C.goldBorder}`,
-              display: "block"
-            }}
-          />
-        ) : svc.title === "2D/3D Drafting" || svc.title === "Mise en plan 2D/3D" ? (
-          <img
-            src="/portfolio/images/services/gare-windsor-floor-plan.jpg"
-            alt="2D and 3D drafting floor plan"
-            style={{
-              width: "100%",
-              height: mob ? 180 : 280,
-              objectFit: "contain",
-              background: C.greenCard,
-              padding: mob ? 10 : 12,
-              borderRadius: 10,
-              border: `1px solid ${C.goldBorder}`,
-              display: "block"
-            }}
-          />
-        ) : svc.title === "BIM Modeling" || svc.title === "Modélisation BIM" ? (
-          <img
-            src="/portfolio/images/services/bim-modeling.jpg"
-            alt="BIM modeling"
-            style={{
-              width: "100%",
-              height: mob ? 180 : 280,
-              objectFit: "cover",
-              borderRadius: 10,
-              border: `1px solid ${C.goldBorder}`,
-              display: "block"
-            }}
-          />
-        ) : svc.title === "Building Analysis" || svc.title === "Analyse du bâtiment" ? (
-          <img
-            src="/portfolio/images/services/interplast-pointcloud.jpg"
-            alt="Building analysis point cloud"
-            style={{
-              width: "100%",
-              height: mob ? 180 : 280,
-              objectFit: "cover",
-              borderRadius: 10,
-              border: `1px solid ${C.goldBorder}`,
-              display: "block"
-            }}
-          />
-        ) : svc.title === "BOMA Measurement" || svc.title === "Mesurage BOMA" || svc.title === "Certificat BOMA" ? (
-          <img
-            src="/portfolio/images/services/gare-windsor-boma-plan.jpg"
-            alt="BOMA measurement plan"
-            style={{
-              width: "100%",
-              height: mob ? 180 : 280,
-              objectFit: "contain",
-              background: C.greenCard,
-              padding: mob ? 10 : 12,
-              borderRadius: 10,
-              border: `1px solid ${C.goldBorder}`,
-              display: "block"
-            }}
-          />
+        {SERVICE_IMAGES[svc.title] ? (
+          <ImagePreview {...SERVICE_IMAGES[svc.title]} height={mob ? 200 : 300} />
         ) : (
-          <Img label={`Image — ${svc.title}`} h={mob ? 180 : 280} />
+          <Img label={`Image — ${svc.title}`} h={mob ? 200 : 300} />
         )}
       </div>
     </div>
@@ -686,20 +671,15 @@ function PointSpacePortfolio() {
           <div style={{ display: "grid", gridTemplateColumns: mob ? "repeat(2, 1fr)" : tab ? "repeat(3, 1fr)" : "repeat(4, 1fr)", gap: mob ? 10 : 16 }}>
             {GALLERY_ITEMS.map((item, i) => (
               <Reveal key={i} delay={i * 0.05}>
-                <div className="ps-gallery-item" style={{ background: C.greenCard, borderRadius: 10, overflow: "hidden", border: `1px solid ${C.border}` }}>
-                  <div style={{ height: mob ? 100 : 160, overflow: "hidden", background: item.contain ? C.greenCard : "#02150d" }}>
-                    <img
-                      src={item.src}
-                      alt={lang === "fr" ? item.fr : item.en}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: item.contain ? "contain" : "cover",
-                        display: "block",
-                        padding: item.contain ? (mob ? 6 : 8) : 0
-                      }}
-                    />
-                  </div>
+                <div className="ps-gallery-item" style={{ background: C.greenCard, borderRadius: 10, overflow: "hidden", border: `1px solid ${C.border}`, gridColumn: !mob && !tab && item.span ? `span ${item.span}` : undefined }}>
+                  <ImagePreview
+                    src={item.src}
+                    alt={lang === "fr" ? item.fr : item.en}
+                    mode={item.mode || "photo"}
+                    height={mob ? (item.hMob ?? 112) : (item.hDesk ?? 188)}
+                    objectPosition={item.objectPosition}
+                    compact
+                  />
                   <div style={{ padding: mob ? "10px 12px" : "14px 18px" }}><span style={{ fontSize: mob ? 11 : 13, fontWeight: 600, color: C.cream }}>{lang === "fr" ? item.fr : item.en}</span></div>
                 </div>
               </Reveal>
