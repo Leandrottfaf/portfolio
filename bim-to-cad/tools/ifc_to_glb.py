@@ -22,6 +22,14 @@ import trimesh
 FT = 0.3048
 SKIP = {"IfcOpeningElement", "IfcSpace", "IfcSite", "IfcAnnotation", "IfcGrid"}
 
+# Fillers for gaps in the Revit model, as (min, max) corners in output coordinates
+# (feet, Y up). Michel-Menard: on the front wall, left of the entry, the lower wall
+# stops at 8'-2 3/8" and the upper one starts at 8'-10 5/8", leaving an open slot
+# under the cornice. Merged into the wall mesh so it renders as wall.
+WALL_PATCHES = [
+    ((4.06, 8.20, -21.717), (25.39, 8.89, -20.717)),
+]
+
 
 def is_external(element):
     psets = ifcopenshell.util.element.get_psets(element)
@@ -78,6 +86,14 @@ def main(src, dst):
             grp["f"].append(inv.reshape(-1, 3) + grp["n"])
             grp["n"] += len(used)
     count = len(shapes)
+
+    walls = max((k for k in groups if k[0] == "IfcWallStandardCase"), key=lambda k: groups[k]["n"], default=None)
+    for lo, hi in WALL_PATCHES if walls else []:
+        b = trimesh.creation.box(bounds=[lo, hi])
+        grp = groups[walls]
+        grp["v"].append(b.vertices)
+        grp["f"].append(b.faces + grp["n"])
+        grp["n"] += len(b.vertices)
 
     scene = trimesh.Scene()
     for i, ((cls, rgb, alpha), grp) in enumerate(sorted(groups.items())):

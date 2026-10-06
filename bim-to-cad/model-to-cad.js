@@ -319,6 +319,7 @@ export function mount(container, opts = {}) {
     return CAD.outline;
   }
 
+  let house = new THREE.Box3();
   let glbRoot = null; // the loaded .glb scene, for drawing anchors (null for the stand-in)
 
   function setModel(root, fromGlb = null) {
@@ -328,10 +329,51 @@ export function mount(container, opts = {}) {
     prepare(root);
     box = new THREE.Box3().setFromObject(root);
     front = box.max.z;
+    // The house itself (walls + roof), for sizing the gold cut indicators
+    house = new THREE.Box3();
+    root.traverse((o) => { if (o.isMesh && /^Ifc(Wall|Roof)/.test(o.name)) house.expandByObject(o); });
+    if (house.isEmpty()) house.copy(box);
+    addTerrain();
     buildLevels();
     placeDrawings();
     requestRender();
     opts.onReady?.();
+  }
+
+  // A block of earth under the site, so the basement sits in the ground. It is
+  // cut like the model: it builds up from below and opens in section.
+  function addTerrain() {
+    const top = glbRoot ? -1.02 : -0.62; // just under the site slab (1 ft thick in the Revit model, 0.6 ft in the stand-in)
+    const bottom = box.min.y - 4;
+    const w = box.max.x - box.min.x, d = box.max.z - box.min.z, h = top - bottom;
+    const cv = document.createElement("canvas");
+    cv.width = cv.height = 256;
+    const ctx = cv.getContext("2d");
+    ctx.fillStyle = "#7d6750";
+    ctx.fillRect(0, 0, 256, 256);
+    for (let y = 0; y < 256; y += 2) { // soil strata with a little grain
+      const k = Math.sin(y * 0.11) * 10 + Math.sin(y * 0.031) * 14 + (Math.random() - 0.5) * 10;
+      ctx.fillStyle = `rgba(${k > 0 ? "255,235,205" : "40,25,15"},${Math.min(0.22, Math.abs(k) / 90)})`;
+      ctx.fillRect(0, y, 256, 2);
+    }
+    for (let i = 0; i < 900; i++) {
+      ctx.fillStyle = `rgba(30,20,10,${Math.random() * 0.25})`;
+      ctx.fillRect(Math.random() * 256, Math.random() * 256, 1 + Math.random() * 2, 1);
+    }
+    const tex = new THREE.CanvasTexture(cv);
+    tex.colorSpace = THREE.SRGBColorSpace;
+    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+    tex.repeat.set(w / 14, h / 14);
+    const earth = new THREE.MeshStandardMaterial({ map: tex, roughness: 1 });
+    const grass = new THREE.MeshStandardMaterial({ color: "#8e9a73", roughness: 1 });
+    const under = new THREE.MeshStandardMaterial({ color: "#5c4a3a", roughness: 1 });
+    const mesh = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), [earth, earth, grass, under, earth, earth]);
+    mesh.name = "Terrain";
+    mesh.position.set((box.min.x + box.max.x) / 2, (top + bottom) / 2, (box.min.z + box.max.z) / 2);
+    const g = new THREE.Group();
+    g.add(mesh);
+    model.add(g);
+    prepare(g);
   }
 
   async function loadGlb(url) {
@@ -547,18 +589,18 @@ export function mount(container, opts = {}) {
     cutAbove.constant = -cutY;
     const moving = (st.build > 0 && st.build < 1) || ((st.planCut || 0) > 0 && (st.planCut || 0) < 1);
     const cutVis = moving && drawT === 0;
-    cutGroup.scale.set(box.max.x - box.min.x + 6, 1, box.max.z - box.min.z + 6);
-    cutGroup.position.set((box.min.x + box.max.x) / 2, cutY, (box.min.z + box.max.z) / 2);
+    cutGroup.scale.set(house.max.x - house.min.x + 8, 1, house.max.z - house.min.z + 8);
+    cutGroup.position.set((house.min.x + house.max.x) / 2, cutY, (house.min.z + house.max.z) / 2);
     cutGroup.visible = cutVis;
     ghostMat.opacity = 0.22 * st.ghost;
 
     // Vertical section plane, walking in from the camera side to the section line
     const secX = touring ? glbRoot.localToWorld(tmp.set(drawings.section.meta.cutX, 0, 0)).x : 0;
-    const secC = lerp(secX + 27, secX, st.secT); // starts just outside the house walls
+    const secC = lerp(house.max.x + 1, secX, st.secT); // starts just outside the house walls
     sectionCut.constant = st.secT > 0 ? secC : 1e4;
     secGroup.visible = st.secT > 0 && st.secT < 1;
-    secGroup.scale.set(1, box.max.y - box.min.y + 4, box.max.z - box.min.z + 6);
-    secGroup.position.set(secC, (box.min.y + box.max.y) / 2, (box.min.z + box.max.z) / 2);
+    secGroup.scale.set(1, house.max.y - house.min.y + 4, house.max.z - house.min.z + 8);
+    secGroup.position.set(secC, (house.min.y + house.max.y) / 2, (house.min.z + house.max.z) / 2);
 
     // Camera frames the model, or the drawing it is turning towards
     const fit = box.clone();
@@ -593,7 +635,7 @@ export function mount(container, opts = {}) {
     gradeAbove.constant = st.cad > 0.5 ? 0.05 : 1e4;
     for (const e of edgeMats.values()) {
       e.solid.color.copy(COL.edge3d).lerp(e.cad, st.cad);
-      e.solid.opacity = lerp(0.5, 1, st.cad) * (1 - drawT);
+      e.solid.opacity = lerp(0.22, 1, st.cad) * (1 - drawT); // faint in 3D: Revit geometry has many near-coincident steps
       e.dashed.opacity = seg(st.cad, 0.5, 1);
     }
     levelMat.opacity = st.cad;

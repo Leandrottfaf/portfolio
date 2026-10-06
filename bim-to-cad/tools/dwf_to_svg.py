@@ -32,8 +32,10 @@ VIEWS = {
         "glb": lambda X, Y: (APEX[0] - (X - 6107) / S, (Y - 4377) / S, -23.0),
     },
     # Ground floor plan, front at the top. Sheet X grows to +x, Y to -z.
+    # A-NOTE holds the section marks and their cut lines, which run off the plan.
     "plan": {
         "region": (4440, 2560, 5460, 3480),
+        "skip_layers": {"A-NOTE"},
         "glb": lambda X, Y: (APEX[0] + (X - 4973) / S, 0.0, APEX[2] - (Y - 3017) / S),
     },
     # Building section through the dormer, front on the left. Sheet X grows to +z.
@@ -146,7 +148,8 @@ def main(dwf, outdir):
     meta = {}
     for key, view in VIEWS.items():
         box = view["region"]
-        mine = [p for p in sheet.prims if p.points]
+        skip = view.get("skip_layers", set())
+        mine = [p for p in sheet.prims if p.points and p.layer not in skip]
         W, H = write_svg(mine, box, os.path.join(outdir, f"{key}.svg"))
         X0, Y0, X1, Y1 = box
         to_glb = view["glb"]
