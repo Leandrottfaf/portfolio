@@ -58,7 +58,12 @@ The DWF itself isn't kept in the repo. Its metadata includes local project folde
 
 ## Video
 
-`film/` is a timed version of the presentation, rendered frame by frame into an MP4 (about 52 s, 1920×1080, 30 fps):
+`film/` is a timed version of the presentation (about 52 s, 1920×1080). It can be recorded two ways:
+
+- **In your browser, in real time (fastest):** open `…/bim-to-cad/film/` (add `?lang=fr` for French). The player has play/pause (space), a scrubber, frame stepping (← →) and fullscreen (f). **● Record** plays the film once and saves the tab as a video, MP4 or WebM depending on the browser. Go fullscreen on a 1080p-or-larger screen first for a full-resolution file. OBS or any screen recorder works too.
+- **Frame by frame, headless (slow, exact 30 fps):** `film/render.mjs`, see below.
+
+The film covers:
 
 1. **0–19 s:** a close-up at the front wall while walls, doors and windows assemble around the camera. Walls rise course by course with a concrete block texture, and windows and doors fly in. The camera then pulls back and orbits as the rest builds, and the roof drops in last.
 2. **19–21 s:** the perspective flattens into an orthographic view.
@@ -69,6 +74,7 @@ The DWF itself isn't kept in the repo. Its metadata includes local project folde
 |---|---|
 | `film/index.html`, `film/film.js` | The film; `window.film.render(t)` draws the frame at `t` seconds. Open `film/?t=12` to preview a moment. |
 | `film/house-elements.glb` | The model with one mesh per element, so each can arrive on its own (`python3 tools/ifc_to_glb.py models/Michel-Menard.ifc film/house-elements.glb --per-element`) |
+| `film/player.js` | Real-time player and in-browser recorder (inactive when render.mjs drives the page) |
 | `film/render.mjs` | Renders every frame with Playwright and pipes them to ffmpeg (libx264) |
 
 ```

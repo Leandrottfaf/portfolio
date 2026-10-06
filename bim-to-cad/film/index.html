@@ -32,6 +32,19 @@
     #gallery .logo { position: absolute; bottom: 52px; font-size: 34px; font-weight: 700; color: #f5f0e6; }
     #gallery .logo span { color: #deb047; }
     #fade { position: absolute; inset: 0; background: #000; pointer-events: none; }
+
+    /* Real-time player (player.js); not used when rendering frames */
+    body.player { width: 100vw; height: 100vh; }
+    body.player #stage { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+    #controls { position: fixed; left: 50%; top: 18px; white-space: nowrap; transform: translateX(-50%); display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-radius: 30px; background: rgba(0, 66, 39, 0.92); color: #f5f0e6; font: 600 13px/1 "Neue Haas", Arial, sans-serif; z-index: 10; opacity: 0.35; transition: opacity 0.2s; }
+    #controls:hover { opacity: 1; }
+    #controls button { border: 0; background: transparent; color: inherit; font: inherit; font-size: 16px; cursor: pointer; padding: 2px 6px; }
+    #controls .rec { background: #deb047; color: #004227; border-radius: 16px; padding: 6px 12px; font-size: 13px; }
+    #controls input { width: min(46vw, 640px); accent-color: #deb047; }
+    #controls .time { min-width: 92px; font-variant-numeric: tabular-nums; }
+    #controls .lang { color: #deb047; text-decoration: none; font-size: 12px; }
+    body.recording #controls { display: none; }
+    body.recording { cursor: none; }
   </style>
   <script type="importmap">
     { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/" } }
@@ -51,5 +64,6 @@
     <div id="fade"></div>
   </div>
   <script type="module" src="film.js"></script>
+  <script type="module" src="player.js"></script>
 </body>
 </html>
