@@ -1,8 +1,16 @@
-// Scroll-driven "BIM model → CAD elevation" viewer.
-// The page passes a progress value (0 → 1) and this module renders:
-//   1. the building rising from the basement through a moving section plane,
-//   2. the camera turning to a straight-on orthographic front view,
-//   3. the shaded model dissolving into hidden-line CAD linework with level tags.
+// Scroll-driven "BIM model → CAD drawings" viewer.
+// The page passes a progress value (0 → 1). With the real model and the AutoCAD
+// drawings (drawings/drawings.json) it tours the deliverables:
+//   1. the building rises from the basement through a moving section plane,
+//   2. the cut drops to 4 ft, the camera looks straight down and the model
+//      turns into the floor plan drawing,
+//   3. a vertical section plane walks through the house and the cut turns
+//      into the building section drawing,
+//   4. the camera faces the front and the model turns into the elevation.
+// Each drawing is the actual AutoCAD sheet (tools/dwf_to_svg.py), pinned to the
+// model so it lands exactly on top of it.
+// Without them (e.g. the stand-in model) it falls back to: build-up, turn to the
+// front, and generated hidden-line linework with level tags.
 //
 // The model comes from the Revit IFC export, converted by tools/ifc_to_glb.py.
 // If it can't be loaded (or CONFIG.model.url is null) a procedural stand-in of
@@ -21,7 +29,10 @@ const CONFIG = {
     topFt: 37.6,
     yawDeg: 180, // rotate the model so its main facade faces the camera at the end
   },
-  // Levels drawn on the CAD elevation (feet, from the IFC storeys).
+  // AutoCAD drawings pinned to the model (tools/dwf_to_svg.py)
+  drawingsUrl: "drawings/drawings.json",
+  planCutFt: 4, // height of the floor plan cut above the ground floor
+  // Levels for the generated elevation (fallback only; feet, from the IFC storeys).
   // side: which end of the level line carries the tag.
   levels: [
     { name: "RIDGE", ft: 36.1157 },
@@ -238,6 +249,7 @@ export function mount(container, opts = {}) {
   const cutAbove = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);  // keeps y > h (ghost)
   const gradeAbove = new THREE.Plane(new THREE.Vector3(0, 1, 0), 1e4);
   const gradeBelow = new THREE.Plane(new THREE.Vector3(0, -1, 0), -0.05);
+  const sectionCut = new THREE.Plane(new THREE.Vector3(-1, 0, 0), 1e4); // keeps x < c (camera on +x)
 
   const ground = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.ShadowMaterial({ opacity: 0.18, depthWrite: false }));
   ground.rotation.x = -Math.PI / 2;
@@ -258,8 +270,8 @@ export function mount(container, opts = {}) {
     if (!edgeMats.has(cad)) {
       edgeMats.set(cad, {
         cad: new THREE.Color(cad),
-        solid: new THREE.LineBasicMaterial({ transparent: true, clippingPlanes: [cutBelow, gradeAbove] }),
-        dashed: new THREE.LineDashedMaterial({ color: cad, dashSize: 0.9, gapSize: 0.6, transparent: true, opacity: 0, clippingPlanes: [cutBelow, gradeBelow] }),
+        solid: new THREE.LineBasicMaterial({ transparent: true, clippingPlanes: [cutBelow, gradeAbove, sectionCut] }),
+        dashed: new THREE.LineDashedMaterial({ color: cad, dashSize: 0.9, gapSize: 0.6, transparent: true, opacity: 0, clippingPlanes: [cutBelow, gradeBelow, sectionCut] }),
       });
     }
     return edgeMats.get(cad);
@@ -274,7 +286,7 @@ export function mount(container, opts = {}) {
       for (const m of mats) {
         m.transparent = true;
         m.side = THREE.DoubleSide;
-        m.clippingPlanes = [cutBelow];
+        m.clippingPlanes = [cutBelow, sectionCut];
         m.clipShadows = true;
         m.polygonOffset = true;
         m.polygonOffsetFactor = 1;
@@ -307,14 +319,19 @@ export function mount(container, opts = {}) {
     return CAD.outline;
   }
 
-  function setModel(root) {
+  let glbRoot = null; // the loaded .glb scene, for drawing anchors (null for the stand-in)
+
+  function setModel(root, fromGlb = null) {
+    glbRoot = fromGlb;
     model.clear();
     model.add(root);
     prepare(root);
     box = new THREE.Box3().setFromObject(root);
     front = box.max.z;
     buildLevels();
+    placeDrawings();
     requestRender();
+    opts.onReady?.();
   }
 
   async function loadGlb(url) {
@@ -333,7 +350,7 @@ export function mount(container, opts = {}) {
     root.position.set(-c.x, CONFIG.model.feet ? 0 : CONFIG.model.bottomFt - b.min.y, -c.z);
     const wrap = new THREE.Group();
     wrap.add(root);
-    return wrap;
+    return { wrap, root };
   }
 
   // Level lines + labels, and the earth hatch below grade
@@ -384,18 +401,58 @@ export function mount(container, opts = {}) {
     levelGroup.add(hatch);
   }
 
-  // Section plane indicator during the build-up
-  const cutGroup = new THREE.Group();
-  const cutFill = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ color: COL.cut, transparent: true, opacity: 0.12, side: THREE.DoubleSide, depthWrite: false }));
-  cutFill.rotation.x = -Math.PI / 2;
-  const cutEdge = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.PlaneGeometry(1, 1)), new THREE.LineBasicMaterial({ color: COL.cut, transparent: true }));
-  cutEdge.rotation.x = -Math.PI / 2;
-  cutFill.renderOrder = cutEdge.renderOrder = 4;
-  cutGroup.add(cutFill, cutEdge);
-  scene.add(cutGroup);
+  // Gold indicators for the moving cuts: horizontal (build-up, plan) and vertical (section)
+  function cutIndicator(rotate) {
+    const g = new THREE.Group();
+    const fill = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ color: COL.cut, transparent: true, opacity: 0.12, side: THREE.DoubleSide, depthWrite: false }));
+    const edge = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.PlaneGeometry(1, 1)), new THREE.LineBasicMaterial({ color: COL.cut, transparent: true }));
+    for (const o of [fill, edge]) { rotate(o); o.renderOrder = 4; g.add(o); }
+    scene.add(g);
+    return g;
+  }
+  const cutGroup = cutIndicator((o) => (o.rotation.x = -Math.PI / 2));
+  const secGroup = cutIndicator((o) => (o.rotation.y = Math.PI / 2));
   const cutLabel = document.createElement("div");
   cutLabel.style.cssText = "position:absolute;left:0;top:0;padding:3px 8px;border-radius:4px;background:#deb047;color:#004227;font-size:11px;font-weight:700;letter-spacing:.3px;white-space:nowrap;will-change:transform";
   container.appendChild(cutLabel);
+
+  // AutoCAD drawings as inline SVG, laid over the model with a CSS matrix
+  const drawings = {}; // key → { el, meta, world: { a, b, c } }
+  const drawingLayer = document.createElement("div");
+  drawingLayer.style.cssText = "position:absolute;inset:0;pointer-events:none;overflow:hidden";
+  container.appendChild(drawingLayer);
+
+  async function loadDrawings(url) {
+    const meta = await (await fetch(url)).json();
+    const base = new URL(url, location.href);
+    await Promise.all(Object.entries(meta).map(async ([key, m]) => {
+      const svg = await (await fetch(new URL(m.src.replace(/^drawings\//, ""), base))).text();
+      const el = document.createElement("div");
+      el.style.cssText = `position:absolute;left:0;top:0;width:${m.width}px;height:${m.height}px;transform-origin:0 0;opacity:0;visibility:hidden`;
+      el.innerHTML = svg;
+      const svgEl = el.querySelector("svg");
+      svgEl.style.cssText = "display:block;width:100%;height:100%;overflow:visible";
+      drawingLayer.appendChild(el);
+      drawings[key] = { el, meta: m };
+    }));
+    placeDrawings();
+    requestRender();
+    opts.onReady?.();
+  }
+
+  // World positions of each drawing's corners (needs the real model's transform)
+  function placeDrawings() {
+    for (const d of Object.values(drawings)) {
+      d.world = glbRoot && Object.fromEntries(["a", "b", "c"].map((k) => [k, glbRoot.localToWorld(new THREE.Vector3(...d.meta[k]))]));
+    }
+  }
+  const tour = () => glbRoot && drawings.plan?.world && drawings.section?.world && drawings.elevation?.world;
+
+  function drawingBox(key) {
+    const { a, b, c } = drawings[key].world;
+    const d = b.clone().add(c).sub(a);
+    return new THREE.Box3().setFromPoints([a, b, c, d]);
+  }
 
   // -------------------------------------------------------------------------
   let progress = 0, raf = 0, disposed = false, compact = false;
@@ -406,19 +463,12 @@ export function mount(container, opts = {}) {
     if (!raf && !disposed) raf = requestAnimationFrame(render);
   }
 
-  function fitCamera(yaw, pitch, cadT, w, h) {
+  function fitCamera(yaw, pitch, fit, w, h) {
     const dir = new THREE.Vector3(Math.sin(yaw) * Math.cos(pitch), Math.sin(pitch), Math.cos(yaw) * Math.cos(pitch));
-    const fit = box.clone();
-    // Make room for level lines and their tags in the drawing
-    if (cadT > 0) {
-      const room = (side) => (compact || !labels.some((l) => l.left === (side === "left")) ? 0 : 15);
-      const extra = new THREE.Box3(new THREE.Vector3(box.min.x - 5 - room("left"), box.min.y, box.min.z), new THREE.Vector3(box.max.x + 5 + room("right"), box.max.y, box.max.z));
-      fit.min.lerp(extra.min, cadT);
-      fit.max.lerp(extra.max, cadT);
-    }
     const c = fit.getCenter(new THREE.Vector3());
     camera.position.copy(c).addScaledVector(dir, 400);
-    camera.up.set(0, 1, 0);
+    // "Up" follows the orbit so the camera can look straight down without flipping
+    camera.up.set(-Math.sin(yaw) * Math.sin(pitch), Math.cos(pitch), -Math.cos(yaw) * Math.sin(pitch));
     camera.lookAt(c);
     camera.updateMatrixWorld();
     const right = new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld, 0);
@@ -442,6 +492,41 @@ export function mount(container, opts = {}) {
     return [(tmp.x * 0.5 + 0.5) * w, (-tmp.y * 0.5 + 0.5) * h];
   }
 
+  // Timeline -------------------------------------------------------------------
+  // Each returns where things stand at progress p: cut heights, camera angles,
+  // how much each drawing is shown (0–1) and what the camera frames.
+  const deg = THREE.MathUtils.degToRad;
+
+  function legacyState(p) {
+    const build = ease(seg(p, 0.03, 0.42));
+    const turn = ease(seg(p, 0.42, 0.68));
+    return {
+      build, cutT: build, secT: 0,
+      yaw: lerp(lerp(-52, -34, build), 0, turn), pitch: lerp(24, 0, turn),
+      ghost: 1 - seg(p, 0.36, 0.46), cad: ease(seg(p, 0.64, 0.86)), show: {}, frame: {},
+    };
+  }
+
+  function tourState(p) {
+    const build = ease(seg(p, 0.03, 0.2));
+    const toPlan = ease(seg(p, 0.2, 0.3)), planIn = ease(seg(p, 0.3, 0.36)), planOut = ease(seg(p, 0.4, 0.44));
+    const toSec = ease(seg(p, 0.4, 0.5)), sweep = ease(seg(p, 0.5, 0.62)), secIn = ease(seg(p, 0.62, 0.68));
+    const secOut = ease(seg(p, 0.72, 0.76)), unsweep = ease(seg(p, 0.72, 0.8));
+    const toElev = ease(seg(p, 0.72, 0.84)), elevIn = ease(seg(p, 0.84, 0.92));
+    return {
+      build,
+      cutT: build,              // 0 → 1: basement → above the ridge
+      planCut: toPlan * (1 - toSec), // 0 → 1: drop to the plan cut height and back
+      secT: sweep * (1 - unsweep),   // 0 → 1: section plane from outside to the section line
+      yaw: lerp(-52, -34, build) + lerp(0, -146, toPlan) - 90 * toSec - 90 * toElev,
+      pitch: lerp(24, 90, toPlan) - 90 * toSec,
+      ghost: 1 - seg(p, 0.16, 0.22),
+      cad: 0,
+      show: { plan: planIn * (1 - planOut), section: secIn * (1 - secOut), elevation: elevIn },
+      frame: { plan: toPlan * (1 - toSec), section: toSec * (1 - toElev), elevation: toElev },
+    };
+  }
+
   function render() {
     raf = 0;
     const w = container.clientWidth, h = container.clientHeight;
@@ -450,52 +535,85 @@ export function mount(container, opts = {}) {
     const size = renderer.getSize(new THREE.Vector2());
     if (size.x !== w || size.y !== h) renderer.setSize(w, h, false);
 
-    const p = progress;
-    const build = ease(seg(p, 0.03, 0.42));
-    const turn = ease(seg(p, 0.42, 0.68));
-    const cadT = ease(seg(p, 0.64, 0.86));
+    const touring = tour();
+    const st = stateAt(progress);
+    const drawT = Math.max(0, ...Object.values(st.show));
+    const flat = Math.max(st.cad, drawT); // how far we are into a "drawing" look
 
-    // 1. Build-up
+    // Horizontal cut: build-up, then down to the plan cut height (4 ft) and back up
     const y0 = box.min.y - 0.3, y1 = box.max.y + 0.3;
-    const cutY = lerp(y0, y1, build);
+    const cutY = lerp(lerp(y0, y1, st.cutT), CONFIG.planCutFt, st.planCut || 0);
     cutBelow.constant = cutY;
     cutAbove.constant = -cutY;
-    const cutVis = build > 0 && build < 1 ? 1 : 0;
-    const sx = box.max.x - box.min.x + 6, sz = box.max.z - box.min.z + 6;
-    cutGroup.scale.set(sx, 1, sz);
+    const moving = (st.build > 0 && st.build < 1) || ((st.planCut || 0) > 0 && (st.planCut || 0) < 1);
+    const cutVis = moving && drawT === 0;
+    cutGroup.scale.set(box.max.x - box.min.x + 6, 1, box.max.z - box.min.z + 6);
     cutGroup.position.set((box.min.x + box.max.x) / 2, cutY, (box.min.z + box.max.z) / 2);
-    cutGroup.visible = cutVis > 0;
-    ghostMat.opacity = 0.22 * (1 - seg(p, 0.36, 0.46));
+    cutGroup.visible = cutVis;
+    ghostMat.opacity = 0.22 * st.ghost;
 
-    // 2. Camera: iso → straight-on front, orthographic throughout
-    const yaw = THREE.MathUtils.degToRad(lerp(lerp(-52, -34, build), 0, turn));
-    const pitch = THREE.MathUtils.degToRad(lerp(24, 0, turn));
-    fitCamera(yaw, pitch, cadT, w, h);
+    // Vertical section plane, walking in from the camera side to the section line
+    const secX = touring ? glbRoot.localToWorld(tmp.set(drawings.section.meta.cutX, 0, 0)).x : 0;
+    const secC = lerp(secX + 27, secX, st.secT); // starts just outside the house walls
+    sectionCut.constant = st.secT > 0 ? secC : 1e4;
+    secGroup.visible = st.secT > 0 && st.secT < 1;
+    secGroup.scale.set(1, box.max.y - box.min.y + 4, box.max.z - box.min.z + 6);
+    secGroup.position.set(secC, (box.min.y + box.max.y) / 2, (box.min.z + box.max.z) / 2);
 
-    // 3. Shaded model → hidden-line drawing
-    const bg = COL.bg3d.clone().lerp(COL.bgCad, cadT);
+    // Camera frames the model, or the drawing it is turning towards
+    const fit = box.clone();
+    if (touring) {
+      const wModel = Math.max(0, 1 - st.frame.plan - st.frame.section - st.frame.elevation);
+      const acc = { min: fit.min.clone().multiplyScalar(wModel), max: fit.max.clone().multiplyScalar(wModel) };
+      for (const key of ["plan", "section", "elevation"]) {
+        if (!st.frame[key]) continue;
+        const b = drawingBox(key);
+        acc.min.addScaledVector(b.min, st.frame[key]);
+        acc.max.addScaledVector(b.max, st.frame[key]);
+      }
+      fit.set(acc.min, acc.max);
+    } else if (st.cad > 0) {
+      // Make room for the generated level lines and their tags
+      const room = (side) => (compact || !labels.some((l) => l.left === (side === "left")) ? 0 : 15);
+      const extra = new THREE.Box3(new THREE.Vector3(box.min.x - 5 - room("left"), box.min.y, box.min.z), new THREE.Vector3(box.max.x + 5 + room("right"), box.max.y, box.max.z));
+      fit.min.lerp(extra.min, st.cad);
+      fit.max.lerp(extra.max, st.cad);
+    }
+    fitCamera(deg(st.yaw), deg(Math.min(st.pitch, 89.99)), fit, w, h);
+
+    // Shaded model ↔ drawing
+    const bg = COL.bg3d.clone().lerp(COL.bgCad, flat);
     renderer.setClearColor(bg);
     container.style.background = `#${bg.getHexString()}`;
     for (const m of surfaceMats) {
-      m.opacity = m.userData.baseOpacity * (1 - cadT);
-      m.colorWrite = cadT < 0.999; // stays in the depth buffer to hide back edges
+      m.opacity = m.userData.baseOpacity * (1 - flat);
+      m.colorWrite = flat < 0.999; // stays in the depth buffer to hide back edges
     }
-    ground.material.opacity = 0.18 * (1 - cadT);
-    gradeAbove.constant = cadT > 0.5 ? 0.05 : 1e4;
+    ground.material.opacity = 0.18 * (1 - flat);
+    gradeAbove.constant = st.cad > 0.5 ? 0.05 : 1e4;
     for (const e of edgeMats.values()) {
-      e.solid.color.copy(COL.edge3d).lerp(e.cad, cadT);
-      e.solid.opacity = lerp(0.5, 1, cadT);
-      e.dashed.opacity = seg(cadT, 0.5, 1);
+      e.solid.color.copy(COL.edge3d).lerp(e.cad, st.cad);
+      e.solid.opacity = lerp(0.5, 1, st.cad) * (1 - drawT);
+      e.dashed.opacity = seg(st.cad, 0.5, 1);
     }
-    levelMat.opacity = cadT;
-    if (hatch) hatch.material.opacity = cadT * 0.9;
+    levelMat.opacity = st.cad;
+    if (hatch) hatch.material.opacity = st.cad * 0.9;
 
     renderer.render(scene, camera);
 
-    // HTML overlays
+    // HTML overlays: drawings, level tags, cut label
+    for (const [key, d] of Object.entries(drawings)) {
+      const t = (touring && st.show[key]) || 0;
+      d.el.style.opacity = t;
+      d.el.style.visibility = t > 0 ? "visible" : "hidden";
+      if (!t) continue;
+      const [ax, ay] = toScreen(d.world.a, w, h), [bx, by] = toScreen(d.world.b, w, h), [cx, cy] = toScreen(d.world.c, w, h);
+      const W = d.meta.width, H = d.meta.height;
+      d.el.style.transform = `matrix(${(bx - ax) / W},${(by - ay) / W},${(cx - ax) / H},${(cy - ay) / H},${ax},${ay})`;
+    }
     for (const l of labels) {
       const [x, y] = toScreen(l.pos, w, h);
-      l.el.style.opacity = cadT;
+      l.el.style.opacity = st.cad;
       l.el.querySelector(".n").style.display = compact ? "none" : "";
       l.el.style.fontSize = compact ? "9px" : "10px";
       // Narrow screens: elevation only, sitting on top of the line's end
@@ -506,9 +624,18 @@ export function mount(container, opts = {}) {
     if (cutVis) {
       const [x, y] = toScreen(tmp.set(box.max.x + 3, cutY, box.max.z + 3), w, h);
       cutLabel.textContent = `▲ ${feetInches(cutY)}`;
-      cutLabel.style.transform = `translate(${Math.min(x + 8, w - 90)}px, ${y - 11}px)`;
+      cutLabel.style.transform = `translate(${Math.min(Math.max(x + 8, 8), w - 90)}px, ${y - 11}px)`;
     }
-    cutLabel.style.opacity = cutVis;
+    cutLabel.style.opacity = cutVis ? 1 : 0;
+  }
+
+  const stateAt = (p) => (tour() ? tourState(p) : legacyState(p));
+  const flatAt = (p) => { const st = stateAt(p); return Math.max(st.cad, ...Object.values(st.show)); };
+
+  // Lets the page match captions to the timeline in use
+  function stage(p) {
+    if (tour()) return p < 0.2 ? "model" : p < 0.4 ? "plan" : p < 0.72 ? "section" : "elevation";
+    return p < 0.42 ? "model" : p < 0.66 ? "turn" : "drafting";
   }
 
   const ro = new ResizeObserver(requestRender);
@@ -522,15 +649,20 @@ export function mount(container, opts = {}) {
     loading.style.cssText = "position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#004227;font-size:13px;font-weight:600;letter-spacing:.4px";
     container.appendChild(loading);
     loadGlb(url)
-      .then((m) => !disposed && setModel(m))
+      .then(({ wrap, root }) => !disposed && setModel(wrap, root))
       .catch((err) => { console.warn("model-to-cad: using stand-in model,", err); if (!disposed) setModel(buildStandIn()); })
       .finally(() => loading.remove());
   } else {
     setModel(buildStandIn());
   }
 
+  loadDrawings(opts.drawingsUrl ?? CONFIG.drawingsUrl).catch((err) => console.warn("model-to-cad: no drawings,", err));
+
   return {
     setProgress(p) { progress = clamp01(p); requestRender(); },
+    stage: () => stage(progress),
+    stages: () => (tour() ? ["model", "plan", "section", "elevation"] : ["model", "turn", "drafting"]),
+    dark: () => flatAt(progress) > 0.5,
     setInsets(i) { insets = i; requestRender(); },
     destroy() {
       disposed = true;

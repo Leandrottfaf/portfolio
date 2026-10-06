@@ -33,7 +33,7 @@
     h1 em { font-style: normal; color: var(--gold); }
     .intro p { color: var(--cream-soft); font-size: 16px; max-width: 600px; }
 
-    .track { height: 380vh; position: relative; }
+    .track { height: 560vh; position: relative; }
     .sticky { position: sticky; top: 0; height: 100vh; height: 100svh; padding: 16px 0; }
     .stage { position: relative; height: 100%; border-radius: 12px; overflow: hidden; border: 1px solid var(--gold-border); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35); background: #ebe6da; }
     #viewer { position: absolute; inset: 0; }
@@ -67,7 +67,7 @@
       .intro { padding: 40px 0 28px; }
       h1 { font-size: 30px; }
       .intro p { font-size: 14px; }
-      .track { height: 300vh; }
+      .track { height: 440vh; }
       .sticky { padding: 10px 0; }
       .caption { top: 12px; left: 12px; right: 12px; max-width: none; padding: 12px 14px; }
       .caption .t { font-size: 16px; }
@@ -129,28 +129,34 @@
     const TEXT = {
       en: {
         tag: "From model to drawing",
-        title: "From BIM model to <em>CAD drawing</em>.",
-        desc: "Scroll: the model builds up level by level, turns into an orthographic view, then becomes the delivered elevation.",
+        title: "From BIM model to <em>CAD drawings</em>.",
+        desc: "Scroll: the model builds up level by level, then becomes each deliverable: the floor plan, the section and the elevation, as drawn.",
         hint: "Scroll to build ↓",
-        steps: [
-          { k: "BIM model", t: "Built from basement to ridge", d: "The Revit model rises level by level, cut by a moving section box." },
-          { k: "Orthographic view", t: "Aligned with the facade", d: "The camera turns to a perfectly straight-on orthographic view." },
-          { k: "Drafting", t: "The deliverable elevation", d: "The model becomes hidden-line CAD linework, complete with levels." },
-        ],
+        steps: {
+          model: { k: "BIM model", t: "Built from basement to ridge", d: "The Revit model rises level by level through a moving section plane." },
+          plan: { k: "Floor plan", t: "Cut at 4 ft, seen from above", d: "The cut drops to plan height and the model becomes the ground floor plan." },
+          section: { k: "Section", t: "A walk through the building", d: "A vertical section plane moves through the house and lands on the building section." },
+          elevation: { k: "Elevation", t: "The front, as drawn", d: "Straight on, the model becomes the hatched front elevation." },
+          turn: { k: "Orthographic view", t: "Aligned with the facade", d: "The camera turns to a perfectly straight-on orthographic view." },
+          drafting: { k: "Drafting", t: "The deliverable elevation", d: "The model becomes hidden-line CAD linework, complete with levels." },
+        },
         outroTitle: "One model, every deliverable.",
         outroDesc: "BIM models, elevations, plans and sections, all coordinated from the same source.",
         cta: "Discuss your project",
       },
       fr: {
         tag: "Du modèle au plan",
-        title: "Du modèle BIM au <em>dessin CAD</em>.",
-        desc: "Faites défiler : la maquette se construit niveau par niveau, pivote en vue orthogonale, puis devient l'élévation livrée.",
+        title: "Du modèle BIM aux <em>dessins CAD</em>.",
+        desc: "Faites défiler : la maquette se construit niveau par niveau, puis devient chaque livrable : le plan, la coupe et l'élévation, tels que dessinés.",
         hint: "Défilez pour construire ↓",
-        steps: [
-          { k: "Modèle BIM", t: "Construit du sous-sol au faîte", d: "La maquette Revit s'élève niveau par niveau, coupée par une boîte de section." },
-          { k: "Vue orthogonale", t: "Alignée sur la façade", d: "La caméra pivote jusqu'à une vue orthogonale parfaitement frontale." },
-          { k: "Mise en plan", t: "L'élévation livrable", d: "Le modèle devient un dessin CAD en lignes cachées, avec ses niveaux." },
-        ],
+        steps: {
+          model: { k: "Modèle BIM", t: "Construit du sous-sol au faîte", d: "La maquette Revit s'élève niveau par niveau à travers un plan de coupe mobile." },
+          plan: { k: "Plan", t: "Coupé à 4 pi, vu de haut", d: "La coupe descend à la hauteur du plan et la maquette devient le plan du rez-de-chaussée." },
+          section: { k: "Coupe", t: "Une traversée du bâtiment", d: "Un plan de coupe vertical traverse la maison et se pose sur la coupe du bâtiment." },
+          elevation: { k: "Élévation", t: "La façade, telle que dessinée", d: "De face, la maquette devient l'élévation avant avec ses hachures." },
+          turn: { k: "Vue orthogonale", t: "Alignée sur la façade", d: "La caméra pivote jusqu'à une vue orthogonale parfaitement frontale." },
+          drafting: { k: "Mise en plan", t: "L'élévation livrable", d: "Le modèle devient un dessin CAD en lignes cachées, avec ses niveaux." },
+        },
         outroTitle: "Un modèle, tous les livrables.",
         outroDesc: "Modèles BIM, élévations, plans et coupes, coordonnés à partir de la même source.",
         cta: "Discuter de votre projet",
@@ -165,7 +171,13 @@
     const mobile = matchMedia("(max-width: 640px)");
 
     let lang = navigator.language.toLowerCase().startsWith("fr") ? "fr" : "en";
-    let step = -1;
+    let step = null;
+    let stages = [];
+
+    function renderLabels() {
+      stages = viewer.stages();
+      steps.querySelector(".labels").innerHTML = stages.map((k) => `<span>${TEXT[lang].steps[k].k}</span>`).join("");
+    }
 
     function setLang(l) {
       lang = l;
@@ -174,21 +186,22 @@
       document.querySelectorAll("[data-i18n]").forEach((el) => (el.textContent = t[el.dataset.i18n]));
       document.querySelectorAll("[data-i18n-html]").forEach((el) => (el.innerHTML = t[el.dataset.i18nHtml]));
       document.querySelectorAll(".lang button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.lang === l));
-      steps.querySelector(".labels").innerHTML = t.steps.map((s) => `<span>${s.k}</span>`).join("");
-      showStep(Math.max(step, 0), true);
+      renderLabels();
+      showStep(viewer.stage(), true);
     }
 
-    function showStep(i, force) {
-      if (i === step && !force) return;
-      const changed = i !== step;
-      step = i;
-      const s = TEXT[lang].steps[i];
-      caption.querySelector(".k").textContent = `0${i + 1} / 03 — ${s.k}`;
+    function showStep(key, force) {
+      if (viewer.stages().join() !== stages.join()) { renderLabels(); force = true; } // model or drawings just loaded
+      if (key === step && !force) return;
+      const changed = key !== step;
+      step = key;
+      const i = stages.indexOf(key);
+      const s = TEXT[lang].steps[key];
+      caption.querySelector(".k").textContent = `0${i + 1} / 0${stages.length} — ${s.k}`;
       caption.querySelector(".t").textContent = s.t;
       caption.querySelector(".d").textContent = s.d;
       if (changed) { caption.classList.remove("enter"); void caption.offsetWidth; caption.classList.add("enter"); }
       steps.querySelectorAll(".labels span").forEach((el, j) => el.classList.toggle("on", j === i));
-      steps.classList.toggle("dark", i === 2);
     }
 
     document.querySelectorAll(".lang button").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
@@ -196,7 +209,12 @@
     const insets = () => (mobile.matches ? { top: 132, bottom: 64 } : { top: 24, bottom: 72 });
     const params = new URLSearchParams(location.search);
     const yaw = params.get("yaw");
-    const viewer = mount(document.getElementById("viewer"), { insets: insets(), modelUrl: params.get("model"), yawDeg: yaw === null ? undefined : +yaw });
+    const viewer = mount(document.getElementById("viewer"), {
+      insets: insets(),
+      modelUrl: params.get("model"),
+      yawDeg: yaw === null ? undefined : +yaw,
+      onReady: () => queueMicrotask(update), // model or drawings loaded: the timeline may have changed
+    });
     mobile.addEventListener("change", () => viewer.setInsets(insets()));
 
     let raf = 0;
@@ -207,7 +225,8 @@
       viewer.setProgress(p);
       bar.style.transform = `scaleX(${p})`;
       hint.classList.toggle("hidden", p > 0.02);
-      showStep(p < 0.42 ? 0 : p < 0.66 ? 1 : 2);
+      showStep(viewer.stage());
+      steps.classList.toggle("dark", viewer.dark());
     }
     const schedule = () => { if (!raf) raf = requestAnimationFrame(update); };
     addEventListener("scroll", schedule, { passive: true });
