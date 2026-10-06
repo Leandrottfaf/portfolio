@@ -236,8 +236,7 @@ function schedule() {
 function animatePieces(t) {
   for (const p of pieces) {
     const m = p.mesh, mat = m.material;
-    if (p.kind === "static") continue;
-    const x = seg(t, p.t0, p.t0 + p.dur);
+    const x = p.kind === "static" ? 1 : seg(t, p.t0, p.t0 + p.dur);
     m.visible = x > 0;
     m.position.set(0, 0, 0);
     p.reveal.constant = 1e4;
@@ -256,7 +255,7 @@ function animatePieces(t) {
       mat.transparent = mat.userData.transparent;
     } else {
       const e = p.kind === "fly" ? easeOutBack(x) : easeOut(x);
-      const lift = p.cls === "IfcRoof" ? 26 : p.kind === "fly" ? 3 : 6;
+      const lift = p.cls === "IfcRoof" ? 26 : p.kind === "fly" ? 3 : 1.5; // interiors settle in place
       m.position.y = lift * (1 - e);
       if (p.kind === "fly") m.position.z = -4 * (1 - e); // in from outside the front (local z is flipped)
       mat.transparent = true;
@@ -492,6 +491,7 @@ function render(t) {
     cap.querySelector(".t").textContent = TEXT[active.key][1];
   }
   cap.classList.toggle("dark", cad > 0.5);
+  document.getElementById("brand").classList.toggle("dark", cad > 0.5);
   document.getElementById("fade").style.opacity = 1 - seg(t, 0, 0.8) + seg(t, DURATION - 0.8, DURATION);
 }
 
