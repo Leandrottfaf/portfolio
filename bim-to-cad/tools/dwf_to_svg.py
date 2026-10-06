@@ -27,8 +27,12 @@ APEX = (0.342, 36.116, 3.318)  # roof apex in house.glb (x, y, z)
 
 VIEWS = {
     # Front elevation (dormer + double door). Sheet X grows to the model's -x.
+    # A-WALL is clipped at the basement level and C-TOPO (a grade line) left out:
+    # both ran out past the earth hatch.
     "elevation": {
         "region": (5470, 3900, 6720, 5010),
+        "skip_layers": {"C-TOPO"},
+        "layer_regions": {"A-WALL": (5470, 4215, 6720, 5010)},
         "glb": lambda X, Y: (APEX[0] - (X - 6107) / S, (Y - 4377) / S, -23.0),
     },
     # Ground floor plan, front at the top. Sheet X grows to +x, Y to -z.
@@ -72,8 +76,9 @@ def inside(p, box):
     return box[0] <= p[0] <= box[2] and box[1] <= p[1] <= box[3]
 
 
-def write_svg(prims, box, path):
+def write_svg(prims, box, path, layer_regions=None):
     X0, Y0, X1, Y1 = box
+    layer_regions = layer_regions or {}
     W, H = X1 - X0, Y1 - Y0
     sx = lambda X: round(X - X0, 1)
     sy = lambda Y: round(Y1 - Y, 1)
@@ -88,7 +93,7 @@ def write_svg(prims, box, path):
         heavy = p.weight > 0
         if p.kind in ("line", "poly") and not (p.kind == "poly" and p.fill):
             for a, b in zip(pts, pts[1:]):
-                seg = clip_segment(a, b, box)
+                seg = clip_segment(a, b, layer_regions.get(p.layer, box))
                 if seg:
                     (ax, ay), (bx, by) = seg
                     strokes[(col, heavy)].append(f"M{sx(ax)} {sy(ay)}L{sx(bx)} {sy(by)}")
@@ -150,7 +155,7 @@ def main(dwf, outdir):
         box = view["region"]
         skip = view.get("skip_layers", set())
         mine = [p for p in sheet.prims if p.points and p.layer not in skip]
-        W, H = write_svg(mine, box, os.path.join(outdir, f"{key}.svg"))
+        W, H = write_svg(mine, box, os.path.join(outdir, f"{key}.svg"), view.get("layer_regions", {}))
         X0, Y0, X1, Y1 = box
         to_glb = view["glb"]
         meta[key] = {

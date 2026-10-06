@@ -2,10 +2,12 @@
 
     pip install ifcopenshell trimesh numpy
     python3 tools/ifc_to_glb.py path/to/model.ifc models/house.glb
+    python3 tools/ifc_to_glb.py path/to/model.ifc film/house-elements.glb --per-element
 
 Output is in feet, Y up. Geometry is merged per IFC class and colour, and every
 mesh is named after its class (IfcWall, IfcWindow, ...) so the viewer can pick
-CAD colours. Only geometry and colours are written: no properties or metadata.
+CAD colours. With --per-element, each element keeps its own meshes (named
+"<class>-<n>|<element id>") so the film can bring them in one by one. Only geometry and colours are written: no properties or metadata.
 Prints the building storeys so they can be copied into CONFIG.levels.
 """
 
@@ -36,7 +38,7 @@ def is_external(element):
     return any(p.get("IsExternal") is True for p in psets.values())
 
 
-def main(src, dst):
+def main(src, dst, per_element=False):
     model = ifcopenshell.open(src)
 
     settings = ifcopenshell.geom.settings()
@@ -74,6 +76,10 @@ def main(src, dst):
         # exterior ones on the elevation.
         if cls == "IfcDoor" and (is_external(element) or on_envelope(v)):
             cls = "IfcDoor-ext"
+        # The site pad (a proxy much larger than the house) is named "Site" so the
+        # viewers can swap it for their graded terrain.
+        if cls == "IfcBuildingElementProxy" and (v.max(0) - v.min(0))[[0, 2]].min() > 60:
+            cls = "Site"
         for mi in np.unique(mids):
             m = mats[mi] if 0 <= mi < len(mats) else None
             rgb = tuple(round(c, 3) for c in m.diffuse.components) if m else (0.7, 0.7, 0.7)
@@ -81,22 +87,22 @@ def main(src, dst):
             alpha = round(1 - t, 3)
             sel = f[mids == mi]
             used, inv = np.unique(sel, return_inverse=True)
-            grp = groups[(cls, rgb, alpha)]
+            grp = groups[(cls, rgb, alpha, element.id() if per_element else 0)]
             grp["v"].append(v[used])
             grp["f"].append(inv.reshape(-1, 3) + grp["n"])
             grp["n"] += len(used)
     count = len(shapes)
 
     walls = max((k for k in groups if k[0] == "IfcWallStandardCase"), key=lambda k: groups[k]["n"], default=None)
-    for lo, hi in WALL_PATCHES if walls else []:
+    for k, (lo, hi) in enumerate(WALL_PATCHES if walls else []):
         b = trimesh.creation.box(bounds=[lo, hi])
-        grp = groups[walls]
+        grp = groups[walls[:3] + (f"patch{k}",)] if per_element else groups[walls]
         grp["v"].append(b.vertices)
         grp["f"].append(b.faces + grp["n"])
         grp["n"] += len(b.vertices)
 
     scene = trimesh.Scene()
-    for i, ((cls, rgb, alpha), grp) in enumerate(sorted(groups.items())):
+    for i, ((cls, rgb, alpha, eid), grp) in enumerate(sorted(groups.items(), key=lambda kv: tuple(map(str, kv[0])))):
         mesh = trimesh.Trimesh(np.vstack(grp["v"]), np.vstack(grp["f"]), process=True)
         color = [int(c * 255) for c in rgb] + [int(alpha * 255)]
         mesh.visual = trimesh.visual.TextureVisuals(
@@ -105,7 +111,8 @@ def main(src, dst):
                 alphaMode="BLEND" if alpha < 0.99 else "OPAQUE",
             )
         )
-        scene.add_geometry(mesh, node_name=f"{cls}-{i}", geom_name=f"{cls}-{i}")
+        name = f"{cls}-{i}|{eid}" if per_element else f"{cls}-{i}"
+        scene.add_geometry(mesh, node_name=name, geom_name=name)
     scene.export(dst)
 
     lo, hi = scene.bounds
@@ -115,4 +122,4 @@ def main(src, dst):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    main(sys.argv[1], sys.argv[2], per_element="--per-element" in sys.argv[3:])
