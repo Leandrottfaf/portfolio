@@ -17,6 +17,7 @@
 // the house is shown instead.
 
 import * as THREE from "three";
+import { buildTerrain, footprintsFrom, rectOf } from "./terrain.js";
 
 const CONFIG = {
   model: {
@@ -68,6 +69,9 @@ const CAD = {
 // and the exported wall surfaces have hairline cracks their edges would show through.
 // Interior doors are the IfcDoor meshes without "-ext" (see tools/ifc_to_glb.py).
 const INTERIOR = /^(Ifc(FlowTerminal|FlowSegment|FurnishingElement|BuildingElementProxy)|IfcDoor-\d)/;
+// Everything inside the house is shown in one neutral grey, so the envelope reads first
+const GREY_INSIDE = /^(Ifc(FlowTerminal|FlowSegment|FurnishingElement|Covering|Stair|StairFlight|Railing)|IfcDoor-\d)/;
+const INSIDE_GREY = new THREE.Color("#c9c4ba");
 
 const clamp01 = (v) => Math.min(1, Math.max(0, v));
 const seg = (p, a, b) => clamp01((p - a) / (b - a));
@@ -102,7 +106,6 @@ function buildStandIn() {
     trim: new THREE.MeshStandardMaterial({ color: "#d9d3c7", roughness: 0.8 }),
     roof: new THREE.MeshStandardMaterial({ color: "#4b5866", roughness: 0.7, flatShading: true }),
     found: new THREE.MeshStandardMaterial({ color: "#8d8a84", roughness: 1 }),
-    slab: new THREE.MeshStandardMaterial({ color: "#a29d94", roughness: 1 }),
     frame: new THREE.MeshStandardMaterial({ color: "#26303a", roughness: 0.5 }),
     glass: new THREE.MeshStandardMaterial({ color: "#7fa6bd", roughness: 0.1, metalness: 0.3 }),
     door: new THREE.MeshStandardMaterial({ color: "#c98d45", roughness: 0.6 }),
@@ -120,9 +123,9 @@ function buildStandIn() {
   const W = 50, D = 50, H = 10.2, T = 1; // footprint, wall height, wall thickness
   const hw = W / 2, hd = D / 2;
 
-  // Site slab and basement (front half of the footprint)
-  box(64, 0.6, 62, 0, -0.6, 2, M.slab, CAD.site);
+  // Basement (front half of the footprint); the paving and earth come from terrain.js
   box(W, 8.4, 26, 0, -9.083, hd - 13, M.found);
+  g.userData.footprints = { site: { minX: -32, maxX: 32, minZ: -29, maxZ: 33 }, footprint: { minX: -hw, maxX: hw, minZ: -hd, maxZ: hd }, basement: { minX: -hw, maxX: hw, minZ: hd - 26, maxZ: hd } };
 
   // Walls
   box(W, H, T, 0, 0, hd - T / 2, M.wall);
@@ -284,6 +287,7 @@ export function mount(container, opts = {}) {
     for (const mesh of meshes) {
       const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
       for (const m of mats) {
+        if (GREY_INSIDE.test(mesh.name) && m.color) m.color.copy(INSIDE_GREY);
         m.transparent = true;
         m.side = THREE.DoubleSide;
         m.clippingPlanes = [cutBelow, sectionCut];
@@ -333,45 +337,26 @@ export function mount(container, opts = {}) {
     house = new THREE.Box3();
     root.traverse((o) => { if (o.isMesh && /^Ifc(Wall|Roof)/.test(o.name)) house.expandByObject(o); });
     if (house.isEmpty()) house.copy(box);
-    addTerrain();
+    addTerrain(root);
     buildLevels();
     placeDrawings();
     requestRender();
     opts.onReady?.();
   }
 
-  // A block of earth under the site, so the basement sits in the ground. It is
-  // cut like the model: it builds up from below and opens in section.
-  function addTerrain() {
-    const top = glbRoot ? -1.02 : -0.62; // just under the site slab (1 ft thick in the Revit model, 0.6 ft in the stand-in)
-    const bottom = box.min.y - 4;
-    const w = box.max.x - box.min.x, d = box.max.z - box.min.z, h = top - bottom;
-    const cv = document.createElement("canvas");
-    cv.width = cv.height = 256;
-    const ctx = cv.getContext("2d");
-    ctx.fillStyle = "#7d6750";
-    ctx.fillRect(0, 0, 256, 256);
-    for (let y = 0; y < 256; y += 2) { // soil strata with a little grain
-      const k = Math.sin(y * 0.11) * 10 + Math.sin(y * 0.031) * 14 + (Math.random() - 0.5) * 10;
-      ctx.fillStyle = `rgba(${k > 0 ? "255,235,205" : "40,25,15"},${Math.min(0.22, Math.abs(k) / 90)})`;
-      ctx.fillRect(0, y, 256, 2);
+  // Paving and earth from terrain.js, replacing the Revit site pad: flat paving
+  // 7" below the door thresholds, earth cut out around the basement. It is cut like
+  // the model: it builds up from below and opens in section.
+  function addTerrain(root) {
+    let fp = root.userData.footprints;
+    if (!fp) {
+      const walls = [], sites = [];
+      root.traverse((o) => { if (o.isMesh && /^IfcWall/.test(o.name)) walls.push(o); if (o.isMesh && /^Site/.test(o.name)) sites.push(o); });
+      const site = new THREE.Box3();
+      for (const m of sites) { site.expandByObject(m); m.visible = false; }
+      fp = { ...footprintsFrom(walls), site: rectOf(site.isEmpty() ? box : site) };
     }
-    for (let i = 0; i < 900; i++) {
-      ctx.fillStyle = `rgba(30,20,10,${Math.random() * 0.25})`;
-      ctx.fillRect(Math.random() * 256, Math.random() * 256, 1 + Math.random() * 2, 1);
-    }
-    const tex = new THREE.CanvasTexture(cv);
-    tex.colorSpace = THREE.SRGBColorSpace;
-    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
-    tex.repeat.set(w / 14, h / 14);
-    const earth = new THREE.MeshStandardMaterial({ map: tex, roughness: 1 });
-    const grass = new THREE.MeshStandardMaterial({ color: "#8e9a73", roughness: 1 });
-    const under = new THREE.MeshStandardMaterial({ color: "#5c4a3a", roughness: 1 });
-    const mesh = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), [earth, earth, grass, under, earth, earth]);
-    mesh.name = "Terrain";
-    mesh.position.set((box.min.x + box.max.x) / 2, (top + bottom) / 2, (box.min.z + box.max.z) / 2);
-    const g = new THREE.Group();
-    g.add(mesh);
+    const g = buildTerrain({ ...fp, bottom: box.min.y - 4 });
     model.add(g);
     prepare(g);
   }

@@ -11,6 +11,7 @@
 
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { buildTerrain, footprintsFrom, rectOf } from "../terrain.js";
 
 const params = new URLSearchParams(location.search);
 const LANG = params.get("lang") === "fr" ? "fr" : "en";
@@ -81,7 +82,7 @@ const sectionCut = new THREE.Plane(new THREE.Vector3(-1, 0, 0), 1e4);
 const clipping = [cutBelow, sectionCut];
 
 // ---------------------------------------------------------------------------
-// Textures: concrete block running bond for exterior walls, soil for the terrain
+// Texture: concrete block running bond for the exterior walls (the terrain is in ../terrain.js)
 
 function canvasTexture(draw, size = 512) {
   const cv = document.createElement("canvas");
@@ -114,20 +115,6 @@ const blockTex = canvasTexture((ctx, s) => {
   }
 });
 
-const soilTex = canvasTexture((ctx, s) => {
-  ctx.fillStyle = "#7d6750";
-  ctx.fillRect(0, 0, s, s);
-  for (let y = 0; y < s; y += 2) {
-    const k = Math.sin(y * 0.055) * 10 + Math.sin(y * 0.016) * 14 + (rand() - 0.5) * 10;
-    ctx.fillStyle = `rgba(${k > 0 ? "255,235,205" : "40,25,15"},${Math.min(0.22, Math.abs(k) / 90)})`;
-    ctx.fillRect(0, y, s, 2);
-  }
-  for (let i = 0; i < 3000; i++) {
-    ctx.fillStyle = `rgba(30,20,10,${rand() * 0.25})`;
-    ctx.fillRect(rand() * s, rand() * s, 1 + rand() * 3, 1 + rand());
-  }
-});
-
 // Box-projected UVs (in feet / tile size) so textures sit at true scale on any face
 function boxUV(geometry, tile) {
   const g = geometry.index ? geometry.toNonIndexed() : geometry;
@@ -152,7 +139,10 @@ function boxUV(geometry, tile) {
 // ---------------------------------------------------------------------------
 // Model
 
-let root, house = new THREE.Box3(), site = new THREE.Box3();
+let root, house = new THREE.Box3(), site = new THREE.Box3(), sitePad = new THREE.Box3(), footprints;
+// Inside the house everything is one neutral grey, so the envelope reads first
+const INSIDE = /^(Ifc(FlowTerminal|FlowSegment|FurnishingElement|Covering|Stair|StairFlight|Railing)|IfcDoor-\d)/;
+const INSIDE_GREY = new THREE.Color("#c9c4ba");
 const pieces = []; // { mesh, cls, bb, reveal, centre, t0, kind, dur }
 
 async function loadModel() {
@@ -173,6 +163,9 @@ async function loadModel() {
     if (/^Ifc(Wall|Roof)/.test(m.name)) house.union(bb);
     site.union(bb);
   }
+  sitePad.makeEmpty();
+  for (const m of meshes) if (/^Site/.test(m.name)) sitePad.union(new THREE.Box3().setFromObject(m));
+  footprints = footprintsFrom(meshes.filter((m) => /^IfcWall/.test(m.name)));
   // Exterior walls (touching the outer wall line) get the block texture
   const env = house.clone();
   const onEnvelope = (bb) => bb.min.x - env.min.x < 1.6 || env.max.x - bb.max.x < 1.6 || bb.min.z - env.min.z < 1.6 || env.max.z - bb.max.z < 1.6;
@@ -186,11 +179,15 @@ async function loadModel() {
     mat.clippingPlanes = [...clipping, reveal];
     mat.clipShadows = true;
     mat.side = THREE.DoubleSide;
-    if (/^IfcWall/.test(cls) && onEnvelope(bb) && bb.max.y > 0.5) {
+    const exteriorWall = /^IfcWall/.test(cls) && onEnvelope(bb) && bb.max.y > 0.5;
+    if (exteriorWall) {
       m.geometry = boxUV(m.geometry, BLOCK_TILE_FT);
       mat.map = blockTex;
       mat.color.multiplyScalar(1.15);
+    } else if (INSIDE.test(m.name) || (/^IfcWall/.test(cls) && bb.max.y > 0.5 && bb.max.y < 12)) {
+      mat.color.copy(INSIDE_GREY); // interior walls, doors, fixtures, furniture, ceilings, stairs
     }
+    if (cls === "Site") m.visible = false; // replaced by the terrain's paving
     mat.userData.opacity = mat.opacity;
     mat.userData.transparent = mat.transparent;
     m.material = mat;
@@ -216,7 +213,7 @@ function schedule() {
   for (const p of pieces) {
     const d = p.centre.distanceTo(start) / maxD, j = rand() * 0.6;
     let t0, kind;
-    if (big(p)) { t0 = -1; kind = "static"; } // site slab: already there
+    if (big(p)) { t0 = -1; kind = "static"; } // site pad: replaced by the terrain
     else if (p.cls === "IfcRoof") { t0 = 14.2; kind = "drop"; }
     else if (p.bb.max.y > 0.3 && p.bb.intersectsBox(closeUp)) {
       t0 = 0.3 + clamp01(p.bb.min.y / 12) * 2 + j * 0.4; // bottom up, all in place by ~4 s
@@ -237,7 +234,7 @@ function animatePieces(t) {
   for (const p of pieces) {
     const m = p.mesh, mat = m.material;
     const x = p.kind === "static" ? 1 : seg(t, p.t0, p.t0 + p.dur);
-    m.visible = x > 0;
+    m.visible = x > 0 && p.cls !== "Site";
     m.position.set(0, 0, 0);
     p.reveal.constant = 1e4;
     if (x <= 0 || x >= 1) {
@@ -265,20 +262,21 @@ function animatePieces(t) {
 }
 
 function addTerrain() {
-  const top = -1.02, bottom = site.min.y - 4;
-  const w = site.max.x - site.min.x, d = site.max.z - site.min.z, h = top - bottom;
-  const earth = new THREE.MeshStandardMaterial({ map: soilTex, roughness: 1, clippingPlanes: clipping, clipShadows: true, side: THREE.DoubleSide });
-  earth.map = soilTex.clone();
-  earth.map.repeat.set(w / 16, h / 16);
-  earth.map.needsUpdate = true;
-  const grass = new THREE.MeshStandardMaterial({ color: "#8e9a73", roughness: 1, clippingPlanes: clipping, side: THREE.DoubleSide });
-  const under = new THREE.MeshStandardMaterial({ color: "#5c4a3a", roughness: 1, clippingPlanes: clipping, side: THREE.DoubleSide });
-  const mesh = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), [earth, earth, grass, under, earth, earth]);
-  mesh.position.set((site.min.x + site.max.x) / 2, (top + bottom) / 2, (site.min.z + site.max.z) / 2);
-  mesh.receiveShadow = true;
-  scene.add(mesh);
-  terrain = mesh;
+  terrain = buildTerrain({ ...footprints, site: rectOf(sitePad.isEmpty() ? site : sitePad), bottom: site.min.y - 4 });
+  terrainMats = [];
+  terrain.traverse((o) => {
+    if (!o.isMesh) return;
+    o.receiveShadow = true;
+    for (const m of o.material) {
+      m.clippingPlanes = clipping;
+      m.clipShadows = true;
+      m.side = THREE.DoubleSide;
+      terrainMats.push(m);
+    }
+  });
+  scene.add(terrain);
 }
+let terrainMats = [];
 let terrain;
 
 // ---------------------------------------------------------------------------
@@ -456,7 +454,7 @@ function render(t) {
     if (modelO < 1) { m.transparent = true; m.opacity = m.userData.opacity * modelO; }
     m.colorWrite = modelO > 0.001;
   });
-  for (const m of terrain.material) { m.transparent = modelO < 1; m.opacity = modelO; m.colorWrite = modelO > 0.001; }
+  for (const m of terrainMats) { m.transparent = modelO < 1; m.opacity = modelO; m.colorWrite = modelO > 0.001; }
 
   renderer.render(scene, cam);
 

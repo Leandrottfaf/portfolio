@@ -76,6 +76,10 @@ def main(src, dst, per_element=False):
         # exterior ones on the elevation.
         if cls == "IfcDoor" and (is_external(element) or on_envelope(v)):
             cls = "IfcDoor-ext"
+        # The site pad (a proxy much larger than the house) is named "Site" so the
+        # viewers can swap it for their graded terrain.
+        if cls == "IfcBuildingElementProxy" and (v.max(0) - v.min(0))[[0, 2]].min() > 60:
+            cls = "Site"
         for mi in np.unique(mids):
             m = mats[mi] if 0 <= mi < len(mats) else None
             rgb = tuple(round(c, 3) for c in m.diffuse.components) if m else (0.7, 0.7, 0.7)
