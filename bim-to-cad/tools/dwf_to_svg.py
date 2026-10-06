@@ -22,17 +22,19 @@ from collections import defaultdict
 from w2d import W2D
 
 SHEET_X0 = 2147470000  # sheet x values are offset by this
+HATCH_LAYERS = {"A-HATCH", "A-DETL-GENF"}  # wall/block grid and earth hatch
+HATCH_OPACITY = 0.38
 S = 16.613              # sheet units per foot
 APEX = (0.342, 36.116, 3.318)  # roof apex in house.glb (x, y, z)
 
 VIEWS = {
     # Front elevation (dormer + double door). Sheet X grows to the model's -x.
-    # A-WALL is clipped at the basement level and C-TOPO (a grade line) left out:
-    # both ran out past the earth hatch.
+    # A-WALL and A-GENM are clipped at grade and C-TOPO (a grade line) left out:
+    # footing lines, break marks and a stray line ran through or past the earth hatch.
     "elevation": {
         "region": (5470, 3900, 6720, 5010),
         "skip_layers": {"C-TOPO"},
-        "layer_regions": {"A-WALL": (5470, 4215, 6720, 5010)},
+        "layer_regions": {"A-WALL": (5470, 4372, 6720, 5010), "A-GENM": (5470, 4370, 6720, 5010)},
         "glb": lambda X, Y: (APEX[0] - (X - 6107) / S, (Y - 4377) / S, -23.0),
     },
     # Ground floor plan, front at the top. Sheet X grows to +x, Y to -z.
@@ -76,6 +78,36 @@ def inside(p, box):
     return box[0] <= p[0] <= box[2] and box[1] <= p[1] <= box[3]
 
 
+def drop_slope_tags(prims):
+    """Remove roof-slope tags ("12/12" on A-NOTE) and their arrows: short diagonal
+    strokes and small arrowheads right next to the label. The shingle hatch is made
+    of horizontal and vertical strokes, so it is left alone."""
+    tags = [p.points[0] for p in prims if p.kind == "text" and p.layer == "A-NOTE" and "/12" in p.data[2]]
+
+    def near_tag(p):
+        return any(all(math.dist(q, t) < 130 for q in p.points) for t in tags)
+
+    def near(p, r):
+        return any(all(math.dist(q, t) < r for q in p.points) for t in tags)
+
+    def slope_mark(p):
+        if p.kind == "text":
+            return p.layer == "A-NOTE"
+        if p.kind == "tri":  # arrowhead
+            xs = [q[0] for q in p.points]; ys = [q[1] for q in p.points]
+            return max(xs) - min(xs) < 14 and max(ys) - min(ys) < 14
+        if p.kind in ("line", "poly") and len(p.points) == 2:
+            (ax, ay), (bx, by) = p.points
+            length = math.dist(p.points[0], p.points[1])
+            sloped = abs(bx - ax) > 2 and abs(by - ay) > 2
+            if sloped:  # the arrow, parallel to the roof it labels, and its short ticks
+                return length < 110 and p.layer in ("A-ROOF", "A-NOTE", "A-DETL-THIN")
+            return p.layer == "A-ROOF" and length < 25 and near(p, 60)  # its little tick
+        return False
+
+    return [p for p in prims if not (near_tag(p) and slope_mark(p))]
+
+
 def write_svg(prims, box, path, layer_regions=None):
     X0, Y0, X1, Y1 = box
     layer_regions = layer_regions or {}
@@ -84,19 +116,22 @@ def write_svg(prims, box, path, layer_regions=None):
     sy = lambda Y: round(Y1 - Y, 1)
     hexc = lambda c: "#%02x%02x%02x" % c
 
-    strokes = defaultdict(list)  # (colour, heavy) → path segments
+    strokes = defaultdict(list)  # (colour, heavy, faint) → path segments
     fills = defaultdict(list)
     texts = []
     for p in prims:
         pts = [(X - SHEET_X0, Y) for X, Y in p.points]
         col = hexc(p.color)
         heavy = p.weight > 0
+        faint = p.layer in HATCH_LAYERS
         if p.kind in ("line", "poly") and not (p.kind == "poly" and p.fill):
             for a, b in zip(pts, pts[1:]):
                 seg = clip_segment(a, b, layer_regions.get(p.layer, box))
                 if seg:
                     (ax, ay), (bx, by) = seg
-                    strokes[(col, heavy)].append(f"M{sx(ax)} {sy(ay)}L{sx(bx)} {sy(by)}")
+                    # roof shingles: the many short strokes on A-ROOF
+                    hatch = faint or (p.layer == "A-ROOF" and math.dist(a, b) < 40)
+                    strokes[(col, heavy, hatch)].append(f"M{sx(ax)} {sy(ay)}L{sx(bx)} {sy(by)}")
         elif p.kind == "poly" and p.fill and len(pts) > 2:
             if all(inside(q, box) for q in pts):
                 fills[col].append("M" + "L".join(f"{sx(x)} {sy(y)}" for x, y in pts) + "Z")
@@ -120,7 +155,7 @@ def write_svg(prims, box, path, layer_regions=None):
                 t = t0 + (t1 - t0) * k / steps
                 large = 1 if (t1 - t0) / steps > math.pi else 0
                 d += f"A{r} {r} 0 {large} 0 {sx(cx + r * math.cos(t))} {sy(cy + r * math.sin(t))}"
-            strokes[(col, heavy)].append(d)
+            strokes[(col, heavy, False)].append(d)
         elif p.kind == "text":
             (x, y), (h, rot, text) = pts[0], p.data
             if inside((x, y), box):
@@ -133,8 +168,10 @@ def write_svg(prims, box, path, layer_regions=None):
            '<g fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">']
     for col, segs in fills.items():
         out.append(f'<path fill="{col}" stroke="{col}" stroke-width="0.6" vector-effect="non-scaling-stroke" d="{"".join(segs)}"/>')
-    for (col, heavy), segs in strokes.items():
-        out.append(f'<path stroke="{col}" stroke-width="{1.6 if heavy else 1}" vector-effect="non-scaling-stroke" d="{"".join(segs)}"/>')
+    # Hatches first and faint, so outlines, openings and level lines read on top
+    for (col, heavy, faint), segs in sorted(strokes.items(), key=lambda kv: not kv[0][2]):
+        op = f' stroke-opacity="{HATCH_OPACITY}"' if faint else ""
+        out.append(f'<path stroke="{col}" stroke-width="{1.6 if heavy else 1}"{op} vector-effect="non-scaling-stroke" d="{"".join(segs)}"/>')
     out.append("</g>")
     if texts:
         out.append('<g font-family="Arial, Helvetica, sans-serif">' + "".join(texts) + "</g>")
@@ -154,7 +191,7 @@ def main(dwf, outdir):
     for key, view in VIEWS.items():
         box = view["region"]
         skip = view.get("skip_layers", set())
-        mine = [p for p in sheet.prims if p.points and p.layer not in skip]
+        mine = drop_slope_tags([p for p in sheet.prims if p.points and p.layer not in skip])
         W, H = write_svg(mine, box, os.path.join(outdir, f"{key}.svg"), view.get("layer_regions", {}))
         X0, Y0, X1, Y1 = box
         to_glb = view["glb"]
