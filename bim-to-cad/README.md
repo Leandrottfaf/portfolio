@@ -17,8 +17,9 @@ The drawings are the real AutoCAD sheet, converted to vector SVG and pinned to t
 | `model-to-cad.js` | three.js viewer: cuts, camera, drawing overlays, timeline |
 | `models/Michel-Menard.ifc` | Source model, exported from Revit 2025 (IFC 2x3 Coordination View 2.0) |
 | `models/house.glb` | Web model generated from the IFC (feet, Y up, ~7 MB) |
+| `film/` | The same story as a rendered video (see below) |
 | `drawings/*.svg`, `drawings/drawings.json` | Plan, section and elevation from the AutoCAD sheet, with their anchors on the model |
-| `tools/ifc_to_glb.py` | IFC → `house.glb` converter |
+| `tools/ifc_to_glb.py` | IFC → `house.glb` converter (`--per-element` for the film) |
 | `tools/dwf_to_svg.py`, `tools/w2d.py` | DWF sheet → drawing SVGs (includes a small decoder for the DWF's W2D vector stream) |
 
 Once GitHub Pages publishes it, the page is at `…/portfolio/bim-to-cad/`. Locally, run `python3 -m http.server` from the repo root and open `http://localhost:8000/bim-to-cad/`. Opening the HTML file directly with `file://` won't work, because browsers block ES modules there.
@@ -52,6 +53,28 @@ Any other `.glb` can be previewed with `?model=path/to/file.glb`. For a file tha
 3. `VIEWS` in `tools/dwf_to_svg.py` says where each view sits on the sheet, which layers to leave out (the plan drops `A-NOTE`, the section marks and their long cut lines), and how each view maps onto the model. The mapping uses the sheet scale (16.613 units per foot), the roof apex, and the ground floor level line of each view. If the sheet layout changes, update the `region` boxes and those reference points; the comments in the file explain each one. `cut_x` is where the section plane stops, the section line in model coordinates.
 
 The DWF itself isn't kept in the repo. Its metadata includes local project folder paths, while the SVGs only carry the drawing.
+
+## Video
+
+`film/` is a timed version of the presentation, rendered frame by frame into an MP4 (about 52 s, 1920×1080, 30 fps):
+
+1. **0–19 s:** a close-up at the front wall while walls, doors and windows assemble around the camera. Walls rise course by course with a concrete block texture, and windows and doors fly in. The camera then pulls back and orbits as the rest builds, and the roof drops in last.
+2. **19–21 s:** the perspective flattens into an orthographic view.
+3. **21–45 s:** the CAD tour: floor plan, the section walking through the house, then the front elevation, each landing on the actual drawing.
+4. **45–52 s:** all three drawings side by side.
+
+| File | Purpose |
+|---|---|
+| `film/index.html`, `film/film.js` | The film; `window.film.render(t)` draws the frame at `t` seconds. Open `film/?t=12` to preview a moment. |
+| `film/house-elements.glb` | The model with one mesh per element, so each can arrive on its own (`python3 tools/ifc_to_glb.py models/Michel-Menard.ifc film/house-elements.glb --per-element`) |
+| `film/render.mjs` | Renders every frame with Playwright and pipes them to ffmpeg (libx264) |
+
+```
+python3 -m http.server 8000      # from the repo root
+node bim-to-cad/film/render.mjs --url http://localhost:8000/bim-to-cad/film/ --out film.mp4 [--lang fr] [--step 4]
+```
+
+`--lang fr` renders the French captions; `--step 4` renders every 4th frame for a quick preview.
 
 ## Tuning
 
