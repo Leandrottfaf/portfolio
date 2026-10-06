@@ -153,7 +153,7 @@ function boxUV(geometry, tile) {
 // Model
 
 let root, house = new THREE.Box3(), site = new THREE.Box3();
-const pieces = []; // { mesh, kind, t0, dur, minY, from }
+const pieces = []; // { mesh, cls, bb, reveal, centre, t0, kind, dur }
 
 async function loadModel() {
   const gltf = await new GLTFLoader().loadAsync("house-elements.glb");
@@ -182,7 +182,8 @@ async function loadModel() {
     const bb = new THREE.Box3().setFromObject(m);
     m.castShadow = m.receiveShadow = true;
     const mat = m.material.clone();
-    mat.clippingPlanes = clipping;
+    const reveal = new THREE.Plane(new THREE.Vector3(0, -1, 0), 1e4); // per element: walls rise behind it
+    mat.clippingPlanes = [...clipping, reveal];
     mat.clipShadows = true;
     mat.side = THREE.DoubleSide;
     if (/^IfcWall/.test(cls) && onEnvelope(bb) && bb.max.y > 0.5) {
@@ -194,33 +195,41 @@ async function loadModel() {
     mat.userData.transparent = mat.transparent;
     m.material = mat;
     const local = new THREE.Box3().setFromBufferAttribute(m.geometry.attributes.position);
-    pieces.push({ mesh: m, cls, bb, minY: local.min.y, centre: bb.getCenter(new THREE.Vector3()) });
+    pieces.push({ mesh: m, cls, bb, reveal, centre: bb.getCenter(new THREE.Vector3()) });
   }
   schedule();
   addTerrain();
+  window.__house = { cx: house.getCenter(new THREE.Vector3()).x, front: house.max.z }; // for inspection previews
 }
 
-// When each element arrives. Site and basement first (mostly underground), then the
-// ground floor spreading out from where the camera starts, then the upper parts and
-// the roof.
+// When each element arrives. Site and basement first (mostly underground). Everything
+// in the opening close-up assembles while the camera is there, done by ~4 s, so that
+// shot never lingers on a half-built wall. Then the rest of the ground floor spreads
+// out from there, then the upper parts, and the roof last.
 function schedule() {
   const start = new THREE.Vector3(house.min.x + 12, 4, house.max.z);
+  const closeUp = new THREE.Box3(new THREE.Vector3(house.min.x - 2, -0.5, house.max.z - 3), new THREE.Vector3(house.min.x + 30, 14, house.max.z + 4));
   const big = (p) => p.bb.getSize(new THREE.Vector3()).x > 60;
   const maxD = Math.max(...pieces.map((p) => p.centre.distanceTo(start)));
+  const kindOf = (p) => /^Ifc(Wall|Column|Slab|Stair|Railing)/.test(p.cls) ? "grow"
+    : /^Ifc(Door|Window|Plate|Member|CurtainWall)/.test(p.cls) ? "fly" : "drop";
   for (const p of pieces) {
     const d = p.centre.distanceTo(start) / maxD, j = rand() * 0.6;
     let t0, kind;
     if (big(p)) { t0 = -1; kind = "static"; } // site slab: already there
     else if (p.cls === "IfcRoof") { t0 = 14.2; kind = "drop"; }
+    else if (p.bb.max.y > 0.3 && p.bb.intersectsBox(closeUp)) {
+      t0 = 0.3 + clamp01(p.bb.min.y / 12) * 2 + j * 0.4; // bottom up, all in place by ~4 s
+      kind = kindOf(p);
+    }
     else if (p.bb.max.y < 0.3) { t0 = 0.2 + d * 1.6 + j * 0.5; kind = "grow"; } // basement
     else if (p.bb.min.y > 8.5) { t0 = 11 + d * 2.5 + j; kind = /^Ifc(Wall|Column)/.test(p.cls) ? "grow" : "drop"; }
     else {
-      t0 = 0.3 + d * 10 + j;
-      kind = /^Ifc(Wall|Column|Slab|Stair|Railing)/.test(p.cls) ? "grow"
-        : /^Ifc(Door|Window|Plate|Member|CurtainWall)/.test(p.cls) ? "fly" : "drop";
+      t0 = 2.5 + d * 8.5 + j;
+      kind = kindOf(p);
     }
     if (/^IfcSlab/.test(p.cls) && p.bb.min.y > -1.5 && p.bb.max.y < 1) t0 = Math.min(t0, 1 + d * 2); // ground floor slab early
-    Object.assign(p, { t0, kind, dur: kind === "grow" ? 1.6 : kind === "drop" && p.cls === "IfcRoof" ? 2.2 : 1.1 });
+    Object.assign(p, { t0, kind, dur: kind === "grow" ? 1.4 : kind === "drop" && p.cls === "IfcRoof" ? 2.2 : 1.1 });
   }
 }
 
@@ -231,19 +240,18 @@ function animatePieces(t) {
     const x = seg(t, p.t0, p.t0 + p.dur);
     m.visible = x > 0;
     m.position.set(0, 0, 0);
-    m.scale.set(1, 1, 1);
+    p.reveal.constant = 1e4;
     if (x <= 0 || x >= 1) {
       mat.opacity = mat.userData.opacity;
       mat.transparent = mat.userData.transparent;
       continue;
     }
     if (p.kind === "grow") {
-      // Rise course by course (8" block courses) from the element's base
+      // Rise course by course (8" block courses) from the element's base. A clipping
+      // plane reveals it rather than scaling, so door and window openings never move.
       const h = p.bb.max.y - p.bb.min.y;
       const courses = Math.max(1, Math.round(h / (8 / 12)));
-      const s = Math.max(0.001, Math.ceil(easeOut(x) * courses) / courses);
-      m.scale.y = s;
-      m.position.y = p.minY * (1 - s);
+      p.reveal.constant = p.bb.min.y + (h * Math.ceil(easeOut(x) * courses)) / courses;
       mat.opacity = mat.userData.opacity;
       mat.transparent = mat.userData.transparent;
     } else {
@@ -381,7 +389,8 @@ function render(t) {
   animatePieces(t);
 
   if (t < 19) {
-    const pos = catmull(flyKeys, t, "pos"), look = catmull(flyKeys, t, "look");
+    let pos = catmull(flyKeys, t, "pos"), look = catmull(flyKeys, t, "look");
+    if (window.camAt) ({ pos, look } = window.camAt(t, pos, look)); // inspection hook (preview only)
     persp.fov = lerp(52, 40, seg(t, 4, 10));
     persp.near = 0.3;
     persp.far = 6000;
