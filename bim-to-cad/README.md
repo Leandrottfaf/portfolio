@@ -4,52 +4,37 @@ A standalone page, separate from the main portfolio. As the visitor scrolls:
 
 1. **BIM model**: the building rises from the basement to the ridge, cut by a moving section plane. A faint outline shows what's still to come.
 2. **Orthographic view**: the camera turns from an isometric view to a straight-on orthographic front view.
-3. **Drafting**: the shaded model dissolves into hidden-line CAD linework. Windows are cyan, doors yellow, eaves magenta, hidden lines below grade are dashed, and dashed level lines carry level tags, all on a dark AutoCAD-style background.
+3. **Drafting**: the shaded model dissolves into hidden-line CAD linework. Windows are cyan, doors yellow, hidden lines below grade are dashed, and dashed level lines carry level tags, all on a dark AutoCAD-style background.
 
-Until a real model is added, the page shows a stand-in house built in code. It matches the levels from the Revit/AutoCAD drawings: basement −9'‑1", 1st floor 0'‑0", ridge 36'‑1 3/8".
+The page shows the Michel-Menard Revit model, exported as IFC and converted to a web model. If the model can't load, a stand-in house built in code is shown instead.
 
 | File | Purpose |
 |---|---|
 | `index.html` | The page: intro, scroll track, captions, FR/EN toggle |
-| `model-to-cad.js` | three.js viewer: stand-in model, section cut, camera, CAD look |
-| `models/` | Put your exported `.glb` here |
+| `model-to-cad.js` | three.js viewer: section cut, camera, CAD look, level tags |
+| `models/Michel-Menard.ifc` | Source model, exported from Revit 2025 (IFC 2x3 Coordination View 2.0) |
+| `models/house.glb` | Web model generated from the IFC (feet, Y up, ~7 MB) |
+| `tools/ifc_to_glb.py` | IFC → `house.glb` converter |
 
 Once GitHub Pages publishes it, the page is at `…/portfolio/bim-to-cad/`. Locally, run `python3 -m http.server` from the repo root and open `http://localhost:8000/bim-to-cad/`. Opening the HTML file directly with `file://` won't work, because browsers block ES modules there.
 
-## Using the real Revit model
+## Updating the model
 
-### 1. Export a .glb
+1. In Revit, open the 3D view, go to *File → Export → IFC* and pick **IFC 2x3 Coordination View 2.0**. Under *Modify setup*, check *Export only elements visible in view*, leave *Export rooms… in 3D views* unchecked, and set the level of detail to *High*.
+2. Convert it:
+   ```
+   pip install ifcopenshell trimesh numpy
+   python3 tools/ifc_to_glb.py models/Michel-Menard.ifc models/house.glb
+   ```
+   The script prints the building storeys. Copy any you want drawn into `CONFIG.levels` in `model-to-cad.js`. `side: "left"` puts a tag on the left end of its line, for levels too close to their neighbours.
+3. If the end view isn't the main facade, change `CONFIG.model.yawDeg` (0, 90, 180 or -90). You can try values without editing by adding `?yaw=90` to the page URL.
 
-**Option A: through Blender (free, reliable)**
-1. In Revit, open a 3D view. Hide anything you don't want shown (furniture, the site, interior detail) with *Hide in View* or a section box.
-2. Go to *File → Export → FBX* and save `house.fbx`.
-3. In Blender, go to *File → Import → FBX* and pick `house.fbx`.
-4. Go to *File → Export → glTF 2.0* and set **Format: glTF Binary (.glb)**. Leave **+Y Up** checked.
-5. Save the file as `bim-to-cad/models/house.glb`.
+How the converter output is used:
+- Geometry is merged per IFC class and colour. Each mesh is named after its class (`IfcWall…`, `IfcWindow…`, `IfcDoor-ext…`), and the viewer picks CAD colours from those names: windows and curtain panels cyan, doors yellow, everything else white.
+- Doors on the outer wall line become `IfcDoor-ext`. Interior doors, fixtures and furniture are shaded in 3D but get no drawn edges, so the elevation only shows what a real elevation would.
+- Only geometry and colours go into the `.glb`; IFC properties and metadata don't.
 
-**Option B:** a free glTF exporter add-in for Revit (search "glTF" on the Autodesk App Store) exports `.glb` straight from Revit.
-
-Aim for a file under about 20 MB so it loads quickly. Leaving out interiors and furniture is usually enough.
-
-### 2. Preview it
-Open `…/bim-to-cad/?model=models/house.glb`. The `?model=` parameter loads any `.glb` without editing code.
-
-### 3. Make it the default
-In `model-to-cad.js`, edit `CONFIG`:
-
-```js
-model: {
-  url: "models/house.glb",
-  bottomFt: -9.083, // lowest point of the model (bottom of basement), in feet
-  topFt: 37.6,      // highest point (top of chimneys / vents), in feet
-  yawDeg: 0,        // turn the model if the end view isn't the main facade: try 90, 180, -90
-},
-levels: [ /* name + elevation in feet, as on the drawings */ ],
-```
-
-The viewer rescales the model so its lowest and highest points match `bottomFt` and `topFt`, whatever units the exporter used. With those two numbers right, the level lines land on the model.
-
-**Line colours** on a real model come from object and material names: `glass`, `window` or `fenêtre` → cyan; `door` or `porte` → yellow; `fascia`, `gutter` or `eave` → magenta; everything else → white. Edit `guessCad()` in `model-to-cad.js` to change these rules.
+Any other `.glb` can be previewed with `?model=path/to/file.glb`. For a file that isn't in feet at true elevations, set `CONFIG.model.feet = false` and the model is scaled between `bottomFt` and `topFt`.
 
 ## Tuning
 

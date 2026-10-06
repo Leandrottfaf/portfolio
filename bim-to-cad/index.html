@@ -194,8 +194,9 @@
     document.querySelectorAll(".lang button").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
 
     const insets = () => (mobile.matches ? { top: 132, bottom: 64 } : { top: 24, bottom: 72 });
-    const modelUrl = new URLSearchParams(location.search).get("model");
-    const viewer = mount(document.getElementById("viewer"), { insets: insets(), modelUrl });
+    const params = new URLSearchParams(location.search);
+    const yaw = params.get("yaw");
+    const viewer = mount(document.getElementById("viewer"), { insets: insets(), modelUrl: params.get("model"), yawDeg: yaw === null ? undefined : +yaw });
     mobile.addEventListener("change", () => viewer.setInsets(insets()));
 
     let raf = 0;

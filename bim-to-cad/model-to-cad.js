@@ -4,29 +4,33 @@
 //   2. the camera turning to a straight-on orthographic front view,
 //   3. the shaded model dissolving into hidden-line CAD linework with level tags.
 //
-// Without a model file it builds a stand-in of the house procedurally.
-// To use the real Revit model, export it to .glb (see README.md), drop it in
-// models/ and set CONFIG.model.url below (or open the page with ?model=models/house.glb).
+// The model comes from the Revit IFC export, converted by tools/ifc_to_glb.py.
+// If it can't be loaded (or CONFIG.model.url is null) a procedural stand-in of
+// the house is shown instead.
 
 import * as THREE from "three";
 
 const CONFIG = {
   model: {
-    url: null, // e.g. "models/house.glb"
-    // Real-world extent of the exported model, in feet. The .glb is scaled so its
-    // lowest point sits at bottomFt and its highest point at topFt, whatever
-    // units the exporter used.
+    url: "models/house.glb",
+    // true: the file is already in feet at true elevations (tools/ifc_to_glb.py output).
+    // false: any other export; it is scaled so its lowest point sits at bottomFt and
+    // its highest point at topFt, whatever units the exporter used.
+    feet: true,
     bottomFt: -9.083,
     topFt: 37.6,
-    yawDeg: 0, // rotate the model so its main facade faces the camera at the end
+    yawDeg: 180, // rotate the model so its main facade faces the camera at the end
   },
-  // Levels as they appear on the CAD elevation (feet).
+  // Levels drawn on the CAD elevation (feet, from the IFC storeys).
+  // side: which end of the level line carries the tag.
   levels: [
-    { name: "RIDGE", ft: 36 + 1.375 / 12 },
-    { name: "TOP OF ROOF", ft: 18 },
-    { name: "1ST FLOOR LOWER CEILING", ft: 8 + 0.375 / 12 },
+    { name: "RIDGE", ft: 36.1157 },
+    { name: "Tof of Roof", ft: 18 },
+    { name: "1ST HIGHER CEILING", ft: 8.8614, side: "left" },
+    { name: "1ST FLOOR LOWER CEILING", ft: 8.0323 },
     { name: "1ST FLOOR", ft: 0 },
-    { name: "BASEMENT", ft: -(9 + 1 / 12) },
+    { name: "Basement Ceiling", ft: -0.5, side: "left" },
+    { name: "Basement", ft: -9.0833 },
   ],
 };
 
@@ -47,6 +51,12 @@ const CAD = {
   eave: "#e04bd8",
   site: "#7a8188",
 };
+
+// Interior elements (fixtures, furniture, interior doors) keep their shading and
+// the outline preview, but get no drawn edges: they never appear on an elevation,
+// and the exported wall surfaces have hairline cracks their edges would show through.
+// Interior doors are the IfcDoor meshes without "-ext" (see tools/ifc_to_glb.py).
+const INTERIOR = /^(Ifc(FlowTerminal|FlowSegment|FurnishingElement|BuildingElementProxy)|IfcDoor-\d)/;
 
 const clamp01 = (v) => Math.min(1, Math.max(0, v));
 const seg = (p, a, b) => clamp01((p - a) / (b - a));
@@ -283,14 +293,15 @@ export function mount(container, opts = {}) {
       hidden.computeLineDistances();
       lines.renderOrder = hidden.renderOrder = 2;
       ghost.renderOrder = 3;
-      mesh.add(lines, hidden, ghost);
+      if (INTERIOR.test(mesh.name)) mesh.add(ghost);
+      else mesh.add(lines, hidden, ghost);
     }
   }
 
   // For an exported model, pick CAD colours from material / object names.
   function guessCad(mesh) {
     const n = `${mesh.name} ${mesh.material?.name || ""}`.toLowerCase();
-    if (/glass|glaz|window|fen[eê]tre|vitr/.test(n)) return CAD.window;
+    if (/glass|glaz|window|fen[eê]tre|vitr|ifcplate/.test(n)) return CAD.window;
     if (/door|porte/.test(n)) return CAD.door;
     if (/fascia|gutter|eave|soffit|cornice/.test(n)) return CAD.eave;
     return CAD.outline;
@@ -310,15 +321,16 @@ export function mount(container, opts = {}) {
     const { GLTFLoader } = await import("three/addons/loaders/GLTFLoader.js");
     const gltf = await new GLTFLoader().loadAsync(url);
     const root = gltf.scene;
-    root.rotation.y = THREE.MathUtils.degToRad(CONFIG.model.yawDeg);
+    root.rotation.y = THREE.MathUtils.degToRad(opts.yawDeg ?? CONFIG.model.yawDeg);
     root.updateMatrixWorld(true);
     const b = new THREE.Box3().setFromObject(root);
-    const s = (CONFIG.model.topFt - CONFIG.model.bottomFt) / (b.max.y - b.min.y);
-    root.scale.setScalar(s);
-    root.updateMatrixWorld(true);
-    b.setFromObject(root);
+    if (!CONFIG.model.feet) {
+      root.scale.setScalar((CONFIG.model.topFt - CONFIG.model.bottomFt) / (b.max.y - b.min.y));
+      root.updateMatrixWorld(true);
+      b.setFromObject(root);
+    }
     const c = b.getCenter(new THREE.Vector3());
-    root.position.set(-c.x, CONFIG.model.bottomFt - b.min.y, -c.z);
+    root.position.set(-c.x, CONFIG.model.feet ? 0 : CONFIG.model.bottomFt - b.min.y, -c.z);
     const wrap = new THREE.Group();
     wrap.add(root);
     return wrap;
@@ -345,7 +357,9 @@ export function mount(container, opts = {}) {
       el.style.cssText = `position:absolute;left:0;top:0;display:flex;align-items:center;gap:6px;color:${COL.level};font-size:10px;line-height:1.15;letter-spacing:.4px;white-space:nowrap;opacity:0;will-change:transform`;
       el.innerHTML = `<svg width="13" height="13" viewBox="0 0 14 14" style="flex:none"><circle cx="7" cy="7" r="5.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M7 1.5V7H1.5A5.5 5.5 0 0 1 7 1.5ZM7 12.5V7h5.5A5.5 5.5 0 0 1 7 12.5Z" fill="currentColor"/></svg><span><span class="n">${lv.name}<br></span>${feetInches(lv.ft)}</span>`;
       labelLayer.appendChild(el);
-      return { el, pos: new THREE.Vector3(x1, lv.ft, z) };
+      const left = lv.side === "left";
+      if (left) el.style.flexDirection = "row-reverse";
+      return { el, left, pos: new THREE.Vector3(left ? x0 : x1, lv.ft, z) };
     });
 
     const cv = document.createElement("canvas");
@@ -397,8 +411,8 @@ export function mount(container, opts = {}) {
     const fit = box.clone();
     // Make room for level lines and their tags in the drawing
     if (cadT > 0) {
-      const tagRoom = compact ? 0 : 15;
-      const extra = new THREE.Box3(new THREE.Vector3(box.min.x - 5, box.min.y, box.min.z), new THREE.Vector3(box.max.x + 5 + tagRoom, box.max.y, box.max.z));
+      const room = (side) => (compact || !labels.some((l) => l.left === (side === "left")) ? 0 : 15);
+      const extra = new THREE.Box3(new THREE.Vector3(box.min.x - 5 - room("left"), box.min.y, box.min.z), new THREE.Vector3(box.max.x + 5 + room("right"), box.max.y, box.max.z));
       fit.min.lerp(extra.min, cadT);
       fit.max.lerp(extra.max, cadT);
     }
@@ -484,8 +498,10 @@ export function mount(container, opts = {}) {
       l.el.style.opacity = cadT;
       l.el.querySelector(".n").style.display = compact ? "none" : "";
       l.el.style.fontSize = compact ? "9px" : "10px";
-      // Narrow screens: elevation only, sitting on the line's right end
-      l.el.style.transform = compact ? `translate(${x}px, ${y - 14}px) translateX(-100%)` : `translate(${x + 6}px, ${y - 13}px)`;
+      // Narrow screens: elevation only, sitting on top of the line's end
+      l.el.style.transform = compact
+        ? `translate(${x}px, ${y - 14}px)${l.left ? "" : " translateX(-100%)"}`
+        : l.left ? `translate(${x - 6}px, ${y - 13}px) translateX(-100%)` : `translate(${x + 6}px, ${y - 13}px)`;
     }
     if (cutVis) {
       const [x, y] = toScreen(tmp.set(box.max.x + 3, cutY, box.max.z + 3), w, h);
@@ -498,9 +514,20 @@ export function mount(container, opts = {}) {
   const ro = new ResizeObserver(requestRender);
   ro.observe(container);
 
-  setModel(buildStandIn());
   const url = opts.modelUrl ?? CONFIG.model.url;
-  if (url) loadGlb(url).then((m) => !disposed && setModel(m)).catch((err) => console.warn("model-to-cad: kept stand-in model,", err));
+  if (url) {
+    box.set(new THREE.Vector3(-30, CONFIG.model.bottomFt, -30), new THREE.Vector3(30, CONFIG.model.topFt, 30));
+    const loading = document.createElement("div");
+    loading.textContent = "Loading model…";
+    loading.style.cssText = "position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#004227;font-size:13px;font-weight:600;letter-spacing:.4px";
+    container.appendChild(loading);
+    loadGlb(url)
+      .then((m) => !disposed && setModel(m))
+      .catch((err) => { console.warn("model-to-cad: using stand-in model,", err); if (!disposed) setModel(buildStandIn()); })
+      .finally(() => loading.remove());
+  } else {
+    setModel(buildStandIn());
+  }
 
   return {
     setProgress(p) { progress = clamp01(p); requestRender(); },
