@@ -39,9 +39,13 @@ VIEWS = {
     },
     # Ground floor plan, front at the top. Sheet X grows to +x, Y to -z.
     # A-NOTE holds the section marks and their cut lines, which run off the plan.
+    # A-DETL-HDLN (a dashed hidden line through the left room) and A-DETL-THIN (a
+    # lone square next to it) are left out, and so are two stray A-WALL stubs
+    # above the front wall.
     "plan": {
         "region": (4440, 2560, 5460, 3480),
-        "skip_layers": {"A-NOTE"},
+        "skip_layers": {"A-NOTE", "A-DETL-HDLN", "A-DETL-THIN"},
+        "drop": [("A-WALL", (4440, 3460, 5460, 3480))],
         "glb": lambda X, Y: (APEX[0] + (X - 4973) / S, 0.0, APEX[2] - (Y - 3017) / S),
     },
     # Building section through the dormer, front on the left. Sheet X grows to +z.
@@ -191,7 +195,9 @@ def main(dwf, outdir):
     for key, view in VIEWS.items():
         box = view["region"]
         skip = view.get("skip_layers", set())
-        mine = drop_slope_tags([p for p in sheet.prims if p.points and p.layer not in skip])
+        drop = view.get("drop", [])
+        dropped = lambda p: any(p.layer == layer and all(inside((X - SHEET_X0, Y), b) for X, Y in p.points) for layer, b in drop)
+        mine = drop_slope_tags([p for p in sheet.prims if p.points and p.layer not in skip and not dropped(p)])
         W, H = write_svg(mine, box, os.path.join(outdir, f"{key}.svg"), view.get("layer_regions", {}))
         X0, Y0, X1, Y1 = box
         to_glb = view["glb"]
