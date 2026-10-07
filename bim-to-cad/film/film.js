@@ -1,13 +1,17 @@
-// Timed "film" version of the BIM → CAD presentation, rendered frame by frame
-// into a video by render.mjs. window.film.render(t) draws the frame at t seconds.
+// Timed "film" version of the BIM → CAD presentation. window.film.render(t) draws
+// the frame at t seconds; player.js plays it in real time, render.mjs renders it
+// frame by frame. One continuous move, no holds:
 //
-//   0–19 s  close-up at the front wall while walls, doors and windows assemble
-//           around the camera (walls rise course by course), then the camera pulls
-//           back and orbits as the rest of the house builds; the roof drops in last.
-//  19–21 s  the perspective flattens into an orthographic view.
-//  21–45 s  the CAD tour: floor plan, a section walking through the house, the
-//           front elevation, each landing on the actual AutoCAD drawing.
-//  45–52 s  all three drawings side by side.
+//   0–11 s   dark stage, the camera glides along the front wall and pulls back,
+//            while gold linework traces over the model from the corner outward,
+//            with level lines running out past the house.
+//  11–14.5   the camera swings square to the front while the perspective flattens
+//            (field of view closes, framing kept) and the shaded model drops away,
+//            leaving the linework.
+//  14.5–19   the actual AutoCAD elevation takes over from the 3D linework.
+//  19–29.5   the drawings as sheets, white on dark: the elevation slides into a row,
+//            the section and the plan draw themselves in as the row moves on.
+//  29.5–37   the row pulls back to show all three, then the end card.
 
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
@@ -15,24 +19,22 @@ import { buildTerrain, footprintsFrom, rectOf } from "../terrain.js";
 
 const params = new URLSearchParams(location.search);
 const LANG = params.get("lang") === "fr" ? "fr" : "en";
-export const DURATION = 52;
+export const DURATION = 37;
 
 const TEXT = {
   en: {
-    model: ["BIM model", "Built element by element"],
-    plan: ["Floor plan", "Cut at 4 ft, seen from above"],
-    section: ["Section", "A walk through the building"],
-    elevation: ["Elevation", "The front, as drawn"],
-    gallery: ["One model, every deliverable.", "Plan · Section · Elevation"],
-    galleryLabels: ["Floor plan", "Section", "Elevation"],
+    model: "From the BIM model",
+    drawing: "To every 2D drawing",
+    all: "One model, every deliverable",
+    end: "3D scanning · BIM · CAD",
+    labels: { elevation: "Front elevation", section: "Section", plan: "Ground floor plan" },
   },
   fr: {
-    model: ["Modèle BIM", "Construit élément par élément"],
-    plan: ["Plan", "Coupé à 4 pi, vu de haut"],
-    section: ["Coupe", "Une traversée du bâtiment"],
-    elevation: ["Élévation", "La façade, telle que dessinée"],
-    gallery: ["Un modèle, tous les livrables.", "Plan · Coupe · Élévation"],
-    galleryLabels: ["Plan", "Coupe", "Élévation"],
+    model: "À partir du modèle BIM",
+    drawing: "Jusqu'à chaque plan 2D",
+    all: "Un modèle, tous les livrables",
+    end: "Numérisation 3D · BIM · DAO",
+    labels: { elevation: "Élévation avant", section: "Coupe", plan: "Plan du rez-de-chaussée" },
   },
 }[LANG];
 
@@ -40,15 +42,11 @@ const clamp01 = (v) => Math.min(1, Math.max(0, v));
 const seg = (t, a, b) => clamp01((t - a) / (b - a));
 const ease = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
 const easeOut = (x) => 1 - Math.pow(1 - x, 3);
-const easeOutBack = (x) => 1 + 2.2 * Math.pow(x - 1, 3) + 1.2 * Math.pow(x - 1, 2);
 const lerp = (a, b, t) => a + (b - a) * t;
 const deg = THREE.MathUtils.degToRad;
 
-// Seeded random so every render of the film is identical
-let seed = 7;
-const rand = () => ((seed = (seed * 16807) % 2147483647) - 1) / 2147483646;
-
-const BG = new THREE.Color("#ebe6da"), BG_CAD = new THREE.Color("#212830");
+const BG = "#161c20";
+const GOLD = new THREE.Color("#f0c255");
 
 // ---------------------------------------------------------------------------
 const stage = document.getElementById("stage");
@@ -56,20 +54,21 @@ const W = stage.clientWidth, H = stage.clientHeight;
 const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
 renderer.setPixelRatio(1);
 renderer.setSize(W, H);
-renderer.localClippingEnabled = true;
+renderer.setClearColor(BG);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.shadowMap.autoUpdate = false; // nothing moves: the shadow map is drawn once
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.05;
+renderer.toneMappingExposure = 0.9;
 stage.prepend(renderer.domElement);
 
 const scene = new THREE.Scene();
 const persp = new THREE.PerspectiveCamera(50, W / H, 0.3, 6000);
 const ortho = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 3000);
 
-scene.add(new THREE.HemisphereLight("#ffffff", "#8a8070", 1.5));
-const sun = new THREE.DirectionalLight("#fff1dc", 2.6);
-sun.position.set(70, 110, 90);
+scene.add(new THREE.HemisphereLight("#c9d3dc", "#2e2924", 0.8));
+const sun = new THREE.DirectionalLight("#ffe6c4", 3.2);
+sun.position.set(-60, 85, 110);
 sun.castShadow = true;
 sun.shadow.mapSize.set(4096, 4096);
 Object.assign(sun.shadow.camera, { left: -60, right: 60, top: 60, bottom: -60, near: 1, far: 400 });
@@ -77,12 +76,11 @@ sun.shadow.bias = -0.0004;
 sun.shadow.normalBias = 0.02;
 scene.add(sun);
 
-const cutBelow = new THREE.Plane(new THREE.Vector3(0, -1, 0), 1e4);
-const sectionCut = new THREE.Plane(new THREE.Vector3(-1, 0, 0), 1e4);
-const clipping = [cutBelow, sectionCut];
-
 // ---------------------------------------------------------------------------
-// Texture: concrete block running bond for the exterior walls (the terrain is in ../terrain.js)
+// Concrete block running bond for the exterior walls
+
+let seed = 7;
+const rand = () => ((seed = (seed * 16807) % 2147483647) - 1) / 2147483646;
 
 function canvasTexture(draw, size = 512) {
   const cv = document.createElement("canvas");
@@ -137,13 +135,88 @@ function boxUV(geometry, tile) {
 }
 
 // ---------------------------------------------------------------------------
+// Linework: lines appear as a front sweeps out from `start`, with a bright leading edge
+
+function lineMaterial() {
+  return new THREE.ShaderMaterial({
+    uniforms: {
+      uStart: { value: new THREE.Vector3() },
+      uSweep: { value: 0 },
+      uGlow: { value: 6 },
+      uWhite: { value: 0 },
+      uOpacity: { value: 1 },
+      uGold: { value: GOLD.clone() },
+    },
+    vertexShader: `
+      varying vec3 vW;
+      void main() {
+        vec4 w = modelMatrix * vec4(position, 1.0);
+        vW = w.xyz;
+        gl_Position = projectionMatrix * viewMatrix * w;
+      }`,
+    fragmentShader: `
+      uniform vec3 uStart, uGold;
+      uniform float uSweep, uGlow, uWhite, uOpacity;
+      varying vec3 vW;
+      void main() {
+        float d = distance(vW, uStart);
+        if (d > uSweep) discard;
+        float edge = 1.0 - smoothstep(0.0, uGlow, uSweep - d);
+        vec3 col = mix(uGold, vec3(0.91, 0.93, 0.94), uWhite);
+        col = mix(col, vec3(1.0, 0.96, 0.82), edge * (1.0 - uWhite));
+        gl_FragColor = vec4(col, uOpacity * (0.8 + 0.2 * edge));
+      }`,
+    transparent: true,
+    depthWrite: false,
+    toneMapped: false,
+  });
+}
+
+// ---------------------------------------------------------------------------
 // Model
 
-let root, house = new THREE.Box3(), site = new THREE.Box3(), sitePad = new THREE.Box3(), footprints;
-// Inside the house everything is one neutral grey, so the envelope reads first
+let root, house = new THREE.Box3(), site = new THREE.Box3(), sitePad = new THREE.Box3();
 const INSIDE = /^(Ifc(FlowTerminal|FlowSegment|FurnishingElement|Covering|Stair|StairFlight|Railing)|IfcDoor-\d)/;
 const INSIDE_GREY = new THREE.Color("#c9c4ba");
-const pieces = []; // { mesh, cls, bb, reveal, centre, t0, kind, dur }
+const shaded = []; // materials that fade away, leaving the linework
+// Background-coloured copy of everything, merged into one mesh: it hides lines behind surfaces
+const maskMat = new THREE.MeshBasicMaterial({ color: BG, toneMapped: false, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 });
+const maskPos = [];
+let masks, edges, edgeMat, guides, guideMat, terrain;
+
+function addMask(mesh) {
+  mesh.updateMatrixWorld(true);
+  const g = mesh.geometry.index ? mesh.geometry.toNonIndexed() : mesh.geometry;
+  const p = g.attributes.position, v = new THREE.Vector3();
+  for (let i = 0; i < p.count; i++) {
+    v.fromBufferAttribute(p, i).applyMatrix4(mesh.matrixWorld);
+    maskPos.push(v.x, v.y, v.z);
+  }
+}
+
+// The line front also passes over the surfaces as a gold band, like a scanner
+const scan = { uScanStart: { value: new THREE.Vector3() }, uScanSweep: { value: 0 }, uScanGold: { value: GOLD } };
+function scanBand(mat) {
+  mat.onBeforeCompile = (sh) => {
+    Object.assign(sh.uniforms, scan);
+    sh.vertexShader = "varying vec3 vScanW;\n" + sh.vertexShader.replace("#include <project_vertex>",
+      "#include <project_vertex>\n  vScanW = (modelMatrix * vec4(transformed, 1.0)).xyz;");
+    sh.fragmentShader = "varying vec3 vScanW;\nuniform vec3 uScanStart, uScanGold;\nuniform float uScanSweep;\n" + sh.fragmentShader.replace("#include <dithering_fragment>",
+      `float scanD = uScanSweep - distance(vScanW, uScanStart);
+  gl_FragColor.rgb += uScanGold * (scanD > 0.0 ? exp(-scanD * 1.4) : 0.0) * 0.75;
+  #include <dithering_fragment>`);
+  };
+  mat.customProgramCacheKey = () => "scan";
+}
+
+function fading(mat) {
+  scanBand(mat);
+  mat.userData.opacity = mat.opacity;
+  mat.transparent = true;
+  mat.depthWrite = false; // depth comes from the masks, so only the front surface draws
+  mat.side = THREE.DoubleSide;
+  shaded.push(mat);
+}
 
 async function loadModel() {
   const gltf = await new GLTFLoader().loadAsync("house-elements.glb");
@@ -162,128 +235,94 @@ async function loadModel() {
     const bb = new THREE.Box3().setFromObject(m);
     if (/^Ifc(Wall|Roof)/.test(m.name)) house.union(bb);
     site.union(bb);
+    if (/^Site/.test(m.name)) sitePad.union(bb);
   }
-  sitePad.makeEmpty();
-  for (const m of meshes) if (/^Site/.test(m.name)) sitePad.union(new THREE.Box3().setFromObject(m));
-  footprints = footprintsFrom(meshes.filter((m) => /^IfcWall/.test(m.name)));
-  // Exterior walls (touching the outer wall line) get the block texture
+  const footprints = footprintsFrom(meshes.filter((m) => /^IfcWall/.test(m.name)));
   const env = house.clone();
   const onEnvelope = (bb) => bb.min.x - env.min.x < 1.6 || env.max.x - bb.max.x < 1.6 || bb.min.z - env.min.z < 1.6 || env.max.z - bb.max.z < 1.6;
 
+  const linePos = [];
+  const v = new THREE.Vector3();
   for (const m of meshes) {
     const cls = m.name.split("-")[0];
+    if (cls === "Site") { m.visible = false; continue; } // replaced by the terrain's paving
     const bb = new THREE.Box3().setFromObject(m);
     m.castShadow = m.receiveShadow = true;
     const mat = m.material.clone();
-    const reveal = new THREE.Plane(new THREE.Vector3(0, -1, 0), 1e4); // per element: walls rise behind it
-    mat.clippingPlanes = [...clipping, reveal];
-    mat.clipShadows = true;
-    mat.side = THREE.DoubleSide;
     const exteriorWall = /^IfcWall/.test(cls) && onEnvelope(bb) && bb.max.y > 0.5;
+    const inside = INSIDE.test(m.name) || (/^IfcWall/.test(cls) && !exteriorWall && bb.max.y > 0.5 && bb.max.y < 12);
     if (exteriorWall) {
       m.geometry = boxUV(m.geometry, BLOCK_TILE_FT);
       mat.map = blockTex;
       mat.color.multiplyScalar(1.15);
-    } else if (INSIDE.test(m.name) || (/^IfcWall/.test(cls) && bb.max.y > 0.5 && bb.max.y < 12)) {
-      mat.color.copy(INSIDE_GREY); // interior walls, doors, fixtures, furniture, ceilings, stairs
+    } else if (inside) {
+      mat.color.copy(INSIDE_GREY);
+    } else if (cls === "IfcRoof") {
+      mat.color.multiplyScalar(0.42); // darker roof, so the linework reads on it
     }
-    if (cls === "Site") m.visible = false; // replaced by the terrain's paving
-    mat.userData.opacity = mat.opacity;
-    mat.userData.transparent = mat.transparent;
+    fading(mat);
     m.material = mat;
-    const local = new THREE.Box3().setFromBufferAttribute(m.geometry.attributes.position);
-    pieces.push({ mesh: m, cls, bb, reveal, centre: bb.getCenter(new THREE.Vector3()) });
-  }
-  schedule();
-  addTerrain();
-  window.__house = { cx: house.getCenter(new THREE.Vector3()).x, front: house.max.z }; // for inspection previews
-}
-
-// When each element arrives. Site and basement first (mostly underground). Everything
-// in the opening close-up assembles while the camera is there, done by ~4 s, so that
-// shot never lingers on a half-built wall. Then the rest of the ground floor spreads
-// out from there, then the upper parts, and the roof last.
-function schedule() {
-  const start = new THREE.Vector3(house.min.x + 12, 4, house.max.z);
-  const closeUp = new THREE.Box3(new THREE.Vector3(house.min.x - 2, -0.5, house.max.z - 3), new THREE.Vector3(house.min.x + 30, 14, house.max.z + 4));
-  const big = (p) => p.bb.getSize(new THREE.Vector3()).x > 60;
-  const maxD = Math.max(...pieces.map((p) => p.centre.distanceTo(start)));
-  const kindOf = (p) => /^Ifc(Wall|Column|Slab|Stair|Railing)/.test(p.cls) ? "grow"
-    : /^Ifc(Door|Window|Plate|Member|CurtainWall)/.test(p.cls) ? "fly" : "drop";
-  for (const p of pieces) {
-    const d = p.centre.distanceTo(start) / maxD, j = rand() * 0.6;
-    let t0, kind;
-    if (big(p)) { t0 = -1; kind = "static"; } // site pad: replaced by the terrain
-    else if (p.cls === "IfcRoof") { t0 = 14.2; kind = "drop"; }
-    else if (p.bb.max.y > 0.3 && p.bb.intersectsBox(closeUp)) {
-      t0 = 0.3 + clamp01(p.bb.min.y / 12) * 2 + j * 0.4; // bottom up, all in place by ~4 s
-      kind = kindOf(p);
-    }
-    else if (p.bb.max.y < 0.3) { t0 = 0.2 + d * 1.6 + j * 0.5; kind = "grow"; } // basement
-    else if (p.bb.min.y > 8.5) { t0 = 11 + d * 2.5 + j; kind = /^Ifc(Wall|Column)/.test(p.cls) ? "grow" : "drop"; }
-    else {
-      t0 = 2.5 + d * 8.5 + j;
-      kind = kindOf(p);
-    }
-    if (/^IfcSlab/.test(p.cls) && p.bb.min.y > -1.5 && p.bb.max.y < 1) t0 = Math.min(t0, 1 + d * 2); // ground floor slab early
-    Object.assign(p, { t0, kind, dur: kind === "grow" ? 1.4 : kind === "drop" && p.cls === "IfcRoof" ? 2.2 : 1.1 });
-  }
-}
-
-function animatePieces(t) {
-  for (const p of pieces) {
-    const m = p.mesh, mat = m.material;
-    const x = p.kind === "static" ? 1 : seg(t, p.t0, p.t0 + p.dur);
-    m.visible = x > 0 && p.cls !== "Site";
-    m.position.set(0, 0, 0);
-    p.reveal.constant = 1e4;
-    if (x <= 0 || x >= 1) {
-      mat.opacity = mat.userData.opacity;
-      mat.transparent = mat.userData.transparent;
-      continue;
-    }
-    if (p.kind === "grow") {
-      // Rise course by course (8" block courses) from the element's base. A clipping
-      // plane reveals it rather than scaling, so door and window openings never move.
-      const h = p.bb.max.y - p.bb.min.y;
-      const courses = Math.max(1, Math.round(h / (8 / 12)));
-      p.reveal.constant = p.bb.min.y + (h * Math.ceil(easeOut(x) * courses)) / courses;
-      mat.opacity = mat.userData.opacity;
-      mat.transparent = mat.userData.transparent;
-    } else {
-      const e = p.kind === "fly" ? easeOutBack(x) : easeOut(x);
-      const lift = p.cls === "IfcRoof" ? 26 : p.kind === "fly" ? 3 : 1.5; // interiors settle in place
-      m.position.y = lift * (1 - e);
-      if (p.kind === "fly") m.position.z = -4 * (1 - e); // in from outside the front (local z is flipped)
-      mat.transparent = true;
-      mat.opacity = mat.userData.opacity * Math.min(1, x * 3);
+    m.renderOrder = 1;
+    addMask(m);
+    // Linework: the envelope only (walls, roof, openings, slabs), as an elevation shows it
+    if (!inside) {
+      const eg = new THREE.EdgesGeometry(m.geometry, 25);
+      const p = eg.attributes.position;
+      for (let i = 0; i < p.count; i++) {
+        v.fromBufferAttribute(p, i).applyMatrix4(m.matrixWorld);
+        linePos.push(v.x, v.y, v.z);
+      }
     }
   }
-}
+  const lg = new THREE.BufferGeometry();
+  lg.setAttribute("position", new THREE.Float32BufferAttribute(linePos, 3));
+  edgeMat = lineMaterial();
+  edges = new THREE.LineSegments(lg, edgeMat);
+  edges.renderOrder = 3;
+  edges.frustumCulled = false;
+  scene.add(edges);
 
-function addTerrain() {
+  // Terrain: paving and earth block, fades with the model
   terrain = buildTerrain({ ...footprints, site: rectOf(sitePad.isEmpty() ? site : sitePad), bottom: site.min.y - 4 });
-  terrainMats = [];
+  scene.add(terrain);
   terrain.traverse((o) => {
     if (!o.isMesh) return;
     o.receiveShadow = true;
-    for (const m of o.material) {
-      m.clippingPlanes = clipping;
-      m.clipShadows = true;
-      m.side = THREE.DoubleSide;
-      terrainMats.push(m);
-    }
+    o.renderOrder = 1;
+    // Only the paving shows (darker, for the night look); the earth stays as a mask,
+    // still hiding the basement the way the drawing's earth hatch does
+    if (o.name === "Terrain-paving") for (const mat of o.material) { mat.color.multiplyScalar(0.45); fading(mat); }
+    else o.material = o.material.map(() => new THREE.MeshBasicMaterial({ visible: false }));
+    addMask(o);
   });
-  scene.add(terrain);
+
+  const mg = new THREE.BufferGeometry();
+  mg.setAttribute("position", new THREE.Float32BufferAttribute(maskPos, 3));
+  masks = new THREE.Mesh(mg, maskMat);
+  masks.frustumCulled = false;
+  scene.add(masks);
+
+  // Level lines on the front face, running far out past the house
+  const front = house.max.z + 0.05, gp = [];
+  for (const y of [0, 8.86, 18, 36.12]) gp.push(-600, y, front, 600, y, front);
+  for (const x of [house.min.x, house.max.x]) gp.push(x, -2, front, x, 300, front);
+  const gg = new THREE.BufferGeometry();
+  gg.setAttribute("position", new THREE.Float32BufferAttribute(gp, 3));
+  guideMat = lineMaterial();
+  guideMat.uniforms.uGlow.value = 30;
+  guides = new THREE.LineSegments(gg, guideMat);
+  guides.renderOrder = 2;
+  guides.frustumCulled = false;
+  scene.add(guides);
 }
-let terrainMats = [];
-let terrain;
 
 // ---------------------------------------------------------------------------
-// Drawings: inline SVG laid over the model through the orthographic camera
+// Drawings
 
 const drawings = {};
 const overlay = document.getElementById("drawings");
+const sheets = document.getElementById("sheets");
+const ORDER = ["elevation", "section", "plan"];
 
 async function loadDrawings() {
   const meta = await (await fetch("../drawings/drawings.json")).json();
@@ -295,8 +334,23 @@ async function loadDrawings() {
     el.style.height = `${m.height}px`;
     el.innerHTML = svg;
     overlay.appendChild(el);
+    const card = document.createElement("div");
+    card.className = "card";
+    card.style.width = `${m.width}px`;
+    card.style.height = `${m.height}px`;
+    card.innerHTML = svg;
+    sheets.appendChild(card);
+    // Draw-on: every stroked path is dashed over its own length (pathLength 1)
+    const paths = [...card.querySelectorAll("path")];
+    const strokes = paths.filter((p) => (p.getAttribute("fill") ?? "none") === "none");
+    for (const p of strokes) { p.setAttribute("pathLength", "1"); p.style.strokeDasharray = "1 1"; }
+    const solids = [...paths.filter((p) => !strokes.includes(p)), ...card.querySelectorAll("text")];
+    const label = document.createElement("div");
+    label.className = "label";
+    label.innerHTML = `<span>${TEXT.labels[key]}</span><i></i>`;
+    sheets.appendChild(label);
     const world = Object.fromEntries(["a", "b", "c"].map((k) => [k, root.localToWorld(new THREE.Vector3(...m[k]))]));
-    drawings[key] = { el, meta: m, world, svg };
+    drawings[key] = { el, card, label, strokes, solids, meta: m, world };
   }));
 }
 
@@ -305,210 +359,224 @@ function drawingBox(key) {
   return new THREE.Box3().setFromPoints([a, b, c, b.clone().add(c).sub(a)]);
 }
 
-// ---------------------------------------------------------------------------
-// Cameras
-
+// Screen rectangle of a drawing laid over the model through the ortho camera
 const tmp = new THREE.Vector3();
-
-// Orthographic camera framing `fit` from yaw/pitch (degrees); up follows the orbit
-function placeOrtho(yaw, pitch, fit, margin = 1.1) {
-  yaw = deg(yaw); pitch = deg(Math.min(pitch, 89.99));
-  const dir = new THREE.Vector3(Math.sin(yaw) * Math.cos(pitch), Math.sin(pitch), Math.cos(yaw) * Math.cos(pitch));
-  const c = fit.getCenter(new THREE.Vector3());
-  ortho.position.copy(c).addScaledVector(dir, 600);
-  ortho.up.set(-Math.sin(yaw) * Math.sin(pitch), Math.cos(pitch), -Math.cos(yaw) * Math.sin(pitch));
-  ortho.lookAt(c);
-  ortho.updateMatrixWorld();
-  const right = new THREE.Vector3().setFromMatrixColumn(ortho.matrixWorld, 0);
-  const up = new THREE.Vector3().setFromMatrixColumn(ortho.matrixWorld, 1);
-  let hx = 0, hy = 0;
-  for (let i = 0; i < 8; i++) {
-    tmp.set(i & 1 ? fit.max.x : fit.min.x, i & 2 ? fit.max.y : fit.min.y, i & 4 ? fit.max.z : fit.min.z).sub(c);
-    hx = Math.max(hx, Math.abs(tmp.dot(right)));
-    hy = Math.max(hy, Math.abs(tmp.dot(up)));
-  }
-  const half = Math.max(hy, hx / (W / H)) * margin;
-  Object.assign(ortho, { left: -half * W / H, right: half * W / H, top: half, bottom: -half });
-  ortho.updateProjectionMatrix();
-  return { dir, c, half };
+function overlayRect(key) {
+  const d = drawings[key];
+  const s = (v) => { tmp.copy(v).project(ortho); return [(tmp.x * 0.5 + 0.5) * W, (-tmp.y * 0.5 + 0.5) * H]; };
+  const [ax, ay] = s(d.world.a), [bx] = s(d.world.b), [, cy] = s(d.world.c);
+  return { x: ax, y: ay, w: bx - ax, h: cy - ay };
 }
 
-// Perspective path: time-keyed Catmull-Rom through camera positions and targets
-function catmull(keys, t, field) {
-  let i = keys.findIndex((k, n) => n < keys.length - 1 && t >= k.t && t <= keys[n + 1].t);
-  if (i < 0) i = t < keys[0].t ? 0 : keys.length - 2;
-  const k1 = keys[i], k2 = keys[i + 1];
-  const k0 = keys[Math.max(0, i - 1)], k3 = keys[Math.min(keys.length - 1, i + 2)];
-  const u = ease(clamp01((t - k1.t) / (k2.t - k1.t))) * 0.35 + clamp01((t - k1.t) / (k2.t - k1.t)) * 0.65;
-  const p0 = k0[field], p1 = k1[field], p2 = k2[field], p3 = k3[field];
-  const out = new THREE.Vector3();
-  for (const a of ["x", "y", "z"]) {
-    const v0 = p0[a], v1 = p1[a], v2 = p2[a], v3 = p3[a];
-    out[a] = 0.5 * (2 * v1 + (-v0 + v2) * u + (2 * v0 - 5 * v1 + 4 * v2 - v3) * u * u + (-v0 + 3 * v1 - 3 * v2 + v3) * u * u * u);
-  }
-  return out;
-}
+// ---------------------------------------------------------------------------
+// Camera: keys in orbit terms (target, yaw, pitch, half-height of the view at the
+// target, field of view). Distance follows from the half-height and the field of
+// view, so closing the field of view flattens the picture without changing framing.
 
-let flyKeys;
-function buildFlyPath() {
+const V = (x, y, z) => new THREE.Vector3(x, y, z);
+let keys, elevFrame;
+
+function buildKeys() {
   const c = house.getCenter(new THREE.Vector3());
   const front = house.max.z, left = house.min.x;
-  const V = (x, y, z) => new THREE.Vector3(x, y, z);
-  const orbit = (yaw, pitch, dist) => V(c.x + Math.sin(deg(yaw)) * Math.cos(deg(pitch)) * dist, 8 + Math.sin(deg(pitch)) * dist, c.z + Math.cos(deg(yaw)) * Math.cos(deg(pitch)) * dist);
-  const look = V(c.x, 9, c.z);
-  flyKeys = [
-    { t: 0, pos: V(left + 7, 4.6, front + 7.5), look: V(left + 12, 5.4, front) },
-    { t: 4.5, pos: V(left + 16, 5.2, front + 8.5), look: V(left + 20, 6.2, front) },
-    { t: 8, pos: V(c.x + 6, 13, front + 34), look: V(c.x - 2, 7, c.z + 6) },
-    { t: 11.5, pos: orbit(48, 18, 82), look },
-    { t: 15, pos: orbit(10, 22, 92), look },
-    { t: 19, pos: orbit(-34, 24, 100), look },
+  const k = (t, target, yaw, pitch, dist, fov) => ({ t, target, yaw, pitch, half: dist * Math.tan(deg(fov) / 2), fov });
+  // Final framing: square to the front, the elevation drawing filling the screen
+  const box = drawingBox("elevation");
+  const ec = box.getCenter(new THREE.Vector3());
+  const size = box.getSize(new THREE.Vector3());
+  const half = Math.max(size.y / 2, size.x / 2 / (W / H)) * 1.08;
+  elevFrame = { c: ec, half };
+  keys = [
+    k(0, V(left + 5, 5.5, front), -62, 3, 9, 62),
+    k(3.5, V(left + 13, 6.5, front), -50, 5, 12, 58),
+    k(7, V(c.x - 2, 9, front - 2), -36, 9, 34, 50),
+    k(10.5, V(c.x, 13, c.z + 4), -20, 10, 96, 40),
+    { t: 14.5, target: ec, yaw: 0, pitch: 0, half, fov: 1 },
   ];
+}
+
+// Catmull-Rom over the key values, uniform in time within each span
+function spline(t, f) {
+  let i = keys.findIndex((k, n) => n < keys.length - 1 && t <= keys[n + 1].t);
+  if (i < 0) i = keys.length - 2;
+  const k1 = keys[i], k2 = keys[i + 1];
+  const k0 = keys[Math.max(0, i - 1)], k3 = keys[Math.min(keys.length - 1, i + 2)];
+  let u = clamp01((t - k1.t) / (k2.t - k1.t));
+  if (i === keys.length - 2) u = 1 - Math.pow(1 - u, 2); // settle into the front view
+  const p0 = f(k0), p1 = f(k1), p2 = f(k2), p3 = f(k3);
+  return 0.5 * (2 * p1 + (-p0 + p2) * u + (2 * p0 - 5 * p1 + 4 * p2 - p3) * u * u + (-p0 + 3 * p1 - 3 * p2 + p3) * u * u * u);
+}
+
+function setCamera(t) {
+  if (t >= 14.5) {
+    // Orthographic front view, pushing in slowly so the frame never sits still
+    const half = elevFrame.half / lerp(1, 1.05, easeOut(seg(t, 14.5, 19.5)));
+    ortho.position.copy(elevFrame.c).add(V(0, 0, 600));
+    ortho.up.set(0, 1, 0);
+    ortho.lookAt(elevFrame.c);
+    Object.assign(ortho, { left: -half * W / H, right: half * W / H, top: half, bottom: -half });
+    ortho.updateProjectionMatrix();
+    ortho.updateMatrixWorld();
+    return ortho;
+  }
+  const target = V(spline(t, (k) => k.target.x), spline(t, (k) => k.target.y), spline(t, (k) => k.target.z));
+  const yaw = deg(spline(t, (k) => k.yaw)), pitch = deg(spline(t, (k) => k.pitch));
+  const half = Math.exp(spline(t, (k) => Math.log(k.half)));
+  const fov = Math.exp(spline(t, (k) => Math.log(k.fov)));
+  const dist = half / Math.tan(deg(fov) / 2);
+  const dir = V(Math.sin(yaw) * Math.cos(pitch), Math.sin(pitch), Math.cos(yaw) * Math.cos(pitch));
+  persp.fov = fov;
+  persp.near = Math.max(0.3, dist - 300);
+  persp.far = dist + 300;
+  persp.position.copy(target).addScaledVector(dir, dist);
+  persp.up.set(0, 1, 0);
+  persp.lookAt(target);
+  persp.updateProjectionMatrix();
+  persp.updateMatrixWorld();
+  return persp;
+}
+
+// ---------------------------------------------------------------------------
+// Sheets: a row of cards that moves on continuously
+
+const CARD_H = 640, GAP = 220, ROW_Y = 470;
+let elevStart; // the elevation's rect on screen when the sheets take over
+
+function sheetLayout(t) {
+  const sizes = ORDER.map((k) => ({ w: CARD_H * drawings[k].meta.width / drawings[k].meta.height, h: CARD_H }));
+  let x = 0;
+  const centres = sizes.map((s) => { const c = x + s.w / 2; x += s.w + GAP; return c; });
+  const total = x - GAP;
+  const focus = ease(seg(t, 21.4, 23.2)) + ease(seg(t, 25.4, 27.2));
+  const fc = lerp(lerp(centres[0], centres[1], Math.min(1, focus)), centres[2], Math.max(0, focus - 1));
+  const offset = 960 - fc - 16 * Math.max(0, t - 19);
+  // Pull back to all three
+  const z = ease(seg(t, 29.4, 31.6));
+  const fitS = 1720 / total, fitOffset = (1920 - total * fitS) / 2;
+  return ORDER.map((key, i) => {
+    const e = 1 - Math.min(1, Math.abs(focus - i));
+    const s = lerp(lerp(0.8, 1, e), fitS, z);
+    const w = sizes[i].w * s, h = sizes[i].h * s;
+    const cx = lerp(centres[i] + offset, fitOffset + centres[i] * fitS, z);
+    const cy = lerp(ROW_Y, 450, z);
+    return { key, rect: { x: cx - w / 2, y: cy - h / 2, w, h }, emph: lerp(e, 1, z) };
+  });
+}
+
+function mixRect(a, b, x) {
+  return { x: lerp(a.x, b.x, x), y: lerp(a.y, b.y, x), w: lerp(a.w, b.w, x), h: lerp(a.h, b.h, x) };
+}
+
+function placeCard(d, r, opacity, drawn) {
+  const { card, label, meta } = d;
+  const vis = opacity > 0.001;
+  card.style.visibility = label.style.visibility = vis ? "visible" : "hidden";
+  if (!vis) return;
+  card.style.opacity = opacity;
+  card.style.transform = `translate(${r.x}px, ${r.y}px) scale(${r.w / meta.width}, ${r.h / meta.height})`;
+  const off = String(1 - drawn);
+  for (const p of d.strokes) p.style.strokeDashoffset = off;
+  const so = String(seg(drawn, 0.5, 1));
+  for (const p of d.solids) p.style.opacity = so;
+  const k = Math.max(0.6, r.h / CARD_H);
+  label.style.opacity = opacity * seg(drawn, 0.3, 0.9);
+  label.style.transform = `translate(${r.x + r.w / 2}px, ${r.y + r.h + 26 * k}px) translateX(-50%) scale(${k})`;
+  label.querySelector("i").style.width = `${seg(drawn, 0.5, 1) * 100}%`;
 }
 
 // ---------------------------------------------------------------------------
 // Timeline
 
-const cap = document.getElementById("caption");
-const gallery = document.getElementById("gallery");
-let galleryBuilt = false;
-
-function caption(key, t, a, b) {
-  return { key, o: seg(t, a, a + 0.6) * (1 - seg(t, b - 0.6, b)) };
-}
+const capEl = document.getElementById("caption");
+const capText = capEl.querySelector("span");
+const capBars = capEl.querySelectorAll("i");
+const CAPTIONS = [["model", 2.2, 10.2], ["drawing", 11.2, 18.8], ["all", 30, 33.4]];
+const endEl = document.getElementById("end");
+endEl.querySelector(".sub").textContent = TEXT.end;
 
 function render(t) {
-  seed = 7; // keep any per-frame randomness stable
-  const flat = []; // (drawing key, opacity)
-  let cam = persp;
-  let cutY = 1e4, secC = 1e4, cad = 0;
+  const cam = setCamera(t);
 
-  animatePieces(t);
+  // Linework sweeps out from the front corner, then turns white as the view flattens
+  const start = V(house.min.x, 0, house.max.z);
+  edgeMat.uniforms.uStart.value.copy(start);
+  edgeMat.uniforms.uSweep.value = lerp(0, 120, Math.pow(seg(t, 1.2, 10.5), 1.25));
+  scan.uScanStart.value.copy(start);
+  scan.uScanSweep.value = edgeMat.uniforms.uSweep.value;
+  edgeMat.uniforms.uWhite.value = ease(seg(t, 11.5, 14));
+  edgeMat.uniforms.uOpacity.value = 1 - ease(seg(t, 15.2, 16.6));
+  guideMat.uniforms.uStart.value.copy(start);
+  guideMat.uniforms.uSweep.value = lerp(0, 700, easeOut(seg(t, 2, 6.5)));
+  guideMat.uniforms.uOpacity.value = 0.55 * (1 - ease(seg(t, 10.5, 13)));
+  edges.visible = edgeMat.uniforms.uOpacity.value > 0;
+  guides.visible = guideMat.uniforms.uOpacity.value > 0;
 
-  if (t < 19) {
-    let pos = catmull(flyKeys, t, "pos"), look = catmull(flyKeys, t, "look");
-    if (window.camAt) ({ pos, look } = window.camAt(t, pos, look)); // inspection hook (preview only)
-    persp.fov = lerp(52, 40, seg(t, 4, 10));
-    persp.near = 0.3;
-    persp.far = 6000;
-    persp.position.copy(pos);
-    persp.up.set(0, 1, 0);
-    persp.lookAt(look);
-    persp.updateProjectionMatrix();
-  } else if (t < 21) {
-    // Flatten: keep the framing while the field of view closes, then hand over to ortho
-    const fit = site.clone();
-    const { dir, c, half } = placeOrtho(-34, 24, fit, 1.02);
-    const x = ease(seg(t, 19, 21));
-    const fov = lerp(40, 2, x);
-    const dist = half / Math.tan(deg(fov) / 2);
-    persp.fov = fov;
-    persp.near = Math.max(0.3, dist - 250); // keep depth precision as the camera backs far away
-    persp.far = dist + 250;
-    persp.position.copy(c).addScaledVector(dir, dist);
-    persp.up.set(0, 1, 0);
-    persp.lookAt(c);
-    persp.updateProjectionMatrix();
-    if (x >= 1) cam = ortho;
-  } else {
-    cam = ortho;
-    // CAD tour (seconds)
-    const toPlan = ease(seg(t, 21, 24.5)), planIn = ease(seg(t, 24.5, 26)), planOut = ease(seg(t, 28.5, 29.3));
-    const toSec = ease(seg(t, 28.5, 31.5)), sweep = ease(seg(t, 31, 34.2)), secIn = ease(seg(t, 34.2, 35.6));
-    const secOut = ease(seg(t, 37.5, 38.3)), unsweep = ease(seg(t, 37.5, 39.5)), toElev = ease(seg(t, 37.5, 41));
-    const elevIn = ease(seg(t, 41, 42.6));
-    const planCut = toPlan * (1 - toSec);
-    cutY = lerp(site.max.y + 1, 4, planCut);
-    const secX = root.localToWorld(tmp.set(drawings.section.meta.cutX, 0, 0)).x;
-    const secT = sweep * (1 - unsweep);
-    secC = secT > 0 ? lerp(house.max.x + 1, secX, secT) : 1e4;
-    const yaw = -34 - 146 * toPlan - 90 * toSec - 90 * toElev;
-    const pitch = lerp(24, 90, toPlan) - 90 * toSec;
-    const frames = { plan: toPlan * (1 - toSec), section: toSec * (1 - toElev), elevation: toElev };
-    const wModel = Math.max(0, 1 - frames.plan - frames.section - frames.elevation);
-    const fit = { min: site.min.clone().multiplyScalar(wModel), max: site.max.clone().multiplyScalar(wModel) };
-    for (const k of ["plan", "section", "elevation"]) {
-      if (!frames[k]) continue;
-      const b = drawingBox(k);
-      fit.min.addScaledVector(b.min, frames[k]);
-      fit.max.addScaledVector(b.max, frames[k]);
-    }
-    placeOrtho(yaw, pitch, new THREE.Box3(fit.min, fit.max), lerp(1.02, 1.08, 1 - wModel));
-    flat.push(["plan", planIn * (1 - planOut)], ["section", secIn * (1 - secOut)], ["elevation", elevIn * (1 - seg(t, 45, 46))]);
+  // The shaded model drops away, leaving the hidden-line drawing
+  const solid = 1 - ease(seg(t, 11, 13.8));
+  for (const m of shaded) { m.opacity = m.userData.opacity * solid; m.visible = solid > 0.001; }
+  if (sun.castShadow !== solid > 0.001) { sun.castShadow = solid > 0.001; renderer.shadowMap.needsUpdate = true; }
+  const show3d = t < 17;
+  root.visible = terrain.visible = masks.visible = show3d;
+
+  if (show3d) renderer.render(scene, cam);
+  else renderer.clear();
+
+  // The AutoCAD elevation takes over from the 3D linework
+  const elev = drawings.elevation;
+  const overlayO = t < 19 ? ease(seg(t, 14.6, 16.2)) : 0;
+  elev.el.style.visibility = overlayO > 0 ? "visible" : "hidden";
+  if (overlayO > 0) {
+    const r = overlayRect("elevation");
+    elev.el.style.opacity = overlayO;
+    elev.el.style.transform = `translate(${r.x}px, ${r.y}px) scale(${r.w / elev.meta.width}, ${r.h / elev.meta.height})`;
   }
 
-  cutBelow.constant = cutY;
-  sectionCut.constant = secC;
-  const drawT = Math.max(0, ...flat.map(([, o]) => o));
-  const galleryT = ease(seg(t, 45.2, 46.6));
-  cad = Math.max(drawT, galleryT);
-
-  // Shaded model ↔ drawings
-  const bg = BG.clone().lerp(BG_CAD, cad);
-  stage.style.background = `#${bg.getHexString()}`;
-  renderer.setClearColor(bg);
-  const modelO = 1 - Math.max(drawT, galleryT);
-  root.traverse((o) => {
-    if (!o.isMesh) return;
-    const m = o.material;
-    if (modelO < 1) { m.transparent = true; m.opacity = m.userData.opacity * modelO; }
-    m.colorWrite = modelO > 0.001;
-  });
-  for (const m of terrainMats) { m.transparent = modelO < 1; m.opacity = modelO; m.colorWrite = modelO > 0.001; }
-
-  renderer.render(scene, cam);
-
-  // Drawing overlays
-  for (const [key, o] of flat) {
+  // Sheets
+  const out = ease(seg(t, 33.2, 34.6));
+  const layout = t >= 19 ? sheetLayout(t) : null;
+  ORDER.forEach((key, i) => {
     const d = drawings[key];
-    d.el.style.opacity = o;
-    d.el.style.visibility = o > 0 ? "visible" : "hidden";
-    if (!o) continue;
-    const s = (v) => { tmp.copy(v).project(ortho); return [(tmp.x * 0.5 + 0.5) * W, (-tmp.y * 0.5 + 0.5) * H]; };
-    const [ax, ay] = s(d.world.a), [bx, by] = s(d.world.b), [cx, cy] = s(d.world.c);
-    d.el.style.transform = `matrix(${(bx - ax) / d.meta.width},${(by - ay) / d.meta.width},${(cx - ax) / d.meta.height},${(cy - ay) / d.meta.height},${ax},${ay})`;
-  }
-  for (const [key, d] of Object.entries(drawings)) if (!flat.some(([k]) => k === key)) d.el.style.visibility = "hidden";
-
-  // Final gallery
-  if (!galleryBuilt) buildGallery();
-  gallery.style.opacity = galleryT;
-  gallery.querySelectorAll(".card").forEach((el, i) => {
-    const x = easeOut(seg(t, 45.4 + i * 0.35, 46.6 + i * 0.35));
-    el.style.opacity = x;
-    el.style.transform = `translateY(${(1 - x) * 30}px)`;
+    if (!layout) return placeCard(d, null, 0, 0);
+    let { rect, emph } = layout[i];
+    let opacity = lerp(0.28, 1, emph), drawn = 1;
+    if (key === "elevation") {
+      rect = mixRect(elevStart, rect, ease(seg(t, 19, 20.6)));
+      opacity = lerp(1, opacity, seg(t, 19, 20.6));
+    } else {
+      const at = key === "section" ? 21.2 : 25.2; // draws itself as it slides in
+      opacity *= seg(t, at, at + 0.6);
+      drawn = easeOut(seg(t, at + 0.1, at + 2.6));
+    }
+    rect = { ...rect, y: rect.y - 40 * out };
+    placeCard(d, rect, opacity * (1 - 0.88 * out), drawn);
   });
 
-  // Captions
-  const caps = [caption("model", t, 0.6, 18.6), caption("plan", t, 22, 29), caption("section", t, 30, 38), caption("elevation", t, 39, 45.2)];
-  const active = caps.find((c) => c.o > 0);
-  cap.style.opacity = active ? active.o : 0;
-  if (active && cap.dataset.key !== active.key) {
-    cap.dataset.key = active.key;
-    cap.querySelector(".k").textContent = TEXT[active.key][0];
-    cap.querySelector(".t").textContent = TEXT[active.key][1];
-  }
-  cap.classList.toggle("dark", cad > 0.5);
-  document.getElementById("brand").classList.toggle("dark", cad > 0.5);
-  document.getElementById("fade").style.opacity = 1 - seg(t, 0, 0.8) + seg(t, DURATION - 0.8, DURATION);
-}
+  // End card
+  endEl.style.opacity = ease(seg(t, 33.8, 35));
+  endEl.style.transform = `translateY(${(1 - easeOut(seg(t, 33.8, 35.4))) * 24}px)`;
 
-function buildGallery() {
-  galleryBuilt = true;
-  gallery.querySelector(".title").textContent = TEXT.gallery[0];
-  gallery.querySelector(".sub").textContent = TEXT.gallery[1];
-  const row = gallery.querySelector(".row");
-  ["plan", "section", "elevation"].forEach((key, i) => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `<div class="sheet">${drawings[key].svg}</div><div class="label">${TEXT.galleryLabels[i]}</div>`;
-    row.appendChild(card);
-  });
+  // Caption: gold bars grow, then the words settle in
+  const c = CAPTIONS.find(([, a, b]) => t >= a && t <= b);
+  if (c) {
+    const [key, a, b] = c;
+    const bar = easeOut(seg(t, a, a + 0.5)), txt = easeOut(seg(t, a + 0.3, a + 1.1)), gone = seg(t, b - 0.5, b);
+    if (capText.dataset.key !== key) { capText.dataset.key = key; capText.textContent = TEXT[key]; }
+    capBars.forEach((el) => { el.style.transform = `scaleY(${bar})`; });
+    capText.style.opacity = txt;
+    capText.style.letterSpacing = `${lerp(14, 5, txt)}px`;
+    capEl.style.opacity = 1 - gone;
+  } else capEl.style.opacity = 0;
+
+  document.getElementById("brand").style.opacity = seg(t, 0.8, 1.8) * (1 - seg(t, 33.4, 34.2));
+  document.getElementById("fade").style.opacity = 1 - seg(t, 0, 1) + seg(t, DURATION - 1, DURATION);
 }
 
 // ---------------------------------------------------------------------------
 await loadModel();
-buildFlyPath();
 await loadDrawings();
-window.film = { duration: DURATION, render, ready: true };
+buildKeys();
+renderer.shadowMap.needsUpdate = true;
+setCamera(19);
+elevStart = overlayRect("elevation");
+window.film = { duration: DURATION, render, ready: true, poster: 8 };
 render(Number(params.get("t") || 0));

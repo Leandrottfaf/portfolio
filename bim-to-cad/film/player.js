@@ -3,8 +3,13 @@
 // Skipped when the page is driven by render.mjs (headless, navigator.webdriver).
 
 if (!navigator.webdriver) {
+  const loading = document.getElementById("loading");
+  loading.hidden = false;
+  addEventListener("error", (e) => { loading.textContent = `Could not load the film: ${e.message}`; });
+  addEventListener("unhandledrejection", (e) => { loading.textContent = `Could not load the film: ${e.reason?.message || e.reason}`; });
   while (!window.film?.ready) await new Promise((r) => setTimeout(r, 50));
-  const { render, duration } = window.film;
+  loading.remove();
+  const { render, duration, poster = 0 } = window.film;
   const stage = document.getElementById("stage");
 
   // Fit the 1920×1080 stage to the window
@@ -39,18 +44,22 @@ if (!navigator.webdriver) {
     slider.value = t;
     label.textContent = `${t.toFixed(1)} / ${duration.toFixed(1)} s`;
   }
+  let startFromTop = false;
   function play(from = t, done = null) {
-    if (from >= duration) from = 0;
+    if (from >= duration || startFromTop) from = 0;
+    startFromTop = false;
     startT = from;
     startedAt = performance.now();
     playing = true;
     onEnd = done;
     playBtn.textContent = "❚❚";
+    wake();
     requestAnimationFrame(tick);
   }
   function pause() {
     playing = false;
     playBtn.textContent = "▶";
+    bar.classList.remove("idle");
   }
   function tick(now) {
     if (!playing) return;
@@ -63,6 +72,15 @@ if (!navigator.webdriver) {
     }
     requestAnimationFrame(tick);
   }
+
+  // Controls stay visible, and fade only while playing with the mouse idle
+  let idle;
+  const wake = () => {
+    bar.classList.remove("idle");
+    clearTimeout(idle);
+    idle = setTimeout(() => playing && bar.classList.add("idle"), 2500);
+  };
+  addEventListener("mousemove", wake);
 
   slider.addEventListener("input", () => { pause(); show(+slider.value); });
   playBtn.addEventListener("click", () => (playing ? pause() : play()));
@@ -111,5 +129,8 @@ if (!navigator.webdriver) {
     play(0, () => setTimeout(() => rec.stop(), 300));
   });
 
-  show(Number(new URLSearchParams(location.search).get("t") || 0));
+  // Open on a poster frame rather than the black first frame; play starts from 0
+  const tParam = new URLSearchParams(location.search).get("t");
+  show(tParam === null ? poster : Number(tParam));
+  if (tParam === null) startFromTop = true;
 }

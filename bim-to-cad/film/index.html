@@ -6,61 +6,62 @@
   <style>
     @font-face { font-family: "Neue Haas"; src: url("../../fonts/NeueHaasDisplayRoman.ttf") format("truetype"); font-weight: 400; }
     @font-face { font-family: "Neue Haas"; src: url("../../fonts/NeueHaasDisplayBold.ttf") format("truetype"); font-weight: 700; }
+    :root { --bg: #161c20; --ink: #e8edf0; --accent: #deb047; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; }
-    #stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #ebe6da; font-family: "Neue Haas", Arial, sans-serif; }
+    #stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: var(--bg); font-family: "Neue Haas", Arial, sans-serif; color: var(--ink); }
     #stage canvas { position: absolute; inset: 0; }
-    #drawings { position: absolute; inset: 0; pointer-events: none; }
-    .drawing { position: absolute; left: 0; top: 0; transform-origin: 0 0; visibility: hidden; }
-    .drawing svg { display: block; width: 100%; height: 100%; overflow: visible; }
+    #vignette { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 75% 70% at 50% 45%, transparent 55%, rgba(0, 0, 0, 0.5)); }
 
-    #brand { position: absolute; top: 44px; right: 56px; font-size: 30px; font-weight: 700; color: #004227; letter-spacing: 0.3px; }
-    #brand span { color: #deb047; }
-    #brand.dark { color: #f5f0e6; }
-    #caption { position: absolute; left: 64px; bottom: 64px; padding: 26px 34px; border-radius: 14px; background: rgba(0, 66, 39, 0.92); border: 1px solid rgba(222, 176, 71, 0.3); min-width: 420px; }
-    #caption .k { font-size: 18px; letter-spacing: 5px; text-transform: uppercase; color: #deb047; font-weight: 700; margin-bottom: 8px; }
-    #caption .t { font-size: 40px; font-weight: 700; color: #f5f0e6; line-height: 1.15; }
+    /* Drawings: white on dark. CSS beats the SVG's own colour attributes; hatch opacity is kept. */
+    #drawings, #sheets { position: absolute; inset: 0; pointer-events: none; }
+    .drawing, .card { position: absolute; left: 0; top: 0; transform-origin: 0 0; visibility: hidden; }
+    .drawing svg, .card svg { display: block; width: 100%; height: 100%; overflow: visible; }
+    .drawing path, .card path { stroke: var(--ink); }
+    .drawing text, .card text { fill: var(--ink); }
+    .drawing path[fill]:not([fill="none"]), .card path[fill]:not([fill="none"]) { fill: #5d676d; stroke: #5d676d; }
+    .drawing path[stroke-opacity], .card path[stroke-opacity] { stroke-opacity: 0.22; }
+    .label { position: absolute; left: 0; top: 0; transform-origin: 50% 0; white-space: nowrap; text-align: center; font-size: 22px; letter-spacing: 6px; text-transform: uppercase; color: var(--ink); visibility: hidden; }
+    .label i { display: block; height: 1px; margin: 12px auto 0; background: var(--accent); }
 
-    #gallery { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; opacity: 0; background: #212830; }
-    #gallery .title { font-size: 54px; font-weight: 700; color: #f5f0e6; }
-    #gallery .sub { font-size: 22px; letter-spacing: 5px; text-transform: uppercase; color: #deb047; margin-bottom: 26px; }
-    #gallery .row { display: flex; gap: 40px; align-items: flex-end; }
-    #gallery .card { display: flex; flex-direction: column; align-items: center; gap: 16px; }
-    #gallery .sheet { width: 520px; height: 470px; padding: 18px; border: 1px solid rgba(245, 240, 230, 0.15); border-radius: 10px; background: #1b2128; display: flex; align-items: center; justify-content: center; }
-    #gallery .sheet svg { width: 100%; height: 100%; }
-    #gallery .label { font-size: 20px; letter-spacing: 4px; text-transform: uppercase; color: #f5f0e6; }
-    #gallery .logo { position: absolute; bottom: 52px; font-size: 34px; font-weight: 700; color: #f5f0e6; }
-    #gallery .logo span { color: #deb047; }
+    #brand { position: absolute; top: 44px; right: 56px; font-size: 30px; font-weight: 700; letter-spacing: 0.3px; color: var(--ink); }
+    #brand span, #end .logo span { color: var(--accent); }
+    #caption { position: absolute; left: 0; right: 0; bottom: 74px; display: flex; justify-content: center; align-items: center; gap: 30px; }
+    #caption i { display: block; width: 2px; height: 52px; background: var(--accent); transform-origin: 50% 50%; }
+    #caption span { font-size: 26px; text-transform: uppercase; white-space: nowrap; }
+    #end { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; opacity: 0; }
+    #end .logo { font-size: 84px; font-weight: 700; }
+    #end .sub { font-size: 22px; letter-spacing: 8px; text-transform: uppercase; }
     #fade { position: absolute; inset: 0; background: #000; pointer-events: none; }
 
     /* Real-time player (player.js); not used when rendering frames */
     body.player { width: 100vw; height: 100vh; }
     body.player #stage { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
-    #controls { position: fixed; left: 50%; top: 18px; white-space: nowrap; transform: translateX(-50%); display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-radius: 30px; background: rgba(0, 66, 39, 0.92); color: #f5f0e6; font: 600 13px/1 "Neue Haas", Arial, sans-serif; z-index: 10; opacity: 0.35; transition: opacity 0.2s; }
-    #controls:hover { opacity: 1; }
+    #controls { position: fixed; left: 50%; bottom: 18px; white-space: nowrap; transform: translateX(-50%); display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-radius: 30px; background: rgba(22, 28, 32, 0.92); border: 1px solid rgba(222, 176, 71, 0.45); box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45); color: #e8edf0; font: 600 13px/1 "Neue Haas", Arial, sans-serif; z-index: 10; transition: opacity 0.4s; }
+    #controls.idle:not(:hover) { opacity: 0; }
     #controls button { border: 0; background: transparent; color: inherit; font: inherit; font-size: 16px; cursor: pointer; padding: 2px 6px; }
-    #controls .rec { background: #deb047; color: #004227; border-radius: 16px; padding: 6px 12px; font-size: 13px; }
+    #controls .rec { background: #deb047; color: #161c20; border-radius: 16px; padding: 6px 12px; font-size: 13px; }
     #controls input { width: min(46vw, 640px); accent-color: #deb047; }
     #controls .time { min-width: 92px; font-variant-numeric: tabular-nums; }
     #controls .lang { color: #deb047; text-decoration: none; font-size: 12px; }
     body.recording #controls { display: none; }
     body.recording { cursor: none; }
+    #loading[hidden] { display: none; }
+    #loading { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; padding: 40px; text-align: center; background: #161c20; color: #e8edf0; font: 600 18px/1.5 "Neue Haas", Arial, sans-serif; letter-spacing: 3px; z-index: 20; }
   </style>
   <script type="importmap">
     { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/" } }
   </script>
 </head>
 <body>
+  <div id="loading" hidden>Loading…</div>
   <div id="stage">
     <div id="drawings"></div>
+    <div id="sheets"></div>
+    <div id="vignette"></div>
     <div id="brand">point<span>Space</span></div>
-    <div id="caption"><div class="k"></div><div class="t"></div></div>
-    <div id="gallery">
-      <div class="title"></div>
-      <div class="sub"></div>
-      <div class="row"></div>
-      <div class="logo">point<span>Space</span></div>
-    </div>
+    <div id="caption"><i></i><span></span><i></i></div>
+    <div id="end"><div class="logo">point<span>Space</span></div><div class="sub"></div></div>
     <div id="fade"></div>
   </div>
   <script type="module" src="film.js"></script>
