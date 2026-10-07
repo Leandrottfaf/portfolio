@@ -1,17 +1,20 @@
 // Timed "film" version of the BIM → CAD presentation. window.film.render(t) draws
 // the frame at t seconds; player.js plays it in real time, render.mjs renders it
-// frame by frame. One continuous move, no holds:
+// frame by frame. One continuous move, no holds: scan → BIM model → drawings.
 //
-//   0–11 s   dark stage, the camera glides along the front wall and pulls back,
-//            while gold linework traces over the model from the corner outward,
-//            with level lines running out past the house.
-//  11–14.5   the camera swings square to the front while the perspective flattens
+//   0–9 s    dark stage, the camera glides along the front wall while the laser
+//            scan appears in a wave from the corner.
+//   4.5–12   gold linework of the BIM model traces over the scan, with level lines
+//            running out past the house.
+//   9.5–15   the model takes over from the scan behind a gold front, as the camera
+//            pulls back.
+//  16–19.5   the camera swings square to the front while the perspective flattens
 //            (field of view closes, framing kept) and the shaded model drops away,
 //            leaving the linework.
-//  14.5–19   the actual AutoCAD elevation takes over from the 3D linework.
-//  19–29.5   the drawings as sheets, white on dark: the elevation slides into a row,
+//  19.5–24   the actual AutoCAD elevation takes over from the 3D linework.
+//  24–34.5   the drawings as sheets, white on dark: the elevation slides into a row,
 //            the section and the plan draw themselves in as the row moves on.
-//  29.5–37   the row pulls back to show all three, then the end card.
+//  34.5–42   the row pulls back to show all three, then the end card.
 
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
@@ -19,18 +22,21 @@ import { buildTerrain, footprintsFrom, rectOf } from "../terrain.js";
 
 const params = new URLSearchParams(location.search);
 const LANG = params.get("lang") === "fr" ? "fr" : "en";
-export const DURATION = 37;
+export const DURATION = 42;
+const D = 5; // the drawing part starts this much later than the model part (it follows the scan)
 
 const TEXT = {
   en: {
-    model: "From the BIM model",
+    scan: "From the 3D laser scan",
+    model: "To the BIM model",
     drawing: "To every 2D drawing",
     all: "One model, every deliverable",
     end: "3D scanning · BIM · CAD",
     labels: { elevation: "Front elevation", section: "Section", plan: "Ground floor plan" },
   },
   fr: {
-    model: "À partir du modèle BIM",
+    scan: "À partir du relevé 3D",
+    model: "Au modèle BIM",
     drawing: "Jusqu'à chaque plan 2D",
     all: "Un modèle, tous les livrables",
     end: "Numérisation 3D · BIM · DAO",
@@ -145,14 +151,18 @@ function lineMaterial() {
       uGlow: { value: 6 },
       uWhite: { value: 0 },
       uOpacity: { value: 1 },
+      uPull: { value: 0 },
       uGold: { value: GOLD.clone() },
     },
     vertexShader: `
+      uniform float uPull;
       varying vec3 vW;
       void main() {
         vec4 w = modelMatrix * vec4(position, 1.0);
         vW = w.xyz;
-        gl_Position = projectionMatrix * viewMatrix * w;
+        vec4 mv = viewMatrix * w;
+        mv.xyz *= 1.0 - min(uPull / length(mv.xyz), 0.5); // ahead of the scan points on the same surface
+        gl_Position = projectionMatrix * mv;
       }`,
     fragmentShader: `
       uniform vec3 uStart, uGold;
@@ -182,7 +192,7 @@ const shaded = []; // materials that fade away, leaving the linework
 // Background-coloured copy of everything, merged into one mesh: it hides lines behind surfaces
 const maskMat = new THREE.MeshBasicMaterial({ color: BG, toneMapped: false, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 });
 const maskPos = [];
-let masks, edges, edgeMat, guides, guideMat, terrain;
+let masks, occluder, edges, edgeMat, guides, guideMat, terrain, cloud, cloudMat;
 
 function addMask(mesh) {
   mesh.updateMatrixWorld(true);
@@ -194,23 +204,38 @@ function addMask(mesh) {
   }
 }
 
-// The line front also passes over the surfaces as a gold band, like a scanner
-const scan = { uScanStart: { value: new THREE.Vector3() }, uScanSweep: { value: 0 }, uScanGold: { value: GOLD } };
-function scanBand(mat) {
+// The model exists only behind a front sweeping out from the corner, which it
+// crosses as a gold band: it takes over from the scan there
+const reveal = { uRevStart: { value: new THREE.Vector3() }, uRev: { value: 1e4 }, uRevGold: { value: GOLD } };
+function revealed(mat, band) {
   mat.onBeforeCompile = (sh) => {
-    Object.assign(sh.uniforms, scan);
-    sh.vertexShader = "varying vec3 vScanW;\n" + sh.vertexShader.replace("#include <project_vertex>",
-      "#include <project_vertex>\n  vScanW = (modelMatrix * vec4(transformed, 1.0)).xyz;");
-    sh.fragmentShader = "varying vec3 vScanW;\nuniform vec3 uScanStart, uScanGold;\nuniform float uScanSweep;\n" + sh.fragmentShader.replace("#include <dithering_fragment>",
-      `float scanD = uScanSweep - distance(vScanW, uScanStart);
-  gl_FragColor.rgb += uScanGold * (scanD > 0.0 ? exp(-scanD * 1.4) : 0.0) * 0.75;
+    Object.assign(sh.uniforms, reveal);
+    sh.vertexShader = "varying vec3 vRevW;\n" + sh.vertexShader.replace("#include <project_vertex>",
+      "#include <project_vertex>\n  vRevW = (modelMatrix * vec4(transformed, 1.0)).xyz;");
+    sh.fragmentShader = "varying vec3 vRevW;\nuniform vec3 uRevStart, uRevGold;\nuniform float uRev;\n" + sh.fragmentShader.replace("#include <dithering_fragment>",
+      `float revD = uRev - distance(vRevW, uRevStart);
+  if (revD < 0.0) discard;
+  ${band ? "gl_FragColor.rgb += uRevGold * exp(-revD * 1.4) * 0.75;" : ""}
   #include <dithering_fragment>`);
   };
-  mat.customProgramCacheKey = () => "scan";
+  mat.customProgramCacheKey = () => (band ? "reveal-band" : "reveal");
 }
+revealed(maskMat, false);
+
+// Depth only, pushed back a few inches: hides the scan and lines behind the model's
+// surfaces (the interior, the far side) but never the scan points on them. Only
+// ahead of the model's front; behind it, the mask does this job.
+const occluderMat = new THREE.MeshBasicMaterial({ colorWrite: false, side: THREE.DoubleSide });
+occluderMat.onBeforeCompile = (sh) => {
+  Object.assign(sh.uniforms, reveal);
+  sh.vertexShader = "varying vec3 vRevW;\n" + sh.vertexShader.replace("gl_Position = projectionMatrix * mvPosition;",
+    "vRevW = (modelMatrix * vec4(transformed, 1.0)).xyz;\n  mvPosition.xyz += normalize(mvPosition.xyz) * 0.35;\n  gl_Position = projectionMatrix * mvPosition;");
+  sh.fragmentShader = "varying vec3 vRevW;\nuniform vec3 uRevStart;\nuniform float uRev;\n" + sh.fragmentShader.replace("#include <dithering_fragment>",
+    "if (uRev - distance(vRevW, uRevStart) > 0.0) discard;\n  #include <dithering_fragment>");
+};
 
 function fading(mat) {
-  scanBand(mat);
+  revealed(mat, true);
   mat.userData.opacity = mat.opacity;
   mat.transparent = true;
   mat.depthWrite = false; // depth comes from the masks, so only the front surface draws
@@ -300,7 +325,10 @@ async function loadModel() {
   mg.setAttribute("position", new THREE.Float32BufferAttribute(maskPos, 3));
   masks = new THREE.Mesh(mg, maskMat);
   masks.frustumCulled = false;
-  scene.add(masks);
+  occluder = new THREE.Mesh(mg, occluderMat);
+  occluder.frustumCulled = false;
+  occluder.renderOrder = -1;
+  scene.add(masks, occluder);
 
   // Level lines on the front face, running far out past the house
   const front = house.max.z + 0.05, gp = [];
@@ -314,6 +342,58 @@ async function loadModel() {
   guides.renderOrder = 2;
   guides.frustumCulled = false;
   scene.add(guides);
+}
+
+// ---------------------------------------------------------------------------
+// Laser scan: int16 positions in the model's coordinates plus a baked grey shade
+// (tools/scan_to_web.py). Points appear in a wave and give way to the model.
+
+async function loadScan() {
+  const meta = await (await fetch("scan.json")).json();
+  const buf = await (await fetch("scan.bin")).arrayBuffer();
+  const n = meta.count;
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.BufferAttribute(new Int16Array(buf, 0, n * 3), 3));
+  g.setAttribute("shade", new THREE.BufferAttribute(new Uint8Array(buf, n * 6, n), 1, true));
+  cloudMat = new THREE.ShaderMaterial({
+    uniforms: {
+      uScale: { value: meta.scale },
+      uOffset: { value: new THREE.Vector3(...meta.offset) },
+      uStart: { value: new THREE.Vector3() },
+      uAppear: { value: 0 },
+      uRev: reveal.uRev,
+      uSize: { value: 900 },
+      uGold: { value: GOLD },
+    },
+    vertexShader: `
+      attribute float shade;
+      uniform float uScale, uSize, uAppear, uRev;
+      uniform vec3 uOffset, uStart;
+      varying float vShade, vA, vR;
+      void main() {
+        vec4 w = modelMatrix * vec4(position * uScale + uOffset, 1.0);
+        float d = distance(w.xyz, uStart);
+        vA = uAppear - d; // > 0 once the wave has passed
+        vR = d - uRev;    // > 0 while the model hasn't taken over yet
+        vShade = shade;
+        vec4 mv = viewMatrix * w;
+        gl_Position = (vA < 0.0 || vR < -0.6) ? vec4(2.0, 2.0, 2.0, 1.0) : projectionMatrix * mv;
+        gl_PointSize = clamp(uSize * 0.06 / -mv.z, 1.5, 6.0);
+      }`,
+    fragmentShader: `
+      uniform vec3 uGold;
+      varying float vShade, vA, vR;
+      void main() {
+        vec2 c = gl_PointCoord - 0.5;
+        if (dot(c, c) > 0.25) discard;
+        vec3 col = vShade * vec3(0.92, 0.95, 1.0);
+        col += uGold * (exp(-vA * 0.5) + 0.9 * exp(-max(vR, 0.0) * 1.2));
+        gl_FragColor = vec4(col, 1.0);
+      }`,
+  });
+  cloud = new THREE.Points(g, cloudMat);
+  cloud.frustumCulled = false;
+  root.add(cloud); // same coordinates as the model
 }
 
 // ---------------------------------------------------------------------------
@@ -387,11 +467,12 @@ function buildKeys() {
   const half = Math.max(size.y / 2, size.x / 2 / (W / H)) * 1.08;
   elevFrame = { c: ec, half };
   keys = [
-    k(0, V(left + 5, 5.5, front), -62, 3, 9, 62),
-    k(3.5, V(left + 13, 6.5, front), -50, 5, 12, 58),
-    k(7, V(c.x - 2, 9, front - 2), -36, 9, 34, 50),
-    k(10.5, V(c.x, 13, c.z + 4), -20, 10, 96, 40),
-    { t: 14.5, target: ec, yaw: 0, pitch: 0, half, fov: 1 },
+    k(0, V(left + 9, 8, front), -56, 7, 30, 55),
+    k(4.5, V(left + 15, 7, front), -46, 5, 19, 52),
+    k(9, V(c.x - 2, 9, front - 2), -38, 9, 34, 50),
+    k(13, V(c.x + 1, 11, c.z + 2), -30, 12, 66, 44),
+    k(15.5, V(c.x, 13, c.z + 4), -20, 10, 96, 40),
+    { t: 14.5 + D, target: ec, yaw: 0, pitch: 0, half, fov: 1 },
   ];
 }
 
@@ -408,9 +489,9 @@ function spline(t, f) {
 }
 
 function setCamera(t) {
-  if (t >= 14.5) {
+  if (t >= 14.5 + D) {
     // Orthographic front view, pushing in slowly so the frame never sits still
-    const half = elevFrame.half / lerp(1, 1.05, easeOut(seg(t, 14.5, 19.5)));
+    const half = elevFrame.half / lerp(1, 1.05, easeOut(seg(t - D, 14.5, 19.5)));
     ortho.position.copy(elevFrame.c).add(V(0, 0, 600));
     ortho.up.set(0, 1, 0);
     ortho.lookAt(elevFrame.c);
@@ -443,6 +524,7 @@ const CARD_H = 640, GAP = 220, ROW_Y = 470;
 let elevStart; // the elevation's rect on screen when the sheets take over
 
 function sheetLayout(t) {
+  t -= D;
   const sizes = ORDER.map((k) => ({ w: CARD_H * drawings[k].meta.width / drawings[k].meta.height, h: CARD_H }));
   let x = 0;
   const centres = sizes.map((s) => { const c = x + s.w / 2; x += s.w + GAP; return c; });
@@ -490,32 +572,39 @@ function placeCard(d, r, opacity, drawn) {
 const capEl = document.getElementById("caption");
 const capText = capEl.querySelector("span");
 const capBars = capEl.querySelectorAll("i");
-const CAPTIONS = [["model", 2.2, 10.2], ["drawing", 11.2, 18.8], ["all", 30, 33.4]];
+const CAPTIONS = [["scan", 1, 7.8], ["model", 8.6, 15.4], ["drawing", 16.2, 23.8], ["all", 35, 38.4]];
 const endEl = document.getElementById("end");
 endEl.querySelector(".sub").textContent = TEXT.end;
 
 function render(t) {
   const cam = setCamera(t);
+  const td = t - D; // clock for the drawing part
 
-  // Linework sweeps out from the front corner, then turns white as the view flattens
+  // Everything sweeps out from the front corner: the scan, then the linework, then the model
   const start = V(house.min.x, 0, house.max.z);
+  cloudMat.uniforms.uStart.value.copy(start);
+  cloudMat.uniforms.uAppear.value = lerp(0, 110, Math.pow(seg(t, 0.2, 7), 1.3));
+  cloudMat.uniforms.uSize.value = H / (2 * Math.tan(deg(persp.fov) / 2));
   edgeMat.uniforms.uStart.value.copy(start);
-  edgeMat.uniforms.uSweep.value = lerp(0, 120, Math.pow(seg(t, 1.2, 10.5), 1.25));
-  scan.uScanStart.value.copy(start);
-  scan.uScanSweep.value = edgeMat.uniforms.uSweep.value;
-  edgeMat.uniforms.uWhite.value = ease(seg(t, 11.5, 14));
-  edgeMat.uniforms.uOpacity.value = 1 - ease(seg(t, 15.2, 16.6));
+  edgeMat.uniforms.uSweep.value = lerp(0, 120, Math.pow(seg(t, 4.5, 12), 1.25));
+  edgeMat.uniforms.uPull.value = guideMat.uniforms.uPull.value = cam.isPerspectiveCamera ? 0.25 : 0;
+  reveal.uRevStart.value.copy(start);
+  reveal.uRev.value = t < 9.5 ? -1 : lerp(-1, 110, Math.pow(seg(t, 9.5, 15.2), 1.15));
+  edgeMat.uniforms.uWhite.value = ease(seg(td, 11.5, 14));
+  edgeMat.uniforms.uOpacity.value = 1 - ease(seg(td, 15.2, 16.6));
   guideMat.uniforms.uStart.value.copy(start);
-  guideMat.uniforms.uSweep.value = lerp(0, 700, easeOut(seg(t, 2, 6.5)));
-  guideMat.uniforms.uOpacity.value = 0.55 * (1 - ease(seg(t, 10.5, 13)));
+  guideMat.uniforms.uSweep.value = lerp(0, 700, easeOut(seg(t, 5, 9.5)));
+  guideMat.uniforms.uOpacity.value = 0.55 * (1 - ease(seg(t, 13.5, 16)));
   edges.visible = edgeMat.uniforms.uOpacity.value > 0;
   guides.visible = guideMat.uniforms.uOpacity.value > 0;
+  cloud.visible = t < 15.5;
+  occluder.visible = t < 15.5 + 0.5;
 
   // The shaded model drops away, leaving the hidden-line drawing
-  const solid = 1 - ease(seg(t, 11, 13.8));
+  const solid = 1 - ease(seg(td, 11, 13.8));
   for (const m of shaded) { m.opacity = m.userData.opacity * solid; m.visible = solid > 0.001; }
   if (sun.castShadow !== solid > 0.001) { sun.castShadow = solid > 0.001; renderer.shadowMap.needsUpdate = true; }
-  const show3d = t < 17;
+  const show3d = td < 17;
   root.visible = terrain.visible = masks.visible = show3d;
 
   if (show3d) renderer.render(scene, cam);
@@ -523,7 +612,7 @@ function render(t) {
 
   // The AutoCAD elevation takes over from the 3D linework
   const elev = drawings.elevation;
-  const overlayO = t < 19 ? ease(seg(t, 14.6, 16.2)) : 0;
+  const overlayO = td < 19 ? ease(seg(td, 14.6, 16.2)) : 0;
   elev.el.style.visibility = overlayO > 0 ? "visible" : "hidden";
   if (overlayO > 0) {
     const r = overlayRect("elevation");
@@ -532,28 +621,28 @@ function render(t) {
   }
 
   // Sheets
-  const out = ease(seg(t, 33.2, 34.6));
-  const layout = t >= 19 ? sheetLayout(t) : null;
+  const out = ease(seg(td, 33.2, 34.6));
+  const layout = td >= 19 ? sheetLayout(t) : null;
   ORDER.forEach((key, i) => {
     const d = drawings[key];
     if (!layout) return placeCard(d, null, 0, 0);
     let { rect, emph } = layout[i];
     let opacity = lerp(0.28, 1, emph), drawn = 1;
     if (key === "elevation") {
-      rect = mixRect(elevStart, rect, ease(seg(t, 19, 20.6)));
-      opacity = lerp(1, opacity, seg(t, 19, 20.6));
+      rect = mixRect(elevStart, rect, ease(seg(td, 19, 20.6)));
+      opacity = lerp(1, opacity, seg(td, 19, 20.6));
     } else {
       const at = key === "section" ? 21.2 : 25.2; // draws itself as it slides in
-      opacity *= seg(t, at, at + 0.6);
-      drawn = easeOut(seg(t, at + 0.1, at + 2.6));
+      opacity *= seg(td, at, at + 0.6);
+      drawn = easeOut(seg(td, at + 0.1, at + 2.6));
     }
     rect = { ...rect, y: rect.y - 40 * out };
     placeCard(d, rect, opacity * (1 - 0.88 * out), drawn);
   });
 
   // End card
-  endEl.style.opacity = ease(seg(t, 33.8, 35));
-  endEl.style.transform = `translateY(${(1 - easeOut(seg(t, 33.8, 35.4))) * 24}px)`;
+  endEl.style.opacity = ease(seg(td, 33.8, 35));
+  endEl.style.transform = `translateY(${(1 - easeOut(seg(td, 33.8, 35.4))) * 24}px)`;
 
   // Caption: gold bars grow, then the words settle in
   const c = CAPTIONS.find(([, a, b]) => t >= a && t <= b);
@@ -567,16 +656,16 @@ function render(t) {
     capEl.style.opacity = 1 - gone;
   } else capEl.style.opacity = 0;
 
-  document.getElementById("brand").style.opacity = seg(t, 0.8, 1.8) * (1 - seg(t, 33.4, 34.2));
+  document.getElementById("brand").style.opacity = seg(t, 0.8, 1.8) * (1 - seg(td, 33.4, 34.2));
   document.getElementById("fade").style.opacity = 1 - seg(t, 0, 1) + seg(t, DURATION - 1, DURATION);
 }
 
 // ---------------------------------------------------------------------------
 await loadModel();
-await loadDrawings();
+await Promise.all([loadScan(), loadDrawings()]);
 buildKeys();
 renderer.shadowMap.needsUpdate = true;
-setCamera(19);
+setCamera(19 + D);
 elevStart = overlayRect("elevation");
-window.film = { duration: DURATION, render, ready: true, poster: 8 };
+window.film = { duration: DURATION, render, ready: true, poster: 6.5 };
 render(Number(params.get("t") || 0));
