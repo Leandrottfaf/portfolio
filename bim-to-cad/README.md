@@ -59,20 +59,26 @@ The DWF itself isn't kept in the repo. Its metadata includes local project folde
 
 ## Video
 
-`film/` is a timed version of the presentation (about 42 s, 1920×1080): scan → BIM model → drawings, in one continuous move on a dark stage with no holds. It can be recorded two ways:
+`film/` is a timed version of the presentation (31 s, 1920×1080, with music): scan → BIM model → drawings, in one continuous move on a dark stage, never holding still. It can be recorded two ways:
 
-- **In your browser, in real time (fastest):** open `…/bim-to-cad/film/` (add `?lang=fr` for French). The player has play/pause (space), a scrubber, frame stepping (← →) and fullscreen (f). **● Record** plays the film once and saves the tab as a video, MP4 or WebM depending on the browser. Go fullscreen on a 1080p-or-larger screen first for a full-resolution file. OBS or any screen recorder works too.
-- **Frame by frame, headless (slow, exact 30 fps):** `film/render.mjs`, see below.
+- **In your browser, in real time (fastest):** open `…/bim-to-cad/film/` (add `?lang=fr` for French). The player has play/pause (space), a scrubber, sound on/off (♪ or m), frame stepping (← →) and fullscreen (f). **● Record** plays the film once and saves the tab, with the music, as a video: MP4 or WebM depending on the browser. Go fullscreen on a 1080p-or-larger screen first for a full-resolution file. OBS or any screen recorder works too.
+- **Frame by frame, headless (slow, exact 30 fps):** `film/render.mjs`, see below. It muxes the music in.
 
-The film covers:
+The film covers (times are `CUE` in `film/film.js`):
 
-1. **0–9 s:** the camera glides along the front wall while the laser scan appears in a wave from the front corner.
-2. **4.5–12 s:** gold linework of the BIM model traces over the scan, and level lines run out past the house.
-3. **9.5–15 s:** the model takes over from the scan behind a gold front, as the camera pulls back.
-4. **16–19.5 s:** the camera swings square to the front while the perspective flattens: the field of view closes and the framing stays. The shaded model drops away and leaves a hidden-line drawing, which turns white.
-5. **19.5–24 s:** the actual AutoCAD elevation takes over from the 3D linework.
-6. **24–34.5 s:** the drawings as sheets, white on dark. The elevation slides into a row, and the section and the plan draw themselves in as the row moves on.
-7. **34.5–42 s:** the row pulls back to show all three, then the end card.
+1. **0–4 s:** the laser scan appears in a wave from the front corner while the camera glides along the facade.
+2. **2.4–7.6 s:** gold linework of the BIM model traces over the scan.
+3. **6.2–10.4 s:** the model builds up from the ground behind a rising gold line, replacing the scan as it goes.
+4. **11–14 s:** the camera swings square to the front while the perspective flattens: the field of view closes and the framing stays. The shaded model drops away and leaves a hidden-line drawing, which turns white.
+5. **14–16.6 s:** the actual AutoCAD elevation takes over from the 3D linework.
+6. **16.6–23.4 s:** the drawings as sheets, white on dark, drifting on in a row; the section and the plan draw themselves in.
+7. **23.4–31 s:** the row pulls back to show all three, then the end card.
+
+The scan and the model are drawn in two passes: first the scan, hidden behind the model's surfaces by a depth-only copy of the model pushed back a few inches (so scan points on those surfaces stay, while the interior and far side are hidden); then the model and its linework on top. That way the lines sit on the scan, and only the edges a real elevation would show are drawn.
+
+### Music
+
+`film/soundtrack.js` synthesizes the score with the Web Audio API from the same `CUE` times, so it always lands on the cuts: a dark pad in D minor, a soft pulse from the linework on, glassy arpeggios as the model builds, risers into the build, the flatten and the drawing landing on low impacts, whooshes as the sheets slide, and an open chord under the logo. It is generated, not a licensed track, so it can be used anywhere. The player renders it once when the page loads (a second or two) and plays it in sync with the picture.
 
 ### The scan
 
@@ -92,6 +98,7 @@ The drawings are shown monochrome by CSS in `film/index.html` (strokes white, so
 | `film/index.html`, `film/film.js` | The film; `window.film.render(t)` draws the frame at `t` seconds. Open `film/?t=12` to preview a moment. |
 | `film/house-elements.glb` | The model with one mesh per element, which the film outlines and shades piece by piece (`python3 tools/ifc_to_glb.py models/Michel-Menard.ifc film/house-elements.glb --per-element`) |
 | `film/scan.bin`, `film/scan.json` | The laser scan, in the model's coordinates (see above) |
+| `film/soundtrack.js` | The music, generated from the film's cue times (see above) |
 | `film/player.js` | Real-time player and in-browser recorder (inactive when render.mjs drives the page) |
 | `film/render.mjs` | Renders every frame with Playwright and pipes them to ffmpeg (libx264) |
 
@@ -100,7 +107,7 @@ python3 -m http.server 8000      # from the repo root
 node bim-to-cad/film/render.mjs --url http://localhost:8000/bim-to-cad/film/ --out film.mp4 [--lang fr] [--step 4]
 ```
 
-`--lang fr` renders the French captions; `--step 4` renders every 4th frame for a quick preview.
+`--lang fr` renders the French captions; `--step 4` renders every 4th frame for a quick preview; `--no-audio` leaves the music out.
 
 ## Tuning
 
