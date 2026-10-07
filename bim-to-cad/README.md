@@ -58,22 +58,25 @@ The DWF itself isn't kept in the repo. Its metadata includes local project folde
 
 ## Video
 
-`film/` is a timed version of the presentation (about 52 s, 1920×1080). It can be recorded two ways:
+`film/` is a timed version of the presentation (about 37 s, 1920×1080): one continuous move on a dark stage, with no holds. It can be recorded two ways:
 
 - **In your browser, in real time (fastest):** open `…/bim-to-cad/film/` (add `?lang=fr` for French). The player has play/pause (space), a scrubber, frame stepping (← →) and fullscreen (f). **● Record** plays the film once and saves the tab as a video, MP4 or WebM depending on the browser. Go fullscreen on a 1080p-or-larger screen first for a full-resolution file. OBS or any screen recorder works too.
 - **Frame by frame, headless (slow, exact 30 fps):** `film/render.mjs`, see below.
 
 The film covers:
 
-1. **0–19 s:** a close-up at the front wall while walls, doors and windows assemble around the camera. Walls rise course by course with a concrete block texture, and windows and doors fly in. The camera then pulls back and orbits as the rest builds, and the roof drops in last.
-2. **19–21 s:** the perspective flattens into an orthographic view.
-3. **21–45 s:** the CAD tour: floor plan, the section walking through the house, then the front elevation, each landing on the actual drawing.
-4. **45–52 s:** all three drawings side by side.
+1. **0–11 s:** the camera glides along the front wall and pulls back. Gold linework traces over the model from the front corner outward, a gold band sweeps across the surfaces with it, and level lines run out past the house.
+2. **11–14.5 s:** the camera swings square to the front while the perspective flattens: the field of view closes and the framing stays. The shaded model drops away and leaves a hidden-line drawing, which turns white.
+3. **14.5–19 s:** the actual AutoCAD elevation takes over from the 3D linework.
+4. **19–29.5 s:** the drawings as sheets, white on dark. The elevation slides into a row, and the section and the plan draw themselves in as the row moves on.
+5. **29.5–37 s:** the row pulls back to show all three, then the end card.
+
+The drawings are shown monochrome by CSS in `film/index.html` (strokes white, solid fills grey, hatches faint), so the SVGs themselves keep their AutoCAD colours.
 
 | File | Purpose |
 |---|---|
 | `film/index.html`, `film/film.js` | The film; `window.film.render(t)` draws the frame at `t` seconds. Open `film/?t=12` to preview a moment. |
-| `film/house-elements.glb` | The model with one mesh per element, so each can arrive on its own (`python3 tools/ifc_to_glb.py models/Michel-Menard.ifc film/house-elements.glb --per-element`) |
+| `film/house-elements.glb` | The model with one mesh per element, which the film outlines and shades piece by piece (`python3 tools/ifc_to_glb.py models/Michel-Menard.ifc film/house-elements.glb --per-element`) |
 | `film/player.js` | Real-time player and in-browser recorder (inactive when render.mjs drives the page) |
 | `film/render.mjs` | Renders every frame with Playwright and pipes them to ffmpeg (libx264) |
 

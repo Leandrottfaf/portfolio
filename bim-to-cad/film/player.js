@@ -9,7 +9,7 @@ if (!navigator.webdriver) {
   addEventListener("unhandledrejection", (e) => { loading.textContent = `Could not load the film: ${e.reason?.message || e.reason}`; });
   while (!window.film?.ready) await new Promise((r) => setTimeout(r, 50));
   loading.remove();
-  const { render, duration } = window.film;
+  const { render, duration, poster = 0 } = window.film;
   const stage = document.getElementById("stage");
 
   // Fit the 1920×1080 stage to the window
@@ -129,8 +129,8 @@ if (!navigator.webdriver) {
     play(0, () => setTimeout(() => rec.stop(), 300));
   });
 
-  // Open on the finished house rather than the black first frame; play starts from 0
+  // Open on a poster frame rather than the black first frame; play starts from 0
   const tParam = new URLSearchParams(location.search).get("t");
-  show(tParam === null ? 16 : Number(tParam));
+  show(tParam === null ? poster : Number(tParam));
   if (tParam === null) startFromTop = true;
 }
