@@ -4,9 +4,11 @@
 //   node bim-to-cad/film/render.mjs --url http://localhost:8000/bim-to-cad/film/ --out film.mp4
 //
 // Options: --fps 30, --from 0, --to <seconds>, --lang en|fr, --step 1 (render every Nth frame,
-// for quick previews). Needs Playwright (npm i playwright) and ffmpeg with libx264.
+// for quick previews), --no-audio. Needs Playwright (npm i playwright) and ffmpeg with libx264.
+// The soundtrack (soundtrack.js) is rendered by the page and muxed in as AAC.
 
 import { spawn } from "node:child_process";
+import { rmSync, writeFileSync } from "node:fs";
 import { chromium } from "playwright";
 
 const arg = (name, def) => {
@@ -32,8 +34,10 @@ await page.evaluate(() => document.fonts.ready);
 const duration = await page.evaluate(() => window.film.duration);
 const from = +arg("from", 0), to = +arg("to", duration);
 
+const audio = !process.argv.includes("--no-audio");
+const videoOut = audio ? `${out}.video.mp4` : out;
 const ffmpeg = spawn("ffmpeg", ["-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", String(fps / step), "-i", "-",
-  "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-pix_fmt", "yuv420p", "-r", String(fps), "-movflags", "+faststart", out], { stdio: ["pipe", "inherit", "inherit"] });
+  "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-pix_fmt", "yuv420p", "-r", String(fps), "-movflags", "+faststart", videoOut], { stdio: ["pipe", "inherit", "inherit"] });
 
 const frames = Math.round((to - from) * fps);
 const t0 = Date.now();
@@ -49,5 +53,15 @@ for (let f = 0; f < frames; f += step) {
 }
 ffmpeg.stdin.end();
 await new Promise((r) => ffmpeg.on("close", r));
+
+if (audio) {
+  const wav = `${out}.score.wav`;
+  writeFileSync(wav, Buffer.from(await page.evaluate(() => window.film.soundtrackWav()), "base64"));
+  const mux = spawn("ffmpeg", ["-y", "-loglevel", "error", "-i", videoOut, "-ss", String(from), "-i", wav,
+    "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out], { stdio: "inherit" });
+  await new Promise((r) => mux.on("close", r));
+  rmSync(videoOut);
+  rmSync(wav);
+}
 await browser.close();
 console.log("wrote", out);
