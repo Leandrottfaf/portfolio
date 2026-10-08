@@ -1,0 +1,607 @@
+{
+  "url": "https://www.pointspace.ca/services/progress-reporting",
+  "lang": "en",
+  "title": "Progress Reporting Services | 3D Scan & Models | pointSpace",
+  "metaDescription": "Accurate progress reporting services with 3D scans, reports and 3D modeling. pointSpace ensures precise project tracking and documentation.",
+  "ogTitle": "Progress Reporting Services | 3D Scan & Models | pointSpace",
+  "ogDescription": "Accurate progress reporting services with 3D scans, reports and 3D modeling. pointSpace ensures precise project tracking and documentation.",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/services/progress-reporting",
+  "hreflang": [
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/services/progress-reporting"
+    },
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/services/rapport-davancement"
+    }
+  ],
+  "h1": [
+    "PROGRESS REPORTING SERVICES"
+  ],
+  "headings": [
+    "h1: PROGRESS REPORTING SERVICES",
+    "h4: Track Every Stage of Your Project with Regularly Updated Surveys, Digital Plans, and Models for Complete Visibility.",
+    "h2: Proven results across 400+ projects",
+    "h4: As-built architectural plans for a retail space",
+    "h4: Structural and roofing analysis ahead of steel frame installation",
+    "h4: Health and safety issue in an\nindustrial site",
+    "h4: Want to learn more about our 3D scanning, 3D modeling and progress reporting services? Our team is here to answer your questions and provide personalized guidance. Feel free to contact us to discuss your project.",
+    "h3: What is included in your progress reports?",
+    "h3: How often are progress reports provided?",
+    "h3: How accurate are the data and deliverables?",
+    "h3: What is your 3D scanning process?",
+    "h3: Which deliverable formats do you offer, and do you provide training?",
+    "h2: \"A high-quality, fast, and efficient service.\""
+  ],
+  "nav": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/progress-reporting"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/rapport-davancement"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contact us",
+      "href": "/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/progress-reporting"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/rapport-davancement"
+    },
+    {
+      "text": "",
+      "href": "/"
+    },
+    {
+      "text": "Work with us 🡒",
+      "href": "/get-a-quote"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/As-built_architectural_plans_for_a_retail_space"
+    },
+    {
+      "text": "tructural and roofing analysis ahead of steel frame installation",
+      "href": "/fr-ca/etude-de-cas/etude-structurelle-et-toiture"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/Structural-and-Roofing-Analysis-Ahead-of-Steel-Frame-Installation"
+    },
+    {
+      "text": "Health and safety issue in an",
+      "href": "/fr-ca/etude-de-cas/etude-structurelle-et-toiture"
+    },
+    {
+      "text": "ndustrial site",
+      "href": "/fr-ca/etude-de-cas/etude-structurelle-et-toiture"
+    },
+    {
+      "text": "Groupe Renfort",
+      "href": "http://www.renfort.com/"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/Health-and-safety-issue-in-an-industrial-site"
+    },
+    {
+      "text": "Contact us 🡒",
+      "href": "/contact"
+    },
+    {
+      "text": "3D models",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "BIM (Building Information Modeling) models",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "architectural or technical plans",
+      "href": "/services/2D-3D-Plans"
+    },
+    {
+      "text": "building analyses",
+      "href": "/services/analysis"
+    },
+    {
+      "text": "BOMA",
+      "href": "/services/boma"
+    },
+    {
+      "text": "Technical Preparation of a 3D Scanning Survey",
+      "href": "http://www.pointspace.ca/technical-preparation-of-a-survey-3d-scanning"
+    },
+    {
+      "text": "The 3D scanning process",
+      "href": "http://www.pointspace.ca/3d-scanning-the-scanning-process"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jcb.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://idxdesign.com/"
+    },
+    {
+      "text": "",
+      "href": "https://tla-architectes.com/"
+    },
+    {
+      "text": "",
+      "href": "https://vacaero.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.nelmar.com/"
+    },
+    {
+      "text": "",
+      "href": "https://stdenisthompson.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.benoy.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupemach.com/en/home.html"
+    },
+    {
+      "text": "",
+      "href": "https://dallaireconsultants.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.cominar.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.broccolini.com/en"
+    },
+    {
+      "text": "",
+      "href": "https://groupecdf.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://lainco.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://renfort.com/home/"
+    },
+    {
+      "text": "",
+      "href": "https://musesolution.ca/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://fr.oktodev.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://shellex.ca/fr/accueil/"
+    },
+    {
+      "text": "",
+      "href": "https://navada.com/fr"
+    },
+    {
+      "text": "",
+      "href": "https://www.kolostat.com/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    }
+  ],
+  "body": "Home\nAbout us\nIndustries\nManufacturing and industrial\nArchitecture and Buildings\nServices\nScanning\nScan to BIM\nAs-Built Drafting\n3D Modeling\nBuilding analysis\nBOMA As-Built Digital Plans\nMatterport 3D Virtual Tours\nDigital Twins\nBlog\nCase studies\nContact\nGet in touch\n(514) 606-9604\nEnglish\nen\nFrançais\nfr\nPROGRESS REPORTING SERVICES\nTrack Every Stage of Your Project with Regularly Updated Surveys, Digital Plans, and Models for Complete Visibility.\nWork with us 🡒\nWhen working with us\nYOU CAN EXPECT\nWe transform your physical spaces into high-quality digital plans and models and deliver them at key stages of your project to ensure thorough progress reporting. By combining advanced LiDAR scanning technology with our drafting expertise, we provide accurate and reliable data you can use with confidence throughout your project.\nPRECISION\nOur progress reporting services start with detailed on-site data capture, documenting every dimension and feature of your building or equipment. This precise foundation enables highly accurate as-built plans, reports and 3D models that reflect real-world conditions, reducing errors during design, renovation, or construction.\nFIELD TO FILE\nWe capture and convert spatial data into clean, structured as-built plans, reports and 3D models. Deliverables are provided in the format of your choice, including DWG, Revit, CAD, STEP, SAT, and more, making them easy to integrate into your workflow.\nEFFICIENCY\nWith accurate and reliable as-built plans, reports and 3D models, you can focus on what matters most. Our progress reporting services help you track your project’s progress, minimize errors caused by data inaccuracies, and improve efficiency.\nCase studies\nProven results across 400+ projects\nWe work with clients across various sectors, including construction, architecture, and manufacturing. Our goal is to provide high-quality progress reporting services perfectly tailored to your needs.\nAs-built architectural plans for a retail space\nWestcliff\nView case study\nS\ntructural and roofing analysis ahead of steel frame installation\nIndustrial Sector\nView case study\nHealth and safety issue in an\ni\nndustrial site\nGroupe Renfort\nView case study\nContact us 🡒\nFAQ\nWant to learn more about our 3D scanning, 3D modeling and progress reporting services? Our team is here to answer your questions and provide personalized guidance. Feel free to contact us to discuss your project.\nWhat is included in your progress reports?\nOur progress reports offer a comprehensive view of your project at key milestones. Each report can include high-quality 2D plans, detailed 3D models, and reports. These deliverables allow you to track project advancements, identify potential issues, and gain a clear understanding of current conditions. Our goal is to provide precise, actionable information that supports architects, engineers, and project managers in making informed decisions.\nHow often are progress reports provided?\nWe deliver progress reports according to a schedule tailored to your needs, ensuring you receive updates exactly when you need them. This approach guarantees that you always have up-to-date insights throughout your project. Each update provides a clear and comprehensive picture of your project’s current status, helping you track progress and make informed decisions.\nHow accurate are the data and deliverables?\nWe use LiDAR scanners with millimeter-level accuracy to capture precise measurements, ensuring our data, as-built plans, reports and 3D models are highly accurate. While absolute millimetric precision cannot be guaranteed, our 3D models, as-built plans and reports consistently deliver a very high level of accuracy, making them ideal for design, planning, and construction applications.\nWhat is your 3D scanning process?\nOur 3D data capture process typically involves several key steps. First, we select the most suitable tool for the project. The site is then scanned from multiple angles to cover its entire surface and generate a point cloud. These raw data are processed using specialized software for alignment, cleaning, and merging, resulting in 3D models, detailed plans, or building analyses.\nThe final outputs can include 3D models\n, BIM (Building Information Modeling) models\nwith detailed component data, architectural or technical plans\n, and building analyses\nsuch as BOMA\nmeasurements, flatness and verticality studies, or structural deformation assessments. All outputs are based on our precise surveys, providing a reliable foundation for planning, maintenance, and renovations.\nOur laser scanners provide real-time visual feedback during capture, allowing us to verify that every area has been fully documented. In simple terms, we capture the environment in 3D the same way a camera captures photographs and then process the data to rebuild an accurate digital version of the existing conditions.\nFor more information about our 3D scanning and modeling process, you can explore these articles:\n• Technical Preparation of a 3D Scanning Survey\n• The 3D scanning process\nWhich deliverable formats do you offer, and do you provide training?\nWe deliver as-built plans, reports and 3D models in the format of your choice, including DWG, Revit, CAD, STEP, SAT, and more. Personalized training is also available to help you use your new plans or models effectively and get the most out of your digital files.\n\"A high-quality, fast, and efficient service.\"\n- Juliano Rodriguez-Daoust,\nVP Business Development and Acquisitions\nCarrossielli Group\nShare by:",
+  "faq": [
+    {
+      "q": "What is included in your progress reports?",
+      "a": "Our progress reports offer a comprehensive view of your project at key milestones. Each report can include high-quality 2D plans, detailed 3D models, and reports. These deliverables allow you to track project advancements, identify potential issues, and gain a clear understanding of current conditions. Our goal is to provide precise, actionable information that supports architects, engineers, and project managers in making informed decisions."
+    },
+    {
+      "q": "How often are progress reports provided?",
+      "a": "We deliver progress reports according to a schedule tailored to your needs, ensuring you receive updates exactly when you need them. This approach guarantees that you always have up-to-date insights throughout your project. Each update provides a clear and comprehensive picture of your project’s current status, helping you track progress and make informed decisions."
+    },
+    {
+      "q": "How accurate are the data and deliverables?",
+      "a": "We use LiDAR scanners with millimeter-level accuracy to capture precise measurements, ensuring our data, as-built plans, reports and 3D models are highly accurate. While absolute millimetric precision cannot be guaranteed, our 3D models, as-built plans and reports consistently deliver a very high level of accuracy, making them ideal for design, planning, and construction applications."
+    },
+    {
+      "q": "What is your 3D scanning process?",
+      "a": "Our 3D data capture process typically involves several key steps. First, we select the most suitable tool for the project. The site is then scanned from multiple angles to cover its entire surface and generate a point cloud. These raw data are processed using specialized software for alignment, cleaning, and merging, resulting in 3D models, detailed plans, or building analyses. The final outputs can include 3D models, BIM (Building Information Modeling) models with detailed component data, architectural or technical plans, and building analyses such as BOMA measurements, flatness and verticality studies, or structural deformation assessments. All outputs are based on our precise surveys, providing a reliable foundation for planning, maintenance, and renovations. Our laser scanners provide real-time visual feedback during capture, allowing us to verify that every area has been fully documented. In simple terms, we capture the environment in 3D the same way a camera captures photographs and then process the data to rebuild an accurate digital version of the existing conditions. For more information about our 3D scanning and modeling process, you can explore these articles: • Technical Preparation of a 3D Scanning Survey • The 3D scanning process"
+    },
+    {
+      "q": "Which deliverable formats do you offer, and do you provide training?",
+      "a": "We deliver as-built plans, reports and 3D models in the format of your choice, including DWG, Revit, CAD, STEP, SAT, and more. Personalized training is also available to help you use your new plans or models effectively and get the most out of your digital files."
+    }
+  ],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sous-titre-545a2f08-1920w.webp",
+      "alt": "Interior of a large unfinished building with exposed ceiling pipes and sunlight through tall windows"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%282%29-1920w.webp",
+      "alt": "3D scan of a gray stone building against a blue sky"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Templates+publications+LI+%289%29-1920w.png",
+      "alt": "Color-coded 3D surface plot with blue, green, and yellow gradients and small markers on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Balcan-2-1920w.png",
+      "alt": "Industrial machine with angled chute, control panel, and support frame on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+      "alt": "Faint white logo reading “JESSICA DAOUST ARCHITECTES” on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+      "alt": "Faint beige abstract logo on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+      "alt": "Faint gold The Theatre St James logo on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+      "alt": "Faint white and gold “COMIX” logo with small tagline text on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+      "alt": "Faint beige “aedifica” wordmark centered on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+      "alt": "JCB Construction Canada logo in pale gold on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold and light gray text and vertical gold bars above it"
+    }
+  ],
+  "jsonLd": [
+    "{\"@context\":\"http://schema.org/\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"What is included in your progress reports?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Our progress reports offer a comprehensive view of your project at key milestones. Each report can include high-quality 2D plans, detailed 3D models, and reports. These deliverables allow you to track project advancements, identify potential issues, and gain a clear understanding of current conditions. Our goal is to provide precise, actionable information that supports architects, engineers, and project managers in making informed decisions.\"}},{\"@type\":\"Question\",\"name\":\"How often are progress reports provided?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"We deliver progress reports according to a schedule tailored to your needs, ensuring you receive updates exactly when you need them. This approach guarantees that you always have up-to-date insights throughout your project. Each update provides a clear and comprehensive picture of your project&rsquo;s current status, helping you track progress and make informed decisions.\"}},{\"@type\":\"Question\",\"name\":\"How accurate are the data and deliverables?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"We use LiDAR scanners with millimeter-level accuracy to capture precise measurements, ensuring our data, as-built plans, reports and 3D models are highly accurate. While absolute millimetric precision cannot be guaranteed, our 3D models, as-built plans and reports consistently deliver a very high level of accuracy, making them ideal for design, planning, and construction applications.\"}},{\"@type\":\"Question\",\"name\":\"What is your 3D scanning process?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Our 3D data capture process typically involves several key steps. First, we select the most suitable tool for the project. The site is then scanned from multiple angles to cover its entire surface and generate a point cloud. These raw data are processed using specialized software for alignment, cleaning, and merging, resulting in 3D models, detailed plans, or building analyses. The final outputs can include 3D models, BIM (Building Information Modeling) models with detailed component data, architectural or technical plans, and building analyses such as BOMA measurements, flatness and verticality studies, or structural deformation assessments. All outputs are based on our precise surveys, providing a reliable foundation for planning, maintenance, and renovations. Our laser scanners provide real-time visual feedback during capture, allowing us to verify that every area has been fully documented. In simple terms, we capture the environment in 3D the same way a camera captures photographs and then process the data to rebuild an accurate digital version of the existing conditions. For more information about our 3D scanning and modeling process, you can explore these articles: &bull; Technical Preparation of a 3D Scanning Survey &bull; The 3D scanning process\"}},{\"@type\":\"Question\",\"name\":\"Which deliverable formats do you offer, and do you provide training?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"We deliver as-built plans, reports and 3D models in the format of your choice, including DWG, Revit, CAD, STEP, SAT, and more. Personalized training is also available to help you use your new plans or models effectively and get the most out of your digital files.\"}}]}"
+  ],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sous-titre-545a2f08-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Sous-titre-545a2f08.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/11+%282%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Templates+publications+LI+%289%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Templates+publications+LI+%289%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Balcan-2-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Balcan-2.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/17+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/21+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/13+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/23+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/12+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/16+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/14+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/8+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/10+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-c0d7ef18-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/3-100388f4-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4-31dab3f9-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/5-7617cdb3-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6-b66f75f9-1920w.png"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/services/progress-reporting"
+}

@@ -1,0 +1,606 @@
+{
+  "url": "https://www.pointspace.ca/fr-ca/services/rapport-davancement",
+  "lang": "fr",
+  "title": "Services de rapport d’avancement | pointSpace",
+  "metaDescription": "Nos services de rapport d’avancement vous offrent un suivi clair et détaillé pour piloter vos projets efficacement et garantir leur réussite.",
+  "ogTitle": "Services de rapport d’avancement | pointSpace",
+  "ogDescription": "Nos services de rapport d’avancement vous offrent un suivi clair et détaillé pour piloter vos projets efficacement et garantir leur réussite.",
+  "ogImage": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/fr-ca/services/rapport-davancement",
+  "hreflang": [
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/services/rapport-davancement"
+    },
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/services/progress-reporting"
+    }
+  ],
+  "h1": [
+    "Services de suivi de l’avancement des projets"
+  ],
+  "headings": [
+    "h1: Services de suivi de l’avancement des projets",
+    "h4: Bénéficiez d'une vue d'ensemble complète de votre projet grâce à un suivi clair et cohérent de sa progression, du début à la fin.",
+    "h2: Des résultats prouvés à travers plus de 400 projets",
+    "h4: Plans architecturaux tels-que-construits d’un espace commercial",
+    "h4: Étude structurelle et de toiture pour l'ajout de charpente en acier",
+    "h4: Problème de santé et sécurité en milieu industriel",
+    "h3: Qu’est-ce qui est inclus dans vos rapports de suivi ?",
+    "h3: Quelle est la précision de vos livrables et données?",
+    "h3: Comment vos relevés sont-ils réalisés ?",
+    "h3: Quels formats de livrables proposez-vous et offrez-vous une formation ?",
+    "h3: À quelle fréquence pouvons-nous recevoir les rapports de suivi ?",
+    "h2: « Un service de qualité, rapide et efficace. »"
+  ],
+  "nav": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/rapport-davancement"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/progress-reporting"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Obtenir une soumission →",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/rapport-davancement"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/progress-reporting"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "Travaillez avec nous 🡒",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/case-studies/Plans-architecturaux-tels-que-construits-dun-espace-commercial"
+    },
+    {
+      "text": "",
+      "href": "https://www.pointspace.ca/fr-ca/etude-de-cas/etude-structurelle-et-toiture"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "https://www.pointspace.ca/fr-ca/etude-de-cas/etude-structurelle-et-toiture"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "https://www.pointspace.ca/fr-ca/case-studies/etude-de-cas-groupe-renfort"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "un modèle 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "une maquette BIM (Building Information Modeling)",
+      "href": "/fr-ca/services/bim"
+    },
+    {
+      "text": "des plans architecturaux ou techniques",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "des analyses de bâtiment",
+      "href": "/fr-ca/services/analyse"
+    },
+    {
+      "text": "Préparation d’un relevé : numérisation 3D",
+      "href": "http://www.pointspace.ca/fr-ca/preparation-technique-dun-releve-numerisation-3d"
+    },
+    {
+      "text": "La numérisation 3D : le processus de numérisation",
+      "href": "http://www.pointspace.ca/fr-ca/la-numerisation-3d-le-processus-de-numerisation"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jcb.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://idxdesign.com/"
+    },
+    {
+      "text": "",
+      "href": "https://tla-architectes.com/"
+    },
+    {
+      "text": "",
+      "href": "https://vacaero.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.nelmar.com/"
+    },
+    {
+      "text": "",
+      "href": "https://stdenisthompson.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.benoy.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupemach.com/en/home.html"
+    },
+    {
+      "text": "",
+      "href": "https://dallaireconsultants.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.cominar.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.broccolini.com/en"
+    },
+    {
+      "text": "",
+      "href": "https://groupecdf.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://lainco.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://renfort.com/home/"
+    },
+    {
+      "text": "",
+      "href": "https://musesolution.ca/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://fr.oktodev.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://shellex.ca/fr/accueil/"
+    },
+    {
+      "text": "",
+      "href": "https://navada.com/fr"
+    },
+    {
+      "text": "",
+      "href": "https://www.kolostat.com/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    }
+  ],
+  "body": "Accueil\nÀ propos\nSecteurs\nManufacturier et industriel\nArchitecture et Bâtiments\nServices\nNumérisation LiDAR 3D\nModélisation BIM\nAs-Built Drafting\nModélisation 3D\nAnalyse du bâtiment\nMise en plan BOMA\nVisites virtuelles 3D Matterport\nJumeaux numériques\nBlogue\nÉtudes de cas\nContact\nCarrières\nContactez-nous\n(514) 606-9604\nFrançais\nfr\nEnglish\nen\nServices de suivi de l’avancement des projets\nBénéficiez d'une vue d'ensemble complète de votre projet grâce à un suivi clair et cohérent de sa progression, du début à la fin.\nTravaillez avec nous 🡒\nLorsque vous travaillez avec nous\nVOUS POUVEZ VOUS ATTENDRE À\nNous transformons vos espaces physiques en plans tels-que-construits et en modèles 3D de haute qualité. En combinant l’utilisation d’outils LiDAR de haute résolution à notre expertise en dessin technique, nous produisons des plans et modèles 3D précis tout au long de votre projet.\nPRÉCISION\nNos outils équipés de la technologie LiDAR offrent une précision millimétrique. Ils garantissent que les données géospatiales utilisées pour la création de nos plans, modèles 3D et rapports soient extrêmement précises. Ce qui permet de réduire les erreurs, d’éviter les reprises coûteuses et d’assurer une représentation fidèle de la réalité.\nSERVICE CLÉ EN MAIN\nDe la capture des données au dessin, notre équipe s’occupe de tout. Nous collectons les données géospatiales de votre bâtiment afin de produire des plans, modèles 3D et rapports de qualité dans les formats de votre choix. Des plans architecturaux détaillés aux modèles 3D, nous transformons les données en fichiers numériques précis et faciles à utiliser.\nEFFICACE\nAvec nos services de suivi de l’avancement des projets, vous pouvez vous concentrer sur les tâches à forte valeur ajoutée. Notre équipe transforme les données relevées de votre espace en plans, modèles 3D et rapports précis et détaillés, vous permettant de gagner du temps et d’éviter les erreurs coûteuses associées aux méthodes traditionnelles, afin d’assurer une efficacité maximale.\nÉtudes de cas\nDes résultats prouvés à travers plus de 400 projets\nNous collaborons avec des clients de différents secteurs, notamment la construction, l’architecture et l’industrie manufacturière. Notre objectif est de fournir des services de suivi de l’avancement des projets parfaitement adaptés à vos besoins.\nPlans architecturaux tels-que-construits d’un espace commercial\nWestcliff\nVoir l'étude de cas\nÉtude structurelle et de toiture pour l'ajout de charpente en acier\nSecteur industriel\nVoir l'étude de cas\nProblème de santé et sécurité en milieu industriel\nReitmans Canada Lée\nVoir l'étude de cas\nContactez-nous 🡒\nFAQ\nVous souhaitez en savoir plus sur nos services de suivi de l’avancement des projets ? Contactez notre équipe pour obtenir des réponses rapides et des conseils personnalisés.\nQu’est-ce qui est inclus dans vos rapports de suivi ?\nNos rapports de suivi offrent une vue d’ensemble complète, à des étapes clés de votre projet. Chaque rapport peut inclure des plans tels-que-construits, des modèles 3D et des analyses approfondies de l’état d’avancement de votre projet. Ces livrables vous permettent de suivre les progrès, d’identifier d’éventuels problèmes et de mieux comprendre les conditions actuelles du site. Notre objectif est de fournir des informations précises et exploitables, afin de soutenir les architectes, ingénieurs et gestionnaires de projet dans leurs prises de décision.\nQuelle est la précision de vos livrables et données?\nNous utilisons des scanners LiDAR offrant une précision millimétrique pour capturer les données géospatiales des bâtiments et des équipements, garantissant l’utilisation de données extrêmement précises. Bien qu’une précision millimétrique absolue ne puisse être garantie, nos plans, modèles 3D, rapports et analyses offrent systématiquement un haut niveau de fiabilité, facilitant la planification, la compréhension de l’état réel du bâtiment et l’identification des problèmes potentiels.\nComment vos relevés sont-ils réalisés ?\nNos relevés se déroule en plusieurs étapes. Nous commençons par choisir l’outil le mieux adapté à la situation, puis capturons le site sous différents angles afin de couvrir l’ensemble de sa surface et de générer un nuage de points. Ces données brutes sont ensuite traitées dans des logiciels spécialisés (alignement, nettoyage, fusion).\nLe produit final peut prendre différentes formes : un modèle 3D\nreprésentant fidèlement l’objet avec ses textures, une maquette BIM (Building Information Modeling)\nintégrant des informations détaillées sur les composants et caractéristiques du bâtiment, des plans architecturaux ou techniques\n, ainsi que des analyses de bâtiment\n, telles que le mesurage BOMA, les études de planéité et de verticalité ou l’analyse des déformations structurelles.\nLes scanners/capteurs lasers que nous utilisons offrent un retour visuel en temps réel, permettant de vérifier que toute la surface a bien été capturée. En bref, nous « photographions » l’environnement en 3D et traitons les données pour reconstituer fidèlement sa forme numérique.\nPour plus d’informations sur notre processus de scan/numérisation 3D, vous pouvez consulter ces articles :\nPréparation d’un relevé : numérisation 3D\nLa numérisation 3D : le processus de numérisation\nQuels formats de livrables proposez-vous et offrez-vous une formation ?\nNous livrons les plans et modèles 3D dans le format de votre choix, notamment DWG, Revit, CAD, STEP, SAT, et bien d’autres. Une formation personnalisée est également disponible pour aider votre équipe à utiliser efficacement vos nouveaux plans ou modèles et à tirer le maximum de vos fichiers numériques.\nÀ quelle fréquence pouvons-nous recevoir les rapports de suivi ?\nNous fournissons des suivis selon un calendrier adapté à vos besoins, vous garantissant de recevoir les mises à jour au moment opportun. Cette approche vous assure de disposer d’informations toujours à jour tout au long de votre projet. Chaque mise à jour offre une vue claire et complète de l’état d’avancement, vous permettant de suivre les progrès efficacement.\n« Un service de qualité, rapide et efficace. »\n- Juliano Rodriguez-Daoust,\nVice-président du développement commercial et des acquisitions\nGroupe Carrossielli\nShare by:",
+  "faq": [
+    {
+      "q": "Qu’est-ce qui est inclus dans vos rapports de suivi ?",
+      "a": "Nos rapports de suivi offrent une vue d’ensemble complète, à des étapes clés de votre projet. Chaque rapport peut inclure des plans tels-que-construits, des modèles 3D et des analyses approfondies de l’état d’avancement de votre projet. Ces livrables vous permettent de suivre les progrès, d’identifier d’éventuels problèmes et de mieux comprendre les conditions actuelles du site. Notre objectif est de fournir des informations précises et exploitables, afin de soutenir les architectes, ingénieurs et gestionnaires de projet dans leurs prises de décision."
+    },
+    {
+      "q": "Quelle est la précision de vos livrables et données?",
+      "a": "Nous utilisons des scanners LiDAR offrant une précision millimétrique pour capturer les données géospatiales des bâtiments et des équipements, garantissant l’utilisation de données extrêmement précises. Bien qu’une précision millimétrique absolue ne puisse être garantie, nos plans, modèles 3D, rapports et analyses offrent systématiquement un haut niveau de fiabilité, facilitant la planification, la compréhension de l’état réel du bâtiment et l’identification des problèmes potentiels."
+    },
+    {
+      "q": "Comment vos relevés sont-ils réalisés ?",
+      "a": "Nos relevés se déroule en plusieurs étapes. Nous commençons par choisir l’outil le mieux adapté à la situation, puis capturons le site sous différents angles afin de couvrir l’ensemble de sa surface et de générer un nuage de points. Ces données brutes sont ensuite traitées dans des logiciels spécialisés (alignement, nettoyage, fusion). Le produit final peut prendre différentes formes : un modèle 3D représentant fidèlement l’objet avec ses textures, une maquette BIM (Building Information Modeling) intégrant des informations détaillées sur les composants et caractéristiques du bâtiment, des plans architecturaux ou techniques, ainsi que des analyses de bâtiment, telles que le mesurage BOMA, les études de planéité et de verticalité ou l’analyse des déformations structurelles. Les scanners/capteurs lasers que nous utilisons offrent un retour visuel en temps réel, permettant de vérifier que toute la surface a bien été capturée. En bref, nous « photographions » l’environnement en 3D et traitons les données pour reconstituer fidèlement sa forme numérique. Pour plus d’informations sur notre processus de scan/numérisation 3D, vous pouvez consulter ces articles : Préparation d’un relevé : numérisation 3D La numérisation 3D : le processus de numérisation"
+    },
+    {
+      "q": "Quels formats de livrables proposez-vous et offrez-vous une formation ?",
+      "a": "Nous livrons les plans et modèles 3D dans le format de votre choix, notamment DWG, Revit, CAD, STEP, SAT, et bien d’autres. Une formation personnalisée est également disponible pour aider votre équipe à utiliser efficacement vos nouveaux plans ou modèles et à tirer le maximum de vos fichiers numériques."
+    },
+    {
+      "q": "À quelle fréquence pouvons-nous recevoir les rapports de suivi ?",
+      "a": "Nous fournissons des suivis selon un calendrier adapté à vos besoins, vous garantissant de recevoir les mises à jour au moment opportun. Cette approche vous assure de disposer d’informations toujours à jour tout au long de votre projet. Chaque mise à jour offre une vue claire et complète de l’état d’avancement, vous permettant de suivre les progrès efficacement."
+    }
+  ],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo PointSpace avec barres verticales dorées et texte gris clair sur fond blanc"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sous-titre-545a2f08-1920w.webp",
+      "alt": "3D architectural rendering of a warehouse interior with blue piping, metal beams, and shadows."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%282%29-1920w.webp",
+      "alt": "Modèle 3D d'un bâtiment en pierre avec un toit clair sur fond de ciel bleu."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Templates+publications+LI+%289%29-1920w.png",
+      "alt": "Color-coded 3D model of a circuit board, green and blue tones indicate varying levels, with yellow and purple highlights."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Balcan-2-1920w.png",
+      "alt": "Industrial machine, gray, with a hopper and conveyor belt, mounted on a wheeled frame."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+      "alt": "Logo de Jessica Daoust Architectes en lettres blanches."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+      "alt": "Abstract cream-colored wavy pattern, similar to the letter \"M\" repeated several times."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+      "alt": "Logo of Théâtre St James with ornate design and \"S\" in the center."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+      "alt": "Connx logo with text \"FUSION W/ TAG NUT\". Company name underneath."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+      "alt": "The word \"aedifica\" in a light-yellow, elegant font."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+      "alt": "JCB Construction Canada logo: light text with initials 'jcb' and company name."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    }
+  ],
+  "jsonLd": [
+    "{\"@context\":\"http://schema.org/\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Qu’est-ce qui est inclus dans vos rapports de suivi ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Nos rapports de suivi offrent une vue d&rsquo;ensemble compl&egrave;te, &agrave; des &eacute;tapes cl&eacute;s de votre projet. Chaque rapport peut inclure des plans tels-que-construits, des mod&egrave;les 3D et des analyses approfondies de l&rsquo;&eacute;tat d&rsquo;avancement de votre projet. Ces livrables vous permettent de suivre les progr&egrave;s, d&rsquo;identifier d&rsquo;&eacute;ventuels probl&egrave;mes et de mieux comprendre les conditions actuelles du site. Notre objectif est de fournir des informations pr&eacute;cises et exploitables, afin de soutenir les architectes, ing&eacute;nieurs et gestionnaires de projet dans leurs prises de d&eacute;cision.\"}},{\"@type\":\"Question\",\"name\":\"Quelle est la précision de vos livrables et données?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Nous utilisons des scanners LiDAR offrant une pr&eacute;cision millim&eacute;trique pour capturer les donn&eacute;es g&eacute;ospatiales des b&acirc;timents et des &eacute;quipements, garantissant l&rsquo;utilisation de donn&eacute;es extr&ecirc;mement pr&eacute;cises. Bien qu&rsquo;une pr&eacute;cision millim&eacute;trique absolue ne puisse &ecirc;tre garantie, nos plans, mod&egrave;les 3D, rapports et analyses offrent syst&eacute;matiquement un haut niveau de fiabilit&eacute;, facilitant la planification, la compr&eacute;hension de l&rsquo;&eacute;tat r&eacute;el du b&acirc;timent et l&rsquo;identification des probl&egrave;mes potentiels.\"}},{\"@type\":\"Question\",\"name\":\"Comment vos relevés sont-ils réalisés ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Nos relev&eacute;s se d&eacute;roule en plusieurs &eacute;tapes. Nous commen&ccedil;ons par choisir l&rsquo;outil le mieux adapt&eacute; &agrave; la situation, puis capturons le site sous diff&eacute;rents angles afin de couvrir l&rsquo;ensemble de sa surface et de g&eacute;n&eacute;rer un nuage de points. Ces donn&eacute;es brutes sont ensuite trait&eacute;es dans des logiciels sp&eacute;cialis&eacute;s (alignement, nettoyage, fusion). Le produit final peut prendre diff&eacute;rentes formes : un mod&egrave;le 3D repr&eacute;sentant fid&egrave;lement l&rsquo;objet avec ses textures, une maquette BIM (Building Information Modeling) int&eacute;grant des informations d&eacute;taill&eacute;es sur les composants et caract&eacute;ristiques du b&acirc;timent, des plans architecturaux ou techniques, ainsi que des analyses de b&acirc;timent, telles que le mesurage BOMA, les &eacute;tudes de plan&eacute;it&eacute; et de verticalit&eacute; ou l&rsquo;analyse des d&eacute;formations structurelles. Les scanners/capteurs lasers que nous utilisons offrent un retour visuel en temps r&eacute;el, permettant de v&eacute;rifier que toute la surface a bien &eacute;t&eacute; captur&eacute;e. En bref, nous &laquo; photographions &raquo; l&rsquo;environnement en 3D et traitons les donn&eacute;es pour reconstituer fid&egrave;lement sa forme num&eacute;rique. Pour plus d&rsquo;informations sur notre processus de scan/num&eacute;risation 3D, vous pouvez consulter ces articles : Pr&eacute;paration d&rsquo;un relev&eacute; : num&eacute;risation 3D La num&eacute;risation 3D : le processus de num&eacute;risation\"}},{\"@type\":\"Question\",\"name\":\"Quels formats de livrables proposez-vous et offrez-vous une formation ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Nous livrons les plans et mod&egrave;les 3D dans le format de votre choix, notamment DWG, Revit, CAD, STEP, SAT, et bien d&rsquo;autres. Une formation personnalis&eacute;e est &eacute;galement disponible pour aider votre &eacute;quipe &agrave; utiliser efficacement vos nouveaux plans ou mod&egrave;les et &agrave; tirer le maximum de vos fichiers num&eacute;riques.\"}},{\"@type\":\"Question\",\"name\":\"À quelle fréquence pouvons-nous recevoir les rapports de suivi ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Nous fournissons des suivis selon un calendrier adapt&eacute; &agrave; vos besoins, vous garantissant de recevoir les mises &agrave; jour au moment opportun. Cette approche vous assure de disposer d&rsquo;informations toujours &agrave; jour tout au long de votre projet. Chaque mise &agrave; jour offre une vue claire et compl&egrave;te de l&rsquo;&eacute;tat d&rsquo;avancement, vous permettant de suivre les progr&egrave;s efficacement.\"}}]}"
+  ],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sous-titre-545a2f08-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Sous-titre-545a2f08.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/11+%282%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Templates+publications+LI+%289%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Templates+publications+LI+%289%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Balcan-2-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Balcan-2.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/17+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/21+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/13+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/23+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/12+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/16+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/14+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/8+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/10+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-c0d7ef18-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/3-100388f4-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4-31dab3f9-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/5-7617cdb3-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6-b66f75f9-1920w.png"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/fr-ca/services/rapport-davancement"
+}

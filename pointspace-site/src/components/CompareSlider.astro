@@ -1,0 +1,46 @@
+---
+// Before/after comparison: point cloud vs model, same viewpoint. Keyboard-accessible range input.
+import { image } from '../data/images';
+import type { Lang } from '../data/routes';
+interface Props { before: string; after: string; lang: Lang; beforeLabel: string; afterLabel: string; caption?: string; sliderLabel: string }
+const { before, after, lang, beforeLabel, afterLabel, caption, sliderLabel } = Astro.props;
+const b = image(before, lang);
+const a = image(after, lang);
+---
+<figure class="cmp" data-compare style="--pos:50%">
+  <div class="cmp__stage" style={`aspect-ratio:${a.width}/${a.height}`}>
+    <img class="cmp__img" src={a.src} srcset={a.srcset} sizes="(min-width:1280px) 70vw, 100vw" alt={a.alt} width={a.width} height={a.height} loading="lazy" />
+    <div class="cmp__before">
+      <img class="cmp__img" src={b.src} srcset={b.srcset} sizes="(min-width:1280px) 70vw, 100vw" alt={b.alt} width={b.width} height={b.height} loading="lazy" />
+    </div>
+    <span class="cmp__tag cmp__tag--l t-label">{beforeLabel}</span>
+    <span class="cmp__tag cmp__tag--r t-label">{afterLabel}</span>
+    <span class="cmp__handle" aria-hidden="true"><span>⟷</span></span>
+    <input class="cmp__range" type="range" min="0" max="100" value="50" aria-label={sliderLabel} />
+  </div>
+  {caption && <figcaption class="cmp__caption t-small">{caption}</figcaption>}
+</figure>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-compare]').forEach((fig) => {
+    const r = fig.querySelector<HTMLInputElement>('.cmp__range')!;
+    const set = () => fig.style.setProperty('--pos', r.value + '%');
+    r.addEventListener('input', set);
+    set();
+  });
+</script>
+
+<style>
+  .cmp { margin: 0; }
+  .cmp__stage { position: relative; overflow: hidden; border-radius: var(--radius-media); background: var(--ps-ink); }
+  .cmp__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .cmp__before { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+  .cmp__handle { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; background: var(--ps-gold); translate: -1px 0; pointer-events: none; }
+  .cmp__handle span { position: absolute; top: 50%; left: 50%; translate: -50% -50%; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--ps-gold); color: var(--ps-green-900); font-size: 20px; box-shadow: 0 6px 20px rgb(0 0 0 / 0.35); }
+  .cmp__range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+  .cmp__range:focus-visible + * , .cmp__stage:has(.cmp__range:focus-visible) { outline: 3px solid var(--ps-gold); outline-offset: 3px; }
+  .cmp__tag { position: absolute; top: 16px; padding: 6px 12px; border-radius: var(--radius-pill); background: rgb(0 30 17 / 0.72); color: var(--ps-cream); pointer-events: none; }
+  .cmp__tag--l { left: 16px; }
+  .cmp__tag--r { right: 16px; }
+  .cmp__caption { margin-top: 12px; color: var(--fg-muted); }
+</style>

@@ -1,0 +1,78 @@
+---
+import { UI } from '../data/ui';
+import { SERVICES } from '../data/services';
+import { ROUTES, PRIVACY, type Lang, type RouteId } from '../data/routes';
+import { SITE } from '../data/site';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = UI[lang];
+const u = (id: RouteId) => ROUTES[id][lang];
+const company: [RouteId, string][] = [
+  ['manufacturing', lang === 'fr' ? 'Manufacturier et industriel' : 'Manufacturing & Industrial'],
+  ['architecture', lang === 'fr' ? 'Architecture et bâtiments' : 'Architecture & Buildings'],
+  ['caseStudies', t.caseStudies],
+  ['blog', t.blog],
+  ['about', t.about],
+  ['careers', t.careers],
+  ['contact', t.contact],
+  ['quote', t.quote],
+];
+const year = 2026;
+const head = SITE.addresses.head;
+const sat = SITE.addresses.satellite;
+---
+<footer class="site-footer theme-green">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <img src="/images/logo-pointspace-on-green.svg" alt="pointSpace" width="190" height="86" loading="lazy" />
+        <p class="t-lead">{t.footerTagline}</p>
+        <a class="btn btn--primary" href={u('quote')}>{t.quote}<span class="btn__arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div>
+        <h2 class="t-label site-footer__h">{t.footerServices}</h2>
+        <ul class="site-footer__list">
+          {SERVICES.map((s) => <li><a href={u(s.id)}>{s[lang].label}</a></li>)}
+        </ul>
+      </div>
+      <div>
+        <h2 class="t-label site-footer__h">{t.footerCompany}</h2>
+        <ul class="site-footer__list">
+          {company.map(([id, label]) => <li><a href={u(id)}>{label}</a></li>)}
+        </ul>
+      </div>
+      <div>
+        <h2 class="t-label site-footer__h">{t.footerContact}</h2>
+        <address class="site-footer__address">
+          <p>{SITE.contactPerson}<br /><a href={`mailto:${SITE.email}`}>{SITE.email}</a><br /><a class="t-num" href={`tel:${SITE.phoneE164}`}>{SITE.phone}</a></p>
+          <p><span class="t-muted">{head[lang]}</span><br />{head.street}<br />{head.city} ({head.region}) {head.postal}</p>
+          <p><span class="t-muted">{sat[lang]}</span><br />{lang === 'fr' ? sat.street : sat.streetEn}<br />{sat.city} ({sat.region}) {sat.postal}</p>
+        </address>
+        <p><a class="site-footer__social" href={SITE.linkedin} rel="noopener">LinkedIn<span aria-hidden="true"> ↗</span></a></p>
+      </div>
+    </div>
+    <hr class="rule" />
+    <div class="site-footer__bottom t-small">
+      <p>© {year} {lang === 'fr' ? SITE.legalName : 'pointSpace Technology'}. {t.rights}</p>
+      <p><a href={PRIVACY[lang]}>{t.privacy}</a></p>
+      <p class="site-footer__proto">{t.prototype}</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer { padding-block: var(--sp-9) var(--sp-6); }
+  .site-footer__top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.1fr; gap: var(--sp-7); padding-bottom: var(--sp-8); }
+  .site-footer__brand img { width: 170px; height: auto; margin-bottom: var(--sp-5); }
+  .site-footer__brand .t-lead { max-width: 22ch; margin-bottom: var(--sp-6); }
+  .site-footer__h { color: var(--ps-cream-80); margin-bottom: var(--sp-4); font-size: var(--fs-label); }
+  .site-footer__list { list-style: none; display: grid; gap: 10px; }
+  .site-footer a { text-decoration: none; }
+  .site-footer__list a:hover, .site-footer__address a:hover, .site-footer__bottom a:hover, .site-footer__social:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .site-footer__address { font-style: normal; font-size: var(--fs-small); display: grid; gap: var(--sp-4); }
+  .site-footer__address p { margin: 0; }
+  .site-footer__social { display: inline-block; margin-top: var(--sp-4); font-size: var(--fs-small); }
+  .site-footer__bottom { display: flex; gap: var(--sp-6); padding-top: var(--sp-5); color: var(--ps-cream-80); }
+  .site-footer__proto { margin-left: auto; color: var(--ps-gold); }
+</style>

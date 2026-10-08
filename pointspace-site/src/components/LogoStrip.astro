@@ -1,0 +1,52 @@
+---
+// The 25 client logos already shown on pointspace.ca (verified visually; see public-clients.md).
+// Slow marquee that pauses on hover/focus; static wrap when the user prefers reduced motion.
+import manifest from '../data/image-manifest.json';
+// compact: one slim row (label + logos) placed directly under a hero.
+interface Props { title: string; compact?: boolean }
+const { title, compact = false } = Astro.props;
+const NAMES: Record<string, string> = {
+  'jessica-daoust-architectes': 'Jessica Daoust Architectes', 'atelier-monarque': 'Atelier Monarque', 'theatre-st-james': 'Théâtre St-James',
+  'conn-x': 'Conn-X', aedifica: 'Aedifica', 'jcb-construction-canada': 'JCB Construction Canada', idx: 'IDX', 'tla-architectes': 'TLA Architectes',
+  'vac-aero': 'VAC AERO International', nelmar: 'Nelmar', 'st-denis-thompson': 'St-Denis Thompson', benoy: 'Benoy', 'groupe-mach': 'Groupe MACH',
+  'dallaire-consultants': 'Dallaire Consultants', cominar: 'Cominar', broccolini: 'Broccolini', 'groupe-cdf': 'Groupe CDF', reitmans: 'Reitmans',
+  lainco: 'Lainco', 'groupe-renfort': 'Groupe Renfort', 'muse-solution': 'Muse Solution de gestion', oktodev: 'Oktodev', shellex: 'Shellex',
+  navada: 'Navada', kolostat: 'Kolostat',
+};
+const M = manifest as Record<string, { width: number; height: number; files: { file: string }[] }>;
+const logos = Object.entries(NAMES).map(([k, name]) => ({ name, ...M['logo-' + k] }));
+---
+<section class:list={['logos theme-green', { 'logos--compact': compact }]} aria-labelledby="logos-title">
+  <div class="container logos__head">
+    <h2 id="logos-title" class="t-label">{title}</h2>
+  </div>
+  <div class="logos__viewport">
+    <ul class="logos__track">
+      {logos.map((l) => <li><img src={`/images/${l.files[0].file}`} alt={l.name} width={l.width} height={l.height} /></li>)}
+    </ul>
+    <ul class="logos__track" aria-hidden="true">
+      {logos.map((l) => <li><img src={`/images/${l.files[0].file}`} alt="" width={l.width} height={l.height} /></li>)}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .logos { padding-block: var(--sp-8); border-top: 1px solid var(--ps-cream-line); }
+  .logos__head h2 { color: var(--ps-cream-80); margin-bottom: var(--sp-6); }
+  .logos__viewport { display: flex; overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+  .logos__track { list-style: none; display: flex; align-items: center; gap: 72px; padding-right: 72px; flex: none; animation: marquee 80s linear infinite; }
+  .logos__viewport:hover .logos__track, .logos__viewport:focus-within .logos__track { animation-play-state: paused; }
+  .logos__track img { height: 44px; width: auto; max-width: 170px; object-fit: contain; opacity: 0.85; }
+  /* Same side margins as the page container: label on the left, logos end at the container's right edge. */
+  .logos--compact { display: grid; grid-template-columns: auto 1fr; align-items: center; padding-block: var(--sp-6); padding-inline: max(var(--gutter), (100% - var(--container)) / 2); }
+  .logos--compact .logos__head { width: auto; margin: 0; padding-right: var(--sp-6); }
+  .logos--compact .logos__viewport { mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+  .logos--compact .logos__head h2 { margin: 0; white-space: nowrap; }
+  .logos--compact .logos__track img { height: 36px; max-width: 150px; }
+  @keyframes marquee { to { transform: translateX(-100%); } }
+  @media (prefers-reduced-motion: reduce) {
+    .logos__viewport { flex-wrap: wrap; mask-image: none; justify-content: center; }
+    .logos__track { animation: none; flex-wrap: wrap; justify-content: center; row-gap: 32px; }
+    .logos__track[aria-hidden] { display: none; }
+  }
+</style>

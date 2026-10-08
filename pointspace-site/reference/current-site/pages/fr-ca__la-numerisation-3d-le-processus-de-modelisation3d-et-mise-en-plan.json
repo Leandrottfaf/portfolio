@@ -1,0 +1,369 @@
+{
+  "url": "https://www.pointspace.ca/fr-ca/la-numerisation-3d-le-processus-de-modelisation3d-et-mise-en-plan",
+  "lang": "en",
+  "title": "La Numérisation 3D: Le Processus de Mise en Plan | pointSpace",
+  "metaDescription": "Découvrez comment pointSpace convertit vos données de scan 3D en plans détaillés et fonctionnels. Le processus clé de mise en plan expliqué.",
+  "ogTitle": "La Numérisation 3D: Le Processus de Mise en Plan | pointSpace",
+  "ogDescription": "Découvrez comment pointSpace convertit vos données de scan 3D en plans détaillés et fonctionnels. Le processus clé de mise en plan expliqué.",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2025-02-27+223026-1920w.png",
+  "canonical": "https://www.pointspace.ca/fr-ca/la-numerisation-3d-le-processus-de-modelisation3d-et-mise-en-plan",
+  "hreflang": [],
+  "h1": [
+    "Le processus de modélisation 3D et mise en plan"
+  ],
+  "headings": [
+    "h1: Le processus de modélisation 3D et mise en plan",
+    "h2: Traitement des données",
+    "h2: Création des modèles 3D",
+    "h2: Génération des plans",
+    "h2: Livraison et support",
+    "h4: Louis Dallaire",
+    "h4: Follow us!",
+    "h4: About us",
+    "h4: Contact us"
+  ],
+  "nav": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contact us",
+      "href": "/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "",
+      "href": "/"
+    },
+    {
+      "text": "Louis Dallaire",
+      "href": "https://www.pointspace.ca/fr-ca/a-propos-louis-dallaire-president"
+    },
+    {
+      "text": "< Previous Post",
+      "href": "/fr-ca/bim-definitions-avantages-niveaux-de-maturite-et-durabilite"
+    },
+    {
+      "text": "Next Post >",
+      "href": "/3d-modeling-process"
+    },
+    {
+      "text": "",
+      "href": "/"
+    },
+    {
+      "text": "",
+      "href": "https://www.linkedin.com/company/pointspace/"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Careers",
+      "href": "/careers"
+    },
+    {
+      "text": "Security and privacy policy",
+      "href": "/security-and-privacy-policy"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    }
+  ],
+  "body": "Home\nAbout us\nIndustries\nManufacturing and industrial\nArchitecture and Buildings\nServices\nScanning\nScan to BIM\nAs-Built Drafting\n3D Modeling\nBuilding analysis\nBOMA As-Built Digital Plans\nMatterport 3D Virtual Tours\nDigital Twins\nBlog\nCase studies\nContact\nGet in touch\n(514) 606-9604\nEnglish\nen\nFrançais\nfr\nLouis Dallaire • February 28, 2025\nLe processus de modélisation 3D et mise en plan\nChez pointSpace, nous transformons les données issues des scans 3D en plans détaillés et fonctionnels. Cette phase essentielle permet de s'assurer que les informations collectées sur le site sont converties avec précision en documents exploitables pour vos projets. Découvrez notre processus de mise en plan et les solutions que nous proposons pour répondre à vos besoins.\nTraitement des données\nUne fois la numérisation terminée, nous transférons les données collectées dans notre système de traitement. Ce processus inclut plusieurs étapes clés : le nettoyage des données, où nous éliminons les anomalies et les bruits pour conserver uniquement les informations pertinentes ; l'alignement des scans, où nous fusionnons les différentes prises de vue pour créer un modèle cohérent et complet du site ; et enfin le filtrage et la simplification des données, en supprimant les détails superflus pour faciliter la création de plans clairs et précis.\nCréation des modèles 3D\nAprès le traitement des données, nous passons à la création des modèles 3D. En utilisant des logiciels de pointe, nous convertissons les données numérisées en modèles 3D détaillés qui peuvent inclure des éléments architecturaux, structurels et mécaniques. Nous vérifions ensuite la précision de ces modèles en les comparant avec les données initiales pour nous assurer que tous les détails sont fidèlement représentés. En collaboration avec le client, nous effectuons les ajustements nécessaires pour répondre à toutes les spécifications et exigences du projet.\nGénération des plans\nLa génération des plans est l'étape finale où les modèles 3D sont convertis en documents utilisables. Nous créons des plans 2D détaillés en extrayant des vues orthographiques et des sections à partir des modèles 3D. Ces plans peuvent inclure des élévations, des sections et des plans de sol. Nous ajoutons toutes les annotations nécessaires, y compris les dimensions, les légendes et les notes, pour assurer une compréhension claire et complète des plans. Chaque plan est vérifié pour s'assurer qu'il répond aux normes de qualité et aux exigences du client avant la livraison finale.\nLivraison et support\nUne fois les plans finalisés, nous les livrons au client dans les formats demandés. Nous offrons également un support continu pour garantir que vous pouvez utiliser efficacement les plans fournis. Nous pouvons fournir les plans dans divers formats numériques (DWG, PDF, etc.) selon vos besoins. Notre équipe est disponible pour répondre à toutes vos questions et vous aider à intégrer les plans dans votre travail. Si des modifications sont nécessaires après la livraison, nous offrons des services de mise à jour et de révision pour garantir que les plans restent à jour avec l'évolution de votre projet.\nLa mise en plan est une étape indispensable qui transforme les données de numérisation en outils utilisables pour la planification et la construction. Chez pointSpace, nous nous engageons à fournir des plans précis, détaillés et adaptés à vos besoins spécifiques. Avec notre expertise et notre technologie avancée, nous garantissons des résultats qui optimisent vos projets de construction ou de rénovation.\nArticle par\nLouis Dallaire\nDiplômé de l’ÉTS en génie des opérations et de la logistique, Louis est un passionné du monde industriel. Son objectif avec pointSpace est de rendre accessible la gestion et l’utilisation des données, car il n’est pas toujours nécessaire d’utiliser des outils complexe pour résoudre des problèmes simples!\n< Previous Post\nNext Post >\nFollow us!\nAbout us\nCase studies\nCareers\nSecurity and privacy policy\nContact us\nLouis Dallaire\nldallaire@pointspace.ca\n(514) 606-9604\nTechnology pointSpace, all rights reserved 2023.\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20221222_185010508_iOS-ba9746f8-1920w.png",
+      "alt": "Man wearing a plaid shirt and quilted vest, arms crossed, leaning against a windowsill."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo in light gray with gold vertical bars above the text"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold and light gray text and vertical gold bars above it"
+    }
+  ],
+  "jsonLd": [
+    "\n\n{\n  \"@context\" : {\n    \"@vocab\" : \"http://schema.org/\"\n  },\n  \"@type\" : \"BlogPosting\",\n  \"headline\" : \"La Numérisation 3D: Le Processus de Mise en Plan | pointSpace\",\n  \"datePublished\" : \"2025-02-28T03:33:04\",\n  \"dateModified\" : \"2026-01-28T16:18:24\",\n  \"author\" : {\n    \"@type\" : \"Person\",\n    \"name\" : \"Louis Dallaire\"\n  },\n  \"image\" : \"https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Screenshot+2025-02-27+223026.png\",\n  \"description\" : \"Découvrez comment pointSpace convertit vos données de scan 3D en plans détaillés et fonctionnels. Le processus clé de mise en plan expliqué.\"\n}\n\n  "
+  ],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20221222_185010508_iOS-ba9746f8-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/20221222_185010508_iOS-ba9746f8.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Screenshot+2025-02-27+223026.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2025-02-27+223026-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/fcvbbLyQcCzAJxx4b8Xe_Vlog+3+-+Mod%C3%A9lisation+Clip.v2.0000000.jpg",
+    "https://irp.cdn-website.com/md/dmtmpl/75bc33b9-819f-4158-8fd6-6dcfe792b59c/dms3rep/multi/desktop/logo-header.svg"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/fr-ca/la-numerisation-3d-le-processus-de-modelisation3d-et-mise-en-plan"
+}

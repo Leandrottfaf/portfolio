@@ -1,0 +1,498 @@
+{
+  "url": "https://www.pointspace.ca/landing-page",
+  "lang": "en",
+  "title": "3D Scanning Solutions | Pointspace | QC & CA",
+  "metaDescription": "Pointspace offers precise 3D scanning & modeling services for building & manufacturing. Contact us for tailored solutions today!",
+  "ogTitle": "3D Scanning Solutions | Pointspace | QC & CA",
+  "ogDescription": "Pointspace offers precise 3D scanning & modeling services for building & manufacturing. Contact us for tailored solutions today!",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/landing-page",
+  "hreflang": [
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/landing-page"
+    },
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/landing-page"
+    }
+  ],
+  "h1": [
+    "PLANS 10X MORE PRECISE , DONE 10X FASTER",
+    "50+ Clients",
+    "400+ Projects",
+    "6+ Years",
+    "For every one of your needs, there's pointSpace."
+  ],
+  "headings": [
+    "h1: PLANS 10X MORE PRECISE , DONE 10X FASTER",
+    "h1: 50+ Clients",
+    "h1: 400+ Projects",
+    "h1: 6+ Years",
+    "h1: For every one of your needs, there's pointSpace.",
+    "h2: 3D Scanning",
+    "h2: 3D Modeling",
+    "h2: Industrial Layout Redesign",
+    "h2: Building Analysis",
+    "h3: 360 Photo and Visual Tours",
+    "h2: Wide Range of Possibilities",
+    "h2: Our team",
+    "h2: Our process",
+    "h2: 01",
+    "h2: 02",
+    "h2: 03",
+    "h2: Our material",
+    "h2: CONTACT US",
+    "h3: Contact Us"
+  ],
+  "nav": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/landing-page"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/landing-page"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contact us",
+      "href": "/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/landing-page"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/landing-page"
+    },
+    {
+      "text": "",
+      "href": "/"
+    },
+    {
+      "text": "Contact Us",
+      "href": "/landing-page#scroll_to_bottom"
+    },
+    {
+      "text": "Button",
+      "href": ""
+    },
+    {
+      "text": "Button",
+      "href": ""
+    },
+    {
+      "text": "Button",
+      "href": ""
+    },
+    {
+      "text": "Button",
+      "href": ""
+    },
+    {
+      "text": "Button",
+      "href": ""
+    },
+    {
+      "text": "",
+      "href": "/"
+    },
+    {
+      "text": "Button",
+      "href": ""
+    },
+    {
+      "text": "Button",
+      "href": ""
+    },
+    {
+      "text": "Button",
+      "href": ""
+    },
+    {
+      "text": "Button",
+      "href": ""
+    }
+  ],
+  "body": "Home\nAbout us\nIndustries\nManufacturing and industrial\nArchitecture and Buildings\nServices\nScanning\nScan to BIM\nAs-Built Drafting\n3D Modeling\nBuilding analysis\nBOMA As-Built Digital Plans\nMatterport 3D Virtual Tours\nDigital Twins\nBlog\nCase studies\nContact\nGet in touch\n(514) 606-9604\nEnglish\nen\nFrançais\nfr\nPLANS 10X MORE PRECISE , DONE 10X FASTER\nYou don't lift a finger. Using cutting edge 3D scanners, we map your entire building in the blink of an eye, then our team of experts turns it into whatever you want.\nContact Us\n50+ Clients\n400+ Projects\n6+ Years\nButton\nFor every one of your needs, there's pointSpace.\n3D Scanning\nWe use fast and precise\nLiDAR technology to scan every inch of any building, including the exact\ndimensions, walls, infrastructure and even the mechanical, electrical and plumbing layout; both inside and outside.\n3D Modeling\nWe are able to render\n2D and 3D models and plans from scan to\nBIM,\nCAD,\nRevit,\nSTEP and\nSAT. We also use\nBOMA measurements to create as-built digital plans.\nIndustrial Layout Redesign\nNeed to\nreinvent the layout of your factory floor as you walk through it? With a\ndigital copy of your property, you can find the perfect placement for every machine before they even move an inch.\nBuilding Analysis\nOur technology allows us to give you an exact and\nfull idea of the state of your building if it's already standing. Otherwise, we can give you\ncomprehensive reports of every step of your building process.\n360 Photo and Visual Tours\nPrecise, high-resolution\n360° site photography that can be converted into immersive and interactive\nMatterport virtual tours. Perfect for marketing initiatives, presentations, and remote project access.\nWide Range of Possibilities\nWhether you're an\narchitect, a\nconstruction entrepreneur, an\nengineer, a\nreal estate owner/manager/operator or even if you work in the\nindustrial field, we'll always have a solution perfect for you.\nButton\nOur team\npointSpace is composed of engineers, scanners and artists of the highest caliber. Mixing the innovative spirit of youth and the wisdom of experience, our team is dedicated to providing the fastest and most precise service on the market.\nOur process\nNothing is left to chance. Our work is fast, clean, precise and simple to understand.\n01\nWe start by meeting you to understand your space, your needs and your level of skill with the data and tools we usually work with.\n02\nOnce we have all the information, we go to your space and start scanning. You don't have to do anything except let us in. The process is fast and clean.\n03\nOnce we have the data, we transform it however you like. We can make 2D/3D plans, models, a digital twin of your space, a virtual tour, you name it. We can also provide you with the raw data if you're more comfortable this way.\nOur material\nLeica RTC360\nOur most powerful scanner. Able to take up to 2 million points of data per second and reaching upwards of 100 meters away, this beast won't miss a spot of your space.\nLeica BLK360\nMore agile, the BLK's small size lets us reach into smaller spaces like ceilings and in between walls. When the job has to be done quickly and in harder conditions, this scanner is the one we bring.\nCONTACT US\nTell us more about how we can help you and we'll be in touch as soon as possible.\nContact Us\nName\nThank you for contacting us.\nWe will get back to you as soon as possible\nOops, there was an error sending your message.\nPlease try again later\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+      "alt": "White 3D building-shaped logo with faint “St-Denis Thompson” text on a light background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+      "alt": "Faint gold Theatrical St. James logo centered on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/17+%281%29-1920w.webp",
+      "alt": "Pale block letters “I D” above a separate “X” on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/14+%281%29-1920w.webp",
+      "alt": "Faint beige uppercase text reading “BROCCOLINI” on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/8+%281%29-1920w.webp",
+      "alt": "Pale beige “LAINCO” logo centered on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr-C3-A9paration--281-29-1920w.png",
+      "alt": "Smartphone mounted on a tripod overlooking a blurred city rooftop skyline"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/nuage+-+videotron-1920w.webp",
+      "alt": "Abstract multicolored 3D room or arena model on a black background"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Balcan+7-1920w.png",
+      "alt": "3D point-cloud scan of an industrial site with buildings, pipes, and equipment on a dark background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/im+1-1920w.png",
+      "alt": "Stone fortress viewed from an aerial angle against a blue sky"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/GareStBruno_Render3-1920w.png",
+      "alt": "Brick house exterior with white trim, large windows, and a paved driveway beside green trees."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sous-titre-545a2f08-1920w.webp",
+      "alt": "Interior construction site with exposed ceiling pipes, columns, and bright sunlight from large windows"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Portrait-en-noir-et-blanc-de-Thomas-S-C3-A9vigny--Charg-C3-A9-de-projet--posant-devant-une-fen-C3-AAtre-avec-vue-panoramique_-1920w.png",
+      "alt": "Portrait of a person in a white shirt standing by a large window in black and white"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20221222_185010508_iOS-1920w.webp",
+      "alt": "Person standing by large windows, wearing a dark vest over a plaid shirt, hands clasped."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Maxime-4-bdcc6817-1920w.jpg",
+      "alt": "Smiling man in a white shirt standing by a large window overlooking a snowy city."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Portrait-en-noir-et-blanc-de-Philippe-Dallaire--Fondateur--souriant-devant-une-fen%C3%AAtre-offrant-une-vue-sur-la-ville_-1920w.png",
+      "alt": "Smiling person in a white shirt standing by a large window with a bright outdoor view"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/IMG_7586-302a5a04-1920w.png",
+      "alt": "City street with a tripod-mounted surveying camera on the sidewalk, modern buildings, and parked cars"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-14a196b3-33b0c301-1920w.png",
+      "alt": "Dual 360 camera on a tripod on a rooftop, with blurred city buildings in the background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/blk-1920w.jpg",
+      "alt": "Person using a tablet beside a black post-mounted camera outdoors near a stone wall"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold and light gray text and vertical gold bars above it"
+    }
+  ],
+  "jsonLd": [],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/17+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/14+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/8+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr-C3-A9paration--281-29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Pr-C3-A9paration--281-29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/nuage+-+videotron-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/nuage+-+videotron.webp",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Balcan+7-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/im+1-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/im+1.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/GareStBruno_Render3-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/GareStBruno_Render3.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sous-titre-545a2f08-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Sous-titre-545a2f08.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Portrait-en-noir-et-blanc-de-Thomas-S-C3-A9vigny--Charg-C3-A9-de-projet--posant-devant-une-fen-C3-AAtre-avec-vue-panoramique_-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20221222_185010508_iOS-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Maxime-4-bdcc6817-1920w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Portrait-en-noir-et-blanc-de-Philippe-Dallaire--Fondateur--souriant-devant-une-fen%C3%AAtre-offrant-une-vue-sur-la-ville_-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/IMG_7586-302a5a04-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/IMG_7586-302a5a04.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-14a196b3-33b0c301-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/2-14a196b3-33b0c301.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/blk-1920w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/blk.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/17+%281%29-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/14+%281%29-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/8+%281%29-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Portrait-en-noir-et-blanc-de-Thomas-S-C3-A9vigny--Charg-C3-A9-de-projet--posant-devant-une-fen-C3-AAtre-avec-vue-panoramique_-640w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20221222_185010508_iOS-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Maxime-4-bdcc6817-640w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Portrait-en-noir-et-blanc-de-Philippe-Dallaire--Fondateur--souriant-devant-une-fen%C3%AAtre-offrant-une-vue-sur-la-ville_-640w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/bZLklnDTPOBzBLACoYjn_StJamesAnimationFinal+%281%29.v2.0000000-1920w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/2+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/18+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/17+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/14+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/8+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Portrait-en-noir-et-blanc-de-Thomas-S-C3-A9vigny--Charg-C3-A9-de-projet--posant-devant-une-fen-C3-AAtre-avec-vue-panoramique_.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/20221222_185010508_iOS.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Maxime-4-bdcc6817.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Portrait-en-noir-et-blanc-de-Philippe-Dallaire--Fondateur--souriant-devant-une-fen%C3%AAtre-offrant-une-vue-sur-la-ville_.png"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/landing-page"
+}

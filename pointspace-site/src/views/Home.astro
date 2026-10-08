@@ -1,0 +1,300 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Picture from '../components/Picture.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import CaseCard from '../components/CaseCard.astro';
+import StatsBand from '../components/StatsBand.astro';
+import Testimonial from '../components/Testimonial.astro';
+import LogoStrip from '../components/LogoStrip.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { SERVICES } from '../data/services';
+import { caseById } from '../data/caseStudies';
+import { ROUTES, type Lang } from '../data/routes';
+import { UI } from '../data/ui';
+import { image } from '../data/images';
+import { TESTIMONIALS } from '../data/testimonials';
+import Faq from '../components/Faq.astro';
+import { SITE } from '../data/site';
+import { faqLd } from '../lib/seo';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = UI[lang];
+const T = {
+  fr: {
+    title: "Numérisation 3D, plans et modèles BIM de l'existant | pointSpace",
+    description: 'pointSpace transforme vos bâtiments et installations en données précises : numérisation LiDAR 3D, plans tels que construits, Scan-to-BIM et mesurage BOMA.',
+    eyebrow: 'Numérisation 3D · Plans · BIM',
+    h1: "De la numérisation 3D aux plans et modèles BIM de l'existant",
+    lead: "Des données précises pour prendre de meilleures décisions sur vos bâtiments et installations. pointSpace numérise l'état existant au scanner laser, puis livre des nuages de points, des plans tels que construits et des modèles BIM prêts à utiliser.",
+    seeServices: 'Voir les services', formats: 'Formats livrés', legendA: 'Nuage de points', legendB: 'Modèle BIM', video: 'vidéo',
+    introH: 'De la capture terrain à la documentation finale.',
+    intro: "Architectes, ingénieurs, entrepreneurs, gestionnaires immobiliers et industriels nous confient le relevé de l'existant de leurs bâtiments et installations au Québec et en Ontario. La capture se fait sur site ; la mise en plan, la modélisation et le traitement des données se font au bureau, par notre équipe.",
+    flowEyebrow: 'Notre méthode', flowTitle: 'Du terrain au livrable, en trois étapes',
+    flowIntro: "Chaque projet part d'un relevé laser 3D de l'existant. Ce nuage de points devient ensuite le livrable dont votre équipe a besoin, dans ses propres logiciels.",
+    flow: [
+      { n: '01 · Capture', h: 'Numérisation sur site', p: 'Relevé laser 3D avec nos scanners Leica RTC360 et BLK360, complété au besoin par la photo 360° et Matterport.', img: 'scanner-laser-3d-entrepot-vide' },
+      { n: '02 · Traitement', h: 'Nuage de points assemblé', p: "Les scans sont assemblés, nettoyés et vérifiés pour former un nuage de points unique, fidèle à l'existant.", img: 'gare-windsor-nuage-points-vue-dessus' },
+      { n: '03 · Livrables', h: 'Plans, modèles et analyses', p: 'Plans CAO, modèles Revit, superficies locatives ou analyses de planéité, livrés dans les formats de votre équipe.', img: 'scan-to-bim-revit-model-cutaway-light' },
+    ],
+    svcTitle: "Dix services, un seul relevé de l'existant",
+    svcIntro: "Capturez l'état réel de vos lieux une fois, puis choisissez les livrables : du nuage de points brut au modèle BIM détaillé.",
+    ctaTileLabel: 'Pas certain du livrable ?', ctaTile: 'Décrivez votre projet, nous vous proposerons les bons livrables.',
+    sectorsTitle: 'Pour les usines en exploitation comme pour les bâtiments existants',
+    sectors: [
+      { id: 'manufacturing' as const, h: 'Manufacturier et industriel', p: "Relevés d'usines en exploitation, plans d'aménagement d'usine et modèles 3D d'équipements pour optimiser vos opérations et planifier vos agrandissements.", img: 'vac-aero-nuage-points-usine' },
+      { id: 'architecture' as const, h: 'Architecture et bâtiments', p: "Relevés 3D et plans de l'existant pour les architectes, les promoteurs et les gestionnaires immobiliers, en amont des projets de construction et de rénovation.", img: 'theatre-st-james-numerisation-facade' },
+    ],
+    casesTitle: 'Des résultats prouvés à travers plus de 400 projets', allCases: 'Toutes les études de cas',
+    quotesTitle: 'Ce que disent nos clients', logos: 'Ils nous font confiance',
+    faqEyebrow: 'FAQ', faqTitle: 'Questions avant de démarrer un projet',
+    faqIntro: 'Les réponses aux questions que nos clients posent le plus souvent avant de demander une soumission.',
+    faq: [
+      { q: 'Combien coûte un service de numérisation 3D ?', a: "Le coût dépend notamment de la superficie à numériser, de la complexité du site, du niveau de précision recherché et des livrables nécessaires. Décrivez votre projet à pointSpace pour obtenir une soumission adaptée." },
+      { q: 'Quels fichiers pouvez-vous livrer après un scan 3D ?', a: "Selon les besoins du projet, pointSpace livre des nuages de points (E57, RCP/RCS), des plans 2D en DWG, des modèles BIM Revit (RVT) et IFC, ainsi que des modèles 3D compatibles avec la CAO, STEP et SAT." },
+      { q: 'Le Scan-to-BIM est-il adapté à un projet de rénovation ?', a: "Oui. Il est particulièrement utile lorsqu'il faut disposer d'informations fiables sur les conditions existantes avant une rénovation ou une modernisation." },
+      { q: 'Intervenez-vous à Montréal et sur la Rive-Sud ?', a: "Oui. pointSpace a son siège social à Longueuil et un bureau satellite à Montréal. Nous offrons nos services partout au Québec et en Ontario." },
+      { q: 'Comment obtenir une soumission ?', a: "Décrivez votre bâtiment ou votre installation, l'emplacement du projet et les livrables recherchés dans le formulaire de soumission. L'équipe déterminera ensuite la solution de numérisation ou de modélisation adaptée." },
+    ],
+    faqCta: 'Une autre question ? Joignez-nous directement :',
+    ctaTitle: 'Parlez-nous de votre projet',
+    ctaText: 'Décrivez votre bâtiment ou votre installation et les livrables attendus : plans, modèle BIM, superficies ou nuage de points. Nous vous préparons une soumission.',
+  },
+  en: {
+    title: '3D Scanning, As-Built Drawings & Scan-to-BIM | pointSpace',
+    description: 'pointSpace turns buildings and facilities into accurate data: LiDAR 3D scanning, as-built drawings, Scan-to-BIM models and BOMA measurement.',
+    eyebrow: '3D scanning · Drawings · BIM',
+    h1: 'From 3D Scanning to As-Built Drawings and BIM Models',
+    lead: 'Accurate data to make better decisions about your buildings and facilities. pointSpace scans existing conditions with a laser scanner, then delivers point clouds, as-built drawings and BIM models ready to use.',
+    seeServices: 'See services', formats: 'Delivered formats', legendA: 'Point cloud', legendB: 'BIM model', video: 'video',
+    introH: 'From field capture to final documentation.',
+    intro: 'Architects, engineers, contractors, property managers and manufacturers trust us to survey the existing conditions of their buildings and facilities across Québec and Ontario. Capture happens on site; drafting, modelling and data processing are done in the office by our team.',
+    flowEyebrow: 'How we work', flowTitle: 'From site to deliverable, in three steps',
+    flowIntro: 'Every project starts with a 3D laser survey of existing conditions. That point cloud then becomes the deliverable your team needs, in its own software.',
+    flow: [
+      { n: '01 · Capture', h: 'On-site scanning', p: '3D laser survey with our Leica RTC360 and BLK360 scanners, complemented by 360° photos and Matterport when needed.', img: 'scanner-laser-3d-entrepot-vide' },
+      { n: '02 · Processing', h: 'Registered point cloud', p: 'Scans are registered, cleaned and checked to form a single point cloud that matches existing conditions.', img: 'gare-windsor-nuage-points-vue-dessus' },
+      { n: '03 · Deliverables', h: 'Drawings, models and analyses', p: 'CAD drawings, Revit models, rentable areas or flatness analyses, delivered in your team’s formats.', img: 'scan-to-bim-revit-model-cutaway-light' },
+    ],
+    svcTitle: 'Ten services, one existing conditions survey',
+    svcIntro: 'Capture the real condition of your site once, then choose your deliverables: from a raw point cloud to a detailed BIM model.',
+    ctaTileLabel: 'Not sure which deliverable?', ctaTile: 'Describe your project and we will suggest the right deliverables.',
+    sectorsTitle: 'For operating plants and existing buildings alike',
+    sectors: [
+      { id: 'manufacturing' as const, h: 'Manufacturing & Industrial', p: 'Surveys of operating plants, plant layout drawings and 3D equipment models to optimise operations and plan expansions.', img: 'vac-aero-nuage-points-usine' },
+      { id: 'architecture' as const, h: 'Architecture & Buildings', p: 'Existing conditions surveys and drawings for architects, developers and property managers, ahead of construction and renovation projects.', img: 'theatre-st-james-numerisation-facade' },
+    ],
+    casesTitle: 'Proven results across 400+ projects', allCases: 'All case studies',
+    quotesTitle: 'What our clients say', logos: 'Trusted across industries',
+    faqEyebrow: 'FAQ', faqTitle: 'Questions before starting a project',
+    faqIntro: 'Answers to the questions clients ask most often before requesting a quote.',
+    faq: [
+      { q: 'How much does a 3D scanning service cost?', a: 'The cost mainly depends on the area to scan, the complexity of the site, the accuracy required and the deliverables you need. Describe your project to pointSpace to get a tailored quote.' },
+      { q: 'Which files can you deliver after a 3D scan?', a: 'Depending on the project, pointSpace delivers point clouds (E57, RCP/RCS), 2D drawings in DWG, Revit (RVT) and IFC BIM models, and 3D models compatible with CAD, STEP and SAT.' },
+      { q: 'Is Scan-to-BIM suitable for a renovation project?', a: 'Yes. It is especially useful when you need reliable information on existing conditions before a renovation or retrofit.' },
+      { q: 'Do you work in Montréal and on the South Shore?', a: 'Yes. pointSpace has its head office in Longueuil and a satellite office in Montréal. We offer our services throughout Quebec and Ontario.' },
+      { q: 'How do I get a quote?', a: 'Describe your building or facility, the project location and the deliverables you need in the quote form. Our team will then determine the right scanning or modeling solution.' },
+    ],
+    faqCta: 'Another question? Reach us directly:',
+    ctaTitle: 'Tell us about your project',
+    ctaText: 'Describe your building or facility and the deliverables you need: drawings, BIM model, floor areas or point cloud. We will prepare a quote.',
+  },
+}[lang];
+
+const capture = SERVICES.filter((s) => s.group === 'capture');
+const deliver = SERVICES.filter((s) => s.group === 'deliver');
+const poster = image('hero-point-cloud-to-bim-poster', lang);
+const featured = ['windsor', 'st-james', 'vac-aero'].map(caseById);
+const quotes = [TESTIMONIALS.carosielliShort, TESTIMONIALS.nelmar];
+---
+<BaseLayout lang={lang} route="home" overlayHeader title={T.title} description={T.description} ogImage="/images/hero-point-cloud-to-bim-poster-1600.webp" jsonLd={[faqLd(T.faq)]}>
+  <section class="hero theme-green" aria-labelledby="h1">
+    <div class="hero__media">
+      <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster={poster.src} aria-hidden="true" tabindex="-1">
+        <source src="/video/hero-point-cloud-to-bim.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__scrim"></div>
+    </div>
+    <div class="container hero__content">
+      <p class="eyebrow t-label">{T.eyebrow}</p>
+      <h1 id="h1" class="t-display hero__title">{T.h1}</h1>
+      <p class="t-lead hero__lead">{T.lead}</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href={ROUTES.quote[lang]}>{t.quote}<span class="btn__arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--secondary" href="#services">{T.seeServices}</a>
+      </div>
+      <ul class="hero__formats chips" aria-label={T.formats}>
+        {['E57', 'RCP/RCS', 'DWG', 'RVT', 'IFC'].map((f) => <li class="chip">{f}</li>)}
+      </ul>
+    </div>
+    <div class="hero__legend container t-small" aria-hidden="true">
+      <span>{T.legendA}</span><span class="hero__legend-line"></span><span>{T.legendB}</span>
+    </div>
+    <div class="hero__logos"><LogoStrip title={T.logos} compact /></div>
+  </section>
+
+  <section class="theme-cream-50 section--tight intro" aria-labelledby="intro-title">
+    <div class="container grid-12">
+      <div class="intro__copy">
+        <h2 id="intro-title" class="t-h3">{T.introH}</h2>
+        <p class="t-muted">{T.intro}</p>
+      </div>
+      <div class="intro__stats"><StatsBand lang={lang} /></div>
+    </div>
+  </section>
+
+  <section class="section theme-cream" aria-labelledby="flow-title">
+    <div class="container">
+      <SectionHeading eyebrow={T.flowEyebrow} title={T.flowTitle} id="flow-title" align="split" intro={T.flowIntro} />
+      <ol class="flow">
+        {T.flow.map((f) => (
+          <li class="flow__step" data-reveal>
+            <Picture name={f.img} lang={lang} ratio="4/3" sizes="(min-width:1280px) 30vw" />
+            <p class="t-label flow__num">{f.n}</p>
+            <h3 class="t-h3">{f.h}</h3>
+            <p class="t-muted">{f.p}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section theme-cream-50" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <SectionHeading eyebrow={t.services} title={T.svcTitle} id="services-title" align="split" intro={T.svcIntro} />
+      <div class="svc-group">
+        <h3 class="t-label svc-group__title">{t.groupCapture}</h3>
+        <div class="svc-grid svc-grid--3">
+          {capture.map((s, i) => <ServiceCard service={s} lang={lang} index={i + 1} level={4} />)}
+        </div>
+      </div>
+      <div class="svc-group">
+        <h3 class="t-label svc-group__title">{t.groupDeliver}</h3>
+        <div class="svc-grid svc-grid--4">
+          {deliver.map((s, i) => <ServiceCard service={s} lang={lang} index={i + 4} level={4} />)}
+          <a class="svc-cta is-card" href={ROUTES.quote[lang]} data-reveal>
+            <span class="t-label svc-cta__label">{T.ctaTileLabel}</span>
+            <span class="t-h3 svc-cta__title">{T.ctaTile}</span>
+            <span class="btn btn--primary btn--sm">{t.quote}<span class="btn__arrow go" aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section theme-green" aria-labelledby="sectors-title">
+    <div class="container">
+      <SectionHeading eyebrow={t.sectors} title={T.sectorsTitle} id="sectors-title" />
+      <div class="sectors">
+        {T.sectors.map((s) => (
+          <a class="sector is-card" href={ROUTES[s.id][lang]} data-reveal>
+            <Picture name={s.img} lang={lang} ratio="16/10" sizes="(min-width:1280px) 50vw" class="zoom" />
+            <div class="sector__body">
+              <h3 class="t-h3">{s.h}</h3>
+              <p class="t-muted">{s.p}</p>
+              <span class="link-arrow">{t.learnMore}<span class="go" aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section theme-cream" aria-labelledby="cases-title">
+    <div class="container">
+      <div class="cases-head">
+        <SectionHeading eyebrow={t.caseStudies} title={T.casesTitle} id="cases-title" />
+        <a class="link-arrow" href={ROUTES.caseStudies[lang]}>{T.allCases}<span aria-hidden="true">→</span></a>
+      </div>
+      <div class="cases">
+        {featured.map((cs, i) => <CaseCard cs={cs} lang={lang} size={i === 0 ? 'lg' : 'md'} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section theme-cream-50" aria-labelledby="quotes-title">
+    <div class="container">
+      <h2 id="quotes-title" class="eyebrow t-label">{T.quotesTitle}</h2>
+      <div class="quotes">
+        {quotes.map((q) => <Testimonial lang={lang} quote={q[lang].quote} name={q.name} role={q[lang].role} company={q.company} />)}
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section theme-cream" aria-labelledby="faq-title">
+    <div class="container faq-layout">
+      <div class="faq-side">
+        <SectionHeading eyebrow={T.faqEyebrow} title={T.faqTitle} id="faq-title" intro={T.faqIntro} />
+        <a class="btn btn--primary" href={ROUTES.quote[lang]}>{t.quote}<span class="btn__arrow go" aria-hidden="true">→</span></a>
+        <div class="faq-side__direct">
+          <p class="t-small t-muted">{T.faqCta}</p>
+          <p class="faq-side__lines">
+            <a class="t-num" href={`tel:${SITE.phoneE164}`}>{SITE.phone}</a>
+            <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+          </p>
+        </div>
+      </div>
+      <Faq items={T.faq} />
+    </div>
+  </section>
+
+  <CtaBand lang={lang} title={T.ctaTitle} text={T.ctaText} avoid={[...T.flow.map((f) => f.img), ...T.sectors.map((s) => s.img), ...featured.map((c) => c.image ?? ''), ...SERVICES.map((s) => s.image)]} />
+</BaseLayout>
+
+<style>
+  /* Hero + client-logo band fill exactly one screen at any size; copy centred between header and legend. */
+  .hero { position: relative; height: 100vh; height: 100svh; min-height: 720px; display: flex; flex-direction: column; overflow: hidden; padding-top: var(--header-h); }
+  .hero__logos { position: relative; flex: none; }
+  .hero__media { position: absolute; inset: 0; }
+  .hero__video { width: 100%; height: 100%; object-fit: cover; }
+  .hero__scrim { position: absolute; inset: 0; background:
+      linear-gradient(90deg, rgb(0 30 17 / 0.92) 0%, rgb(0 30 17 / 0.72) 38%, rgb(0 30 17 / 0.12) 75%),
+      linear-gradient(0deg, rgb(0 30 17 / 0.85) 0%, rgb(0 30 17 / 0) 40%); }
+  .hero__content { position: relative; flex: 1; display: flex; flex-direction: column; justify-content: center; padding-block: var(--sp-7); }
+  .hero__title { max-width: 15ch; margin-bottom: var(--sp-6); }
+  .hero__lead { max-width: 54ch; color: var(--ps-cream-80); margin-bottom: var(--sp-7); }
+  .hero__actions { display: flex; gap: var(--sp-4); margin-bottom: var(--sp-7); }
+  .hero__formats .chip { color: var(--ps-cream-80); }
+  .hero__legend { position: relative; display: flex; align-items: center; gap: 12px; padding-bottom: var(--sp-6); color: var(--ps-cream-80); }
+  .hero__legend-line { width: 120px; height: 1px; background: linear-gradient(90deg, var(--ps-cream-80), var(--ps-gold)); }
+
+  .intro__copy { grid-column: 1 / span 5; }
+  .intro__copy h2 { margin-bottom: var(--sp-5); max-width: 20ch; }
+  .intro__stats { grid-column: 7 / span 6; align-self: end; }
+
+  .flow { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-6); }
+  .flow__step { display: flex; flex-direction: column; gap: 12px; }
+  .flow__num { margin-top: var(--sp-4); color: var(--ps-green-600); }
+
+  .svc-group + .svc-group { margin-top: var(--sp-8); }
+  .svc-group__title { color: var(--ps-green-600); margin-bottom: var(--sp-5); padding-bottom: var(--sp-3); border-bottom: 1px solid var(--line); }
+  .svc-grid { display: grid; gap: var(--sp-5); }
+  .svc-grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .svc-grid--4 { grid-template-columns: repeat(4, 1fr); }
+  .svc-cta { transition: background var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease); display: flex; flex-direction: column; justify-content: space-between; gap: var(--sp-5); padding: var(--sp-6); border-radius: var(--radius-card); background: var(--ps-green-900); color: var(--ps-cream); text-decoration: none; }
+  .svc-cta:hover { background: var(--ps-green-700); transform: var(--hover-lift); box-shadow: var(--hover-shadow); }
+  .svc-cta__label { color: var(--ps-cream-80); }
+  .svc-cta__title { font-weight: 300; }
+  .svc-cta .btn { align-self: flex-start; }
+
+  .sectors { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-6); }
+  .sector { display: flex; flex-direction: column; text-decoration: none; background: rgb(237 231 218 / 0.04); border: 1px solid var(--ps-cream-line); border-radius: var(--radius-card); overflow: hidden; transition: background var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
+  .sector:hover { background: rgb(237 231 218 / 0.08); transform: var(--hover-lift); box-shadow: 0 18px 40px -20px rgb(0 0 0 / 0.5); }
+  .sector :global(.pic) { border-radius: 0; }
+  .sector__body { padding: var(--sp-6); display: flex; flex-direction: column; gap: var(--sp-4); align-items: flex-start; }
+  .sector__body p { max-width: 52ch; }
+
+  .cases-head { display: flex; justify-content: space-between; align-items: flex-end; }
+  .cases-head .link-arrow { margin-bottom: var(--sp-8); }
+  .cases { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: var(--sp-6); align-items: start; }
+  .faq-layout { display: grid; grid-template-columns: 4fr 7fr; gap: var(--sp-9); align-items: start; }
+  .faq-side { position: sticky; top: calc(var(--header-h) + 24px); }
+  .faq-side :global(.sh) { margin-bottom: var(--sp-5); }
+  .faq-side__direct { margin-top: var(--sp-7); padding-top: var(--sp-5); border-top: 1px solid var(--line); }
+  .faq-side__lines { display: flex; flex-direction: column; gap: 4px; margin-top: 8px; font-size: 1.125rem; }
+  .faq-side__lines a { text-decoration: none; width: fit-content; }
+  .faq-side__lines a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .quotes { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-9); }
+</style>

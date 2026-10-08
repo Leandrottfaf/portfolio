@@ -1,0 +1,100 @@
+import manifest from './image-manifest.json';
+import type { Lang } from './routes';
+
+// Alt text describes what each image actually shows (reviewed visually, see reference/image-inventory.md).
+const ALT: Record<string, { fr: string; en: string }> = {
+  'scan-to-bim-revit-model-cutaway-light': { fr: "Modèle Revit en coupe isométrique d'un espace industriel : murs, conduits de ventilation, postes de travail et salle fermée", en: 'Isometric cutaway Revit model of an industrial space: walls, ventilation ducts, workstations and an enclosed room' },
+  'scan-to-bim-revit-model-cutaway-dark': { fr: "Modèle BIM Revit en coupe d'un espace industriel avec conduits de ventilation et postes de travail, sur fond noir", en: 'Cutaway BIM Revit model of an industrial space with ventilation ducts and workstations, on a black background' },
+  'mesurage-boma-plan-superficie-entrepot': { fr: "Plan de superficies d'un entrepôt avec légende : espace de location, zone de service du bâtiment, zone en surplomb et grande pénétration verticale", en: 'Area plan of a warehouse with a legend: rentable space, building service area, overhang zone and major vertical penetration' },
+  'analyse-batiment-nuage-points-toiture': { fr: "Nuage de points colorisé d'un grand bâtiment industriel vu en isométrie, toiture comprise", en: 'Colour-mapped point cloud of a large industrial building in isometric view, including the roof' },
+  'numerisation-3d-eglise-tribune-orgue': { fr: "Nuage de points haute densité de l'intérieur d'une église : tribune, orgue et arcades", en: 'High-density point cloud of a church interior: gallery, organ and arcades' },
+  'numerisation-3d-eglise-nef-nuage-points': { fr: "Nuage de points de la nef d'une église, vue vers le chœur", en: 'Point cloud of a church nave, looking towards the choir' },
+  'modele-revit-etage-laboratoire': { fr: "Modèle Revit isométrique d'un étage avec laboratoires et équipements", en: 'Isometric Revit model of a floor with laboratory rooms and fixtures' },
+  'scanner-leica-rtc360-toit-industriel': { fr: "Scanner laser Leica RTC360 sur trépied sur le toit d'une usine, silos en arrière-plan", en: 'Leica RTC360 laser scanner on a tripod on a plant rooftop, silos in the background' },
+  'theatre-st-james-facade-nuage-points': { fr: 'Nuage de points de la colonnade corinthienne du Théâtre St-James, vue en contre-plongée', en: 'Point cloud of the St-James Theatre Corinthian colonnade, seen from below' },
+  'nuage-points-etage-interieur-coupe': { fr: "Nuage de points d'un étage intérieur en coupe, bureaux et aire ouverte", en: 'Cutaway point cloud of an interior floor with offices and an open area' },
+  'modele-bim-tuyauterie-mecanique-vanne': { fr: 'Modèle BIM de tuyauterie mécanique : conduites, pompes et vanne en gros plan', en: 'BIM model of mechanical piping: pipes, pumps and a valve in close-up' },
+  'modele-3d-tuyauterie-salle-mecanique': { fr: "Modèle 3D d'une salle mécanique avec réseau de tuyauterie", en: '3D model of a mechanical room with its piping network' },
+  'modele-bim-salle-mecanique-vue-ensemble': { fr: "Vue d'ensemble d'un modèle BIM de salle mécanique : supports de tuyauterie, charpente et équipements", en: 'Overview of a mechanical room BIM model: pipe racks, structural frame and equipment' },
+  'nuage-points-salle-couleur': { fr: "Nuage de points colorisé d'une grande salle vue en isométrie", en: 'Colour point cloud of a large hall in isometric view' },
+  'plans-tels-que-construits-plan-etage-gare-windsor': { fr: "Plan d'étage tel que construit d'un bâtiment en L", en: 'As-built floor plan of an L-shaped building' },
+  'assemblage-scans-reseau-stations': { fr: 'Assemblage des scans : positions du scanner reliées en réseau sur le plan du nuage de points', en: 'Scan registration: scanner positions linked as a network over the point-cloud plan' },
+  'nuage-points-salle-mecanique-haute-densite': { fr: "Nuage de points couleur haute densité d'une salle mécanique : ventilateurs, compresseurs et tuyauterie", en: 'High-density colour point cloud of a mechanical room: blowers, compressors and piping' },
+  'nuage-points-salle-mecanique-2': { fr: "Nuage de points couleur d'une salle mécanique, autre angle", en: 'Colour point cloud of a mechanical room, second angle' },
+  'plan-cao-dwg-mecanique': { fr: 'Plan CAO en traits : murs et parcours mécaniques', en: 'CAD linework plan: walls and mechanical runs' },
+  'plan-superficies-locatives-gare-windsor': { fr: 'Plan de la Gare Windsor avec superficies par zone, en couleur et en pieds carrés', en: 'Windsor Station floor plan with colour-coded areas in square feet' },
+  'gare-windsor-plan-superficies-etage': { fr: "Plan d'étage de la Gare Windsor avec zones de superficie en couleur", en: 'Windsor Station floor plan with colour-coded area zones' },
+  'gare-windsor-plan-tel-que-construit': { fr: "Plan tel que construit d'un étage de la Gare Windsor avec identification des locaux", en: 'As-built floor plan of a Windsor Station floor with room labels' },
+  'gare-windsor-coupe-nuage-points': { fr: "Coupe horizontale du nuage de points d'un étage de la Gare Windsor", en: 'Horizontal slice of the point cloud of a Windsor Station floor' },
+  'gare-windsor-nuage-points-vue-dessus': { fr: "Nuage de points couleur d'un étage de bureaux de la Gare Windsor, vue du dessus", en: 'Colour point cloud of a Windsor Station office floor, top view' },
+  'technicien-releve-numerisation-usine': { fr: 'Technicien de pointSpace en dossard, tablette en main, à côté du scanner laser dans une usine', en: 'pointSpace technician in a safety vest holding a tablet beside the laser scanner in a plant' },
+  'centre-commercial-etage-17-nuage-points': { fr: "Nuage de points couleur d'un étage de bureaux en tour, vue isométrique", en: 'Colour point cloud of an office tower floor, isometric view' },
+  'centre-commercial-sous-sol-nuage-points': { fr: "Nuage de points couleur du sous-sol d'un centre commercial", en: 'Colour point cloud of a shopping-centre basement' },
+  'numerisation-facade-scanner-mat-centre-ville': { fr: "Scanner laser monté sur mât devant l'entrée d'un immeuble commercial du centre-ville", en: 'Mast-mounted laser scanner in front of a downtown commercial building entrance' },
+  'technicien-scanner-trottoir-centre-ville': { fr: 'Technicien opérant un scanner laser sur trépied sur un trottoir du centre-ville', en: 'Technician operating a tripod laser scanner on a downtown sidewalk' },
+  'modele-revit-centre-aquatique': { fr: "Modèle Revit d'un centre aquatique intérieur avec fermes d'acier", en: 'Revit model of an indoor aquatic centre with steel trusses' },
+  'modele-revit-centre-aquatique-2': { fr: "Modèle Revit d'un centre aquatique : bassins et plongeoirs", en: 'Revit model of an aquatic centre: pools and diving boards' },
+  'scanner-laser-3d-entrepot-vide': { fr: 'Scanner laser 3D sur trépied dans un entrepôt vide', en: '3D laser scanner on a tripod in an empty warehouse' },
+  'reitmans-vitrine-nuage-points': { fr: "Nuage de points d'une vitrine de magasin Reitmans dans un centre commercial", en: 'Point cloud of a Reitmans store front in a shopping mall' },
+  'modele-revit-etage-chemins-cables': { fr: "Modèle Revit d'un étage avec chemins de câbles et réseaux mécaniques", en: 'Revit model of a floor with cable trays and mechanical services' },
+  'modele-bim-mep-entrepot': { fr: "Modèle BIM d'un entrepôt avec conduits de ventilation et tuyauterie en couleur", en: 'BIM model of a warehouse interior with colour-coded ducts and piping' },
+  'rendu-architectural-batiment-brique': { fr: 'Rendu architectural photoréaliste d\'un bâtiment en brique aux consoles blanches', en: 'Photorealistic architectural render of a brick building with white brackets' },
+  'blogue-scan-to-bim-nuage-points-maison': { fr: "Nuage de points d'un bâtiment de maçonnerie d'un étage avec lucarne, sur fond sombre", en: 'Point cloud of a one-storey masonry building with a dormer, on a dark background' },
+  'blogue-scan-to-bim-modele-bim-maison': { fr: 'Modèle BIM du même bâtiment : murs de maçonnerie, toit à quatre versants, lucarne, fenêtres à carreaux et porte double', en: 'BIM model of the same building: masonry walls, hip roof, dormer, multi-pane windows and a double door' },
+  'hero-point-cloud-to-bim-poster': { fr: "Nuage de points d'une salle de génératrices industrielles superposé au modèle BIM", en: 'Point cloud of an industrial generator hall overlaid with the BIM model' },
+  'louis-dallaire-portrait': { fr: 'Portrait de Louis Dallaire, président de pointSpace', en: 'Portrait of Louis Dallaire, CEO of pointSpace' },
+  'equipe-philippe-dallaire': { fr: 'Portrait de Philippe Dallaire, fondateur', en: 'Portrait of Philippe Dallaire, founder' },
+  'equipe-portrait-3': { fr: 'Portrait de Leandro Lazaretti, technicien en Revit, nuage de points et scan 3D', en: 'Portrait of Leandro Lazaretti, Revit technician' },
+  'equipe-thomas-sevigny': { fr: 'Portrait de Thomas Sévigny, chargé de projet', en: 'Portrait of Thomas Sévigny, project manager' },
+  'equipe-maxime-montreuil': { fr: 'Portrait de Maxime Montreuil, technicien en relevé de bâtiment', en: 'Portrait of Maxime Montreuil, building survey technician' },
+  'theatre-st-james-numerisation-facade': { fr: 'Opérateur avec scanner laser devant la colonnade du Théâtre St-James, rue Saint-Jacques', en: 'Operator with a laser scanner in front of the St-James Theatre colonnade on Saint-Jacques Street' },
+  'theatre-st-james-elevation-nuage-points': { fr: 'Élévation orthographique de la façade du Théâtre St-James tirée du nuage de points', en: 'Orthographic elevation of the St-James Theatre façade from the point cloud' },
+  'theatre-st-james-elevation-dessin': { fr: "Dessin d'élévation en traits d'une façade ornementée", en: 'Line-drawn elevation of an ornate façade' },
+  'gare-windsor-numerisation-facade': { fr: 'Scanner laser sur trépied devant la façade en pierre de la Gare Windsor', en: 'Laser scanner on a tripod in front of the stone façade of Windsor Station' },
+  'gare-windsor-nuage-points-exterieur': { fr: "Nuage de points couleur de l'extérieur de la Gare Windsor", en: 'Colour point cloud of the Windsor Station exterior' },
+  'analyse-planeite-dalle-carte-couleur': { fr: "Carte de planéité d'une dalle : écarts de niveau du bleu au jaune", en: 'Floor-flatness map of a slab: level deviations from blue to yellow' },
+  'analyse-planeite-profil': { fr: "Profil de planéité d'une dalle tiré du nuage de points", en: 'Floor-flatness profile of a slab from the point cloud' },
+  'vac-aero-modele-3d-usine': { fr: "Modèle 3D de l'usine de VAC AERO à Dorval : fours, mezzanine et escaliers", en: '3D model of the VAC AERO plant in Dorval: furnaces, mezzanine and stairs' },
+  'vac-aero-nuage-points-usine': { fr: "Nuage de points de l'usine de VAC AERO, même point de vue que le modèle", en: 'Point cloud of the VAC AERO plant, same viewpoint as the model' },
+  'scierie-modele-3d-groupe-cdf': { fr: "Modèle 3D de l'intérieur d'une scierie : charpente, passerelles et bâtiment intérieur", en: '3D model of a sawmill interior: structure, catwalks and an inner building' },
+  'prevost-usine-photo-360': { fr: "Photo 360° d'une ligne d'assemblage d'autobus", en: '360° photo of a bus assembly line' },
+  'prevost-modele-usine': { fr: "Modèle 3D d'usine en couleurs par catégorie : poutres, ventilation et équipements", en: 'Colour-coded 3D plant model: beams, ventilation and equipment' },
+  'hapag-lloyd-toronto-express': { fr: 'Poupe du navire Toronto Express à quai au port de Montréal', en: 'Stern of the Toronto Express vessel docked at the Port of Montreal' },
+  'hapag-lloyd-nuage-points-coque': { fr: "Nuage de points de la structure interne de la coque du navire", en: 'Point cloud of the vessel’s internal hull structure' },
+  'nadco-usine-photo-360': { fr: "Photo 360° d'une usine de moulage par injection", en: '360° photo of an injection-moulding plant' },
+  'nadco-plan-amenagement-cao': { fr: "Plan d'aménagement CAO d'une usine avec l'empreinte des machines", en: 'CAD plant layout plan showing machine footprints' },
+  'westcliff-la-baie-nuage-points': { fr: "Nuage de points de l'ancien magasin La Baie d'Hudson à Kitchener", en: 'Point cloud of the former Hudson’s Bay store in Kitchener' },
+  'broccolini-restaurant-nuage-points': { fr: "Nuage de points en coupe d'un restaurant sur plusieurs étages", en: 'Cutaway point cloud of a multi-storey restaurant' },
+  'broccolini-modele-revit': { fr: "Modèle Revit de l'intérieur d'un restaurant : cuisine et comptoirs", en: 'Revit model of a restaurant interior: kitchen and counters' },
+  'reitmans-magasin-numerisation': { fr: 'Scanner laser sur trépied dans un magasin de vêtements', en: 'Laser scanner on a tripod in a clothing store' },
+  'entreplafond-nuage-points': { fr: "Nuage de points d'un entreplafond : conduits, câbles et charpente", en: 'Point cloud of a ceiling void: ducts, cables and structure' },
+  'modele-3d-tours-residentielles': { fr: 'Modèle 3D de deux tours résidentielles avec balcons courbes', en: '3D model of two residential towers with curved balconies' },
+  'plan-elevation-tour': { fr: "Dessin d'élévation d'une tour d'habitation", en: 'Elevation drawing of a residential tower' },
+  'releve-manuel-croquis': { fr: 'Croquis de relevé manuel annoté à la main', en: 'Hand-annotated manual survey sketch' },
+  'equipement-releve-pointspace': { fr: "Équipement de relevé de pointSpace : scanner, trépied, batteries, télémètre et dossard", en: 'pointSpace survey kit: scanner, tripod, batteries, laser distance meter and safety vest' },
+  'equipement-modele-3d-renfort': { fr: "Modèle 3D d'une machine industrielle", en: '3D model of an industrial machine' },
+  'st-denis-thompson-tours-nuage-points': { fr: 'Nuage de points des façades de deux tours résidentielles', en: 'Point cloud of the façades of two residential towers' },
+  'nelmar-usine-vue-aerienne': { fr: "Vue aérienne de l'usine de Nelmar avec ses zones d'impression, d'extrusion, de fabrication de sacs et d'entreposage", en: 'Aerial view of the Nelmar plant showing its printing, extrusion, bag-making and warehousing areas' },
+  'le-foufou-royalmount-modele-bim': { fr: 'Modèle BIM du chantier de Royalmount avec conduits de ventilation et tuyauterie en couleur', en: 'BIM model of the Royalmount site with colour-coded ducts and piping' },
+  'prevu3d-interface-jumeau-numerique': { fr: "Interface Prevu3D affichant le jumeau numérique d'une salle mécanique", en: 'Prevu3D interface showing the digital twin of a mechanical room' },
+};
+
+type Entry = { width: number; height: number; files: { w: number; file: string }[]; status: 'ok' | 'pending'; source: string };
+const M = manifest as Record<string, Entry>;
+
+export function image(name: string, lang: Lang) {
+  const e = M[name];
+  if (!e) throw new Error(`Unknown image: ${name}`);
+  const alt = ALT[name]?.[lang] ?? (name.startsWith('logo-') ? '' : undefined);
+  if (alt === undefined) throw new Error(`Missing alt text for ${name}`);
+  const largest = e.files[e.files.length - 1];
+  return {
+    src: `/images/${largest.file}`,
+    srcset: e.files.map((f) => `/images/${f.file} ${f.w}w`).join(', '),
+    width: e.width,
+    height: e.height,
+    alt,
+    pending: e.status === 'pending',
+    source: e.source,
+  };
+}

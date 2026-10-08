@@ -1,0 +1,628 @@
+{
+  "url": "https://www.pointspace.ca/fr-ca/services/modelisation-3d",
+  "lang": "fr",
+  "title": "Services de modélisation 3D | pointSpace",
+  "metaDescription": "Services de modélisation 3D de qualité pour l’architecture, la construction et les secteurs industriel et manufacturier. Compatible Revit, CAD, SAT, etc.",
+  "ogTitle": "Services de modélisation 3D | pointSpace",
+  "ogDescription": "Services de modélisation 3D de qualité pour l’architecture, la construction et les secteurs industriel et manufacturier. Compatible Revit, CAD, SAT, etc.",
+  "ogImage": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/fr-ca/services/modelisation-3d",
+  "hreflang": [
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/services/modelisation-3d"
+    },
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/services/3D-modeling"
+    }
+  ],
+  "h1": [
+    "SERVICES DE MODÉLISATION 3D"
+  ],
+  "headings": [
+    "h1: SERVICES DE MODÉLISATION 3D",
+    "h4: Obtenez des modèles 3D détaillés que vous pouvez intégrer facilement dans vos logiciels préférés (Revit, Inventor, CAD, STEP, SAT, etc.)",
+    "h2: EFFICACITÉ",
+    "h3: Objectifs de modélisation définis",
+    "h3: Données source précises",
+    "h3: Nuages de points unifiés et propres",
+    "h3: Modélisation 3D cohérente",
+    "h3: Contrôle qualité et validation",
+    "h3: Résultats utilisables et assitance",
+    "h4: Explorez notre blog pour découvrir des articles et conseils pratiques sur la numérisation 3D, la modélisation 3D et les jumeaux numériques. Apprenez comment optimiser vos projets de construction, d’architecture ou d’industrie manufacturière grâce aux technologies 3D.",
+    "h3: Le processus de modélisation 3D et mise en plan",
+    "h3: BIM : Définitions, Bénéfices, Niveaux de Maturité et Durabilité",
+    "h2: Des résultats prouvés à travers plus de 400 projets",
+    "h4: Scan 3D et modélisation 3D complète d’un bâtiment",
+    "h4: Scan 3D et modélisation 3D des façades d’un bâtiment",
+    "h4: Scan 3D et modélisation 3D d’une scierie",
+    "h4: Scan 3D et modélisation 3D d’une usine",
+    "h3: Qu’est-ce que la modélisation 3D ?",
+    "h3: Quels formats de livrables proposez-vous et offrez-vous une formation ?",
+    "h3: Pour quels secteurs fournissez-vous des services de modélisation 3D ?",
+    "h3: Quels types de services de modélisation 3D proposez-vous ?",
+    "h3: Quelle est la précision de vos modèles 3D ?",
+    "h3: Vos modèles 3D peuvent-ils être utilisés sur différents logiciels ?",
+    "h3: Quels sont les avantages des modèles 3D pour mon projet ?",
+    "h2: \"Le travail de PointSpace nous a permis de démystifier l'état actuel d'un bâtiment qui, depuis sa construction en 1960, a subi plusieurs interventions non documentées. Le plan détaillé fourni par l'équipe nous évitera bien des imprévus pendant la phase de construction.\""
+  ],
+  "nav": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/3D-modeling"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Obtenir une soumission →",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "Travaillez avec nous 🡒",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Voir plus d'articles 🡒",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca/la-numerisation-3d-le-processus-de-modelisation3d-et-mise-en-plan"
+    },
+    {
+      "text": "Le processus de modélisation 3D et mise en plan",
+      "href": "/fr-ca/la-numerisation-3d-le-processus-de-modelisation3d-et-mise-en-plan"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca/bim-definitions-avantages-niveaux-de-maturite-et-durabilite"
+    },
+    {
+      "text": "BIM : Définitions, Bénéfices, Niveaux de Maturité et Durabilité",
+      "href": "/fr-ca/bim-definitions-avantages-niveaux-de-maturite-et-durabilite"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/etude-de-cas/numerisation-3D-et-modelisation-3D-complete-dun-batiment"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/etude-de-cas/Scan-3D-et-modélisation-3D-des-façades-dun-bâtiment"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/etude-de-cas/Scan-3D-et-modélisation-3D-dune-scierie"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/etude-de-cas/Scan-3D-et-modélisation-3D-dune-usine"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Gestion des actifs",
+      "href": "/fr-ca/etude-de-cas/JCB"
+    },
+    {
+      "text": "Aménagements et planification industrielle",
+      "href": "/fr-ca/etude-de-cas/vac-aero"
+    },
+    {
+      "text": "Visites virtuelles",
+      "href": "/fr-ca/services/visites-virtuelles"
+    },
+    {
+      "text": "scans 3D",
+      "href": "/fr-ca/services/numerisation"
+    },
+    {
+      "text": "plans 2D détaillés",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jcb.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://idxdesign.com/"
+    },
+    {
+      "text": "",
+      "href": "https://tla-architectes.com/"
+    },
+    {
+      "text": "",
+      "href": "https://vacaero.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.nelmar.com/"
+    },
+    {
+      "text": "",
+      "href": "https://stdenisthompson.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.benoy.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupemach.com/en/home.html"
+    },
+    {
+      "text": "",
+      "href": "https://dallaireconsultants.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.cominar.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.broccolini.com/en"
+    },
+    {
+      "text": "",
+      "href": "https://groupecdf.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://lainco.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://renfort.com/home/"
+    },
+    {
+      "text": "",
+      "href": "https://musesolution.ca/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://fr.oktodev.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://shellex.ca/fr/accueil/"
+    },
+    {
+      "text": "",
+      "href": "https://navada.com/fr"
+    },
+    {
+      "text": "",
+      "href": "https://www.kolostat.com/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    }
+  ],
+  "body": "Accueil\nÀ propos\nSecteurs\nManufacturier et industriel\nArchitecture et Bâtiments\nServices\nNumérisation LiDAR 3D\nModélisation BIM\nAs-Built Drafting\nModélisation 3D\nAnalyse du bâtiment\nMise en plan BOMA\nVisites virtuelles 3D Matterport\nJumeaux numériques\nBlogue\nÉtudes de cas\nContact\nCarrières\nContactez-nous\n(514) 606-9604\nFrançais\nfr\nEnglish\nen\nSERVICES DE MODÉLISATION 3D\nObtenez des modèles 3D détaillés que vous pouvez intégrer facilement dans vos logiciels préférés (Revit, Inventor, CAD, STEP, SAT, etc.)\nTravaillez avec nous 🡒\nLorsque vous travaillez avec nous\nVOUS POUVEZ VOUS ATTENDRE À\nNous proposons des services de modélisation 3D qui transforment vos espaces physiques en modèles 3D précis et détaillés. Grâce à des scans LiDAR haute résolution et à notre expertise en dessin, nous réalisons des plans 2D et des modèles 3D fiables.\nPRÉCISION\nNos services de modélisation 3D débutent par une capture de données détaillée sur site, documentant chaque dimension et caractéristique de votre bâtiment ou équipement. Cette approche nous permet de créer des modèles 3D d’une grande précision, reproduisant fidèlement les conditions réelles.\nSERVICE CLÉ EN MAIN\nDe la capture des données à la modélisation 3D, notre équipe s’occupe de tout. Nous collectons les données géospatiales de votre bâtiment afin de produire des modèles 3D de qualité dans les formats de votre choix. Nous transformons les mesures sur le terrain en fichiers numériques précis et faciles à utiliser.\nEFFICACITÉ\nNos services de modélisation 3D permettent de réduire les erreurs coûteuses liées aux méthodes traditionnelles et de minimiser les interventions sur le site. Ils permettent à votre équipe de planifier en toute confiance, de détecter rapidement les problèmes et de collaborer efficacement à distance.\nAu cours de notre processus de modélisation 3D\nVOUS POUVEZ COMPTER SUR\nNos services de modélisation 3D s'appuient sur des données précises issues de la capture de la réalité et sur un processus de modélisation structuré. En transformant des nuages de points en modèles numériques précis, nous fournissons des représentations fiables des conditions existantes qui facilitent la conception, l'analyse et la prise de décision dans le cadre d'un large éven\ntail de projets.\n1\nObjectifs de modélisation définis\nNous commençons par comprendre comment le modèle 3D sera utilisé, que ce soit pour la coordination de la conception, l'analyse technique, la visualisation, la documentation ou les workflows BIM en aval. À ce stade, nous définissons le niveau de détail requis, la portée de la modélisation, les tolérances et les formats de sortie afin de garantir que le modèle soit conforme aux exigences du projet dès le départ.\n2\nDonnées source précises\nTous les modèles 3D sont développés à partir de nuages de points de haute qualité générés par numérisation 3D. Cela garantit que la géométrie modélisée reflète les conditions réelles, fournissant ainsi une base fiable pour des mesures précises, des analyses spatiales et une coordination optimale.\n3\nNuages de points unifiés et propres\nAvant de commencer la modélisation, les données du nuage de points sont enregistrées, alignées et traitées afin d'éliminer le bruit, les points redondants et les éléments non pertinents. L'ensemble de données est structuré et optimisé pour permettre une modélisation efficace tout en préservant la précision requise pour une utilisation technique.\n4\nModélisation 3D cohérente\nÀ l'aide d'un logiciel de modélisation spécialisé, nous convertissons les données de nuages de points en modèles numériques précis et en dessins adaptés à votre flux de travail. Cela comprend les dessins CAO, les modèles Revit et les formats 3D tels que DWG, IFC, STEP et SAT. Tous les fichiers sont livrés avec des calques correctement nommés, des structures de modèles organisées et des conventions cohérentes afin de garantir une intégration transparente dans les flux de travail de conception, de coordination et d'analyse.\n5\nContrôle qualité et validation\nChaque modèle est soumis à un contrôle qualité par rapport au nuage de points d'origine afin de vérifier la précision dimensionnelle, l'alignement et l'exhaustivité. Ce processus de validation garantit que le modèle final reste une représentation numérique fidèle des conditions existantes.\n6\nRésultats utilisables et assitance\nLes modèles 3D finaux sont livrés dans des formats compatibles avec votre flux de travail, notamment Revit, AutoCAD et d'autres plateformes standard du secteur. Notre équipe reste à votre disposition pour vous aider dans les révisions, la coordination et les phases futures du projet, à mesure que vos besoins évoluent.\nVoir plus d'articles 🡒\nTout ce qu’il faut savoir sur\nla\nmODÉLISATION 3D\nExplorez notre blog pour découvrir des articles et conseils pratiques sur la numérisation 3D, la modélisation 3D et les jumeaux numériques. Apprenez comment optimiser vos projets de construction, d’architecture ou d’industrie manufacturière grâce aux technologies 3D.\nLe processus de modélisation 3D et mise en plan\npar Louis Dallaire\n•\n28 février 2025\nDécouvrez comment pointSpace convertit vos données de scan 3D en plans détaillés et fonctionnels. Le processus clé de mise en plan expliqué.\nBIM : Définitions, Bénéfices, Niveaux de Maturité et Durabilité\npar Louis Dallaire\n•\n9 octobre 2024\nLe BIM (Building Information Modeling) transforme la façon dont les projets de construction sont conçus, gérés et réalisés. En combinant un modèle 3D intelligent et des données précises, le BIM améliore la coordination entre les équipes, réduit les erreurs et maximise l’efficacité des projets. Grâce à des outils comme la numérisation 3D, le BIM devient un levier essentiel pour des projets plus efficaces et durables.\nÉtudes de cas\nDes résultats prouvés à travers plus de 400 projets\nNous collaborons avec des clients de divers secteurs, tels que la construction, l’architecture et l’industrie manufacturière. Notre objectif est de vous offrir un service de modélisation 3D de haute qualité ainsi que des solutions adaptées à vos besoins.\nScan 3D et modélisation 3D complète d’un bâtiment\nBroccolini\nVoir l'étude de cas\nScan 3D et modélisation 3D des façades d’un bâtiment\nSt-Denis Thompson Inc.\nVoir l'étude de cas\nScan 3D et modélisation 3D d’une scierie\nGroupe CDF\nVoir l'étude de cas\nScan 3D et modélisation 3D d’une usine\nVAC AERO International\nVoir l'étude de cas\nContactez-nous 🡒\nFAQ\nVous souhaitez en savoir plus sur nos services de modélisation 3D ? Contactez notre équipe pour obtenir des réponses rapides et des conseils personnalisés.\nQu’est-ce que la modélisation 3D ?\nLa modélisation 3D consiste à créer une version numérique en trois dimensions d’un objet, d’un espace ou d’une structure physique. Elle permet de visualiser, d’analyser et d’interagir avec un projet avant le début des travaux. Grâce à des techniques avancées de scan LiDAR, de photogrammétrie et de mesures de précision, nous capturons chaque dimension et chaque détail de votre bâtiment, de vos équipements ou de vos installations industrielles.\nNos services de modélisation 3D fournissent des modèles numériques très précis pouvant être utilisés pour une large gamme d’applications :\nConception et rénovation : Planifiez les modifications avec précision et réduisez les erreurs lors de la construction.\nPlanification et coordination de chantier : Utilisez les modèles pour détecter les conflits, organiser les tâches et coordonner efficacement les équipes.\nGestion des actifs\n: Conservez un registre numérique de vos équipements, infrastructures et plans de bâtiments pour la maintenance ou les mises à jour futures.\nAménagements et planification industrielle\n: Optimisez les flux de travail, le placement des machines et la sécurité dans les usines ou espaces industriels.\nVisites virtuelles\net visualisation : Créez des visites immersives ou des présentations réalistes pour vos parties prenantes, clients ou approbations de projet.\nCes modèles sont compatibles avec les logiciels standards du secteur tels que Revit, AutoCAD, STEP, SAT et bien d’autres.\nEn fournissant des modèles 3D précis et fiables, nous aidons les équipes à réduire les visites sur site, à détecter les problèmes potentiels dès le départ, à améliorer la collaboration entre les équipes et à prendre des décisions éclairées tout au long du projet.\nQuels formats de livrables proposez-vous et offrez-vous une formation ?\nNous livrons les plans et modèles 3D dans le format de votre choix, notamment DWG, Revit, CAD, STEP, SAT, et bien d’autres. Une formation personnalisée est également disponible pour aider votre équipe à utiliser efficacement vos nouveaux plans ou modèles et à tirer le maximum de vos fichiers numériques.\nPour quels secteurs fournissez-vous des services de modélisation 3D ?\nNous proposons des services de modélisation 3D pour les secteurs de la construction, de l’architecture, de l’industrie et de la fabrication. Nos services sont adaptés à chaque projet, qu’il s’agisse de rénovations de bâtiments, d’aménagements d’usines, d’espaces commerciaux ou d’installations industrielles complexes, garantissant des modèles numériques précis et exploitables pour toutes les situations.\nQuels types de services de modélisation 3D proposez-vous ?\nNous proposons des scans 3D\nhaute résolution, des nuage de points, des plans 2D détaillés\n, des modèles Revit, des dessins CAO et des modèles 3D dans plusieurs formats tels que DWG, IFC, STEP et SAT. Chaque modèle est organisé, structuré et prêt à être intégré facilement à vos projets.\nQuelle est la précision de vos modèles 3D ?\nNous utilisons des scanners LiDAR de précision millimétrique pour capturer les données géospatiales de bâtiments et d’équipements, garantissant des modèles 3D très précis. Bien que la précision millimétrique absolue ne puisse être garantie, nos modèles offrent systématiquement un haut niveau de précision, les rendant idéaux pour la conception, la planification et les applications de construction.\nVos modèles 3D peuvent-ils être utilisés sur différents logiciels ?\nOui. Bien que les modèles ne soient pas automatiquement compatibles avec toutes les plateformes, nous les créons dans les formats dont vous avez besoin. Nos services de modélisation 3D sont adaptés à vos exigences, et nous livrons les modèles dans vos formats préférés, tels que Revit, AutoCAD, STEP, SAT, et bien d’autres. Chaque fichier est soigneusement préparé pour une intégration facile à vos projets, sans configuration supplémentaire.\nQuels sont les avantages des modèles 3D pour mon projet ?\nLes modèles 3D réduisent les visites répétées sur site, améliorent la collaboration entre les équipes, facilitent la planification et soutiennent une prise de décision plus efficace. Ils permettent de visualiser les espaces, d’optimiser les aménagements, de détecter les conflits potentiels et de coordonner efficacement les projets de construction ou de rénovation.\n\"Le travail de PointSpace nous a permis de démystifier l'état actuel d'un bâtiment qui, depuis sa construction en 1960, a subi plusieurs interventions non documentées. Le plan détaillé fourni par l'équipe nous évitera bien des imprévus pendant la phase de construction.\"\n- Jacob Marquis,\nCoordonnateur du développement immobilier\nBroccolini\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo PointSpace avec barres verticales dorées et texte gris clair sur fond blanc"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/26-1920w.jpg",
+      "alt": "Brick building with white trim, windows, and angled roof, in a sunlit outdoor setting."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2025-02-27+223026-1920w.png",
+      "alt": "Exterior shot of industrial buildings, metal scaffolding, and stairs against a blue sky."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sans+titre+%281920+x+1920+px%29-1920w.png",
+      "alt": "BIM lifecycle graphic: white arrows in a circle, labeled Conception, Construction, Exploitation, Maintenance, around the BIM logo and building silhouette."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4_Model_6000px+%281%29-1920w.webp",
+      "alt": "Exterior of a retail store with glass windows, featuring mannequins, an open entrance, and visible merchandise inside."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot_16-7-2024_102652_--281-29-1d1d9314-1920w.png",
+      "alt": "Multi-story brown, teal, and white apartment building with balconies, glass entrance, and blue sky."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2023-10-17+104620+%283%29-1920w.webp",
+      "alt": "Yellow industrial robot arm placing a box in a factory."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Vac+Aero_5+%284%29-1920w.webp",
+      "alt": "Yellow industrial robot arm placing a box in a factory."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+      "alt": "Logo de Jessica Daoust Architectes en lettres blanches."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+      "alt": "Abstract cream-colored wavy pattern, similar to the letter \"M\" repeated several times."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+      "alt": "Logo of Théâtre St James with ornate design and \"S\" in the center."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+      "alt": "Connx logo with text \"FUSION W/ TAG NUT\". Company name underneath."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+      "alt": "The word \"aedifica\" in a light-yellow, elegant font."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+      "alt": "JCB Construction Canada logo: light text with initials 'jcb' and company name."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    }
+  ],
+  "jsonLd": [],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/26-1920w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/26.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2025-02-27+223026-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sans+titre+%281920+x+1920+px%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4_Model_6000px+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/4_Model_6000px+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot_16-7-2024_102652_--281-29-1d1d9314-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Screenshot_16-7-2024_102652_--281-29-1d1d9314.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2023-10-17+104620+%283%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Screenshot+2023-10-17+104620+%283%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Vac+Aero_5+%284%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Vac+Aero_5+%284%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/17+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/21+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/13+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/23+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/12+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/16+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/14+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/8+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/10+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-c0d7ef18-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/3-100388f4-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4-31dab3f9-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/5-7617cdb3-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6-b66f75f9-1920w.png"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/fr-ca/services/modelisation-3d"
+}

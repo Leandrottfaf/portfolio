@@ -1,0 +1,369 @@
+{
+  "url": "https://www.pointspace.ca/3d-modeling-process",
+  "lang": "en",
+  "title": "3D Digitizing: The Planning Process | pointSpace",
+  "metaDescription": "Discover how pointSpace transforms 3D scan data into detailed plans for building and renovation projects. Learn the key planning steps in 3D digitizing.",
+  "ogTitle": "3D Digitizing: The Planning Process | pointSpace",
+  "ogDescription": "Discover how pointSpace transforms 3D scan data into detailed plans for building and renovation projects. Learn the key planning steps in 3D digitizing.",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2025-02-27+223026-1920w.png",
+  "canonical": "https://www.pointspace.ca/3d-modeling-process",
+  "hreflang": [],
+  "h1": [
+    "The 3D Modeling Process"
+  ],
+  "headings": [
+    "h1: The 3D Modeling Process",
+    "h2: Data processing",
+    "h2: 3D model creation",
+    "h2: Plan generation",
+    "h2: Delivery and support",
+    "h4: Louis Dallaire",
+    "h4: Follow us!",
+    "h4: About us",
+    "h4: Contact us"
+  ],
+  "nav": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contact us",
+      "href": "/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "",
+      "href": "/"
+    },
+    {
+      "text": "Louis Dallaire",
+      "href": "/louis-dallaire-ceo"
+    },
+    {
+      "text": "< Previous Post",
+      "href": "/fr-ca/la-numerisation-3d-le-processus-de-modelisation3d-et-mise-en-plan"
+    },
+    {
+      "text": "Next Post >",
+      "href": "/fr-ca/comment-la-numerisation-3d-optimise-et-transforme-votre-maniere-de-travailler"
+    },
+    {
+      "text": "",
+      "href": "/"
+    },
+    {
+      "text": "",
+      "href": "https://www.linkedin.com/company/pointspace/"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Careers",
+      "href": "/careers"
+    },
+    {
+      "text": "Security and privacy policy",
+      "href": "/security-and-privacy-policy"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    }
+  ],
+  "body": "Home\nAbout us\nIndustries\nManufacturing and industrial\nArchitecture and Buildings\nServices\nScanning\nScan to BIM\nAs-Built Drafting\n3D Modeling\nBuilding analysis\nBOMA As-Built Digital Plans\nMatterport 3D Virtual Tours\nDigital Twins\nBlog\nCase studies\nContact\nGet in touch\n(514) 606-9604\nEnglish\nen\nFrançais\nfr\nLouis Dallaire • February 28, 2025\nThe 3D Modeling Process\nAt pointSpace, we transform data from 3D scans into detailed, functional plans. This essential phase ensures that the information gathered on site is accurately converted into usable documents for your projects. Find out more about our drafting process and the solutions we offer to meet your needs.\nData processing\nOnce the scan is complete, we transfer the collected data to our processing system. This process includes several key steps: data cleansing, where we eliminate anomalies and noise to retain only relevant information; scan alignment, where we merge the different shots to create a coherent and complete model of the site; and finally data filtering and simplification, removing superfluous details to facilitate the creation of clear and accurate plans.\n3D model creation\nAfter processing the data, we move on to creating the 3D models. Using state-of-the-art software, we convert the scanned data into detailed 3D models, which can include architectural, structural and mechanical elements. We then check the accuracy of these models against the original data to ensure that all details are accurately represented. In collaboration with the customer, we make the necessary adjustments to meet all project specifications and requirements.\nPlan generation\nPlan generation is the final step, where 3D models are converted into usable documents. We create detailed 2D plans by extracting orthographic views and sections from 3D models. These plans can include elevations, sections and floor plans. We add all necessary annotations, including dimensions, legends and notes, to ensure a clear and complete understanding of the plans. Each plan is checked to ensure that it meets quality standards and customer requirements before final delivery.\nDelivery and support\nOnce the plans have been finalized, we deliver them to the customer in the requested formats. We also offer ongoing support to ensure that you can make effective use of the plans supplied. We can supply drawings in a variety of digital formats (DWG, PDF, etc.) to suit your needs. Our team is available to answer any questions you may have and to help you integrate the plans into your work. If modifications are required after delivery, we offer update and revision services to ensure that the plans remain up to date as your project evolves.\nDrafting is an essential step that transforms digitized data into usable tools for planning and construction. At pointSpace, we're committed to delivering accurate, detailed plans tailored to your specific needs. With our expertise and advanced technology, we guarantee results that optimize your construction or renovation projects.\nArticle par\nLouis Dallaire\nDiplômé de l’ÉTS en génie des opérations et de la logistique, Louis est un passionné du monde industriel. Son objectif avec pointSpace est de rendre accessible la gestion et l’utilisation des données, car il n’est pas toujours nécessaire d’utiliser des outils complexe pour résoudre des problèmes simples!\n< Previous Post\nNext Post >\nFollow us!\nAbout us\nCase studies\nCareers\nSecurity and privacy policy\nContact us\nLouis Dallaire\nldallaire@pointspace.ca\n(514) 606-9604\nTechnology pointSpace, all rights reserved 2023.\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20221222_185010508_iOS-ba9746f8-1920w.png",
+      "alt": "Man in plaid shirt and vest leans against a windowsill, hands clasped."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo in light gray with gold vertical bars above the text"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold and light gray text and vertical gold bars above it"
+    }
+  ],
+  "jsonLd": [
+    "\n\n{\n  \"@context\" : {\n    \"@vocab\" : \"http://schema.org/\"\n  },\n  \"@type\" : \"BlogPosting\",\n  \"headline\" : \"3D Digitizing: The Planning Process | pointSpace\",\n  \"datePublished\" : \"2025-02-28T03:36:50\",\n  \"dateModified\" : \"2026-01-28T16:18:24\",\n  \"author\" : {\n    \"@type\" : \"Person\",\n    \"name\" : \"Louis Dallaire\"\n  },\n  \"image\" : \"https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Screenshot+2025-02-27+223026.png\",\n  \"description\" : \"Discover how pointSpace transforms 3D scan data into detailed plans for building and renovation projects. Learn the key planning steps in 3D digitizing.\"\n}\n\n  "
+  ],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20221222_185010508_iOS-ba9746f8-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/20221222_185010508_iOS-ba9746f8.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Screenshot+2025-02-27+223026.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2025-02-27+223026-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/fcvbbLyQcCzAJxx4b8Xe_Vlog+3+-+Mod%C3%A9lisation+Clip.v2.0000000.jpg",
+    "https://irp.cdn-website.com/md/dmtmpl/75bc33b9-819f-4158-8fd6-6dcfe792b59c/dms3rep/multi/desktop/logo-header.svg"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/3d-modeling-process"
+}

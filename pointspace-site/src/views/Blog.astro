@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import Picture from '../components/Picture.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { BLOG } from '../data/blog';
+import { ROUTES, type Lang } from '../data/routes';
+import { UI } from '../data/ui';
+import { breadcrumbLd } from '../lib/seo';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = UI[lang];
+const T = {
+  fr: {
+    title: 'Blogue : numérisation 3D, BIM et plans | pointSpace',
+    description: 'Articles de pointSpace sur la numérisation 3D, la modélisation BIM, la mise en plan et les jumeaux numériques : processus, préparation d\'un relevé et glossaire.',
+    h1: 'Blogue', lead: 'Articles et conseils pratiques sur la numérisation 3D, la modélisation BIM et les jumeaux numériques, par l\'équipe de pointSpace.',
+    read: "Lire l'article", latest: 'Article récent',
+    ctaTitle: 'Une question sur votre projet ?', ctaText: 'Notre équipe vous guide vers la bonne solution de numérisation, de plans ou de modélisation.',
+  },
+  en: {
+    title: 'Blog: 3D Scanning, BIM and Drawings | pointSpace',
+    description: 'pointSpace articles on 3D scanning, BIM modeling, drafting and digital twins: processes, survey preparation and more.',
+    h1: 'Blog', lead: 'Articles and practical advice on 3D scanning, BIM modeling and digital twins from the pointSpace team.',
+    read: 'Read the article', latest: 'Latest article',
+    ctaTitle: 'A question about your project?', ctaText: 'Our team will point you to the right scanning, drafting or modeling solution.',
+  },
+}[lang];
+// Images illustrate each article's topic (all already published on pointspace.ca)
+const IMG: Record<string, string> = {
+  'scan-to-bim-maison': 'blogue-scan-to-bim-modele-bim-maison',
+  'ia-autodesk': 'modele-bim-mep-entrepot', glossaire: 'gare-windsor-nuage-points-exterieur', materiel: 'equipement-releve-pointspace',
+  workflow: 'technicien-releve-numerisation-usine', modelisation: 'vac-aero-modele-3d-usine', bim: 'scan-to-bim-revit-model-cutaway-dark',
+  entreplafonds: 'entreplafond-nuage-points', processus: 'scanner-laser-3d-entrepot-vide', preparation: 'scanner-leica-rtc360-toit-industriel',
+};
+const posts = BLOG[lang];
+const [first, ...rest] = posts;
+const crumbs = [{ name: t.home, path: ROUTES.home[lang] }, { name: T.h1, path: ROUTES.blog[lang] }];
+---
+<BaseLayout lang={lang} route="blog" title={T.title} description={T.description} jsonLd={[breadcrumbLd(crumbs.map((c) => ({ name: c.name, path: c.path })))]}>
+  <PageHero lang={lang} crumbs={crumbs} h1={T.h1} lead={T.lead} compact />
+
+  <section class="section theme-cream" aria-labelledby="latest-title">
+    <div class="container">
+      <article class="feature is-card" data-reveal>
+        <Picture name={IMG[first.id]} lang={lang} ratio="16/10" sizes="(min-width:1280px) 55vw" class="zoom" />
+        <div class="feature__body">
+          <p class="t-label t-muted" id="latest-title">{T.latest} · {first.topic}</p>
+          <h2 class="t-h2"><a class="post__link card-link" href={first.url}>{first.title}</a></h2>
+          <p class="t-small t-muted"><time datetime={first.iso}>{first.date}</time>{first.author && ` · ${first.author}`}</p>
+          {first.internal
+            ? <span class="link-arrow">{T.read}<span class="go" aria-hidden="true">→</span></span>
+            : <span class="link-arrow">{T.read} {t.liveLink}<span class="go go--ext" aria-hidden="true">↗</span></span>}
+        </div>
+      </article>
+
+      <ul class="posts">
+        {rest.map((p) => (
+          <li class="post is-card" data-reveal>
+            <Picture name={IMG[p.id]} lang={lang} ratio="3/2" sizes="(min-width:1280px) 30vw" class="zoom" />
+            <p class="t-label t-muted post__topic">{p.topic}</p>
+            <h2 class="t-h4 post__title"><a class="post__link card-link" href={p.url}>{p.title}</a></h2>
+            <p class="t-small t-muted"><time datetime={p.iso}>{p.date}</time>{p.author && ` · ${p.author}`}</p>
+            {p.internal
+              ? <span class="t-small post__cta">{T.read} <span class="go" aria-hidden="true">→</span></span>
+              : <span class="t-small post__cta">{T.read} <span class="t-muted">{t.liveLink}</span> <span class="go go--ext" aria-hidden="true">↗</span></span>}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <CtaBand lang={lang} title={T.ctaTitle} text={T.ctaText} avoid={Object.values(IMG)} />
+</BaseLayout>
+
+<style>
+  .feature { position: relative; display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--sp-8); align-items: center; padding-bottom: var(--sp-9); margin-bottom: var(--sp-9); border-bottom: 1px solid var(--line); }
+  .feature__body { display: flex; flex-direction: column; gap: var(--sp-4); align-items: flex-start; }
+  .posts { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-8) var(--sp-6); }
+  .post { position: relative; display: flex; flex-direction: column; gap: 10px; }
+  .post__topic { margin-top: var(--sp-3); }
+  .post__title { font-weight: 400; font-size: 1.375rem; }
+  .post__link { text-decoration: none; }
+  .post__link::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+  .post:hover .post__link, .feature:hover .post__link { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+  .post__cta { font-weight: 500; }
+</style>

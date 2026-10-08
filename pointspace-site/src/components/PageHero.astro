@@ -1,0 +1,36 @@
+---
+// Hero for non-service pages: breadcrumbs, H1, lead, optional image and actions.
+import Breadcrumbs from './Breadcrumbs.astro';
+import Picture from './Picture.astro';
+import type { Lang } from '../data/routes';
+interface Props { lang: Lang; crumbs: { name: string; path?: string }[]; eyebrow?: string; h1: string; lead?: string; image?: string; position?: string; compact?: boolean }
+const { lang, crumbs, eyebrow, h1, lead, image, position, compact = false } = Astro.props;
+---
+<section class:list={['pagehero theme-green', { 'pagehero--compact': compact, 'pagehero--image': image }]} aria-labelledby="h1">
+  <div class="container pagehero__grid">
+    <div class="pagehero__copy">
+      <Breadcrumbs lang={lang} items={crumbs} />
+      {eyebrow && <p class="eyebrow t-label pagehero__eyebrow">{eyebrow}</p>}
+      <h1 id="h1" class:list={['t-h1', { 'pagehero__h1--push': !eyebrow }]}>{h1}</h1>
+      {lead && <p class="t-lead pagehero__lead">{lead}</p>}
+      <slot />
+    </div>
+    {image && <div class="pagehero__media"><Picture name={image} lang={lang} eager sizes="(min-width:1280px) 50vw" position={position} /></div>}
+  </div>
+</section>
+
+<style>
+  .pagehero { overflow: hidden; }
+  .pagehero__grid { display: grid; grid-template-columns: 1fr; min-height: 420px; }
+  .pagehero--image .pagehero__grid { grid-template-columns: 1fr 1fr; gap: var(--sp-8); min-height: 560px; }
+  .pagehero__copy { padding: var(--sp-7) 0 var(--sp-9); display: flex; flex-direction: column; }
+  .pagehero__eyebrow { margin-top: auto; padding-top: var(--sp-8); }
+  .pagehero:not(.pagehero--image) h1 { max-width: 18ch; }
+  .pagehero__h1--push { margin-top: auto; padding-top: var(--sp-8); }
+  .pagehero--image h1 { max-width: 14ch; }
+  .pagehero__lead { margin-top: var(--sp-5); color: var(--ps-cream-80); max-width: 52ch; }
+  .pagehero--compact .pagehero__grid { min-height: 340px; }
+  .pagehero__media { position: relative; margin-right: calc(-1 * max(var(--gutter), (100vw - var(--container)) / 2)); }
+  .pagehero__media :global(.pic) { position: absolute; inset: 0; border-radius: 0; }
+  .pagehero :global(.pagehero__actions) { display: flex; gap: var(--sp-4); margin-top: var(--sp-7); }
+</style>

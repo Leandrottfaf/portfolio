@@ -1,0 +1,394 @@
+{
+  "url": "https://www.pointspace.ca/lead-magnet-landing-page",
+  "lang": "en",
+  "title": "3D Scanning for Project Accuracy | Pointspace",
+  "metaDescription": "Prevent costly project errors with our free guide on 3D scanning. Assess risks & improve accuracy in the building & manufacturing industry.",
+  "ogTitle": "3D Scanning for Project Accuracy | Pointspace",
+  "ogDescription": "Prevent costly project errors with our free guide on 3D scanning. Assess risks & improve accuracy in the building & manufacturing industry.",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/lead-magnet-landing-page",
+  "hreflang": [
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/lead-magnet-landing-page"
+    },
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/lead-magnet-landing-page"
+    }
+  ],
+  "h1": [
+    "L'erreur à 3 millions de dollars",
+    "01",
+    "02",
+    "03",
+    "04"
+  ],
+  "headings": [
+    "h1: L'erreur à 3 millions de dollars",
+    "h2: Contenu du guide:",
+    "h1: 01",
+    "h3: Survol de l'étude de cas",
+    "h1: 02",
+    "h3: Les types de situations mettant les projets à risque d'imprécision",
+    "h1: 03",
+    "h3: Ce que pointSpace fait",
+    "h1: 04",
+    "h3: Quiz pour analyser le risque d'imprécision de votre projet",
+    "h2: pointSpace: la référence dans le domaine de la numérisation et du modèle 3D."
+  ],
+  "nav": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/lead-magnet-landing-page"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/lead-magnet-landing-page"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contact us",
+      "href": "/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/lead-magnet-landing-page"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/lead-magnet-landing-page"
+    },
+    {
+      "text": "",
+      "href": "/"
+    },
+    {
+      "text": "Téléchargez le guide",
+      "href": "https://irp.cdn-website.com/5767f5b6/files/uploaded/lead+magnet.pdf+%282%29.pdf"
+    },
+    {
+      "text": "Button",
+      "href": ""
+    },
+    {
+      "text": "Button",
+      "href": ""
+    },
+    {
+      "text": "Button",
+      "href": ""
+    },
+    {
+      "text": "Button",
+      "href": ""
+    },
+    {
+      "text": "Button",
+      "href": ""
+    },
+    {
+      "text": "Téléchargez le guide",
+      "href": "https://irp.cdn-website.com/5767f5b6/files/uploaded/lead+magnet.pdf+%282%29.pdf"
+    }
+  ],
+  "body": "Home\nAbout us\nIndustries\nManufacturing and industrial\nArchitecture and Buildings\nServices\nScanning\nScan to BIM\nAs-Built Drafting\n3D Modeling\nBuilding analysis\nBOMA As-Built Digital Plans\nMatterport 3D Virtual Tours\nDigital Twins\nBlog\nCase studies\nContact\nGet in touch\n(514) 606-9604\nEnglish\nen\nFrançais\nfr\nL'erreur à 3 millions de dollars\nUn de nos client a failli perdre 10% de la valeur de son projet à cause de mesures qui n'étaient plus à jour.\nApprenez si votre projet est à risque et comment y remédier avec à notre guide gratuit.\nTéléchargez le guide\nContenu du guide:\n01\nSurvol de l'étude de cas\nRésumé rapide de l'erreur évitée par le client.\n02\nLes types de situations mettant les projets à risque d'imprécision\nListe des conditions communes qui indiquent une potentielle imprécision dans les plans d'un projet.\n03\nCe que pointSpace fait\nLes méthodes et technologies utilisées par pointSpace pour éviter de telles imprécisions.\n04\nQuiz pour analyser le risque d'imprécision de votre projet\nUne\nchecklist\nconcise et directe\nqui permet d'évaluer le risque d'imprécisions des plans à tous coups.\nButton\npointSpace: la référence dans le domaine de la numérisation et du modèle 3D.\nRien ne parle plus que les preuves.\n+50 clients\n+400 projets\nTéléchargez le guide\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-1920w.webp",
+      "alt": "Faint Dallaire Consultants logo with large stylized “D” on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+      "alt": "JCB Construction Canada logo in pale gold on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%281%29-1920w.webp",
+      "alt": "Pale beige abstract zigzag logo on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+      "alt": "Cream 3D logo with a curved S-shaped building and faint “St-Denis Thompson” text"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+      "alt": "Faint gold The Theatre St James logo on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold and light gray text and vertical gold bars above it"
+    }
+  ],
+  "jsonLd": [],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%281%29-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/IMG_1360-2880w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/image+%282%29-2880w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/15+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/22+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/25+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/2+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/18+%281%29.webp"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/lead-magnet-landing-page"
+}

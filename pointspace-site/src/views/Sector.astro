@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import Picture from '../components/Picture.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import CaseCard from '../components/CaseCard.astro';
+import Testimonial from '../components/Testimonial.astro';
+import LogoStrip from '../components/LogoStrip.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { ROUTES, type Lang, type RouteId } from '../data/routes';
+import { UI } from '../data/ui';
+import { serviceById } from '../data/services';
+import { caseById } from '../data/caseStudies';
+import { TESTIMONIALS, type TestimonialId } from '../data/testimonials';
+import { breadcrumbLd } from '../lib/seo';
+
+interface Props { lang: Lang; sector: 'manufacturing' | 'architecture' }
+const { lang, sector } = Astro.props;
+const t = UI[lang];
+
+type Need = { h: string; p: string; img: string };
+type C = {
+  title: string; description: string; h1: string; lead: string; image: string;
+  needsTitle: string; needsIntro: string; needs: Need[];
+  services: RouteId[]; servicesTitle: string; cases: string[]; casesTitle: string; testimonial: TestimonialId;
+  ctaTitle: string; ctaText: string;
+};
+const CONTENT: Record<'manufacturing' | 'architecture', { fr: C; en: C }> = {
+  manufacturing: {
+    fr: {
+      title: "Numérisation 3D industrielle et plans d'usine | pointSpace",
+      description: "Relevés laser 3D d'usines en exploitation : plans d'aménagement d'usine, modèles 3D d'équipements, salles mécaniques et jumeaux numériques pour le manufacturier.",
+      h1: 'Numérisation 3D industrielle pour le manufacturier',
+      lead: "La numérisation 3D industrielle transforme votre usine en données précises. Nous permettons aux entreprises de transformer et d'optimiser leurs opérations grâce à des jumeaux numériques polyvalents, facilitant l'organisation de l'espace pour stimuler la croissance.",
+      image: 'modele-bim-salle-mecanique-vue-ensemble',
+      needsTitle: "Optimiser l'aménagement, préparer une expansion, documenter l'existant",
+      needsIntro: "Vous souhaitez optimiser l'aménagement d'une usine, préparer une expansion ou documenter un environnement industriel complexe ? pointSpace accompagne les entreprises manufacturières avec des services de numérisation 3D, de modélisation 3D et de mise en plan.",
+      needs: [
+        { h: "Réaménager un plancher de production", p: "Plans d'aménagement d'usine avec l'empreinte de chaque machine, pour tester des scénarios sans déplacer un seul équipement.", img: 'nadco-plan-amenagement-cao' },
+        { h: 'Intégrer un nouvel équipement', p: "Modèles 3D des lieux et des machines pour vérifier les dégagements avant l'installation.", img: 'vac-aero-modele-3d-usine' },
+        { h: 'Documenter les salles mécaniques', p: 'Nuages de points et modèles de la tuyauterie et des équipements mécaniques.', img: 'modele-bim-tuyauterie-mecanique-vanne' },
+      ],
+      servicesTitle: 'Les services utilisés en milieu industriel',
+      services: ['scanning', 'asBuilt', 'modeling3d', 'scanToBim', 'analysis', 'digitalTwins'],
+      casesTitle: 'Projets industriels et manufacturiers',
+      cases: ['vac-aero', 'cdf', 'renfort', 'nelmar', 'nadco', 'prevost'],
+      testimonial: 'nelmar',
+      ctaTitle: 'Parlez-nous de votre usine', ctaText: "Décrivez l'installation, la zone à relever et votre objectif (aménagement, expansion, documentation). Nous vous préparons une soumission.",
+    },
+    en: {
+      title: 'Industrial 3D Laser Scanning for Manufacturers | pointSpace',
+      description: '3D laser surveys of operating plants: plant layout drawings, 3D equipment models, mechanical rooms and digital twins for manufacturers.',
+      h1: 'Industrial 3D Scanning for Manufacturers',
+      lead: 'Industrial 3D scanning turns your plant into accurate data. We help companies transform and optimise their operations with versatile digital twins that make space planning easier and support growth.',
+      image: 'modele-bim-salle-mecanique-vue-ensemble',
+      needsTitle: 'Optimise layouts, prepare an expansion, document existing conditions',
+      needsIntro: 'Want to optimise a plant layout, prepare an expansion or document a complex industrial environment? pointSpace supports manufacturers with 3D scanning, 3D modeling and drafting services.',
+      needs: [
+        { h: 'Rework a production floor', p: 'Plant layout drawings with each machine’s footprint, to test scenarios without moving any equipment.', img: 'nadco-plan-amenagement-cao' },
+        { h: 'Integrate new equipment', p: '3D models of the space and machines to check clearances before installation.', img: 'vac-aero-modele-3d-usine' },
+        { h: 'Document mechanical rooms', p: 'Point clouds and models of piping and mechanical equipment.', img: 'modele-bim-tuyauterie-mecanique-vanne' },
+      ],
+      servicesTitle: 'Services used in industrial settings',
+      services: ['scanning', 'asBuilt', 'modeling3d', 'scanToBim', 'analysis', 'digitalTwins'],
+      casesTitle: 'Industrial and manufacturing projects',
+      cases: ['vac-aero', 'cdf', 'renfort', 'nelmar', 'nadco', 'prevost'],
+      testimonial: 'nelmar',
+      ctaTitle: 'Tell us about your plant', ctaText: 'Describe the facility, the area to survey and your goal (layout, expansion, documentation). We will prepare a quote.',
+    },
+  },
+  architecture: {
+    fr: {
+      title: "Relevé de l'existant pour architectes et immeubles | pointSpace",
+      description: "Relevés 3D avant rénovation, plans tels que construits, modèles BIM et mesurage BOMA pour architectes, promoteurs et gestionnaires immobiliers.",
+      h1: "Relevé de l'existant pour l'architecture et les bâtiments",
+      lead: "Un relevé de l'existant précis, avant de dessiner ou de rénover. Nous offrons aux acteurs du milieu immobilier des relevés 3D et des plans de l'existant pour propulser la conception des projets de construction et de rénovation.",
+      image: 'theatre-st-james-numerisation-facade',
+      needsTitle: 'Des données fiables à chaque étape de la vie du bâtiment',
+      needsIntro: "Plans introuvables, modifications non documentées, superficies à confirmer : le relevé laser 3D donne à votre équipe une base commune et vérifiable.",
+      needs: [
+        { h: 'Relevé avant rénovation', p: "Plans tels que construits et modèle BIM de l'existant avant la conception, pour éviter les imprévus en chantier.", img: 'gare-windsor-plan-tel-que-construit' },
+        { h: 'Bâtiments patrimoniaux', p: 'Façades ornementées et intérieurs historiques documentés avec précision avant toute intervention.', img: 'numerisation-3d-eglise-tribune-orgue' },
+        { h: 'Superficies et gestion immobilière', p: 'Mesurage BOMA de la superficie locative et plans à jour pour la gestion des baux.', img: 'plan-superficies-locatives-gare-windsor' },
+      ],
+      servicesTitle: 'Les services utilisés en architecture et en immobilier',
+      services: ['scanning', 'asBuilt', 'scanToBim', 'boma', 'analysis', 'matterport'],
+      casesTitle: 'Projets en architecture et en immobilier',
+      cases: ['windsor', 'st-james', 'le-foufou', 'westcliff', 'broccolini', 'st-denis'],
+      testimonial: 'carosielliShort',
+      ctaTitle: 'Parlez-nous de votre bâtiment', ctaText: "Décrivez le bâtiment, les étages à relever et les livrables souhaités. Nous vous préparons une soumission.",
+    },
+    en: {
+      title: 'Existing Conditions Surveys for Architects | pointSpace',
+      description: 'Pre-renovation 3D surveys, as-built drawings, BIM models and BOMA measurement for architects, developers and property managers.',
+      h1: 'Existing Conditions Surveys for Architecture and Buildings',
+      lead: 'An accurate existing conditions survey before you design or renovate. We provide the real estate industry with 3D surveys and existing conditions drawings to drive design in construction and renovation projects.',
+      image: 'theatre-st-james-numerisation-facade',
+      needsTitle: 'Reliable data at every stage of a building’s life',
+      needsIntro: 'Missing drawings, undocumented changes, floor areas to confirm: a 3D laser survey gives your team a shared, verifiable basis.',
+      needs: [
+        { h: 'Pre-renovation surveys', p: 'As-built drawings and an as-built BIM model before design, to avoid surprises on site.', img: 'gare-windsor-plan-tel-que-construit' },
+        { h: 'Heritage buildings', p: 'Ornate façades and historic interiors documented accurately before any intervention.', img: 'numerisation-3d-eglise-tribune-orgue' },
+        { h: 'Floor areas and property management', p: 'BOMA measurement of rentable area and up-to-date drawings for lease management.', img: 'plan-superficies-locatives-gare-windsor' },
+      ],
+      servicesTitle: 'Services used in architecture and real estate',
+      services: ['scanning', 'asBuilt', 'scanToBim', 'boma', 'analysis', 'matterport'],
+      casesTitle: 'Architecture and real estate projects',
+      cases: ['windsor', 'st-james', 'le-foufou', 'westcliff', 'broccolini', 'st-denis'],
+      testimonial: 'carosielliShort',
+      ctaTitle: 'Tell us about your building', ctaText: 'Describe the building, the floors to survey and the deliverables you need. We will prepare a quote.',
+    },
+  },
+};
+const c = CONTENT[sector][lang];
+const route: RouteId = sector;
+const crumbName = sector === 'manufacturing' ? (lang === 'fr' ? 'Manufacturier et industriel' : 'Manufacturing & Industrial') : (lang === 'fr' ? 'Architecture et bâtiments' : 'Architecture & Buildings');
+const crumbs = [{ name: t.home, path: ROUTES.home[lang] }, { name: t.sectors }, { name: crumbName, path: ROUTES[route][lang] }];
+const q = TESTIMONIALS[c.testimonial];
+---
+<BaseLayout lang={lang} route={route} title={c.title} description={c.description} ogImage={`/images/${c.image}-1600.webp`}
+  jsonLd={[breadcrumbLd([{ name: t.home, path: ROUTES.home[lang] }, { name: crumbName, path: ROUTES[route][lang] }])]}>
+  <PageHero lang={lang} crumbs={crumbs} eyebrow={t.sectors} h1={c.h1} lead={c.lead} image={c.image}>
+    <div class="pagehero__actions">
+      <a class="btn btn--primary" href={ROUTES.quote[lang]}>{t.quote}<span class="btn__arrow" aria-hidden="true">→</span></a>
+    </div>
+  </PageHero>
+  <LogoStrip title={lang === 'fr' ? 'Ils nous font confiance' : 'Trusted across industries'} compact />
+
+  <section class="section theme-cream" aria-labelledby="needs-title">
+    <div class="container">
+      <SectionHeading eyebrow={lang === 'fr' ? 'Vos besoins' : 'Your needs'} title={c.needsTitle} id="needs-title" align="split" intro={c.needsIntro} />
+      <ul class="needs">
+        {c.needs.map((n) => (
+          <li class="need" data-reveal>
+            <Picture name={n.img} lang={lang} ratio="4/3" sizes="(min-width:1280px) 30vw" />
+            <h3 class="t-h3">{n.h}</h3>
+            <p class="t-muted">{n.p}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section theme-cream-50" aria-labelledby="svc-title">
+    <div class="container">
+      <SectionHeading eyebrow={t.services} title={c.servicesTitle} id="svc-title" />
+      <div class="svc-grid">
+        {c.services.map((id, i) => <ServiceCard service={serviceById(id)} lang={lang} index={i + 1} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section theme-cream" aria-labelledby="cases-title">
+    <div class="container">
+      <SectionHeading eyebrow={t.caseStudies} title={c.casesTitle} id="cases-title" />
+      <div class="cases">{c.cases.map((id) => <CaseCard cs={caseById(id)} lang={lang} />)}</div>
+      <div class="quote-wrap"><Testimonial lang={lang} quote={q[lang].quote} name={q.name} role={q[lang].role} company={q.company} /></div>
+    </div>
+  </section>
+
+  <CtaBand lang={lang} title={c.ctaTitle} text={c.ctaText} avoid={[c.image, ...c.needs.map((n) => n.img), ...c.cases.map((id) => caseById(id).image ?? ''), ...c.services.map((id) => serviceById(id).image)]} />
+</BaseLayout>
+
+<style>
+  .needs { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-6); }
+  .need { display: flex; flex-direction: column; gap: 12px; }
+  .need h3 { margin-top: var(--sp-3); }
+  .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-5); }
+  .cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-8) var(--sp-6); }
+  .quote-wrap { margin-top: var(--sp-9); padding-top: var(--sp-8); border-top: 1px solid var(--line); max-width: 980px; }
+</style>

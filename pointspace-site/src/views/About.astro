@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import Picture from '../components/Picture.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import StatsBand from '../components/StatsBand.astro';
+import LogoStrip from '../components/LogoStrip.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { ROUTES, type Lang } from '../data/routes';
+import { UI } from '../data/ui';
+import { breadcrumbLd } from '../lib/seo';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = UI[lang];
+// Team bios and titles as published on the live About pages.
+const T = {
+  fr: {
+    title: 'À propos de pointSpace : numérisation 3D et BIM | pointSpace',
+    description: "pointSpace, équipe de numérisation 3D et de modélisation BIM : notre mission, nos compétences, notre équipe et notre équipement de relevé laser.",
+    h1: 'À propos de pointSpace',
+    lead: "Nous sommes la solution la plus accessible et polyvalente pour l'interprétation des données géospatiales au Québec.",
+    pillars: [
+      { h: 'Compétence', p: 'Experts des espaces et de leurs systèmes, nous créons des plans et modèles clairs, précis et exploitables en combinant nuages de points et technologies de pointe. Nos solutions 3D personnalisées offrent à nos clients un contrôle total sur leurs infrastructures.' },
+      { h: 'Mission', p: "Notre mission est de fournir la solution la plus accessible et la plus polyvalente pour l'interprétation des données géospatiales. Nous utilisons les technologies de numérisation 3D et les solutions BIM pour créer un jumeau numérique sur mesure." },
+    ],
+    statsTitle: 'En chiffres',
+    teamEyebrow: 'Notre équipe', teamTitle: 'Rencontrez notre équipe',
+    teamIntro: 'Notre équipe passionnée met son expertise à votre service pour transformer vos idées en résultats concrets. À vos côtés à chaque étape, nous vous conseillons, vous accompagnons et vous guidons vers la réussite de vos projets.',
+    team: [
+      { img: 'louis-dallaire-portrait', name: 'Louis Dallaire', role: 'Président', bio: "Diplômé de l'ÉTS en génie des opérations et de la logistique, Louis est passionné par le monde industriel. Son objectif avec pointSpace est de rendre accessible la gestion et l'utilisation des données, car il n'est pas toujours nécessaire d'utiliser des outils complexes pour résoudre des problèmes simples !" },
+      { img: 'equipe-philippe-dallaire', name: 'Philippe Dallaire', role: 'Fondateur', bio: "Avec plus de 30 ans d'expérience dans le domaine du bâtiment, Philippe est notre entrepreneur en série qui nous guide dans cette aventure !" },
+      { img: 'equipe-thomas-sevigny', name: 'Thomas Sévigny', role: 'Chargé de projet', bio: "Diplômé en génie civil de l'Université Queen's de Kingston, Thomas est notre expert technique chez pointSpace. À ses heures perdues, il excelle dans la fabrication de meubles !" },
+      { img: 'equipe-maxime-montreuil', name: 'Maxime Montreuil', role: 'Technicien en relevé de bâtiment', bio: 'Diplômé en dessin industriel du CIMME, Maxime est notre spécialiste terrain. Avec son attention au détail et sa minutie, il veille à la précision et à la qualité des données collectées lors de chacun de nos mandats.' },
+      { img: 'equipe-portrait-3', name: 'Leandro Lazaretti', role: 'Technicien en Revit, nuage de points et scan 3D', bio: 'Diplômé en technologies CAD/BIM avec une expérience en conception architecturale, Leandro est notre spécialiste de la modélisation Revit à partir de nuages de points et de scans 3D. Grâce à sa rigueur, il transforme les données capturées sur le terrain en modèles précis et fiables.' },
+    ],
+    equipEyebrow: 'Notre équipement', equipTitle: 'Des outils de relevé choisis pour chaque site',
+    equip: [
+      { h: 'Leica RTC360', p: 'Notre scanner le plus puissant, pour les bâtiments, les usines et les façades.' },
+      { h: 'Leica BLK360', p: 'Plus agile, sa petite taille lui permet d\'atteindre les espaces restreints comme les entreplafonds et l\'intérieur des murs.' },
+      { h: 'Matterport', p: 'Pour la photo 360° et les visites virtuelles immersives.' },
+    ],
+    area: 'Nous offrons nos services partout au Québec et en Ontario : la capture des données se fait sur site, tandis que notre équipe gère à distance la mise en plan, la modélisation et le traitement des données.',
+    joinTitle: 'Prêt pour un nouveau défi ?', join: "Rejoignez l'équipe", logos: 'Ils nous font confiance',
+    ctaTitle: 'Travaillons ensemble', ctaText: 'Parlez-nous de votre bâtiment ou de votre installation. Nous vous préparons une soumission.',
+  },
+  en: {
+    title: 'About pointSpace: 3D Scanning and BIM Team | pointSpace',
+    description: 'Meet pointSpace, a 3D scanning and BIM modeling team serving Quebec and Ontario: our mission, expertise, people and laser survey equipment.',
+    h1: 'About pointSpace',
+    lead: 'We are the most accessible and versatile solution for geospatial data interpretation in Quebec.',
+    pillars: [
+      { h: 'Expertise', p: 'Experts in spaces and their systems, we create clear, precise and usable drawings and models by combining point clouds with cutting-edge technology. Our customised 3D solutions give our clients complete control over their infrastructure.' },
+      { h: 'Mission', p: 'Our mission is to provide the most accessible and versatile solution for the interpretation of geospatial data. We use 3D scanning technologies and BIM solutions to deliver a digital twin tailored to your needs.' },
+    ],
+    statsTitle: 'By the numbers',
+    teamEyebrow: 'Our team', teamTitle: 'Meet our team',
+    teamIntro: 'Our passionate team puts its expertise at your service to turn your ideas into concrete results. By your side every step of the way, we advise, support and guide you toward the success of your projects.',
+    team: [
+      { img: 'louis-dallaire-portrait', name: 'Louis Dallaire', role: 'CEO', bio: 'A graduate of ÉTS in operations and logistics engineering, Louis is passionate about the industrial world. His goal with pointSpace is to make data management and use accessible, because it’s not always necessary to use complex tools to solve simple problems!' },
+      { img: 'equipe-philippe-dallaire', name: 'Philippe Dallaire', role: 'Founder', bio: 'With over 30 years’ experience in the building trade, Philippe is our serial contractor who guides us through this adventure!' },
+      { img: 'equipe-portrait-3', name: 'Leandro Lazaretti', role: 'Revit technician', bio: 'A graduate in CAD/BIM technologies with a background in architectural design, Leandro is our Revit modeling specialist, transforming point clouds and 3D scan data into accurate, reliable models.' },
+      { img: 'equipe-thomas-sevigny', name: 'Thomas Sévigny', role: 'Project manager', bio: 'A civil engineering graduate from Queen’s University in Kingston, Thomas is our technical expert. In his spare time, he’s exceptional at building furniture!' },
+      { img: 'equipe-maxime-montreuil', name: 'Maxime Montreuil', role: 'Building surveying technician', bio: 'A graduate in Industrial Drafting from CIMME, Maxime is our field specialist. Detail-oriented and meticulous, he ensures the accuracy and quality of the data collected on each project.' },
+    ],
+    equipEyebrow: 'Our equipment', equipTitle: 'Survey tools chosen for each site',
+    equip: [
+      { h: 'Leica RTC360', p: 'Our most powerful scanner, for buildings, plants and façades.' },
+      { h: 'Leica BLK360', p: 'More agile, its small size lets us reach tight spaces such as ceilings and in between walls.' },
+      { h: 'Matterport', p: 'For 360° photography and immersive virtual tours.' },
+    ],
+    area: 'We offer our services throughout Quebec and Ontario: data capture is performed on site, while our team remotely manages drafting, modeling and data processing.',
+    joinTitle: 'Ready for a new challenge?', join: 'Join the team', logos: 'Trusted across industries',
+    ctaTitle: 'Let’s work together', ctaText: 'Tell us about your building or facility. We will prepare a quote.',
+  },
+}[lang];
+const crumbs = [{ name: t.home, path: ROUTES.home[lang] }, { name: T.h1, path: ROUTES.about[lang] }];
+---
+<BaseLayout lang={lang} route="about" title={T.title} description={T.description} jsonLd={[breadcrumbLd(crumbs.map((c) => ({ name: c.name, path: c.path })))]}>
+  <PageHero lang={lang} crumbs={crumbs} h1={T.h1} lead={T.lead} image="technicien-releve-numerisation-usine" position="50% 52%" />
+
+  <section class="section theme-cream" aria-label={T.pillars.map((p) => p.h).join(' / ')}>
+    <div class="container pillars">
+      {T.pillars.map((p) => <div data-reveal><h2 class="t-h3">{p.h}</h2><p class="t-lead t-muted">{p.p}</p></div>)}
+    </div>
+    <div class="container stats-wrap">
+      <h2 class="visually-hidden">{T.statsTitle}</h2>
+      <StatsBand lang={lang} />
+    </div>
+  </section>
+
+  <LogoStrip title={T.logos} compact />
+
+  <section class="section theme-cream-50" aria-labelledby="team-title">
+    <div class="container">
+      <SectionHeading eyebrow={T.teamEyebrow} title={T.teamTitle} id="team-title" align="split" intro={T.teamIntro} />
+      <ul class="team">
+        {T.team.map((m) => (
+          <li class="member" data-reveal>
+            <Picture name={m.img} lang={lang} ratio="4/5" sizes="(min-width:1280px) 20vw" position="50% 30%" />
+            <h3 class="t-h4">{m.name}</h3>
+            <p class="t-label t-muted member__role">{m.role}</p>
+            <p class="t-small t-muted">{m.bio}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section theme-green" aria-labelledby="equip-title">
+    <div class="container equip">
+      <div>
+        <SectionHeading eyebrow={T.equipEyebrow} title={T.equipTitle} id="equip-title" />
+        <ul class="equip__list">
+          {T.equip.map((e) => <li><h3 class="t-h4">{e.h}</h3><p class="t-muted">{e.p}</p></li>)}
+        </ul>
+        <p class="t-muted equip__area">{T.area}</p>
+      </div>
+      <Picture name="equipement-releve-pointspace" lang={lang} ratio="4/5" sizes="(min-width:1280px) 40vw" />
+    </div>
+  </section>
+
+  <section class="section--tight theme-cream" aria-labelledby="join-title">
+    <div class="container join">
+      <h2 id="join-title" class="t-h2">{T.joinTitle}</h2>
+      <a class="btn btn--secondary" href={ROUTES.careers[lang]}>{T.join}<span class="btn__arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <CtaBand lang={lang} title={T.ctaTitle} text={T.ctaText} avoid={['technicien-releve-numerisation-usine', 'equipement-releve-pointspace']} />
+</BaseLayout>
+
+<style>
+  .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-9); }
+  .pillars h2 { margin-bottom: var(--sp-4); }
+  .stats-wrap { margin-top: var(--sp-9); }
+  .team { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--sp-6); }
+  .member { display: flex; flex-direction: column; gap: 8px; }
+  .member h3 { margin-top: var(--sp-3); }
+  .member__role { font-size: 11px; }
+  .equip { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--sp-9); align-items: center; }
+  .equip__list { list-style: none; display: grid; gap: var(--sp-5); }
+  .equip__list li { padding-top: var(--sp-4); border-top: 1px solid var(--ps-cream-line); }
+  .equip__area { margin-top: var(--sp-7); max-width: 56ch; }
+  .join { display: flex; justify-content: space-between; align-items: center; gap: var(--sp-6); }
+</style>

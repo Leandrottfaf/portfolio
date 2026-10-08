@@ -1,0 +1,547 @@
+---
+// Blog article built on Thierry's blog structure (H1, intro, 7 H2 sections, FAQ, conclusion).
+// Model article for the marketing team: project facts not yet confirmed are highlighted with <mark class="todo">.
+// The scroll section scrubs public/video/blog-scan-to-bim-scroll.mp4 (keyframe every 4 frames, so seeking stays smooth):
+// scrolling down builds the BIM model, scrolling up takes it back to the point cloud.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Picture from '../components/Picture.astro';
+import Faq from '../components/Faq.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { ROUTES, type Lang } from '../data/routes';
+import { UI } from '../data/ui';
+import { serviceById } from '../data/services';
+import { image } from '../data/images';
+import { breadcrumbLd, faqLd, absUrl } from '../lib/seo';
+import { SITE } from '../data/site';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = UI[lang];
+const TODO = null; // a fact still to confirm: rendered as a highlighted mark
+
+const T = {
+  fr: {
+    title: "Scan 3D d'un bâtiment existant : plans et modèle BIM | pointSpace",
+    description: "Du scan 3D au nuage de points, puis au modèle BIM, aux élévations et aux plans tels que construits : comment pointSpace documente un bâtiment existant.",
+    crumb: "Scan 3D d'un bâtiment existant",
+    draft: "Article modèle pour l'équipe marketing : les éléments surlignés sont à confirmer avec les informations du projet.",
+    todo: 'À confirmer',
+    eyebrow: 'Blogue · Scan-to-BIM',
+    h1: "Scan 3D d'un bâtiment existant : du nuage de points aux plans tels que construits et au modèle BIM",
+    lead: "Avant de rénover, d'agrandir ou de vendre un bâtiment, il faut savoir exactement ce qui est construit. Or les plans d'origine sont souvent introuvables, incomplets ou dépassés.",
+    intro: "Un relevé de l'existant imprécis se paie plus tard : reprises de conception, visites répétées sur le chantier et imprévus pendant les travaux. Dans cet article, nous suivons un bâtiment du scan 3D jusqu'aux livrables : le nuage de points, le modèle BIM, les élévations et les plans CAO.",
+    date: '7 octobre 2026', read: '6 min de lecture', by: 'Par',
+    chips: ['Numérisation LiDAR 3D', 'Scan-to-BIM', 'Plans tels que construits'],
+    scrub: {
+      eyebrow: 'Faites défiler', title: 'Du scan 3D au modèle BIM',
+      hint: 'Défilez vers le bas pour construire le modèle, vers le haut pour revenir au nuage de points.',
+      steps: [
+        { h: 'Le relevé', p: 'Le scanner laser mesure des millions de points. Ensemble, ils forment le nuage de points : une copie mesurable du bâtiment.' },
+        { h: 'La modélisation', p: 'Murs, ouvertures et toiture sont tracés dans Revit directement sur le nuage de points.' },
+        { h: 'Le modèle BIM', p: "Le modèle fidèle à l'existant sert de base aux élévations, aux coupes et aux plans CAO." },
+      ],
+      video: 'Animation : le nuage de points d\'un bâtiment de maçonnerie devient un modèle BIM au fil du défilement.',
+    },
+    toc: 'Dans cet article',
+    why: {
+      h: 'Pourquoi ce besoin est important',
+      p: [
+        "Un bâtiment change au fil des années : un mur déplacé, une ouverture bouchée, un agrandissement jamais reporté sur les plans. Quand une équipe de conception part de documents qui ne reflètent plus l'état réel des lieux, les erreurs apparaissent tard, souvent sur le chantier, là où elles coûtent le plus cher.",
+        "Mesurer un bâtiment complet à la main prend du temps et laisse des zones d'ombre : hauteurs sous plafond, murs hors d'aplomb, toiture difficile d'accès. Le scan 3D capte toute la géométrie visible en une seule visite.",
+      ],
+      listTitle: 'Situations typiques',
+      list: ['Rénovation ou agrandissement', 'Bâtiment ancien ou patrimonial sans plans à jour', "Acquisition ou vente d'un immeuble", 'Coordination de travaux de structure ou de mécanique'],
+    },
+    how: {
+      h: 'Comment pointSpace répond à ce besoin',
+      p: 'Chaque projet suit le même enchaînement, du relevé sur place au contrôle des livrables.',
+      steps: [
+        { h: 'Définir le besoin', p: "Avec vous, nous fixons l'usage des données, les livrables, le niveau de détail (LOD) et les formats attendus." },
+        { h: 'Numériser sur place', p: "Nous relevons l'intérieur et l'extérieur avec un scanner laser 3D Leica, en multipliant les positions pour couvrir chaque façade, la toiture visible et les ouvertures." },
+        { h: 'Assembler le nuage de points', p: 'Les scans sont alignés dans un seul système de coordonnées, nettoyés et vérifiés avant la modélisation.' },
+        { h: 'Modéliser dans Revit', p: 'Murs, planchers, toiture, portes et fenêtres sont modélisés sur le nuage de points au niveau de détail convenu.' },
+        { h: 'Produire les plans et contrôler', p: "Élévations, coupes et plans d'étage sont tirés du modèle, puis comparés au nuage de points avant la livraison." },
+      ],
+    },
+    deliv: {
+      h: 'Quels livrables peuvent être fournis',
+      p: 'Un seul relevé alimente plusieurs livrables. Vous choisissez ceux dont votre équipe a besoin.',
+      items: [
+        { h: 'Nuage de points', p: 'Le relevé complet, mesurable dans votre logiciel. Formats E57 ou RCP.', img: 'blogue-scan-to-bim-nuage-points-maison' },
+        { h: 'Modèle BIM', p: 'Modèle Revit (RVT) ou IFC, au niveau de détail convenu.', img: 'blogue-scan-to-bim-modele-bim-maison' },
+        { h: 'Élévations et coupes', p: 'Façades et coupes cotées, tirées du modèle.', ph: 'Image à ajouter : élévation principale' },
+        { h: "Plans d'étage et plans CAO", p: 'Plans tels que construits en DWG et en PDF, prêts à annoter.', ph: "Image à ajouter : plan d'étage (DWG)" },
+      ],
+      note: 'Autres formats sur demande : CAD, STEP et SAT.',
+    },
+    types: {
+      h: 'Pour quels types de projets ou bâtiments',
+      items: [
+        { h: 'Résidentiel et commercial', p: 'Bâtiments à rénover, à agrandir ou à transformer.' },
+        { h: 'Patrimonial', p: 'Bâtiments anciens dont les plans manquent ou ne sont plus fiables.', link: { label: 'Étude de cas : la Gare Windsor', href: ROUTES.caseWindsor.fr } },
+        { h: 'Commerces et bureaux', p: 'Locaux en réaménagement ou en changement de locataire.' },
+        { h: 'Industriel', p: 'Usines et installations à documenter avant une expansion.', link: { label: 'Manufacturier et industriel', href: ROUTES.manufacturing.fr } },
+      ],
+    },
+    benef: {
+      h: 'Quels bénéfices pour les équipes',
+      items: [
+        { h: 'Architectes', p: 'Une base fiable pour concevoir, avec des élévations et des coupes prêtes à annoter.' },
+        { h: 'Ingénieurs', p: 'La géométrie réelle pour coordonner la structure et la mécanique, et repérer les conflits tôt.' },
+        { h: 'Propriétaires et gestionnaires', p: "Une documentation à jour de l'actif, utile pour les travaux, l'entretien ou une transaction." },
+        { h: 'Entrepreneurs', p: "Moins de visites de vérification et moins d'imprévus pendant les travaux." },
+      ],
+    },
+    example: {
+      h: 'Exemple de projet : un bâtiment de maçonnerie avec lucarne',
+      p: [
+        "L'animation suit un bâtiment de maçonnerie d'un étage, coiffé d'un toit à quatre versants et d'une lucarne. À partir du nuage de points, l'équipe a modélisé les murs, la toiture, la lucarne, les fenêtres à carreaux et la porte double.",
+        'Le modèle sert ensuite à produire les élévations des façades et les plans CAO en DWG.',
+      ],
+      facts: [
+        ['Bâtiment', "Bâtiment de maçonnerie d'un étage avec lucarne"],
+        ['Emplacement', TODO],
+        ['Superficie', TODO],
+        ['Besoin du client', TODO],
+        ['Livrables', 'Nuage de points · Modèle Revit · Élévations · Plans CAO'],
+        ['Délai de livraison', TODO],
+      ],
+      videoCap: "L'animation complète : du nuage de points au modèle BIM.",
+    },
+    faq: {
+      h: 'FAQ',
+      items: [
+        { q: "Nous n'avons pas de plans à jour de notre bâtiment. Par où commencer ?", a: "Par un relevé de l'existant par scan 3D. Nous définissons avec vous l'usage prévu (rénovation, agrandissement, gestion), les livrables et le niveau de détail, puis nous planifions la visite sur place." },
+        { q: 'Quels formats de fichiers recevons-nous ?', a: 'Le nuage de points en E57 ou RCP, le modèle en Revit (RVT) ou en IFC, et les plans et élévations en DWG et en PDF. D\'autres formats, comme STEP ou SAT, sont offerts sur demande.' },
+        { q: 'Faut-il un modèle BIM, ou des plans 2D suffisent-ils ?', a: "Des plans 2D peuvent être produits directement à partir du nuage de points. Le modèle BIM devient utile quand plusieurs vues doivent rester cohérentes, par exemple les élévations, les coupes et les plans d'un même bâtiment, ou quand plusieurs disciplines doivent se coordonner." },
+        { q: 'Peut-on numériser un bâtiment occupé ?', a: 'Oui. La numérisation se fait sans contact, et nous convenons avec vous des plages d\'accès pour limiter le dérangement.' },
+        { q: 'Combien de temps faut-il ?', a: 'Un relevé complet peut prendre de quelques heures à quelques jours selon la superficie et la complexité du bâtiment. Le délai de livraison des plans et du modèle est précisé dans la soumission.' },
+      ],
+    },
+    concl: {
+      h: 'Conclusion',
+      p: "Un bâtiment bien documenté se rénove, se gère et se vend plus facilement. Le scan 3D fournit une base mesurable ; le modèle BIM et les plans tels que construits la rendent utile à toute l'équipe de projet.",
+      links: [['Le service Scan-to-BIM', ROUTES.scanToBim.fr], ['Les plans tels que construits', ROUTES.asBuilt.fr]],
+    },
+    author: 'Rédigé par Leandro Lazaretti, technicien Revit (nuage de points vers BIM) chez pointSpace.',
+    servicesTitle: 'Services liés',
+    ctaTitle: 'Vos plans ne reflètent plus votre bâtiment ?',
+    ctaText: 'Parlez-nous du bâtiment et des livrables dont vous avez besoin. Nous vous préparons une soumission.',
+  },
+  en: {
+    title: '3D Scanning an Existing Building: As-Built Drawings and BIM | pointSpace',
+    description: 'From 3D scanning to a point cloud, then to a BIM model, elevations and as-built drawings: how pointSpace documents an existing building.',
+    crumb: '3D scanning an existing building',
+    draft: 'Template article for the marketing team: highlighted items are to be confirmed with the project details.',
+    todo: 'To confirm',
+    eyebrow: 'Blog · Scan-to-BIM',
+    h1: '3D Scanning an Existing Building: From Point Cloud to As-Built Drawings and a BIM Model',
+    lead: 'Before renovating, extending or selling a building, you need to know exactly what was built. Yet the original drawings are often missing, incomplete or out of date.',
+    intro: 'An inaccurate existing conditions survey costs more later: design rework, repeat site visits and surprises during construction. In this article, we follow one building from the 3D scan to the deliverables: the point cloud, the BIM model, the elevations and the CAD drawings.',
+    date: 'October 7, 2026', read: '6 min read', by: 'By',
+    chips: ['LiDAR 3D scanning', 'Scan-to-BIM', 'As-built drawings'],
+    scrub: {
+      eyebrow: 'Scroll', title: 'From 3D scan to BIM model',
+      hint: 'Scroll down to build the model, scroll up to go back to the point cloud.',
+      steps: [
+        { h: 'The survey', p: 'The laser scanner measures millions of points. Together, they form the point cloud: a measurable copy of the building.' },
+        { h: 'The modeling', p: 'Walls, openings and the roof are traced in Revit directly on the point cloud.' },
+        { h: 'The BIM model', p: 'The model, true to existing conditions, becomes the basis for elevations, sections and CAD drawings.' },
+      ],
+      video: 'Animation: the point cloud of a masonry building turns into a BIM model as you scroll.',
+    },
+    toc: 'In this article',
+    why: {
+      h: 'Why this need matters',
+      p: [
+        'Buildings change over the years: a wall moved, an opening closed, an extension never added to the drawings. When a design team starts from documents that no longer match the building, errors show up late, often on site, where they cost the most.',
+        'Measuring a whole building by hand takes time and leaves blind spots: ceiling heights, walls out of plumb, a roof that is hard to reach. A 3D scan captures all the visible geometry in a single visit.',
+      ],
+      listTitle: 'Typical situations',
+      list: ['Renovation or extension', 'Older or heritage building with no up-to-date drawings', 'Acquiring or selling a property', 'Coordinating structural or mechanical work'],
+    },
+    how: {
+      h: 'How pointSpace meets this need',
+      p: 'Every project follows the same sequence, from the site survey to the deliverables check.',
+      steps: [
+        { h: 'Define the need', p: 'Together we set how the data will be used, the deliverables, the level of development (LOD) and the file formats.' },
+        { h: 'Scan on site', p: 'We survey the interior and exterior with a Leica 3D laser scanner, using as many positions as needed to cover every façade, the visible roof and the openings.' },
+        { h: 'Register the point cloud', p: 'The scans are aligned in a single coordinate system, cleaned and checked before modeling.' },
+        { h: 'Model in Revit', p: 'Walls, floors, roof, doors and windows are modeled on the point cloud to the agreed level of development.' },
+        { h: 'Produce drawings and check', p: 'Elevations, sections and floor plans are taken from the model, then compared with the point cloud before delivery.' },
+      ],
+    },
+    deliv: {
+      h: 'What deliverables can be provided',
+      p: 'One survey feeds several deliverables. You choose the ones your team needs.',
+      items: [
+        { h: 'Point cloud', p: 'The complete survey, measurable in your software. E57 or RCP formats.', img: 'blogue-scan-to-bim-nuage-points-maison' },
+        { h: 'BIM model', p: 'Revit (RVT) or IFC model, to the agreed level of development.', img: 'blogue-scan-to-bim-modele-bim-maison' },
+        { h: 'Elevations and sections', p: 'Dimensioned façades and sections, taken from the model.', ph: 'Image to add: main elevation' },
+        { h: 'Floor plans and CAD drawings', p: 'As-built drawings in DWG and PDF, ready to mark up.', ph: 'Image to add: floor plan (DWG)' },
+      ],
+      note: 'Other formats on request: CAD, STEP and SAT.',
+    },
+    types: {
+      h: 'Which projects and buildings it suits',
+      items: [
+        { h: 'Residential and commercial', p: 'Buildings to renovate, extend or convert.' },
+        { h: 'Heritage', p: 'Older buildings whose drawings are missing or no longer reliable.', link: { label: 'Case study: Windsor Station', href: ROUTES.caseWindsor.en } },
+        { h: 'Retail and offices', p: 'Spaces being refitted or changing tenants.' },
+        { h: 'Industrial', p: 'Plants and facilities to document before an expansion.', link: { label: 'Manufacturing and industrial', href: ROUTES.manufacturing.en } },
+      ],
+    },
+    benef: {
+      h: 'What teams gain',
+      items: [
+        { h: 'Architects', p: 'A reliable basis for design, with elevations and sections ready to mark up.' },
+        { h: 'Engineers', p: 'The real geometry to coordinate structure and mechanical systems, and catch clashes early.' },
+        { h: 'Owners and property managers', p: 'Up-to-date documentation of the asset, useful for works, maintenance or a transaction.' },
+        { h: 'Contractors', p: 'Fewer verification visits and fewer surprises during construction.' },
+      ],
+    },
+    example: {
+      h: 'Project example: a masonry building with a dormer',
+      p: [
+        'The animation follows a one-storey masonry building with a hip roof and a dormer. From the point cloud, the team modeled the walls, the roof, the dormer, the multi-pane windows and the double door.',
+        'The model is then used to produce the façade elevations and the CAD drawings in DWG.',
+      ],
+      facts: [
+        ['Building', 'One-storey masonry building with a dormer'],
+        ['Location', TODO],
+        ['Area', TODO],
+        ["Client's need", TODO],
+        ['Deliverables', 'Point cloud · Revit model · Elevations · CAD drawings'],
+        ['Delivery time', TODO],
+      ],
+      videoCap: 'The full animation: from point cloud to BIM model.',
+    },
+    faq: {
+      h: 'FAQ',
+      items: [
+        { q: "We don't have up-to-date drawings of our building. Where do we start?", a: 'With an existing conditions survey by 3D scanning. Together we define the intended use (renovation, extension, management), the deliverables and the level of detail, then we plan the site visit.' },
+        { q: 'What file formats do we receive?', a: 'The point cloud in E57 or RCP, the model in Revit (RVT) or IFC, and drawings and elevations in DWG and PDF. Other formats, such as STEP or SAT, are available on request.' },
+        { q: 'Do we need a BIM model, or are 2D drawings enough?', a: '2D drawings can be produced directly from the point cloud. A BIM model becomes useful when several views must stay consistent, such as the elevations, sections and plans of one building, or when several disciplines need to coordinate.' },
+        { q: 'Can an occupied building be scanned?', a: 'Yes. Scanning is contact-free, and we agree on access times with you to keep disruption low.' },
+        { q: 'How long does it take?', a: 'A complete survey can take from a few hours to a few days depending on the size and complexity of the building. The delivery time for the drawings and model is set out in the quote.' },
+      ],
+    },
+    concl: {
+      h: 'Conclusion',
+      p: 'A well-documented building is easier to renovate, manage and sell. The 3D scan provides a measurable basis; the BIM model and as-built drawings make it useful to the whole project team.',
+      links: [['Our Scan-to-BIM service', ROUTES.scanToBim.en], ['As-built drawings', ROUTES.asBuilt.en]],
+    },
+    author: 'Written by Leandro Lazaretti, Revit technician (point cloud to BIM) at pointSpace.',
+    servicesTitle: 'Related services',
+    ctaTitle: 'Do your drawings still match your building?',
+    ctaText: 'Tell us about the building and the deliverables you need. We will prepare a quote.',
+  },
+}[lang];
+
+const sections = [
+  ['pourquoi', T.why.h], ['comment', T.how.h], ['livrables', T.deliv.h], ['projets', T.types.h],
+  ['benefices', T.benef.h], ['exemple', T.example.h], ['faq', T.faq.h], ['conclusion', T.concl.h],
+] as const;
+const crumbs = [
+  { name: t.home, path: ROUTES.home[lang] },
+  { name: t.blog, path: ROUTES.blog[lang] },
+  { name: T.crumb, path: ROUTES.blogScanToBim[lang] },
+];
+const poster = image('blogue-scan-to-bim-nuage-points-maison', lang);
+const posterEnd = image('blogue-scan-to-bim-modele-bim-maison', lang);
+const ogImage = '/images/blogue-scan-to-bim-modele-bim-maison-1600.webp';
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: T.h1, description: T.description, inLanguage: lang === 'fr' ? 'fr-CA' : 'en-CA',
+    datePublished: '2026-10-07', author: { '@type': 'Person', name: 'Leandro Lazaretti' }, publisher: { '@id': `${SITE.url}/#organization` },
+    image: absUrl(ogImage), mainEntityOfPage: absUrl(ROUTES.blogScanToBim[lang]) },
+  faqLd(T.faq.items),
+  breadcrumbLd(crumbs.map((c) => ({ name: c.name, path: c.path }))),
+];
+---
+<BaseLayout lang={lang} route="blogScanToBim" title={T.title} description={T.description} jsonLd={jsonLd} ogImage={ogImage}>
+  <header class="ahead theme-cream" aria-labelledby="h1">
+    <div class="container">
+      <Breadcrumbs lang={lang} items={crumbs} />
+      <p class="draft t-small" role="note">{T.draft}</p>
+      <p class="eyebrow t-label ahead__eyebrow">{T.eyebrow}</p>
+      <h1 id="h1" class="t-h1 ahead__h1">{T.h1}</h1>
+      <div class="ahead__grid">
+        <div>
+          <p class="t-lead ahead__lead">{T.lead}</p>
+          <p class="ahead__intro">{T.intro}</p>
+        </div>
+        <div class="ahead__meta">
+          <p class="t-small"><time datetime="2026-10-07">{T.date}</time> · {T.read}</p>
+          <p class="t-small">{T.by} Leandro Lazaretti</p>
+          <ul class="chips">{T.chips.map((c) => <li class="chip">{c}</li>)}</ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll-driven animation: the section is tall, the stage sticks, scroll position sets the video time. -->
+  <section class="scrub" data-scrub aria-labelledby="scrub-title">
+    <div class="scrub__stage">
+      <div class="container scrub__inner">
+        <div class="scrub__top">
+          <div>
+            <p class="eyebrow t-label scrub__eyebrow">{T.scrub.eyebrow}</p>
+            <h2 id="scrub-title" class="t-h2 scrub__title">{T.scrub.title}</h2>
+          </div>
+          <p class="t-small scrub__hint">{T.scrub.hint}</p>
+        </div>
+        <div class="scrub__media">
+          <video class="scrub__video" muted playsinline preload="auto" poster={poster.src} aria-label={T.scrub.video} data-scrub-video>
+            <source src="/video/blog-scan-to-bim-scroll.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="scrub__steps">
+          <div class="scrub__track" aria-hidden="true"><span class="scrub__bar" data-scrub-bar></span></div>
+          <ol>
+            {T.scrub.steps.map((s, i) => (
+              <li class:list={['scrub__step', { 'is-active': i === 0 }]} data-step>
+                <p class="t-label t-num scrub__n">{String(i + 1).padStart(2, '0')}</p>
+                <h3 class="t-h4">{s.h}</h3>
+                <p class="t-small scrub__p">{s.p}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="theme-cream">
+    <div class="container grid-12 abody">
+      <nav class="toc" aria-labelledby="toc-title">
+        <p id="toc-title" class="t-label toc__h">{T.toc}</p>
+        <ol>{sections.map(([id, h], i) => <li><a href={`#${id}`} data-toc={id}><span class="t-num">{String(i + 1).padStart(2, '0')}</span>{h}</a></li>)}</ol>
+      </nav>
+
+      <article class="acontent">
+        <section id="pourquoi" class="asec" aria-labelledby="pourquoi-h">
+          <h2 id="pourquoi-h" class="t-h3">{T.why.h}</h2>
+          <div class="prose">{T.why.p.map((p) => <p>{p}</p>)}</div>
+          <div class="callout">
+            <p class="t-label callout__h">{T.why.listTitle}</p>
+            <ul>{T.why.list.map((l) => <li>{l}</li>)}</ul>
+          </div>
+        </section>
+
+        <section id="comment" class="asec" aria-labelledby="comment-h">
+          <h2 id="comment-h" class="t-h3">{T.how.h}</h2>
+          <p class="prose">{T.how.p}</p>
+          <ol class="steps">
+            {T.how.steps.map((s, i) => (
+              <li><span class="t-label t-num steps__n">{String(i + 1).padStart(2, '0')}</span><div><h3 class="t-h4">{s.h}</h3><p class="t-muted">{s.p}</p></div></li>
+            ))}
+          </ol>
+        </section>
+
+        <section id="livrables" class="asec" aria-labelledby="livrables-h">
+          <h2 id="livrables-h" class="t-h3">{T.deliv.h}</h2>
+          <p class="prose">{T.deliv.p}</p>
+          <ul class="deliv">
+            {T.deliv.items.map((d) => (
+              <li>
+                {d.img
+                  ? <Picture name={d.img} lang={lang} ratio="2266/1104" sizes="(min-width:1280px) 28vw" />
+                  : <div class="ph"><span class="t-small">{d.ph}</span></div>}
+                <h3 class="t-h4">{d.h}</h3>
+                <p class="t-muted">{d.p}</p>
+              </li>
+            ))}
+          </ul>
+          <p class="t-small t-muted">{T.deliv.note}</p>
+        </section>
+
+        <section id="projets" class="asec" aria-labelledby="projets-h">
+          <h2 id="projets-h" class="t-h3">{T.types.h}</h2>
+          <ul class="types">
+            {T.types.items.map((it) => (
+              <li><h3 class="t-h4">{it.h}</h3><p class="t-muted">{it.p}</p>{it.link && <a class="link-arrow t-small" href={it.link.href}>{it.link.label} <span aria-hidden="true">→</span></a>}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section id="benefices" class="asec" aria-labelledby="benefices-h">
+          <h2 id="benefices-h" class="t-h3">{T.benef.h}</h2>
+          <ul class="benef">{T.benef.items.map((b) => <li><h3 class="t-h4">{b.h}</h3><p class="t-muted">{b.p}</p></li>)}</ul>
+        </section>
+
+        <section id="exemple" class="asec" aria-labelledby="exemple-h">
+          <h2 id="exemple-h" class="t-h3">{T.example.h}</h2>
+          <div class="example">
+            <div class="prose">{T.example.p.map((p) => <p>{p}</p>)}</div>
+            <dl class="facts">
+              {T.example.facts.map(([k, v]) => <div><dt class="t-label">{k}</dt><dd>{v ?? <mark class="todo">{T.todo}</mark>}</dd></div>)}
+            </dl>
+          </div>
+          <figure class="player">
+            <video controls playsinline preload="metadata" poster={posterEnd.src} width="1600" height="780">
+              <source src="/video/blog-scan-to-bim.mp4" type="video/mp4" />
+            </video>
+            <figcaption class="t-small t-muted">{T.example.videoCap}</figcaption>
+          </figure>
+        </section>
+
+        <section id="faq" class="asec" aria-labelledby="faq-h">
+          <h2 id="faq-h" class="t-h3">{T.faq.h}</h2>
+          <Faq items={T.faq.items} />
+        </section>
+
+        <section id="conclusion" class="asec" aria-labelledby="conclusion-h">
+          <h2 id="conclusion-h" class="t-h3">{T.concl.h}</h2>
+          <p class="prose t-lead">{T.concl.p}</p>
+          <p class="concl__links">{T.concl.links.map(([label, href]) => <a class="link-arrow" href={href}>{label} <span aria-hidden="true">→</span></a>)}</p>
+          <p class="t-small t-muted author">{T.author}</p>
+        </section>
+      </article>
+    </div>
+  </div>
+
+  <section class="section--tight theme-cream-50" aria-labelledby="svc-title">
+    <div class="container">
+      <h2 id="svc-title" class="t-label svc__h">{T.servicesTitle}</h2>
+      <div class="svc">{(['scanning', 'scanToBim', 'asBuilt'] as const).map((id) => <ServiceCard service={serviceById(id)} lang={lang} variant="compact" />)}</div>
+    </div>
+  </section>
+
+  <CtaBand lang={lang} title={T.ctaTitle} text={T.ctaText} avoid={['blogue-scan-to-bim-nuage-points-maison', 'blogue-scan-to-bim-modele-bim-maison']} />
+</BaseLayout>
+
+<script>
+  // Scroll-scrubbed video. Down = forward (point cloud → BIM model), up = backward.
+  const root = document.querySelector<HTMLElement>('[data-scrub]');
+  const video = root?.querySelector<HTMLVideoElement>('[data-scrub-video]');
+  if (root && video) {
+    const bar = root.querySelector<HTMLElement>('[data-scrub-bar]')!;
+    const steps = [...root.querySelectorAll<HTMLElement>('[data-step]')];
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const STEP_AT = [0, 0.33, 0.62]; // where each caption takes over (matches the animation's phases)
+    let target = 0, current = 0, raf = 0, want = -1;
+
+    const progress = () => {
+      const r = root.getBoundingClientRect();
+      const total = r.height - window.innerHeight;
+      return total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
+    };
+    const seek = () => {
+      if (!video.duration || want < 0) return;
+      const t = want * (video.duration - 0.05);
+      if (!video.seeking && Math.abs(video.currentTime - t) > 0.015) video.currentTime = t;
+    };
+    const render = () => {
+      want = current;
+      seek();
+      bar.style.transform = `scaleX(${current})`;
+      let idx = 0;
+      STEP_AT.forEach((at, i) => { if (current >= at) idx = i; });
+      steps.forEach((s, i) => s.classList.toggle('is-active', i === idx));
+    };
+    const tick = () => {
+      raf = 0;
+      current = reduce ? target : current + (target - current) * 0.2;
+      if (Math.abs(target - current) < 0.0008) current = target;
+      render();
+      if (current !== target) raf = requestAnimationFrame(tick);
+    };
+    const onScroll = () => { target = progress(); if (!raf) raf = requestAnimationFrame(tick); };
+
+    video.addEventListener('seeked', seek);
+    video.addEventListener('loadedmetadata', () => { root.classList.add('is-ready'); onScroll(); });
+    if (video.readyState >= 1) root.classList.add('is-ready');
+    video.pause();
+    addEventListener('scroll', onScroll, { passive: true });
+    addEventListener('resize', onScroll);
+    onScroll();
+  }
+
+  // Table of contents: highlight the section being read.
+  const links = new Map([...document.querySelectorAll<HTMLAnchorElement>('[data-toc]')].map((a) => [a.dataset.toc!, a]));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      links.forEach((a) => a.removeAttribute('aria-current'));
+      links.get(e.target.id)?.setAttribute('aria-current', 'true');
+    });
+  }, { rootMargin: '-35% 0px -60% 0px' });
+  links.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
+</script>
+
+<style>
+  /* Article header */
+  .ahead { padding: var(--sp-7) 0 var(--sp-9); }
+  .draft { margin: var(--sp-6) 0 var(--sp-7); padding: 12px 16px; max-width: 72ch; border-left: 3px solid var(--ps-gold); background: rgb(227 171 56 / 0.14); }
+  .ahead__h1 { max-width: 24ch; font-size: 3.75rem; }
+  .ahead__grid { display: grid; grid-template-columns: 7fr 4fr; gap: var(--sp-9); margin-top: var(--sp-7); align-items: start; }
+  .ahead__lead { max-width: 58ch; }
+  .ahead__intro { margin-top: var(--sp-5); max-width: 66ch; color: var(--fg-muted); }
+  .ahead__meta { display: flex; flex-direction: column; gap: var(--sp-3); padding-top: var(--sp-4); border-top: 3px solid var(--ps-green-900); }
+  .ahead__meta .chips { margin-top: var(--sp-3); }
+
+  /* Scroll stage */
+  .scrub { --stage-bg: #13171b; position: relative; height: 320vh; background: var(--stage-bg); color: var(--ps-cream); }
+  .scrub__stage { position: sticky; top: var(--header-h); height: calc(100vh - var(--header-h)); overflow: hidden; }
+  .scrub__inner { height: 100%; display: grid; grid-template-rows: auto 1fr auto; gap: var(--sp-5); padding-block: var(--sp-6) var(--sp-6); }
+  .scrub__top { display: flex; justify-content: space-between; align-items: end; gap: var(--sp-8); }
+  .scrub__eyebrow { color: var(--ps-cream-80); margin-bottom: var(--sp-3); }
+  .scrub__title { font-size: 2.5rem; }
+  .scrub__hint { max-width: 34ch; color: var(--ps-cream-80); text-align: right; }
+  .scrub__media { position: relative; min-height: 0; }
+  .scrub__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: var(--stage-bg); }
+  .scrub__media::after { content: ''; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 80px 40px var(--stage-bg); }
+  .scrub__steps ol { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-6); margin-top: var(--sp-4); }
+  .scrub__track { height: 2px; background: var(--ps-cream-line); }
+  .scrub__bar { display: block; height: 100%; background: var(--ps-gold); transform-origin: left; transform: scaleX(0); }
+  .scrub__step { opacity: 0.38; transition: opacity 300ms var(--ease); }
+  .scrub__step.is-active { opacity: 1; }
+  .scrub__n { color: var(--ps-gold); margin-bottom: 6px; }
+  .scrub__p { margin-top: 6px; color: var(--ps-cream-80); max-width: 42ch; }
+  .scrub:not(.is-ready) .scrub__step { opacity: 1; } /* no JS / video not loaded: show all captions */
+
+  /* Article body */
+  .abody { padding-block: var(--sp-10); align-items: start; }
+  .toc { grid-column: 1 / span 3; position: sticky; top: calc(var(--header-h) + var(--sp-6)); }
+  .toc__h { color: var(--fg-muted); margin-bottom: var(--sp-4); }
+  .toc ol { list-style: none; border-left: 1px solid var(--line); }
+  .toc a { display: flex; gap: 10px; padding: 8px 0 8px 16px; margin-left: -1px; border-left: 2px solid transparent; color: var(--fg-muted); text-decoration: none; font-size: var(--fs-small); line-height: 1.35; }
+  .toc a span { color: var(--ps-green-600); }
+  .toc a:hover { color: var(--fg); }
+  .toc a[aria-current] { color: var(--fg); border-left-color: var(--ps-gold); font-weight: 500; }
+  .acontent { grid-column: 5 / span 8; }
+  .asec { scroll-margin-top: calc(var(--header-h) + var(--sp-6)); padding-bottom: var(--sp-9); margin-bottom: var(--sp-9); border-bottom: 1px solid var(--line); }
+  .asec:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+  .asec > h2 { margin-bottom: var(--sp-5); font-size: 2.25rem; }
+  .asec > .prose, .asec > p.prose { margin-bottom: var(--sp-6); }
+  .callout { padding: var(--sp-5) var(--sp-6); background: var(--ps-cream-50); border-radius: var(--radius-card); }
+  .callout__h { color: var(--fg-muted); margin-bottom: var(--sp-3); }
+  .callout ul { columns: 2; column-gap: var(--sp-7); padding-left: 1.1em; }
+  .callout li { margin-bottom: 6px; break-inside: avoid; }
+  .steps { list-style: none; border-top: 1px solid var(--line); }
+  .steps li { display: grid; grid-template-columns: 56px 1fr; gap: var(--sp-4); padding: var(--sp-5) 0; border-bottom: 1px solid var(--line); }
+  .steps__n { color: var(--ps-green-600); padding-top: 4px; }
+  .steps h3 { margin-bottom: 4px; }
+  .deliv { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-7) var(--sp-6); margin-bottom: var(--sp-5); }
+  .deliv li { display: flex; flex-direction: column; gap: 8px; }
+  .deliv h3 { margin-top: var(--sp-3); }
+  .ph { aspect-ratio: 2266 / 1104; display: grid; place-items: center; padding: var(--sp-5); text-align: center; border: 1.5px dashed var(--ps-gold); border-radius: var(--radius-media); background: rgb(227 171 56 / 0.10); color: var(--ps-green-900); }
+  .types, .benef { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-6); }
+  .types li, .benef li { display: flex; flex-direction: column; gap: 8px; padding-top: var(--sp-4); border-top: 3px solid var(--ps-green-900); }
+  .types .link-arrow { margin-top: 4px; }
+  .example { display: grid; grid-template-columns: 1.15fr 1fr; gap: var(--sp-7); align-items: start; margin-bottom: var(--sp-7); }
+  .facts { margin: 0; border-top: 3px solid var(--ps-gold); }
+  .facts div { display: grid; grid-template-columns: 11rem 1fr; gap: var(--sp-4); padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .facts dt { color: var(--fg-muted); padding-top: 3px; }
+  .facts dd { margin: 0; }
+  .todo { padding: 1px 8px; border-radius: 3px; background: rgb(227 171 56 / 0.35); color: var(--ps-green-900); font-size: var(--fs-small); }
+  .player { margin: 0; }
+  .player video { display: block; width: 100%; height: auto; border-radius: var(--radius-media); background: #13171b; }
+  .player figcaption { margin-top: 12px; }
+  .concl__links { display: flex; gap: var(--sp-7); margin-bottom: var(--sp-7); }
+  .author { padding-top: var(--sp-5); border-top: 1px solid var(--line); }
+  .svc__h { color: var(--ps-green-600); margin-bottom: var(--sp-4); }
+  .svc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 var(--sp-6); border-top: 1px solid var(--line); }
+</style>

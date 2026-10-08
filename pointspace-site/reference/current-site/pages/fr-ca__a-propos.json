@@ -1,0 +1,562 @@
+{
+  "url": "https://www.pointspace.ca/fr-ca/a-propos",
+  "lang": "fr",
+  "title": "À propos de pointSpace | Numérisation 3D & Modélisation",
+  "metaDescription": "Chez pointSpace, notre mission est de rendre la numérisation 3D et la modélisation accessibles. Découvrez notre équipe dédiée à donner vie à vos projets.",
+  "ogTitle": "À propos de pointSpace | Numérisation 3D & Modélisation",
+  "ogDescription": "Chez pointSpace, notre mission est de rendre la numérisation 3D et la modélisation accessibles. Découvrez notre équipe dédiée à donner vie à vos projets.",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/fr-ca/a-propos",
+  "hreflang": [
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/a-propos"
+    },
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/about-us"
+    }
+  ],
+  "h1": [
+    "Pourquoi\npointSpace ?"
+  ],
+  "headings": [
+    "h1: Pourquoi\npointSpace ?",
+    "h2: Compétence",
+    "h2: Mission",
+    "h3: Louis Dallaire, Président",
+    "h3: Philippe Dallaire, Fondateur",
+    "h3: Thomas Sévigny, Chargé de projet",
+    "h3: Maxime Montreuil, Technicien en relevé de bâtiment",
+    "h3: Leandro Lazaretti, Technicien en Revit, nuage de point et scan 3D",
+    "h4: Louis Dallaire",
+    "h3: Contactez-nous"
+  ],
+  "nav": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "English\nen",
+      "href": "/about-us"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Obtenir une soumission →",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "English\nen",
+      "href": "/about-us"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jcb.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://idxdesign.com/"
+    },
+    {
+      "text": "",
+      "href": "https://tla-architectes.com/"
+    },
+    {
+      "text": "",
+      "href": "https://vacaero.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.nelmar.com/"
+    },
+    {
+      "text": "",
+      "href": "https://stdenisthompson.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.benoy.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupemach.com/en/home.html"
+    },
+    {
+      "text": "",
+      "href": "https://dallaireconsultants.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.cominar.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.broccolini.com/en"
+    },
+    {
+      "text": "",
+      "href": "https://groupecdf.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://lainco.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://renfort.com/home/"
+    },
+    {
+      "text": "",
+      "href": "https://musesolution.ca/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://fr.oktodev.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://shellex.ca/fr/accueil/"
+    },
+    {
+      "text": "",
+      "href": "https://navada.com/fr"
+    },
+    {
+      "text": "",
+      "href": "https://www.kolostat.com/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    },
+    {
+      "text": "Bouton",
+      "href": ""
+    },
+    {
+      "text": "Button",
+      "href": ""
+    },
+    {
+      "text": "Rejoignez l'équipe",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "",
+      "href": "http://linkedin.com/"
+    }
+  ],
+  "body": "Accueil\nÀ propos\nSecteurs\nManufacturier et industriel\nArchitecture et Bâtiments\nServices\nNumérisation LiDAR 3D\nModélisation BIM\nAs-Built Drafting\nModélisation 3D\nAnalyse du bâtiment\nMise en plan BOMA\nVisites virtuelles 3D Matterport\nJumeaux numériques\nBlogue\nÉtudes de cas\nContact\nCarrières\nContactez-nous\n(514) 606-9604\nFrançais\nfr\nEnglish\nen\nPourquoi\npointSpace\n?\nNous sommes la solution la plus accessible et polyvalente pour l'interprétation des données géospatiales au Québec.\nCompétence\nExperts des espaces et de leurs systèmes, nous créons des plans et modèles clairs, précis et exploitables en combinant nuages de points et technologies de pointe. Nos solutions 3D personnalisées offrent à nos clients un contrôle total sur leurs infrastructures.\nMission\nNotre mission est de fournir la solution la plus accessible et la plus polyvalente pour l'interprétation des données géospatiales. Nous utilisons les technologies de numérisation 3D et les solutions BIM pour créer un jumeau numérique sur mesure.\nRencontrez notre équipe\nNotre équipe passionnée met son expertise à votre service pour transformer vos idées en résultats concrets. À vos côtés à chaque étape, nous vous conseillons, vous accompagnons et vous guidons vers la réussite de vos projets.\nLouis Dallaire, Président\nDiplômé de l'ÉTS en génie des opérations et de la logistique, Louis est passionné par le monde industriel. Son objectif avec pointSpace est de rendre accessible la gestion et l'utilisation des données, car il n'est pas toujours nécessaire d’utiliser des outils complexes pour résoudre des problèmes simples!\nBouton\nPhilippe Dallaire, Fondateur\nAvec plus de 30 ans d'expérience dans le domaine du bâtiment, Philippe est notre entrepreneur en série qui nous guide dans cette aventure!\nThomas Sévigny, Chargé de projet\nDiplômé en génie civil de l'Université Queen's de Kingston, Thomas est notre expert technique chez pointSpace. À ses heures perdues, il excelle dans la fabrication de meubles !\nMaxime Montreuil, Technicien en relevé de bâtiment\nDiplômé en dessin industriel du CIMME, Maxime est notre spécialiste terrain chez pointSpace. Avec son attention au détail et sa minutie, il veille à la précision et à la qualité des données collectées lors de chacun de nos mandats.\nLeandro Lazaretti, Technicien en Revit, nuage de point et scan 3D\nDiplômé en technologies CAD/BIM avec une expérience en conception architecturale, Leandro est notre spécialiste de la modélisation Revit à partir de nuages de points et de scans 3D chez pointSpace. Grâce à sa rigueur et à son souci du détail, il transforme les données capturées sur le terrain en modèles précis et fiables pour nos projets.\nButton\nPrêt pour un nouveau défi ?\nRejoignez l'équipe\nContactez-nous !\nLouis Dallaire\nldallaire@pointspace.ca\n(514) 606-9604\nContactez-nous\nPrénom\nNom de famille\nE-mail\nMessage\nMerci de nous avoir contactés. Nous vous répondrons dans les plus brefs délais.\nOups, une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard.\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo PointSpace avec barres verticales dorées et texte gris clair sur fond blanc"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/33-1920w.jpg",
+      "alt": "Intérieur d'un grand entrepôt industriel vide, avec charpente métallique, sol en béton et cloisons blanches."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+      "alt": "Logo de Jessica Daoust Architectes en lettres blanches."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+      "alt": "Abstract cream-colored wavy pattern, similar to the letter \"M\" repeated several times."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+      "alt": "Logo of Théâtre St James with ornate design and \"S\" in the center."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+      "alt": "Connx logo with text \"FUSION W/ TAG NUT\". Company name underneath."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+      "alt": "The word \"aedifica\" in a light-yellow, elegant font."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+      "alt": "JCB Construction Canada logo: light text with initials 'jcb' and company name."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20221222_185010508_iOS-1920w.webp",
+      "alt": "Man in checkered shirt and vest leans against a window, cloudy sky visible outside."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Portrait-en-noir-et-blanc-de-Philippe-Dallaire--Fondateur--souriant-devant-une-fen%C3%AAtre-offrant-une-vue-sur-la-ville_-1920w.png",
+      "alt": "Man with glasses smiles, leans on a ledge by a window overlooking a cityscape."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Portrait-en-noir-et-blanc-de-Thomas-S-C3-A9vigny--Charg-C3-A9-de-projet--posant-devant-une-fen-C3-AAtre-avec-vue-panoramique_-1920w.png",
+      "alt": "Man with curly hair in a light-colored button-down shirt stands in front of a window."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Maxime-4-bdcc6817-1920w.jpg",
+      "alt": "Man in glasses smiles, sits near a window with city view, wearing button-down shirt."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Image+%287%29-1920w.jpg",
+      "alt": ""
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    }
+  ],
+  "jsonLd": [],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/33-1920w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/33.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20221222_185010508_iOS-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Portrait-en-noir-et-blanc-de-Philippe-Dallaire--Fondateur--souriant-devant-une-fen%C3%AAtre-offrant-une-vue-sur-la-ville_-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Portrait-en-noir-et-blanc-de-Thomas-S-C3-A9vigny--Charg-C3-A9-de-projet--posant-devant-une-fen-C3-AAtre-avec-vue-panoramique_-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Maxime-4-bdcc6817-1920w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Image+%287%29-1920w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20221222_185010508_iOS-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Portrait-en-noir-et-blanc-de-Philippe-Dallaire--Fondateur--souriant-devant-une-fen%C3%AAtre-offrant-une-vue-sur-la-ville_-640w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Portrait-en-noir-et-blanc-de-Thomas-S-C3-A9vigny--Charg-C3-A9-de-projet--posant-devant-une-fen-C3-AAtre-avec-vue-panoramique_-640w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Maxime-4-bdcc6817-640w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Image+%287%29-640w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/17+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/21+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/13+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/23+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/12+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/16+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/14+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/8+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/10+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-c0d7ef18-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/3-100388f4-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4-31dab3f9-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/5-7617cdb3-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6-b66f75f9-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/20221222_185010508_iOS.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Portrait-en-noir-et-blanc-de-Philippe-Dallaire--Fondateur--souriant-devant-une-fen%C3%AAtre-offrant-une-vue-sur-la-ville_.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Portrait-en-noir-et-blanc-de-Thomas-S-C3-A9vigny--Charg-C3-A9-de-projet--posant-devant-une-fen-C3-AAtre-avec-vue-panoramique_.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Maxime-4-bdcc6817.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Image+%287%29.jpg"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/fr-ca/a-propos"
+}

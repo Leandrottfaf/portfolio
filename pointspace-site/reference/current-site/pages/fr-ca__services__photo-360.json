@@ -1,0 +1,572 @@
+{
+  "url": "https://www.pointspace.ca/fr-ca/services/photo-360",
+  "lang": "fr",
+  "title": "Services de photos 360° immersives | pointSpace",
+  "metaDescription": "pointSpace offre des services de photos 360° pour des visites virtuelles immersives, idéales pour la promotion, la gestion et la documentation de vos espaces.",
+  "ogTitle": "Services de photos 360° immersives | pointSpace",
+  "ogDescription": "pointSpace offre des services de photos 360° pour des visites virtuelles immersives, idéales pour la promotion, la gestion et la documentation de vos espaces.",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/fr-ca/services/photo-360",
+  "hreflang": [
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/services/photo-360"
+    },
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/services/360°-photo"
+    }
+  ],
+  "h1": [
+    "SERVICES DE PHOTOS 360°"
+  ],
+  "headings": [
+    "h1: SERVICES DE PHOTOS 360°",
+    "h4: Obtenez une\nvue complète à 360° de votre bâtiment ou de votre site et\nexplorez votre environnement comme jamais auparavant.",
+    "h2: Des résultats prouvés à travers plus de 400 projets",
+    "h4: Numérisation 3D exhaustive de commerces de détail",
+    "h4: Scan 3D et modélisation 3D d'une usine",
+    "h4: Numérisation 3D et modélisation 3D complète d'un bâtiment",
+    "h3: Qu’est-ce qu'une photo 360° ?",
+    "h3: Combien de temps faut-il pour capturer un espace ?",
+    "h3: Comment puis-je visualiser et partager les images ?",
+    "h3: Dans quels formats les images sont-elles livrées ?",
+    "h3: Pouvez-vous capturer des zones difficiles d’accès ou restreintes ?",
+    "h2: \"L'équipe de pointSpace a fourni un service de haute qualité, rapide et efficace pour répondre à nos besoins opérationnels. Les plans produits par pointSpace aident nos clients et notre équipe de coordination à préparer des événements exceptionnels au Théâtre St-James.\""
+  ],
+  "nav": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/photo-360"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/360°-photo"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Obtenir une soumission →",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/photo-360"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/360°-photo"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "Travaillez avec nous 🡒",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/etude-de-cas/Numérisation-3D-exhaustive-de-commerces-de-détail"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "https://www.pointspace.ca/fr-ca/etude-de-cas/vac-aero"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/etude-de-cas/numerisation-3D-et-modelisation-3D-complete-dun-batiment"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jcb.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://idxdesign.com/"
+    },
+    {
+      "text": "",
+      "href": "https://tla-architectes.com/"
+    },
+    {
+      "text": "",
+      "href": "https://vacaero.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.nelmar.com/"
+    },
+    {
+      "text": "",
+      "href": "https://stdenisthompson.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.benoy.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupemach.com/en/home.html"
+    },
+    {
+      "text": "",
+      "href": "https://dallaireconsultants.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.cominar.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.broccolini.com/en"
+    },
+    {
+      "text": "",
+      "href": "https://groupecdf.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://lainco.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://renfort.com/home/"
+    },
+    {
+      "text": "",
+      "href": "https://musesolution.ca/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://fr.oktodev.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://shellex.ca/fr/accueil/"
+    },
+    {
+      "text": "",
+      "href": "https://navada.com/fr"
+    },
+    {
+      "text": "",
+      "href": "https://www.kolostat.com/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    }
+  ],
+  "body": "Accueil\nÀ propos\nSecteurs\nManufacturier et industriel\nArchitecture et Bâtiments\nServices\nNumérisation LiDAR 3D\nModélisation BIM\nAs-Built Drafting\nModélisation 3D\nAnalyse du bâtiment\nMise en plan BOMA\nVisites virtuelles 3D Matterport\nJumeaux numériques\nBlogue\nÉtudes de cas\nContact\nCarrières\nContactez-nous\n(514) 606-9604\nFrançais\nfr\nEnglish\nen\nSERVICES DE PHOTOS 360°\nObtenez une\nvue complète à 360° de votre bâtiment ou de votre site et\nexplorez votre environnement comme jamais auparavant.\nTravaillez avec nous 🡒\nLorsque vous travaillez avec nous\nVOUS POUVEZ VOUS ATTENDRE À\nNos\nservices de photos 360° permettent de générer des\nimages de haute qualité. Grâce à des\noutils avancés, nous fournissons des\nimages immersives qui vous permettent d’\nexplorer et de partager vos espaces comme jamais auparavant.\nPRÉCISION\nObtenez des images 360° de haute qualité de votre environnement. Nous capturons chaque détail avec précision afin de créer des visuels immersifs qui vous permettent d’explorer, partager et mettre en valeur vos espaces comme jamais auparavant.\nSERVICE CLÉ EN MAIN\nDe la capture des images à la livraison, notre équipe s’occupe de tout. Nous fournissons les images 360° dans le format qui vous convient le mieux. Notre processus garantit des visuels immersifs et de haute qualité, faciles à partager et à exploiter.\nRAPIDITÉ\nLa capture des images de votre site ou bâtiment est réalisée rapidement et efficacement. Nous fournissons ainsi des visuels de haute qualité sans nécessiter de longues interventions sur le site.\nÉtudes de cas\nDes résultats prouvés à travers plus de 400 projets\nNous collaborons avec des clients de différents secteurs, notamment la construction, l’architecture et l’industrie manufacturière. Notre objectif est de fournir des services de photos\n360°\nparfaitement adaptés à vos besoins.\nNumérisation 3D exhaustive de commerces de détail\nReitmans Canada Lée\nVoir l'étude de cas\nScan 3D et modélisation 3D d'une usine\nVAC AERO International INC.\nVoir l'étude de cas\nNumérisation 3D et modélisation 3D complète d'un bâtiment\nBroccolini\nVoir l'étude de cas\nContactez-nous 🡒\nFAQ\nVous souhaitez en savoir plus sur nos services de numérisation 3D et modélisation 3D ? Contactez notre équipe pour obtenir des réponses rapides et des conseils personnalisés.\nQu’est-ce qu'une photo 360° ?\nLes photos 360° permettent de capturer une vue panoramique complète d’un espace depuis un seul point. Elles offrent aux utilisateurs la possibilité de regarder dans toutes les directions, procurant une perception réaliste de l’environnement sans être physiquement présents.\nCombien de temps faut-il pour capturer un espace ?\nLe temps de capture dépend de la taille et de la complexité de l’espace. La plupart des projets sont réalisés rapidement et efficacement, tout en fournissant des images détaillées et de haute qualité.\nComment puis-je visualiser et partager les images ?\nLes images 360° et les visites virtuelles sont interactives et peuvent être visualisées sur ordinateur, tablette ou téléphone. Vous pouvez les partager facilement avec votre équipe, vos clients ou le public via des liens, les réseaux sociaux ou en les intégrant à votre site web.\nDans quels formats les images sont-elles livrées ?\nNous fournissons des images 360° dans les formats qui vous conviennent le mieux. Les fichiers sont de haute qualité et faciles à intégrer sur votre site web ou à partager avec le public et vos partenaires.\nPouvez-vous capturer des zones difficiles d’accès ou restreintes ?\nOui. Notre technologie nous permet de capturer en toute sécurité des espaces difficiles d’accès ou restreints, offrant une vue complète de votre propriété ou site sans compromettre la sécurité.\n\"L'équipe de pointSpace a fourni un service de haute qualité, rapide et efficace pour répondre à nos besoins opérationnels. Les plans produits par pointSpace aident nos clients et notre équipe de coordination à préparer des événements exceptionnels au Théâtre St-James.\"\n- Juliano Rodriguez-Daoust,\nVice-président du développement\ncommercial et des acquisitions\nGroupe Carosielli\nShare by:",
+  "faq": [
+    {
+      "q": "Qu’est-ce qu'une photo 360° ?",
+      "a": "Les photos 360° permettent de capturer une vue panoramique complète d’un espace depuis un seul point. Elles offrent aux utilisateurs la possibilité de regarder dans toutes les directions, procurant une perception réaliste de l’environnement sans être physiquement présents."
+    },
+    {
+      "q": "Combien de temps faut-il pour capturer un espace ?",
+      "a": "Le temps de capture dépend de la taille et de la complexité de l’espace. La plupart des projets sont réalisés rapidement et efficacement, tout en fournissant des images détaillées et de haute qualité."
+    },
+    {
+      "q": "Comment puis-je visualiser et partager les images ?",
+      "a": "Les images 360° et les visites virtuelles sont interactives et peuvent être visualisées sur ordinateur, tablette ou téléphone. Vous pouvez les partager facilement avec votre équipe, vos clients ou le public via des liens, les réseaux sociaux ou en les intégrant à votre site web."
+    },
+    {
+      "q": "Dans quels formats les images sont-elles livrées ?",
+      "a": "Nous fournissons des images 360° dans les formats qui vous conviennent le mieux. Les fichiers sont de haute qualité et faciles à intégrer sur votre site web ou à partager avec le public et vos partenaires."
+    },
+    {
+      "q": "Pouvez-vous capturer des zones difficiles d’accès ou restreintes ?",
+      "a": "Oui. Notre technologie nous permet de capturer en toute sécurité des espaces difficiles d’accès ou restreints, offrant une vue complète de votre propriété ou site sans compromettre la sécurité."
+    }
+  ],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo PointSpace avec barres verticales dorées et texte gris clair sur fond blanc"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot-2025-04-03-163540-1920w.webp",
+      "alt": "Entrée du magasin avec vitrines présentant des vêtements ; vue intérieure, plusieurs mannequins visibles, oiseaux sur l'allée."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Vac-Aero_5--282-29-1920w.webp",
+      "alt": "A 3D rendering of an industrial complex, featuring cylindrical structures, tanks, and orange doors. Blue sky backdrop."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4_Model_6000px+%281%29-1920w.webp",
+      "alt": "Interior view of a modern building with shelves and lights. Empty hallway with dark gray walls and ceiling."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+      "alt": "Logo de Jessica Daoust Architectes en lettres blanches."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+      "alt": "Abstract cream-colored wavy pattern, similar to the letter \"M\" repeated several times."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+      "alt": "Logo of Théâtre St James with ornate design and \"S\" in the center."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+      "alt": "Connx logo with text \"FUSION W/ TAG NUT\". Company name underneath."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+      "alt": "The word \"aedifica\" in a light-yellow, elegant font."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+      "alt": "JCB Construction Canada logo: light text with initials 'jcb' and company name."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    }
+  ],
+  "jsonLd": [
+    "{\"@context\":\"http://schema.org/\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Qu’est-ce qu'une photo 360° ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Les photos 360&deg; permettent de capturer une vue panoramique compl&egrave;te d&rsquo;un espace depuis un seul point. Elles offrent aux utilisateurs la possibilit&eacute; de regarder dans toutes les directions, procurant une perception r&eacute;aliste de l&rsquo;environnement sans &ecirc;tre physiquement pr&eacute;sents.\"}},{\"@type\":\"Question\",\"name\":\"Combien de temps faut-il pour capturer un espace ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Le temps de capture d&eacute;pend de la taille et de la complexit&eacute; de l&rsquo;espace. La plupart des projets sont r&eacute;alis&eacute;s rapidement et efficacement, tout en fournissant des images d&eacute;taill&eacute;es et de haute qualit&eacute;.\"}},{\"@type\":\"Question\",\"name\":\"Comment puis-je visualiser et partager les images ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Les images 360&deg; et les visites virtuelles sont interactives et peuvent &ecirc;tre visualis&eacute;es sur ordinateur, tablette ou t&eacute;l&eacute;phone. Vous pouvez les partager facilement avec votre &eacute;quipe, vos clients ou le public via des liens, les r&eacute;seaux sociaux ou en les int&eacute;grant &agrave; votre site web.\"}},{\"@type\":\"Question\",\"name\":\"Dans quels formats les images sont-elles livrées ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Nous fournissons des images 360&deg; dans les formats qui vous conviennent le mieux. Les fichiers sont de haute qualit&eacute; et faciles &agrave; int&eacute;grer sur votre site web ou &agrave; partager avec le public et vos partenaires.\"}},{\"@type\":\"Question\",\"name\":\"Pouvez-vous capturer des zones difficiles d’accès ou restreintes ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Oui. Notre technologie nous permet de capturer en toute s&eacute;curit&eacute; des espaces difficiles d&rsquo;acc&egrave;s ou restreints, offrant une vue compl&egrave;te de votre propri&eacute;t&eacute; ou site sans compromettre la s&eacute;curit&eacute;.\"}}]}"
+  ],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot-2025-04-03-163540-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Screenshot-2025-04-03-163540.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Vac-Aero_5--282-29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Vac-Aero_5--282-29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4_Model_6000px+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/4_Model_6000px+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/17+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/21+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/13+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/23+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/12+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/16+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/14+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/8+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/10+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-c0d7ef18-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/3-100388f4-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4-31dab3f9-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/5-7617cdb3-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6-b66f75f9-1920w.png"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/fr-ca/services/photo-360"
+}

@@ -1,0 +1,49 @@
+---
+import Picture from './Picture.astro';
+import { UI } from '../data/ui';
+import { ROUTES, type Lang } from '../data/routes';
+import { SITE } from '../data/site';
+interface Props { lang: Lang; title: string; text: string; image?: string; avoid?: string[] }
+// Field photos (people, scanners on site, survey kit), all already published or own assets.
+// One is picked per page (stable hash of the URL), skipping images the page already shows.
+const POOL: [string, string][] = [
+  ['technicien-releve-numerisation-usine', '50% 45%'],
+  ['scanner-laser-3d-entrepot-vide', '50% 60%'],
+  ['scanner-leica-rtc360-toit-industriel', '60% 50%'],
+  ['gare-windsor-numerisation-facade', '50% 55%'],
+  ['theatre-st-james-numerisation-facade', '60% 50%'],
+  ['reitmans-magasin-numerisation', '50% 50%'],
+  ['equipement-releve-pointspace', '50% 50%'],
+];
+const { lang, title, text, image, avoid = [] } = Astro.props;
+const seed = [...decodeURI(Astro.url.pathname).replace(/\/$/, '')].reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) >>> 0, 7);
+const pool = POOL.filter(([n]) => !avoid.includes(n));
+const [pick, position] = image ? [image, '50% 50%'] : pool[seed % pool.length];
+const t = UI[lang];
+---
+<section class="cta theme-green-700" aria-labelledby="cta-title">
+  <div class="container cta__inner">
+    <div class="cta__media" data-reveal>
+      <Picture name={pick} lang={lang} ratio="5/4" sizes="(min-width:1280px) 40vw" position={position} />
+    </div>
+    <div class="cta__copy" data-reveal>
+      <h2 id="cta-title" class="t-h2">{title}</h2>
+      <p class="t-lead cta__text">{text}</p>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href={ROUTES.quote[lang]}>{t.quote}<span class="btn__arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--secondary" href={`tel:${SITE.phoneE164}`}><span class="t-num">{SITE.phone}</span></a>
+      </div>
+      <p class="t-small cta__contact">{SITE.contactPerson} · <a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta { padding-block: var(--sp-9); }
+  .cta__inner { display: grid; grid-template-columns: 5fr 6fr; gap: var(--sp-9); align-items: center; }
+  .cta__media :global(.pic) { border-radius: var(--radius-card); }
+  .cta__text { margin: var(--sp-5) 0 var(--sp-6); color: var(--ps-cream); max-width: 46ch; }
+  .cta__actions { display: flex; gap: var(--sp-4); }
+  .cta__contact { margin-top: var(--sp-6); color: var(--ps-cream); }
+  .cta__contact a { color: inherit; }
+</style>

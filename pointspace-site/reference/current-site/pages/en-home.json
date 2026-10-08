@@ -1,0 +1,660 @@
+{
+  "url": "https://www.pointspace.ca",
+  "lang": "en",
+  "title": "3D Scanning Services for Buildings, Architecture & Manufacturing",
+  "metaDescription": "PointSpace offers high-precision 3D scanning solutions for buildings, architecture, and infrastructure—delivering digital twins, 2D/3D plans, BIM models, and analysis.",
+  "ogTitle": "3D Scanning Services for Buildings, Architecture & Manufacturing",
+  "ogDescription": "PointSpace offers high-precision 3D scanning solutions for buildings, architecture, and infrastructure—delivering digital twins, 2D/3D plans, BIM models, and analysis.\n",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/",
+  "hreflang": [
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/"
+    },
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca"
+    }
+  ],
+  "h1": [
+    "3D SCANNING & MODELING SERVICES"
+  ],
+  "headings": [
+    "h1: 3D SCANNING & MODELING SERVICES",
+    "h2: Comprehensive 3D Solutions",
+    "h3: 3D LiDAR SCANNING",
+    "h3: 3D MODELING",
+    "h3: BUILDING ANALYSIS",
+    "h3: BOMA\nAs-Built Digital Plans",
+    "h3: PROGRESS REPORTING",
+    "h3: SCAN TO BIM",
+    "h3: AS-BUILT DRAFTING",
+    "h3: 360° PHOTO",
+    "h3: MATTERPORT VIRTUAL TOURS",
+    "h3: DIGITAL TWINS",
+    "h2: Architecture & buildings",
+    "h2: Manufacturing & industrial"
+  ],
+  "nav": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contact us",
+      "href": "/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "",
+      "href": "/"
+    },
+    {
+      "text": "Get a quote",
+      "href": "/get-a-quote"
+    },
+    {
+      "text": "Contact us 🡒",
+      "href": "/contact"
+    },
+    {
+      "text": "About us 🡒",
+      "href": "/about-us"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jcb.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://idxdesign.com/"
+    },
+    {
+      "text": "",
+      "href": "https://tla-architectes.com/"
+    },
+    {
+      "text": "",
+      "href": "https://vacaero.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.nelmar.com/"
+    },
+    {
+      "text": "",
+      "href": "https://stdenisthompson.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.benoy.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupemach.com/en/home.html"
+    },
+    {
+      "text": "",
+      "href": "https://dallaireconsultants.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.cominar.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.broccolini.com/en"
+    },
+    {
+      "text": "",
+      "href": "https://groupecdf.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://lainco.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://renfort.com/home/"
+    },
+    {
+      "text": "",
+      "href": "https://musesolution.ca/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://fr.oktodev.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://shellex.ca/fr/accueil/"
+    },
+    {
+      "text": "",
+      "href": "https://navada.com/fr"
+    },
+    {
+      "text": "",
+      "href": "https://www.kolostat.com/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    },
+    {
+      "text": "Work with us 🡒",
+      "href": "/get-a-quote"
+    },
+    {
+      "text": "3D LiDAR SCANNING",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Fast and precise 3D LiDAR data capture for infrastructure, facades, mechanical systems, ceilings and roofing.",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "3D MODELING",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Accurate 3D models and plans, from scan to BIM, CAD, Revit, STEP, and SAT. Tailored to meet your project’s needs. Perfect for architecture, construction, manufacturing, industry, and more.",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "BUILDING ANALYSIS",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "Structural and facade analysis for deformation, flatness, verticality, and heritage preservation.",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Standardized BOMA measurements for accurate area calculations. Ideal for property managers, landlords, and owners.",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "PROGRESS REPORTING",
+      "href": "/services/progress-reporting"
+    },
+    {
+      "text": "Accurate surveys and as-built 3D scans, plans, and models providing precise data for project tracking and quality assessment.",
+      "href": "/services/progress-reporting"
+    },
+    {
+      "text": "",
+      "href": "/services/progress-reporting"
+    },
+    {
+      "text": "SCAN TO BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "From 3D scan to BIM, we produce precise as-built models including architectural, structural, and MEP elements.",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "AS-BUILT DRAFTING",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "Accurate as-built 2D and 3D plans created from detailed 3D scans. From basic layouts to highly detailed plans of structures, facades, mechanical systems, roofing, and more.",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "360° PHOTO",
+      "href": "/services/360°-photo"
+    },
+    {
+      "text": "Precise, high-resolution 360° site photography that can be converted into immersive and interactive Matterport virtual tours.",
+      "href": "/services/360°-photo"
+    },
+    {
+      "text": "",
+      "href": "/services/360°-photo"
+    },
+    {
+      "text": "MATTERPORT VIRTUAL TOURS",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Immersive and secure 3D Matterport virtual tours. Perfect for marketing initiatives, presentations, and remote project access.",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "DIGITAL TWINS",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Accurate 3D digital twins powered by Prevu3D for visualization, simulation, and facility management.",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Learn more",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Learn more",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Work with us",
+      "href": "/get-a-quote"
+    }
+  ],
+  "body": "Home\nAbout us\nIndustries\nManufacturing and industrial\nArchitecture and Buildings\nServices\nScanning\nScan to BIM\nAs-Built Drafting\n3D Modeling\nBuilding analysis\nBOMA As-Built Digital Plans\nMatterport 3D Virtual Tours\nDigital Twins\nBlog\nCase studies\nContact\nGet in touch\n(514) 606-9604\nEnglish\nen\nFrançais\nfr\n3D SCANNING & MODELING SERVICES\nAccurate data to make better decisions about your buildings and facilities.\nWe aim to give companies total control over their infrastructure's geospatial data.\nGet a quote\nContact us 🡒\nProven impact in numbers\nAbout us 🡒\nWorking with our team allows you to reach new goals and truly unlock the potential of innovation. We are a team of experts dedicated to your success. Our clients receive tailored 3D scanning & modeling solutions.\n400+\nProjects delivered\n50+\nClients served\n10+\nCore services\n6+\nYears of experience\nTrusted across industries\nWork with us 🡒\nComprehensive 3D Solutions\nTAILORED TO YOUR NEEDS\n3D LiDAR SCANNING\nFast and precise 3D LiDAR data capture for infrastructure, facades, mechanical systems, ceilings and roofing.\n3D MODELING\nAccurate 3D models and plans, from scan to BIM, CAD, Revit, STEP, and SAT. Tailored to meet your project’s needs. Perfect for architecture, construction, manufacturing, industry, and more.\nBUILDING ANALYSIS\nStructural and facade analysis for deformation, flatness, verticality, and heritage preservation.\nBOMA\nAs-Built Digital Plans\nStandardized BOMA measurements for accurate area calculations. Ideal for property managers, landlords, and owners.\nPROGRESS REPORTING\nAccurate surveys and as-built 3D scans, plans, and models providing precise data for project tracking and quality assessment.\nSCAN TO BIM\nFrom 3D scan to BIM, we produce precise as-built models including architectural, structural, and MEP elements.\nAS-BUILT DRAFTING\nAccurate as-built 2D and 3D plans created from detailed 3D scans. From basic layouts to highly detailed plans of structures, facades, mechanical systems, roofing, and more.\n360° PHOTO\nPrecise, high-resolution 360° site photography that can be converted into immersive and interactive Matterport virtual tours.\nMATTERPORT VIRTUAL TOURS\nImmersive and secure 3D Matterport virtual tours. Perfect for marketing initiatives, presentations, and remote project access.\nDIGITAL TWINS\nAccurate 3D digital twins powered by Prevu3D for visualization, simulation, and facility management.\nLearn more\nArchitecture & buildings\nWe provide the real estate industry with 3D scans and layout solutions to streamline the design process in construction and renovation projects.\nLearn more\nManufacturing & industrial\npointSpace is an affordable solution for geospatial data interpretation in Quebec's manufacturing and industrial sectors. We enable companies to optimize their operations and stimulate growth.\n\"A high-quality, fast, and efficient service.\"\n- Juliano Rodriguez-Daoust, VP Business Development and Acquisitions\nCarosielli Group\nWork with us\n\"The service was A1, we made several changes and these were always made quickly.\"\n-\nOlivier Tremblay, Process Improvement and Maintenance Manager\nNelmar\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+      "alt": "Faint white logo text reading “JESSICA DAOUST ARCHITECTES” on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+      "alt": "Faint cream-colored abstract geometric logo on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+      "alt": "Faint gold “Theatre St. James” logo centered on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+      "alt": "Faint gold “connx” logo with crossed tools on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+      "alt": "Pale beige “ædifica” wordmark centered on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+      "alt": "Pale yellow JCB Construction Canada logo on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/35-1196w.jpg",
+      "alt": "Brick house with white-trimmed windows and a gravel driveway in bright sunlight"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%287%29-1196w.webp",
+      "alt": "Yellow industrial robot arm loading boxes on a factory conveyor line"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-164w.png",
+      "alt": "PointSpace logo with gold and light gray text and vertical gold bars above it"
+    }
+  ],
+  "jsonLd": [],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/35-1196w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/35.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%287%29-1196w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Pr%C3%A9sentation+source+%287%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-164w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2023-10-17+104620+%283%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/17+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/21+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/13+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/23+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/12+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/16+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/14+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/8+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/10+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-c0d7ef18-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/3-100388f4-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4-31dab3f9-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/5-7617cdb3-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6-b66f75f9-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Vac-Aero_5-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Domaine-du-Parc-Olympique_R-a7686535-54278c55-1920w.webp"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/"
+}

@@ -1,0 +1,70 @@
+/* pointSpace design tokens.
+   Brand colours are the exact values extracted from the live site (see reference/brand.md).
+   Everything else (tints, lines, overlays) is derived from those values with alpha only. */
+
+@font-face { font-family: 'Neue Haas Display'; src: url('/fonts/NeueHaasDisplay-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Neue Haas Display'; src: url('/fonts/NeueHaasDisplay-Roman.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Neue Haas Display'; src: url('/fonts/NeueHaasDisplay-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Neue Haas Display'; src: url('/fonts/NeueHaasDisplay-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+
+:root {
+  /* Brand colours (exact) */
+  --ps-green-900: #004225;   /* primary: dark surfaces, text on light */
+  --ps-green-700: #036238;   /* secondary green surfaces */
+  --ps-green-600: #2F634A;   /* borders, muted text on cream (5.67:1) */
+  --ps-gold: #E3AB38;        /* accent: CTA fill; text only on green-900 (5.62:1) */
+  --ps-cream: #EDE7DA;       /* light canvas; text on green (9.44:1) */
+  --ps-cream-50: #FAF6EA;    /* raised surfaces on cream */
+
+  /* Derived (alpha only) */
+  --ps-cream-80: rgb(237 231 218 / 0.80);   /* muted text on green-900: 7.2:1 */
+  --ps-cream-line: rgb(237 231 218 / 0.18);
+  --ps-green-line: rgb(0 66 37 / 0.16);
+  --ps-green-scrim: rgb(0 30 17 / 0.62);
+  --ps-ink: #0b1f15;                         /* near-black green for image letterboxing only */
+
+  /* Semantic */
+  --bg: var(--ps-cream);
+  --fg: var(--ps-green-900);
+  --fg-muted: var(--ps-green-600);
+  --accent: var(--ps-gold);
+  --focus: var(--ps-gold);
+
+  /* Typography */
+  --font: 'Neue Haas Display', 'Helvetica Neue', Arial, sans-serif;
+  --fs-display: 5.5rem;   /* 88px: home H1 */
+  --fs-h1: 4.5rem;        /* 72px: page H1 */
+  --fs-h2: 3rem;          /* 48px */
+  --fs-h3: 1.75rem;       /* 28px */
+  --fs-h4: 1.25rem;       /* 20px */
+  --fs-lead: 1.375rem;    /* 22px */
+  --fs-body: 1.125rem;    /* 18px */
+  --fs-small: 0.9375rem;  /* 15px */
+  --fs-label: 0.8125rem;  /* 13px: eyebrows, chips */
+  --lh-tight: 1.02;
+  --lh-heading: 1.12;
+  --lh-body: 1.55;
+  --tracking-display: -0.025em;
+  --tracking-label: 0.14em;
+
+  /* Spacing (4px base) */
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px; --sp-6: 32px;
+  --sp-7: 48px; --sp-8: 64px; --sp-9: 96px; --sp-10: 128px; --sp-11: 160px;
+  --section-y: var(--sp-10);
+  --container: 1440px;
+  --gutter: 64px;
+
+  /* Shape & motion */
+  --radius-pill: 999px;   /* live site buttons use 50px pills */
+  --radius-card: 6px;
+  --radius-media: 4px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur: 240ms;
+  --header-h: 84px;
+
+  /* Hover system (one rule for every clickable card) */
+  --hover-lift: translateY(-3px);
+  --hover-shadow: 0 18px 40px -24px rgb(0 30 17 / 0.5);
+  --hover-zoom: scale(1.03);
+  --zoom-dur: 600ms;
+}

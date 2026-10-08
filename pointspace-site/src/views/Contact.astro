@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import StaticForm from '../components/StaticForm.astro';
+import { PROJECT_FORM } from '../data/projectForm';
+import { ROUTES, PRIVACY, type Lang } from '../data/routes';
+import { UI } from '../data/ui';
+import { SITE } from '../data/site';
+import { breadcrumbLd } from '../lib/seo';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = UI[lang];
+const T = {
+  fr: {
+    title: 'Contact – numérisation 3D et BIM | pointSpace',
+    description: 'Joignez pointSpace pour vos projets de numérisation 3D, de plans tels que construits, de modélisation BIM et de mesurage BOMA : téléphone, courriel et bureaux.',
+    h1: 'Contactez-nous', lead: 'Des questions ou prêt à lancer votre projet ? Écrivez-nous ou appelez-nous : nous vous guiderons vers la solution adaptée.',
+    formTitle: 'Parlez-nous de votre projet', detailsTitle: 'Coordonnées', offices: 'Bureaux',
+    privacy: 'Politique de confidentialité', quoteH: 'Vous avez un projet précis ?', quoteP: 'Utilisez le formulaire de soumission pour décrire les lieux et les livrables.',
+  },
+  en: {
+    title: 'Contact – 3D Scanning and BIM | pointSpace',
+    description: 'Contact pointSpace about 3D scanning, as-built drawings, BIM modeling and BOMA measurement projects: phone, email and offices.',
+    h1: 'Contact us', lead: 'Have questions or ready to start your project? Write or call us and we will point you to the right solution.',
+    formTitle: 'Tell us about your project', detailsTitle: 'Contact details', offices: 'Offices',
+    privacy: 'Privacy policy', quoteH: 'Have a specific project?', quoteP: 'Use the quote form to describe the site and the deliverables.',
+  },
+}[lang];
+const F = PROJECT_FORM[lang];
+const crumbs = [{ name: t.home, path: ROUTES.home[lang] }, { name: t.contact, path: ROUTES.contact[lang] }];
+const head = SITE.addresses.head, sat = SITE.addresses.satellite;
+---
+<BaseLayout lang={lang} route="contact" title={T.title} description={T.description} jsonLd={[breadcrumbLd(crumbs.map((c) => ({ name: c.name, path: c.path })))]}>
+  <PageHero lang={lang} crumbs={crumbs} h1={T.h1} lead={T.lead} compact />
+  <section class="section theme-cream">
+    <div class="container layout">
+      <div>
+        <h2 class="t-h3 layout__h">{T.formTitle}</h2>
+        <StaticForm id="contact-form" fields={F.fields} submit={F.submit} notice={F.notice} requiredNote={F.req} />
+        <p class="t-small t-muted privacy"><a href={PRIVACY[lang]}>{T.privacy}</a></p>
+      </div>
+      <aside class="details" aria-labelledby="details-title">
+        <h2 id="details-title" class="t-h3 layout__h">{T.detailsTitle}</h2>
+        <p class="details__person">{SITE.contactPerson}<br /><a href={`mailto:${SITE.email}`}>{SITE.email}</a><br /><a class="t-num" href={`tel:${SITE.phoneE164}`}>{SITE.phone}</a></p>
+        <h3 class="t-label details__label">{T.offices}</h3>
+        <address>
+          <p><strong>{head[lang]}</strong><br />{head.street}<br />{head.city} ({head.region}) {head.postal}</p>
+          <p><strong>{sat[lang]}</strong><br />{lang === 'fr' ? sat.street : sat.streetEn}<br />{sat.city} ({sat.region}) {sat.postal}</p>
+        </address>
+        <div class="details__quote">
+          <h3 class="t-h4">{T.quoteH}</h3>
+          <p class="t-small t-muted">{T.quoteP}</p>
+          <a class="btn btn--primary btn--sm" href={ROUTES.quote[lang]}>{t.quote}<span class="btn__arrow" aria-hidden="true">→</span></a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--sp-9); align-items: start; }
+  .layout__h { margin-bottom: var(--sp-5); }
+  .privacy { margin-top: var(--sp-5); }
+  .details { border-top: 3px solid var(--ps-green-900); padding-top: var(--sp-5); }
+  .details a { text-decoration: none; }
+  .details a:hover { text-decoration: underline; }
+  .details__person { font-size: 1.125rem; margin-bottom: var(--sp-6); }
+  .details__label { color: var(--ps-green-600); margin-bottom: var(--sp-3); }
+  address { font-style: normal; display: grid; gap: var(--sp-4); }
+  address strong { font-weight: 500; }
+  .details__quote { margin-top: var(--sp-7); padding: var(--sp-6); background: var(--ps-cream-50); border-radius: var(--radius-card); display: grid; gap: var(--sp-3); justify-items: start; }
+</style>

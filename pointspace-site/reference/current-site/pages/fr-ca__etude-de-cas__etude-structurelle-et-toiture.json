@@ -1,0 +1,393 @@
+{
+  "url": "https://www.pointspace.ca/fr-ca/etude-de-cas/etude-structurelle-et-toiture",
+  "lang": "fr",
+  "title": "Analyse de toiture & structure | pointSpace",
+  "metaDescription": "Numérisation 3D et analyse structurelle et de toiture pour repérer les obstructions avant la pose de la charpente et améliorer la planification.",
+  "ogTitle": "Analyse de toiture & structure | pointSpace",
+  "ogDescription": "Numérisation 3D et analyse structurelle et de toiture pour repérer les obstructions avant la pose de la charpente et améliorer la planification.",
+  "ogImage": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/fr-ca/etude-de-cas/etude-structurelle-et-toiture",
+  "hreflang": [
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/etude-de-cas/etude-structurelle-et-toiture"
+    },
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/case-studies/Structural-and-Roofing-Analysis-Ahead-of-Steel-Frame-Installation"
+    }
+  ],
+  "h1": [
+    "Étude structurelle et de toiture pour l'ajout de charpente en acier"
+  ],
+  "headings": [
+    "h5: Secteur industriel",
+    "h1: Étude structurelle et de toiture pour l'ajout de charpente en acier",
+    "h2: Mise en contexte",
+    "h2: Solutions proposées",
+    "h2: Gains",
+    "h2: Louis Dallaire",
+    "h3: Plans architecturaux tels-que-construits d’un espace commercial",
+    "h3: Contactez-nous !",
+    "h4: Louis Dallaire",
+    "h3: Contactez-nous"
+  ],
+  "nav": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/etude-de-cas/etude-structurelle-et-toiture"
+    },
+    {
+      "text": "English\nen",
+      "href": "/case-studies/Structural-and-Roofing-Analysis-Ahead-of-Steel-Frame-Installation"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Obtenir une soumission →",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/etude-de-cas/etude-structurelle-et-toiture"
+    },
+    {
+      "text": "English\nen",
+      "href": "/case-studies/Structural-and-Roofing-Analysis-Ahead-of-Steel-Frame-Installation"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "Louis Dallaire",
+      "href": "/fr-ca/louis-dallaire-president"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/case-studies/Plans-architecturaux-tels-que-construits-dun-espace-commercial"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "",
+      "href": "http://linkedin.com/"
+    }
+  ],
+  "body": "Accueil\nÀ propos\nSecteurs\nManufacturier et industriel\nArchitecture et Bâtiments\nServices\nNumérisation LiDAR 3D\nModélisation BIM\nAs-Built Drafting\nModélisation 3D\nAnalyse du bâtiment\nMise en plan BOMA\nVisites virtuelles 3D Matterport\nJumeaux numériques\nBlogue\nÉtudes de cas\nContact\nCarrières\nContactez-nous\n(514) 606-9604\nFrançais\nfr\nEnglish\nen\nSecteur industriel\nÉtude structurelle et de toiture pour l'ajout de charpente en acier\nMise en contexte\nUne entreprise québécoise spécialisée dans la construction de bâtiments en acier a fait appel à pointSpace dans le cadre d'un projet d'installation de charpente. L'objectif était d'obtenir un plan précis des obstructions présentes en toiture afin de réduire les risques d'erreurs et faciliter la planification.\nSolutions proposées\nNumérisation 3D complète\nde la toiture\nLivraison d'un fichier en couleur e57\npour intégration dans le logiciel SDS2\nGains\nGrâce aux données fournies par pointSpace, l'entreprise a pu :\nPlanifier l'installation de la charpente avec précision,\nRéduire le risque d'interférences en chantier,\nGagner en efficacité dans la coordination technique avec ses partenaires.\nAssurer une intégration harmonieuse de la charpente sur la toiture existante\nVisualiser clairement les conditions réelles du site pour mieux anticiper les contraintes\nIntégrer facilement les plans dans le flux de travail\nPourquoi pointSpace ?\nNotre mission est simple : amener le bâtiment directement sur les ordinateurs de nos clients. Grâce à des données précises et un accès intuitif, nous permettons à nos partenaires comme Reitmans de gagner du temps, d'être plus efficaces et de maîtriser leurs projets.\nArticle de\nLouis Dallaire\nDiplômé de l'ÉTS en génie des opérations et de la logistique, Louis est passionné par le monde industriel. Avec pointSpace, son objectif est de rendre la gestion et l'utilisation des données accessibles, car il n'est pas toujours nécessaire d'utiliser des outils complexes pour résoudre des problèmes simples !\nPlans architecturaux tels-que-construits d’un espace commercial\nVoir l'étude de cas\nContactez-nous !\nLouis Dallaire\nldallaire@pointspace.ca\n(514) 606-9604\nContactez-nous\nPrénom\nNom de famille\nE-mail\nMessage\nMerci de nous avoir contacté. Nous vous répondrons dans les plus brefs délais.\nOups, une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard.\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo PointSpace avec barres verticales dorées et texte gris clair sur fond blanc"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr-C3-A9sentation-source--289-29-48527783-1920w.png",
+      "alt": "Isometric view of a rectangular, color-coded map showing variations, likely measuring something like density or elevation."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/background-website--284-29-b52ca136-1920w.png",
+      "alt": "Floor plan with colored elevation data; building with a railing."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Cr%C3%A9ation-sans-titre-%281%29-1920w.png",
+      "alt": "Man wearing a plaid shirt, quilted vest, and watch, standing with folded hands."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%282%29-1920w.webp",
+      "alt": "Modèle 3D d'un bâtiment en pierre se détachant sur un ciel bleu dégradé."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    }
+  ],
+  "jsonLd": [],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr-C3-A9sentation-source--289-29-48527783-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Pr-C3-A9sentation-source--289-29-48527783.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/background-website--284-29-b52ca136-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/background-website--284-29-b52ca136.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Cr%C3%A9ation-sans-titre-%281%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Cr%C3%A9ation-sans-titre-%281%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sous-titre-545a2f08-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%286%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4_Model_6000px+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot-2025-04-03-163540-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot_16-7-2024_102652_+%281%29-1920w.jpeg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2023-10-17+104620+%283%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Vac+Aero_5+%284%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%288%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%289%29-1920w.webp"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/fr-ca/etude-de-cas/etude-structurelle-et-toiture"
+}
