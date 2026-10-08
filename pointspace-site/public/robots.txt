@@ -1,0 +1,6 @@
+# Production robots.txt for www.pointspace.ca.
+# The internal design-system page is excluded; every other page is indexable and listed in the sitemap.
+User-agent: *
+Disallow: /styleguide
+
+Sitemap: https://www.pointspace.ca/sitemap.xml

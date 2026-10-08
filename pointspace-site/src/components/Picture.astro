@@ -1,0 +1,50 @@
+---
+// Responsive WebP image with alt text from src/data/images.ts.
+// Images from client projects not yet public on pointspace.ca show an "Approbation requise" badge.
+import { image } from '../data/images';
+import type { Lang } from '../data/routes';
+
+interface Props {
+  name: string;
+  lang: Lang;
+  sizes?: string;
+  class?: string;
+  eager?: boolean;
+  fit?: 'cover' | 'contain';
+  ratio?: string; // e.g. "16/10"
+  caption?: string;
+  position?: string; // object-position
+}
+const { name, lang, sizes = '(min-width: 1280px) 50vw, 100vw', class: cls, eager = false, fit = 'cover', ratio, caption, position } = Astro.props;
+const img = image(name, lang);
+const Tag = caption ? 'figure' : 'div';
+---
+<Tag class:list={['pic', cls, { 'pic--contain': fit === 'contain' }]} style={ratio ? `--ratio:${ratio}` : undefined}>
+  <img
+    src={img.src}
+    srcset={img.srcset}
+    sizes={sizes}
+    width={img.width}
+    height={img.height}
+    alt={img.alt}
+    loading={eager ? 'eager' : 'lazy'}
+    decoding="async"
+    fetchpriority={eager ? 'high' : undefined}
+    style={position ? `object-position:${position}` : undefined}
+  />
+  {caption && <figcaption class="pic__caption t-small">{caption}</figcaption>}
+</Tag>
+
+<style>
+  .pic { position: relative; margin: 0; overflow: hidden; border-radius: var(--radius-media); background: var(--ps-ink); }
+  .pic img { width: 100%; height: 100%; object-fit: cover; }
+  .pic[style*='--ratio'] { aspect-ratio: var(--ratio); }
+  .pic[style*='--ratio'] img { position: absolute; inset: 0; }
+  figure.pic[style*='--ratio'] { aspect-ratio: auto; }
+  figure.pic[style*='--ratio'] img { position: static; aspect-ratio: var(--ratio); }
+  .pic--contain { background: #fff; }
+  .pic--contain img { object-fit: contain; padding: 4%; background: #fff; }
+  .pic__caption { padding: 12px 0 0; background: var(--bg, transparent); color: var(--fg-muted); }
+  figure.pic { background: transparent; overflow: visible; }
+  figure.pic img { border-radius: var(--radius-media); background: var(--ps-ink); }
+</style>

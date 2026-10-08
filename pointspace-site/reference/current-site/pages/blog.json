@@ -1,0 +1,430 @@
+{
+  "url": "https://www.pointspace.ca/blog",
+  "lang": "en",
+  "title": "pointSpace Blog | 3D Scanning, Modeling & Insights",
+  "metaDescription": "Gain insights on 3D scanning, modeling, digital twins, and more with pointSpace’s latest articles.",
+  "ogTitle": "pointSpace Blog | 3D Scanning, Modeling & Insights",
+  "ogDescription": "Gain insights on 3D scanning, modeling, digital twins, and more with pointSpace’s latest articles.",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/blog",
+  "hreflang": [
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/blog"
+    },
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/blogue"
+    }
+  ],
+  "h1": [],
+  "headings": [
+    "h3: The material differentiating pointSpace",
+    "h3: How 3D Scanning Streamlines and Elevates Your Workflow",
+    "h3: The 3D Modeling Process",
+    "h3: BIM: Definitions, Benefits, Maturity Levels and Sustainability",
+    "h3: 3D Scan of Ceiling Spaces",
+    "h3: The 3D scanning process",
+    "h3: Technical Preparation of a 3D Scanning Survey",
+    "h3: TQC Plans - Le FouFou"
+  ],
+  "nav": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/blog"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/blogue"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contact us",
+      "href": "/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/blog"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "",
+      "href": "/"
+    },
+    {
+      "text": "",
+      "href": "/the-material-differentiating-pointspace"
+    },
+    {
+      "text": "The material differentiating pointSpace",
+      "href": "/the-material-differentiating-pointspace"
+    },
+    {
+      "text": "",
+      "href": "/how-3d-scanning-streamlined-and-elevates-your-workflow"
+    },
+    {
+      "text": "How 3D Scanning Streamlines and Elevates Your Workflow",
+      "href": "/how-3d-scanning-streamlined-and-elevates-your-workflow"
+    },
+    {
+      "text": "",
+      "href": "/3d-modeling-process"
+    },
+    {
+      "text": "The 3D Modeling Process",
+      "href": "/3d-modeling-process"
+    },
+    {
+      "text": "",
+      "href": "/bim-definitions-benefits-maturity-levels-and-sustainability"
+    },
+    {
+      "text": "BIM: Definitions, Benefits, Maturity Levels and Sustainability",
+      "href": "/bim-definitions-benefits-maturity-levels-and-sustainability"
+    },
+    {
+      "text": "",
+      "href": "/3d-digitizing-of-ceiling-spaces"
+    },
+    {
+      "text": "3D Scan of Ceiling Spaces",
+      "href": "/3d-digitizing-of-ceiling-spaces"
+    },
+    {
+      "text": "",
+      "href": "/3d-scanning-the-scanning-process"
+    },
+    {
+      "text": "The 3D scanning process",
+      "href": "/3d-scanning-the-scanning-process"
+    },
+    {
+      "text": "",
+      "href": "/technical-preparation-of-a-survey-3d-scanning"
+    },
+    {
+      "text": "Technical Preparation of a 3D Scanning Survey",
+      "href": "/technical-preparation-of-a-survey-3d-scanning"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/As-Built-plans-le-foufou"
+    }
+  ],
+  "body": "Home\nAbout us\nIndustries\nManufacturing and industrial\nArchitecture and Buildings\nServices\nScanning\nScan to BIM\nAs-Built Drafting\n3D Modeling\nBuilding analysis\nBOMA As-Built Digital Plans\nMatterport 3D Virtual Tours\nDigital Twins\nBlog\nCase studies\nContact\nGet in touch\n(514) 606-9604\nEnglish\nen\nFrançais\nfr\nThe material differentiating pointSpace\nBy Louis Dallaire\n•\nMarch 19, 2026\n3D scanning has become an essential tool for the fields of architecture, engineering, construction, industry, and property management. Whether it’s to reorganize your production line, optimize your facility, or much more, it enables you to capture reality with precision, improve decision-making, and reduce errors during the design and execution phases. At Technologie pointSpace, we present two of the cutting-edge Leica Geosystems 3D laser scanners we use—the Leica BLK360 and the Leica RTC360—to meet a wide range of needs. The Leica BLK360 stands out primarily for its compact size and ease of use. Designed to be highly portable, it allows for the rapid capture of indoor environments or small sites with great efficiency. Its lightweight format and intuitive operation make it an ideal solution for professionals looking to integrate 3D scanning into their workflow without technical complexity. The BLK360 produces colorized point clouds and images in a short amount of time, while ensuring automatic alignment of scans directly in the field. This approach greatly simplifies raw data processing and speeds up data delivery. It is particularly well suited for renovation projects, Scan-to-BIM modeling of interior spaces, and the documentation of existing buildings. The Leica RTC360, on the other hand, is intended for larger and more complex projects where precision, speed, and range are essential. This high-performance 3D laser scanner is capable of capturing millions of points per second, enabling the digitization of large environments with exceptional detail. Thanks to its built-in visual tracking technology, the RTC360 automatically links scans together in real time, reducing the risk of errors and the time required for data processing. Its extended range and HDR imaging quality make it an ideal solution for construction sites, industrial facilities, complex infrastructure, and projects requiring extremely precise documentation. The RTC360 integrates seamlessly with advanced BIM workflows and professional processing and modeling software. The choice between the Leica BLK360, the Leica RTC360, or another of our devices mainly depends on the nature and scale of the project. The BLK360 offers an accessible, fast, and mobile solution for small to medium-sized projects, while the RTC360 meets the demands of larger environments and projects requiring higher precision and broader coverage. In both cases, these technologies provide reliable, usable data that meets current industry standards. At pointSpace, our expertise goes beyond the use of advanced equipment. We support our clients at every stage, from data capture to data utilization, ensuring accurate results tailored to their objectives. Whether your project requires a flexible, compact solution or high-performance 3D scanning technology, we provide the equipment and expertise needed to transform reality into actionable data. To learn more, feel free to visit our social media to watch an explanatory video by Louis!\nHow 3D Scanning Streamlines and Elevates Your Workflow\nBy Louis Dallaire\n•\nMarch 12, 2026\nImagine a tool that streamlines every stage of your projects, simplifies collaboration, and optimizes your resources—effortlessly. 3D scanning is more than just a capture technology; it naturally integrates into your daily workflow to accelerate decision-making, improve communication, and maximize efficiency.\nThe 3D Modeling Process\nBy Louis Dallaire\n•\nFebruary 28, 2025\nDiscover how pointSpace transforms 3D scan data into detailed plans for building and renovation projects. Learn the key planning steps in 3D digitizing.\nBIM: Definitions, Benefits, Maturity Levels and Sustainability\nBy Louis Dallaire\n•\nOctober 9, 2024\nBIM (Building Intergrated Modeling) is a digital management method that is revolutionizing the construction industry. Unlike traditional methods based on 2D plans, BIM enables the creation of an intelligent 3D model containing all the necessary information on a building, from design to demolition.\n3D Scan of Ceiling Spaces\nBy Louis Dallaire\n•\nSeptember 24, 2024\n3D scanning is transforming the way companies approach building renovation and inspection projects. One of the major benefits that 3D scanning brings is the digitization of ceiling spaces. These areas, often difficult to access, are packed with cables, conduits and equipment essential to a building's infrastructure.\nThe 3D scanning process\nBy Louis Dallaire\n•\nSeptember 17, 2024\nAt pointSpace, digitizing spaces and collecting data are crucial steps that enable us to capture every detail of your building's infrastructure with precision. We use state-of-the-art equipment and a proven methodology to ensure accurate, actionable results.\nTechnical Preparation of a 3D Scanning Survey\nBy Louis Dallaire\n•\nMarch 11, 2024\nAt pointSpace, we know that good technical preparation is the key to high-quality 3D scanning surveys. Indeed, understanding the purpose of the survey and preparing accordingly is the key to a successful result that captures all the essential information.\nCase Studies\nTQC Plans - Le FouFou\nView case study\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/IMG_7586-302a5a04-1920w.png",
+      "alt": ""
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/undefined-1920w.png",
+      "alt": "A man in a yellow vest is using a tablet and a 3d scanner in a warehouse "
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2025-02-27+223026-1920w.png",
+      "alt": "Exterior shot of industrial buildings, metal scaffolding, and stairs against a blue sky."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sans+titre+%281920+x+1920+px%29-1920w.png",
+      "alt": "Diagram of the BIM cycle: conception, construction, exploitation, and maintenance, with a building illustration at its center."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot-2024-10-01-110231-1920w.png",
+      "alt": "Interior view of an unfinished building with exposed beams, ventilation, and wiring."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-14a196b3-33b0c301-1920w.png",
+      "alt": "White and gray laser scanner on a tripod, positioned on a rooftop overlooking industrial structures emitting steam."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Cr%C3%A9ation-sans-titre-%286%29-1920w.png",
+      "alt": "A collection of surveying equipment: tripod, batteries, vest, tablet, charger, rangefinder, and jacket on a wooden surface."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sous-titre-545a2f08-1920w.webp",
+      "alt": "Empty industrial interior with exposed ceiling pipes and sunlight through large windows"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold and light gray text and vertical gold bars above it"
+    }
+  ],
+  "jsonLd": [],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/IMG_7586-302a5a04-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/undefined-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2025-02-27+223026-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sans+titre+%281920+x+1920+px%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot-2024-10-01-110231-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-14a196b3-33b0c301-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Cr%C3%A9ation-sans-titre-%286%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sous-titre-545a2f08-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%286%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2023-10-17+104620+%283%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Vac+Aero_5+%284%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4_Model_6000px+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot-2025-04-03-163540-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot_16-7-2024_102652_+%281%29-1920w.jpeg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%288%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%289%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%282%29-1920w.webp"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/blog"
+}

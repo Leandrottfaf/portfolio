@@ -1,0 +1,808 @@
+{
+  "url": "https://www.pointspace.ca/fr-ca/services/numerisation-LiDAR-3D",
+  "lang": "fr",
+  "title": "Services de numérisation 3D | pointSpace",
+  "metaDescription": "Profitez de solutions de numérisation 3D sur-mesure, adaptées à l’architecture, la construction, l’immobilier et l’industrie manufacturière.",
+  "ogTitle": "Services de numérisation 3D | pointSpace",
+  "ogDescription": "Profitez de solutions de numérisation 3D sur-mesure, adaptées à l’architecture, la construction, l’immobilier et l’industrie manufacturière.",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/fr-ca/services/numerisation-LiDAR-3D",
+  "hreflang": [
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/services/LiDAR-3D-Scanning"
+    },
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/services/numerisation-LiDAR-3D"
+    }
+  ],
+  "h1": [
+    "SERVICES DE",
+    "NUMÉRISATION LiDAR 3D"
+  ],
+  "headings": [
+    "h1: SERVICES DE",
+    "h1: NUMÉRISATION LiDAR 3D",
+    "h4: Capturez chaque détail de votre infrastructure avec précision grâce à nos services de numérisation 3D.",
+    "h4: Nous transformons vos espaces physiques en plans numériques 2D et 3D de haute qualité. Grâce à la technologie LiDAR, nous réalisons des relevés rapides et précis ainsi que des modèles 3D géolocalisables. La numérisation 3D facilite la documentation du bâtiment, améliore la coordination entre les équipes et réduit les erreurs liées aux relevés manuels.",
+    "h3: Consultation et planification",
+    "h3: Préparation minuteuse du site",
+    "h3: Scan de haute précision",
+    "h3: Traitement précis des données",
+    "h3: Modèles détaillés et résultats",
+    "h3: Contrôle qualité et assitance",
+    "h4: Explorez notre blog pour découvrir des articles, études de cas et conseils pratiques sur la numérisation 3D, la modélisation et les jumeaux numériques. Apprenez comment optimiser vos projets de construction, d’architecture ou d’industrie manufacturière grâce aux technologies 3D.",
+    "h3: Numérisation 3D des entreplafonds",
+    "h3: La numérisation 3D : Le processus de numérisation",
+    "h3: Préparation technique d’un relevé de numérisation 3D",
+    "h2: Des résultats prouvés à travers plus de 400 projets",
+    "h4: Numérisation 3D exhaustive de commerces de détail",
+    "h4: Numérisation 3D et modélisation 3D des façades de bâtiments",
+    "h4: Numérisation et mise en plan des zones critiques d'une ligne de production",
+    "h3: Qu’est-ce que la numérisation (scan) 3D ?",
+    "h3: À quoi sert la numérisation (scan) 3D ? Quels en sont les avantages ?",
+    "h3: Combien de temps prend la numérisation (scan) 3D ?",
+    "h3: Comment se réalise la numérisation (scan) 3D ?",
+    "h3: Quelles industries desservez-vous ?",
+    "h3: Quels formats de livrables offrez-vous et proposez-vous une formation ?",
+    "h3: Comment obtenir un devis pour un projet de numérisation (scan) 3D ?",
+    "h2: \"L'équipe de pointSpace a fourni un service de haute qualité, rapide et efficace pour répondre à nos besoins opérationnels. Les plans produits par pointSpace aident nos clients et notre équipe de coordination à préparer des événements exceptionnels au Théâtre St-James.\""
+  ],
+  "nav": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/LiDAR-3D-Scanning"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Obtenir une soumission →",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "Travaillez avec nous",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Voir plus d'articles",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca/numerisation-3d-des-entreplafonds"
+    },
+    {
+      "text": "Numérisation 3D des entreplafonds",
+      "href": "/fr-ca/numerisation-3d-des-entreplafonds"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca/la-numerisation-3d-le-processus-de-numerisation"
+    },
+    {
+      "text": "La numérisation 3D : Le processus de numérisation",
+      "href": "/fr-ca/la-numerisation-3d-le-processus-de-numerisation"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca/preparation-technique-dun-releve-numerisation-3d"
+    },
+    {
+      "text": "Préparation technique d’un relevé de numérisation 3D",
+      "href": "/fr-ca/preparation-technique-dun-releve-numerisation-3d"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/etude-de-cas/Numérisation-3D-exhaustive-de-commerces-de-détail"
+    },
+    {
+      "text": "",
+      "href": "https://www.pointspace.ca/fr-ca/etude-de-cas/etude-structurelle-et-toiture"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/etude-de-cas/Scan-3D-et-modélisation-3D-des-façades-dun-bâtiment"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/etude-de-cas/Mise-en-plan-et-numérisation-3D-des-zones-critiques-de-la-chaîne-de-production"
+    },
+    {
+      "text": "Contactez-nous",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "modèle 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "architecture",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "construction",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "ingénierie",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "industrie",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "réaménagement d’usines",
+      "href": "/fr-ca/etude-de-cas/vac-aero"
+    },
+    {
+      "text": "reconstruction de façades",
+      "href": "/fr-ca/etude-de-cas/st-denis-thompson"
+    },
+    {
+      "text": "modèles 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "BIM",
+      "href": "/fr-ca/services/bim"
+    },
+    {
+      "text": "modèles 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Préparation technique d’un relevé : numérisation 3D",
+      "href": "http://www.pointspace.ca/fr-ca/preparation-technique-dun-releve-numerisation-3d"
+    },
+    {
+      "text": "La numérisation 3D : Le processus de numérisation",
+      "href": "http://www.pointspace.ca/fr-ca/la-numerisation-3d-le-processus-de-numerisation"
+    },
+    {
+      "text": "La numérisation 3D: le processus de mise en plan",
+      "href": "http://www.pointspace.ca/fr-ca/la-numerisation-3d-le-processus-de-mise-en-plan"
+    },
+    {
+      "text": "un maillage polygonal texturé",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "une maquette BIM (Building Information Modeling)",
+      "href": "/fr-ca/services/bim"
+    },
+    {
+      "text": "des plans architecturaux ou techniques",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "des analyses de bâtiment",
+      "href": "/fr-ca/services/analyse"
+    },
+    {
+      "text": "mesurage BOMA",
+      "href": "/fr-ca/services/boma"
+    },
+    {
+      "text": "Préparation d’un relevé : numérisation 3D",
+      "href": "http://www.pointspace.ca/fr-ca/preparation-technique-dun-releve-numerisation-3d"
+    },
+    {
+      "text": "La numérisation 3D : le processus de numérisation",
+      "href": "http://www.pointspace.ca/fr-ca/la-numerisation-3d-le-processus-de-numerisation"
+    },
+    {
+      "text": "bâtiment",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "l’industrie manufacturière,",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "réaménagement d’usines",
+      "href": "/fr-ca/etude-de-cas/vac-aero"
+    },
+    {
+      "text": "la mise en plan,",
+      "href": "/fr-ca/case-studies/the-bay"
+    },
+    {
+      "text": "le suivi d’avancement",
+      "href": "/fr-ca/etude-de-cas/JCB"
+    },
+    {
+      "text": "l’analyse de bâtiments",
+      "href": "/fr-ca/etude-de-cas/etude-structurelle-et-toiture"
+    },
+    {
+      "text": "la conservation patrimoniale",
+      "href": "/fr-ca/etude-de-cas/theatre-st-james"
+    },
+    {
+      "text": "modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "l’analyse",
+      "href": "/fr-ca/services/analyse"
+    },
+    {
+      "text": "la mise en plan BOMA",
+      "href": "/fr-ca/services/boma"
+    },
+    {
+      "text": "le suivi d’avancement",
+      "href": "/fr-ca/services/rapport-davancemment"
+    },
+    {
+      "text": "les visites virtuelles",
+      "href": "/fr-ca/services/visites-virtuelles"
+    },
+    {
+      "text": "les photos 360°",
+      "href": "/fr-ca/services/services-photo-360"
+    },
+    {
+      "text": "les jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "e BIM",
+      "href": "/fr-ca/services/bim"
+    },
+    {
+      "text": "les rendus architecturaux.",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "plans",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "modèles 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Obtenir une soumission",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jcb.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://idxdesign.com/"
+    },
+    {
+      "text": "",
+      "href": "https://tla-architectes.com/"
+    },
+    {
+      "text": "",
+      "href": "https://vacaero.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.nelmar.com/"
+    },
+    {
+      "text": "",
+      "href": "https://stdenisthompson.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.benoy.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupemach.com/en/home.html"
+    },
+    {
+      "text": "",
+      "href": "https://dallaireconsultants.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.cominar.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.broccolini.com/en"
+    },
+    {
+      "text": "",
+      "href": "https://groupecdf.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://lainco.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://renfort.com/home/"
+    },
+    {
+      "text": "",
+      "href": "https://musesolution.ca/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://fr.oktodev.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://shellex.ca/fr/accueil/"
+    },
+    {
+      "text": "",
+      "href": "https://navada.com/fr"
+    },
+    {
+      "text": "",
+      "href": "https://www.kolostat.com/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    }
+  ],
+  "body": "Accueil\nÀ propos\nSecteurs\nManufacturier et industriel\nArchitecture et Bâtiments\nServices\nNumérisation LiDAR 3D\nModélisation BIM\nAs-Built Drafting\nModélisation 3D\nAnalyse du bâtiment\nMise en plan BOMA\nVisites virtuelles 3D Matterport\nJumeaux numériques\nBlogue\nÉtudes de cas\nContact\nCarrières\nContactez-nous\n(514) 606-9604\nFrançais\nfr\nEnglish\nen\nSERVICES DE\nNUMÉRISATION LiDAR 3D\nCapturez chaque détail de votre infrastructure avec précision grâce à nos services de numérisation 3D.\nTravaillez avec nous\nLorsque vous travaillez avec nous\nVOUS POUVEZ VOUS ATTENDRE À\nNous transformons vos espaces physiques en plans numériques 2D et 3D de haute qualité. Grâce à la technologie LiDAR, nous réalisons des relevés rapides et précis ainsi que des modèles 3D géolocalisables. La numérisation 3D facilite la documentation du bâtiment, améliore la coordination entre les équipes et réduit les erreurs liées aux relevés manuels.\nPRÉCISION\nNos outils équipés de la technologie\nLiDAR offrent une précision millimétrique. Ils garantissent que les données géospatiales utilisées pour la création de nos plans, modèles 3D et rapports soient extrêmement précises. Ce qui permet de réduire les erreurs, d’éviter les reprises coûteuses et d’assurer une représentation fidèle de la réalité.\nSERVICE CLÉ EN MAIN\nNous capturons les données géospatiales de votre bâtiment afin de livrer des\nplans tels-que-construits\net des\nmodèles 3D, compatibles avec des formats tels que\nDWG, Revit, CAD, STEP, SAT\net bien d’autres. Nous offrons ainsi une approche clé en main, garantissant la prise en charge complète du processus, de la capture des données à la livraison des plans et modèles finaux.\nRAPIDITÉ\nGrâce à nos outils de capture, nous pouvons rapidement numériser toutes les données de votre bâtiment pour produire des plans 2D et modèles 3D précis, exploitables et directement intégrables dans vos logiciels CAO/BIM.\nAu cours de notre processus de numérisation 3D\nVOUS POUVEZ COMPTER SUR\nNous abordons chaque projet avec une méthodologie axée sur le LiDAR. Avant de commencer le balayage, notre équipe travaille en étroite collaboration avec vous pour définir la portée, les exigences de précision et l'utilisation prévue des données. Nous planifions ensuite le processus de capture LiDAR en détail, en optimisant les positions de balayage, le chevauchement et la résolution afin de documenter avec précision les conditions existantes. Cette approche structurée garantit des données de nuages de points fiables qui peuvent être utilisées en toute confiance pour la modélisation, l'analyse et la prise de décision.\n1\nConsultation et planification\nNous commençons par prendre connaissance de vos objectifs, de vos délais et du niveau de précision requis. Sur cette base, nous choisissons la technologie de numérisation optimale et déterminons les positions de numérisation et le chevauchement nécessaires pour capturer tous les détails. Une bonne planification préalable à la numérisation, comprenant l'évaluation du site, la configuration de l'équipement, le placement des cibles et les positions de numérisation, est essentielle pour obtenir des données précises.\n2\nPréparation minuteuse du site\nAvant l'arrivée du scanner sur site, notre équipe évalue les points d'accès, les conditions environnementales (lumière, température, poussière) et les dangers potentiels, et s'assure que tous les équipements sont calibrés et prêts à l'emploi. Nous plaçons stratégiquement des cibles et des points de contrôle afin d'améliorer l'alignement.\n3\nScan de haute précision\nPendant le balayage, nous fixons et positionnons le scanner LiDAR de manière sécurisée, ajustons les paramètres en fonction des conditions du site et capturons plusieurs balayages qui se chevauchent. Nous repositionnons le scanner si nécessaire et surveillons la progression en temps réel afin d'éviter les erreurs qui pourraient compromettre la qualité du nuage de points. Cette approche structurée permet d'éviter les désalignements, les artefacts de bruit et les couvertures incomplètes.\n4\nTraitement précis des données\nAprès le balayage LiDAR, nous importons les nuages de points bruts, alignons plusieurs balayages dans un seul système de coordonnées et filtrons le bruit ou les points parasites. Nous segmentons les données en couches logiques, extrayons les caractéristiques et vérifions la précision de l'enregistrement par rapport aux points de contrôle de l'étude afin de garantir un ensemble de données fiable pour la modélisation CAO/BIM.\n5\nModèles détaillés et résultats\nÀ partir d'un nuage de points propre et enregistré, nos spécialistes extraient les caractéristiques et génèrent des modèles 3D ou des plans 2D précis. Nous livrons les fichiers dans le format de votre choix (Revit, AutoCAD, STL, etc.) et nous nous assurons qu'ils sont compatibles avec votre logiciel.\n6\nContrôle qualité et assitance\nNous vérifions l'exactitude grâce à des contrôles qualité, notamment le placement des cibles, la précision dimensionnelle et les écarts de numérisation, avant de livrer l'ensemble de données final. Notre équipe reste disponible pour assurer la formation et l'assistance après la livraison.\nVoir plus d'articles\nTout ce qu’il faut savoir sur\nla\nNumérisation 3D\nExplorez notre blog pour découvrir des articles, études de cas et conseils pratiques sur la numérisation 3D, la modélisation et les jumeaux numériques. Apprenez comment optimiser vos projets de construction, d’architecture ou d’industrie manufacturière grâce aux technologies 3D.\nNumérisation 3D des entreplafonds\npar Louis Dallaire\n•\n24 septembre 2024\nLa numérisation 3D transforme l’accès aux entreplafonds : meilleure planification, inspection plus sûre et gain de temps avec pointSpace.\nLa numérisation 3D : Le processus de numérisation\npar Louis Dallaire\n•\n17 septembre 2024\nChez pointSpace, chaque relevé 3D débute par une méthodologie rigoureuse : installation, scan, gestion des données, pour garantir une capture fiable.\nPréparation technique d’un relevé de numérisation 3D\npar Louis Dallaire\n•\n11 mars 2024\nLa clé d’un relevé 3D réussi ? Une préparation technique solide. pointSpace détaille les étapes pour optimiser vos projets de numérisation.\nÉtudes de cas\nDes résultats prouvés à travers plus de 400 projets\nNous accompagnons les professionnels de la construction, de l’architecture et de l’industrie manufacturière avec des solutions sur mesure de numérisation 3D, mise en plan et modélisation. Consultez nos études de cas pour découvrir comment nos services contribuent à optimiser les projets de nos clients.\nNumérisation 3D exhaustive de commerces de détail\nReitmans Canada Lée\nVoir l'étude de cas\nNumérisation 3D et modélisation 3D des façades de bâtiments\nSt-Denis Thompson Inc.\nVoir l'étude de cas\nNumérisation et mise en plan des zones critiques d'une ligne de production\nNelmar\nVoir l'étude de cas\nContactez-nous\nFAQ\nVous souhaitez en savoir plus sur nos services de numérisation 3D et modélisation 3D ? Contactez notre équipe pour obtenir des réponses rapides et des conseils personnalisés.\nQu’est-ce que la numérisation (scan) 3D ?\nLa numérisation 3D (ou scan 3D) permet de capturer un objet ou un espace réel en trois dimensions afin d’en obtenir des données géospatiales numériques. Un capteur laser ou scanner 3D utilise des technologies telles que le laser, la photogrammétrie ou le LiDAR pour mesurer des millions de points et reconstituer l’objet ou l’environnement sous forme de modèle numérique, générant ainsi un « nuage de points ». Ce processus permet de créer un modèle 3D\nfidèle à la réalité.\nCette technologie est principalement utilisée en architecture\n, construction\n, ingénierie\n, industrie\n,\nconservation patrimoniale, et dans de nombreux autres secteurs. Ses applications sont très variées : création de\njumeaux numériques\n, réaménagement d’usines\n, reconstruction de façades\n,\net bien plus encore. Les possibilités sont presque infinies.\nLa numérisation 3D est particulièrement adaptée aux environnements complexes, chargés ou difficiles d’accès. Elle est notamment très utile pour développer des visites virtuelles ou des modèles 3D\ninteractifs, permettant de naviguer facilement dans l’environnement à distance, d’examiner différentes coupes ou de sélectionner des aspects précis pour analyser plus clairement l’espace.\nÀ quoi sert la numérisation (scan) 3D ? Quels en sont les avantages ?\nLa numérisation 3D apporte de nombreux avantages concrets pour les entreprises. Elle fournit des mesures précises, grâce à la précision millimétrique des capteurs laser ou scanners. Comparée aux méthodes traditionnelles, elle est beaucoup plus rapide et fiable, permettant de gagner du temps et de l’argent.\nUn relevé complet peut être obtenu en quelques heures ou jours, selon la superficie, alors que les méthodes classiques nécessiteraient plusieurs jours, voire semaines. Tout en réduisant les risques d’erreurs et les retouches, ce qui améliore la fiabilité des données.\nDe plus, en convertissant l’existant en données numériques, la numérisation 3D simplifie la conception (intégration BIM\n), la maintenance prédictive, la gestion de patrimoine, et bien plus encore. Elle facilite l’accès aux modèles numériques, accélère les cycles de conception, réduit les coûts globaux (moins d’interventions physiques, meilleure planification) et permet de visualiser précisément les bâtiments avant toute intervention.\nLa numérisation 3D est particulièrement adaptée aux environnements complexes, chargés ou difficiles d’accès. Elle est notamment très utile pour développer des visites virtuelles ou des modèles 3D\ninteractifs, permettant de naviguer facilement dans l’environnement à distance, d’examiner différentes coupes ou de sélectionner des aspects précis pour analyser plus clairement l’espace.\nCombien de temps prend la numérisation (scan) 3D ?\nLe temps nécessaire pour une numérisation 3D dépend avant tout de la taille et de la complexité de l’objet ou de l’espace à scanner. Scanner une pièce peut prendre quelques minutes à quelques heures, tandis qu’un grand bâtiment peut nécessiter plusieurs heures, voire plusieurs jours.\nAu-delà de la capture, le post-traitement (alignement et fusion des scans) ajoute du temps de travail logiciel. En pratique, le temps total inclut donc à la fois la prise de vue sur site et le traitement des données. La précision souhaitée (résolution du scan) et les conditions de l’environnement (obstacles, éclairage) influencent également la durée finale.\nPour plus d’informations sur notre processus de scan/numérisation 3D et de modélisation 3D, vous pouvez consulter ces articles :\nPréparation technique d’un relevé : numérisation 3D\nLa numérisation 3D : Le processus de numérisation\nLa numérisation 3D: le processus de mise en plan\nComment se réalise la numérisation (scan) 3D ?\nNos relevés se déroule en plusieurs étapes. Nous commençons par choisir l’outil le mieux adapté à la situation, puis capturons le site sous différents angles afin de couvrir l’ensemble de sa surface et de générer un nuage de points. Ces données brutes sont ensuite traitées dans des logiciels spécialisés (alignement, nettoyage, fusion).\nLe produit final peut prendre différentes formes : un maillage polygonal texturé\nreprésentant fidèlement l’objet avec ses textures, une maquette BIM (Building Information Modeling)\nintégrant des informations détaillées sur les composants et caractéristiques du bâtiment, des plans architecturaux ou techniques\n, ainsi que des analyses de bâtiment\n, telles que le mesurage BOMA\n, les études de planéité et de verticalité ou l’analyse des déformations structurelles.\nLes scanners/capteurs lasers que nous utilisons offrent un retour visuel en temps réel, permettant de vérifier que toute la surface a bien été capturée. En bref, nous « photographions » l’environnement en 3D et traitons les données pour reconstituer fidèlement sa forme numérique.\nPour plus d’informations sur notre processus de scan/numérisation 3D, vous pouvez consulter ces articles :\nPréparation d’un relevé : numérisation 3D\nLa numérisation 3D : le processus de numérisation\nQuelles industries desservez-vous ?\nNous servons principalement les secteurs du bâtiment\net de l’industrie manufacturière,\nincluant majoritairement la construction, l’ingénierie et l’architecture. Nos solutions s’appliquent à de nombreux cas d’utilisation tels que le réaménagement d’usines\n, la gestion d’actifs, la vente d’actifs, la mise en plan,\nle suivi d’avancement\n, l’analyse de bâtiments\n, la conservation patrimoniale\net bien plus encore.\nNos services incluent la modélisation 3D\n, l’analyse\n, la mise en plan BOMA\n, le suivi d’avancement\n, les visites virtuelles\n, les photos 360°\n, les jumeaux numériques\n, le BIM\net les rendus architecturaux.\nGrâce à cette approche complète, nous permettons à nos clients de visualiser, planifier et gérer leurs bâtiments et équipements de manière précise, efficace et sécurisée.\nQuels formats de livrables offrez-vous et proposez-vous une formation ?\nNous livrons vos plans\net modèles 3D\ndans le format de votre choix. Nous proposons notamment des livrables aux formats DWG, Revit, CAD, STEP, SAT et plus encore. Des formations personnalisées sont également disponibles pour vous aider à utiliser efficacement vos nouveaux plans ou modèles et à exploiter pleinement vos plans et modèles.\nComment obtenir un devis pour un projet de numérisation (scan) 3D ?\nIl vous suffit de remplir ce formulaire : Obtenir une soumission\nen indiquant vos besoins, les services recherchés et les détails de votre projet, notre équipe se fera un plaisir de vous contacter pour répondre à vos questions, préciser vos attentes et vous fournir rapidement un devis détaillé parfaitement adapté à votre projet.\n\"L'équipe de pointSpace a fourni un service de haute qualité, rapide et efficace pour répondre à nos besoins opérationnels. Les plans produits par pointSpace aident nos clients et notre équipe de coordination à préparer des événements exceptionnels au Théâtre St-James.\"\n- Juliano Rodriguez-Daoust,\nVice-président du développement commercial et des acquisitions\nGroupe Carosielli\nShare by:",
+  "faq": [
+    {
+      "q": "Qu’est-ce que la numérisation (scan) 3D ?",
+      "a": "La numérisation 3D (ou scan 3D) permet de capturer un objet ou un espace réel en trois dimensions afin d’en obtenir des données géospatiales numériques. Un capteur laser ou scanner 3D utilise des technologies telles que le laser, la photogrammétrie ou le LiDAR pour mesurer des millions de points et reconstituer l’objet ou l’environnement sous forme de modèle numérique, générant ainsi un « nuage de points ». Ce processus permet de créer un modèle 3D fidèle à la réalité. Cette technologie est principalement utilisée en architecture, construction, ingénierie, industrie, conservation patrimoniale, et dans de nombreux autres secteurs. Ses applications sont très variées : création de jumeaux numériques, réaménagement d’usines, reconstruction de façades, et bien plus encore. Les possibilités sont presque infinies. La numérisation 3D est particulièrement adaptée aux environnements complexes, chargés ou difficiles d’accès. Elle est notamment très utile pour développer des visites virtuelles ou des modèles 3D interactifs, permettant de naviguer facilement dans l’environnement à distance, d’examiner différentes coupes ou de sélectionner des aspects précis pour analyser plus clairement l’espace."
+    },
+    {
+      "q": "À quoi sert la numérisation (scan) 3D ? Quels en sont les avantages ?",
+      "a": "La numérisation 3D apporte de nombreux avantages concrets pour les entreprises. Elle fournit des mesures précises, grâce à la précision millimétrique des capteurs laser ou scanners. Comparée aux méthodes traditionnelles, elle est beaucoup plus rapide et fiable, permettant de gagner du temps et de l’argent. Un relevé complet peut être obtenu en quelques heures ou jours, selon la superficie, alors que les méthodes classiques nécessiteraient plusieurs jours, voire semaines. Tout en réduisant les risques d’erreurs et les retouches, ce qui améliore la fiabilité des données. De plus, en convertissant l’existant en données numériques, la numérisation 3D simplifie la conception (intégration BIM), la maintenance prédictive, la gestion de patrimoine, et bien plus encore. Elle facilite l’accès aux modèles numériques, accélère les cycles de conception, réduit les coûts globaux (moins d’interventions physiques, meilleure planification) et permet de visualiser précisément les bâtiments avant toute intervention. La numérisation 3D est particulièrement adaptée aux environnements complexes, chargés ou difficiles d’accès. Elle est notamment très utile pour développer des visites virtuelles ou des modèles 3D interactifs, permettant de naviguer facilement dans l’environnement à distance, d’examiner différentes coupes ou de sélectionner des aspects précis pour analyser plus clairement l’espace."
+    },
+    {
+      "q": "Combien de temps prend la numérisation (scan) 3D ?",
+      "a": "Le temps nécessaire pour une numérisation 3D dépend avant tout de la taille et de la complexité de l’objet ou de l’espace à scanner. Scanner une pièce peut prendre quelques minutes à quelques heures, tandis qu’un grand bâtiment peut nécessiter plusieurs heures, voire plusieurs jours. Au-delà de la capture, le post-traitement (alignement et fusion des scans) ajoute du temps de travail logiciel. En pratique, le temps total inclut donc à la fois la prise de vue sur site et le traitement des données. La précision souhaitée (résolution du scan) et les conditions de l’environnement (obstacles, éclairage) influencent également la durée finale. Pour plus d’informations sur notre processus de scan/numérisation 3D et de modélisation 3D, vous pouvez consulter ces articles : Préparation technique d’un relevé : numérisation 3D La numérisation 3D : Le processus de numérisation La numérisation 3D: le processus de mise en plan"
+    },
+    {
+      "q": "Comment se réalise la numérisation (scan) 3D ?",
+      "a": "Nos relevés se déroule en plusieurs étapes. Nous commençons par choisir l’outil le mieux adapté à la situation, puis capturons le site sous différents angles afin de couvrir l’ensemble de sa surface et de générer un nuage de points. Ces données brutes sont ensuite traitées dans des logiciels spécialisés (alignement, nettoyage, fusion). Le produit final peut prendre différentes formes : un maillage polygonal texturé représentant fidèlement l’objet avec ses textures, une maquette BIM (Building Information Modeling) intégrant des informations détaillées sur les composants et caractéristiques du bâtiment, des plans architecturaux ou techniques, ainsi que des analyses de bâtiment, telles que le mesurage BOMA, les études de planéité et de verticalité ou l’analyse des déformations structurelles. Les scanners/capteurs lasers que nous utilisons offrent un retour visuel en temps réel, permettant de vérifier que toute la surface a bien été capturée. En bref, nous « photographions » l’environnement en 3D et traitons les données pour reconstituer fidèlement sa forme numérique. Pour plus d’informations sur notre processus de scan/numérisation 3D, vous pouvez consulter ces articles : Préparation d’un relevé : numérisation 3D La numérisation 3D : le processus de numérisation"
+    },
+    {
+      "q": "Quelles industries desservez-vous ?",
+      "a": "Nous servons principalement les secteurs du bâtiment et de l’industrie manufacturière, incluant majoritairement la construction, l’ingénierie et l’architecture. Nos solutions s’appliquent à de nombreux cas d’utilisation tels que le réaménagement d’usines, la gestion d’actifs, la vente d’actifs, la mise en plan, le suivi d’avancement, l’analyse de bâtiments, la conservation patrimoniale et bien plus encore. Nos services incluent la modélisation 3D, l’analyse, la mise en plan BOMA, le suivi d’avancement, les visites virtuelles, les photos 360°, les jumeaux numériques, le BIM et les rendus architecturaux. Grâce à cette approche complète, nous permettons à nos clients de visualiser, planifier et gérer leurs bâtiments et équipements de manière précise, efficace et sécurisée."
+    },
+    {
+      "q": "Quels formats de livrables offrez-vous et proposez-vous une formation ?",
+      "a": "Nous livrons vos plans et modèles 3D dans le format de votre choix. Nous proposons notamment des livrables aux formats DWG, Revit, CAD, STEP, SAT et plus encore. Des formations personnalisées sont également disponibles pour vous aider à utiliser efficacement vos nouveaux plans ou modèles et à exploiter pleinement vos plans et modèles."
+    },
+    {
+      "q": "Comment obtenir un devis pour un projet de numérisation (scan) 3D ?",
+      "a": "Il vous suffit de remplir ce formulaire : Obtenir une soumission en indiquant vos besoins, les services recherchés et les détails de votre projet, notre équipe se fera un plaisir de vous contacter pour répondre à vos questions, préciser vos attentes et vous fournir rapidement un devis détaillé parfaitement adapté à votre projet."
+    }
+  ],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo PointSpace avec barres verticales dorées et texte gris clair sur fond blanc"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/48-1920w.jpg",
+      "alt": "A city street scene with a 3D scanner on a tripod in the foreground; cars and buildings in the background."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot-2024-10-01-110231-1920w.png",
+      "alt": "Interior of a building's unfinished ceiling. Exposed beams, ductwork, wires, and insulation."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-14a196b3-33b0c301-1920w.png",
+      "alt": "White and gray 3D scanner on tripod, scanning an industrial roof with tanks and steam."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Cr%C3%A9ation-sans-titre-%286%29-1920w.png",
+      "alt": "Equipment laid out on a table: tripod, charger, batteries, vest, tablet, and other surveying tools."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot-2025-04-03-163540-1920w.webp",
+      "alt": "Entrée du magasin avec vitrines présentant des vêtements ; vue intérieure, plusieurs mannequins visibles, oiseaux sur l'allée."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot_16-7-2024_102652_--281-29-1d1d9314-1920w.png",
+      "alt": "Immeuble d'appartements moderne en briques avec balcons incurvés et entrée vitrée."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%287%29-1920w.webp",
+      "alt": "Industrial machine, gray, with a hopper and conveyor belt, mounted on a wheeled frame."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+      "alt": "Logo de Jessica Daoust Architectes en lettres blanches."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+      "alt": "Abstract cream-colored wavy pattern, similar to the letter \"M\" repeated several times."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+      "alt": "Logo of Théâtre St James with ornate design and \"S\" in the center."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+      "alt": "Connx logo with text \"FUSION W/ TAG NUT\". Company name underneath."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+      "alt": "The word \"aedifica\" in a light-yellow, elegant font."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+      "alt": "JCB Construction Canada logo: light text with initials 'jcb' and company name."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    }
+  ],
+  "jsonLd": [
+    "{\"@context\":\"http://schema.org/\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Qu’est-ce que la numérisation (scan) 3D ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"La num&eacute;risation 3D (ou scan 3D) permet de capturer un objet ou un espace r&eacute;el en trois dimensions afin d&rsquo;en obtenir des donn&eacute;es g&eacute;ospatiales num&eacute;riques. Un capteur laser ou scanner 3D utilise des technologies telles que le laser, la photogramm&eacute;trie ou le LiDAR pour mesurer des millions de points et reconstituer l&rsquo;objet ou l&rsquo;environnement sous forme de mod&egrave;le num&eacute;rique, g&eacute;n&eacute;rant ainsi un &laquo; nuage de points &raquo;. Ce processus permet de cr&eacute;er un mod&egrave;le 3D fid&egrave;le &agrave; la r&eacute;alit&eacute;. Cette technologie est principalement utilis&eacute;e en architecture, construction, ing&eacute;nierie, industrie, conservation patrimoniale, et dans de nombreux autres secteurs. Ses applications sont tr&egrave;s vari&eacute;es : cr&eacute;ation de jumeaux num&eacute;riques, r&eacute;am&eacute;nagement d&rsquo;usines, reconstruction de fa&ccedil;ades, et bien plus encore. Les possibilit&eacute;s sont presque infinies. La num&eacute;risation 3D est particuli&egrave;rement adapt&eacute;e aux environnements complexes, charg&eacute;s ou difficiles d&rsquo;acc&egrave;s. Elle est notamment tr&egrave;s utile pour d&eacute;velopper des visites virtuelles ou des mod&egrave;les 3D interactifs, permettant de naviguer facilement dans l&rsquo;environnement &agrave; distance, d&rsquo;examiner diff&eacute;rentes coupes ou de s&eacute;lectionner des aspects pr&eacute;cis pour analyser plus clairement l&rsquo;espace.\"}},{\"@type\":\"Question\",\"name\":\"À quoi sert la numérisation (scan) 3D ? Quels en sont les avantages ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"La num&eacute;risation 3D apporte de nombreux avantages concrets pour les entreprises. Elle fournit des mesures pr&eacute;cises, gr&acirc;ce &agrave; la pr&eacute;cision millim&eacute;trique des capteurs laser ou scanners. Compar&eacute;e aux m&eacute;thodes traditionnelles, elle est beaucoup plus rapide et fiable, permettant de gagner du temps et de l&rsquo;argent. Un relev&eacute; complet peut &ecirc;tre obtenu en quelques heures ou jours, selon la superficie, alors que les m&eacute;thodes classiques n&eacute;cessiteraient plusieurs jours, voire semaines. Tout en r&eacute;duisant les risques d&rsquo;erreurs et les retouches, ce qui am&eacute;liore la fiabilit&eacute; des donn&eacute;es. De plus, en convertissant l&rsquo;existant en donn&eacute;es num&eacute;riques, la num&eacute;risation 3D simplifie la conception (int&eacute;gration BIM), la maintenance pr&eacute;dictive, la gestion de patrimoine, et bien plus encore. Elle facilite l&rsquo;acc&egrave;s aux mod&egrave;les num&eacute;riques, acc&eacute;l&egrave;re les cycles de conception, r&eacute;duit les co&ucirc;ts globaux (moins d&rsquo;interventions physiques, meilleure planification) et permet de visualiser pr&eacute;cis&eacute;ment les b&acirc;timents avant toute intervention. La num&eacute;risation 3D est particuli&egrave;rement adapt&eacute;e aux environnements complexes, charg&eacute;s ou difficiles d&rsquo;acc&egrave;s. Elle est notamment tr&egrave;s utile pour d&eacute;velopper des visites virtuelles ou des mod&egrave;les 3D interactifs, permettant de naviguer facilement dans l&rsquo;environnement &agrave; distance, d&rsquo;examiner diff&eacute;rentes coupes ou de s&eacute;lectionner des aspects pr&eacute;cis pour analyser plus clairement l&rsquo;espace.\"}},{\"@type\":\"Question\",\"name\":\"Combien de temps prend la numérisation (scan) 3D ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Le temps n&eacute;cessaire pour une num&eacute;risation 3D d&eacute;pend avant tout de la taille et de la complexit&eacute; de l&rsquo;objet ou de l&rsquo;espace &agrave; scanner. Scanner une pi&egrave;ce peut prendre quelques minutes &agrave; quelques heures, tandis qu&rsquo;un grand b&acirc;timent peut n&eacute;cessiter plusieurs heures, voire plusieurs jours. Au-del&agrave; de la capture, le post-traitement (alignement et fusion des scans) ajoute du temps de travail logiciel. En pratique, le temps total inclut donc &agrave; la fois la prise de vue sur site et le traitement des donn&eacute;es. La pr&eacute;cision souhait&eacute;e (r&eacute;solution du scan) et les conditions de l&rsquo;environnement (obstacles, &eacute;clairage) influencent &eacute;galement la dur&eacute;e finale. Pour plus d&rsquo;informations sur notre processus de scan/num&eacute;risation 3D et de mod&eacute;lisation 3D, vous pouvez consulter ces articles : Pr&eacute;paration technique d&rsquo;un relev&eacute; : num&eacute;risation 3D La num&eacute;risation 3D : Le processus de num&eacute;risation La num&eacute;risation 3D: le processus de mise en plan\"}},{\"@type\":\"Question\",\"name\":\"Comment se réalise la numérisation (scan) 3D ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Nos relev&eacute;s se d&eacute;roule en plusieurs &eacute;tapes. Nous commen&ccedil;ons par choisir l&rsquo;outil le mieux adapt&eacute; &agrave; la situation, puis capturons le site sous diff&eacute;rents angles afin de couvrir l&rsquo;ensemble de sa surface et de g&eacute;n&eacute;rer un nuage de points. Ces donn&eacute;es brutes sont ensuite trait&eacute;es dans des logiciels sp&eacute;cialis&eacute;s (alignement, nettoyage, fusion). Le produit final peut prendre diff&eacute;rentes formes : un maillage polygonal textur&eacute; repr&eacute;sentant fid&egrave;lement l&rsquo;objet avec ses textures, une maquette BIM (Building Information Modeling) int&eacute;grant des informations d&eacute;taill&eacute;es sur les composants et caract&eacute;ristiques du b&acirc;timent, des plans architecturaux ou techniques, ainsi que des analyses de b&acirc;timent, telles que le mesurage BOMA, les &eacute;tudes de plan&eacute;it&eacute; et de verticalit&eacute; ou l&rsquo;analyse des d&eacute;formations structurelles. Les scanners/capteurs lasers que nous utilisons offrent un retour visuel en temps r&eacute;el, permettant de v&eacute;rifier que toute la surface a bien &eacute;t&eacute; captur&eacute;e. En bref, nous &laquo; photographions &raquo; l&rsquo;environnement en 3D et traitons les donn&eacute;es pour reconstituer fid&egrave;lement sa forme num&eacute;rique. Pour plus d&rsquo;informations sur notre processus de scan/num&eacute;risation 3D, vous pouvez consulter ces articles : Pr&eacute;paration d&rsquo;un relev&eacute; : num&eacute;risation 3D La num&eacute;risation 3D : le processus de num&eacute;risation\"}},{\"@type\":\"Question\",\"name\":\"Quelles industries desservez-vous ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Nous servons principalement les secteurs du b&acirc;timent et de l&rsquo;industrie manufacturi&egrave;re, incluant majoritairement la construction, l&rsquo;ing&eacute;nierie et l&rsquo;architecture. Nos solutions s&rsquo;appliquent &agrave; de nombreux cas d&rsquo;utilisation tels que le r&eacute;am&eacute;nagement d&rsquo;usines, la gestion d&rsquo;actifs, la vente d&rsquo;actifs, la mise en plan, le suivi d&rsquo;avancement, l&rsquo;analyse de b&acirc;timents, la conservation patrimoniale et bien plus encore. Nos services incluent la mod&eacute;lisation 3D, l&rsquo;analyse, la mise en plan BOMA, le suivi d&rsquo;avancement, les visites virtuelles, les photos 360&deg;, les jumeaux num&eacute;riques, le BIM et les rendus architecturaux. Gr&acirc;ce &agrave; cette approche compl&egrave;te, nous permettons &agrave; nos clients de visualiser, planifier et g&eacute;rer leurs b&acirc;timents et &eacute;quipements de mani&egrave;re pr&eacute;cise, efficace et s&eacute;curis&eacute;e.\"}},{\"@type\":\"Question\",\"name\":\"Quels formats de livrables offrez-vous et proposez-vous une formation ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Nous livrons vos plans et mod&egrave;les 3D dans le format de votre choix. Nous proposons notamment des livrables aux formats DWG, Revit, CAD, STEP, SAT et plus encore. Des formations personnalis&eacute;es sont &eacute;galement disponibles pour vous aider &agrave; utiliser efficacement vos nouveaux plans ou mod&egrave;les et &agrave; exploiter pleinement vos plans et mod&egrave;les.\"}},{\"@type\":\"Question\",\"name\":\"Comment obtenir un devis pour un projet de numérisation (scan) 3D ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Il vous suffit de remplir ce formulaire : Obtenir une soumission en indiquant vos besoins, les services recherch&eacute;s et les d&eacute;tails de votre projet, notre &eacute;quipe se fera un plaisir de vous contacter pour r&eacute;pondre &agrave; vos questions, pr&eacute;ciser vos attentes et vous fournir rapidement un devis d&eacute;taill&eacute; parfaitement adapt&eacute; &agrave; votre projet.\"}}]}"
+  ],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/48-1920w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/48.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot-2024-10-01-110231-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-14a196b3-33b0c301-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Cr%C3%A9ation-sans-titre-%286%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot-2025-04-03-163540-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Screenshot-2025-04-03-163540.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot_16-7-2024_102652_--281-29-1d1d9314-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Screenshot_16-7-2024_102652_--281-29-1d1d9314.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Pr%C3%A9sentation+source+%287%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/17+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/21+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/13+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/23+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/12+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/16+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/14+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/8+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/10+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-c0d7ef18-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/3-100388f4-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4-31dab3f9-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/5-7617cdb3-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6-b66f75f9-1920w.png"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/fr-ca/services/numerisation-LiDAR-3D"
+}

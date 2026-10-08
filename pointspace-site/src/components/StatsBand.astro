@@ -1,0 +1,53 @@
+---
+// Company figures (site + capabilities PDF). The final values are in the HTML (SEO, no-JS);
+// a short count-up plays once when the band scrolls into view, unless reduced motion is requested.
+import { SITE } from '../data/site';
+import type { Lang } from '../data/routes';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+---
+<dl class="stats" data-stats>
+  {SITE.stats.map((s) => {
+    const n = parseInt(s.value, 10);
+    const suffix = s.value.replace(/^\d+/, '');
+    return (
+      <div class="stats__item">
+        <dt class="stats__label t-small">{s[lang]}</dt>
+        <dd class="stats__value t-num"><span data-count={n}>{n}</span>{suffix}</dd>
+      </div>
+    );
+  })}
+</dl>
+
+<script>
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll<HTMLElement>('[data-stats]').forEach((band) => {
+    if (reduce || !('IntersectionObserver' in window)) return;
+    const nums = [...band.querySelectorAll<HTMLElement>('[data-count]')];
+    nums.forEach((el) => (el.textContent = '0'));
+    const io = new IntersectionObserver((entries) => {
+      if (!entries.some((e) => e.isIntersecting)) return;
+      io.disconnect();
+      const t0 = performance.now(), dur = 1400;
+      const tick = (now: number) => {
+        const p = Math.min(1, (now - t0) / dur);
+        const eased = 1 - Math.pow(1 - p, 3); // ease-out cubic
+        nums.forEach((el) => (el.textContent = String(Math.round(Number(el.dataset.count) * eased))));
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      // Guarantee the final values even if animation frames are throttled (background tab, embedded view).
+      setTimeout(() => nums.forEach((el) => (el.textContent = el.dataset.count ?? '')), dur + 100);
+    }, { threshold: 0.5 });
+    io.observe(band);
+  });
+</script>
+
+<style>
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; border-top: 1px solid var(--line); }
+  .stats__item { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 6px; padding: var(--sp-6) var(--sp-5) 0 0; border-right: 1px solid var(--line); }
+  .stats__item + .stats__item { padding-left: var(--sp-6); }
+  .stats__item:last-child { border-right: 0; }
+  .stats__value { margin: 0; font-size: 4rem; line-height: 1; font-weight: 300; letter-spacing: -0.03em; }
+  .stats__label { color: var(--fg-muted); }
+</style>

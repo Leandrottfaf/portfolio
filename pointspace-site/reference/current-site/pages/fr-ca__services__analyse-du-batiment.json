@@ -1,0 +1,630 @@
+{
+  "url": "https://www.pointspace.ca/fr-ca/services/analyse-du-bâtiment",
+  "lang": "fr",
+  "title": "Services d'analyse de bâtiments | pointSpace",
+  "metaDescription": "Optimisez vos projets avec nos services d’analyse : façades, déformations structurelles, études planéité & verticalité, conservation patrimoniale & normes BOMA.",
+  "ogTitle": "Services d'analyse de bâtiments | pointSpace",
+  "ogDescription": "Optimisez vos projets avec nos services d’analyse : façades, déformations structurelles, études planéité & verticalité, conservation patrimoniale & normes BOMA.",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/fr-ca/services/analyse-du-bâtiment",
+  "hreflang": [
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/services/building-analysis"
+    },
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/services/analyse-du-bâtiment"
+    }
+  ],
+  "h1": [
+    "SERVICE D'ANALYSE DU BÂTIMENT"
+  ],
+  "headings": [
+    "h1: SERVICE D'ANALYSE DU BÂTIMENT",
+    "h4: Obtenez des informations précieuses sur l'état de votre bâtiment, notamment les déformations, la planéité, la verticalité, etc.",
+    "h2: EFFICACITÉ",
+    "h4: Nous collaborons avec des clients de divers secteurs, notamment la construction, l'architecture, l'industrie et la fabrication, et leur proposons une gamme de solutions d'analyse du bâtiment adaptées à leurs besoins.",
+    "h3: FAÇADES DÉTAILLÉES",
+    "h3: BOMA",
+    "h3: VERTICALITÉ",
+    "h3: DÉFORMATIONS STRUCTURELLES",
+    "h3: CONSERVATION DU PATRIMOINE",
+    "h3: PLANÉITUDE",
+    "h3: Objectifs d'analyse clairs",
+    "h3: Capture précise des conditions",
+    "h3: Données propres et structurées",
+    "h3: Modèles conçus pour l'analyse",
+    "h3: Analyse technique approfondie",
+    "h3: Résultats validés et assistance",
+    "h2: Des résultats prouvés à travers plus de 400 projets",
+    "h4: Nous collaborons avec des clients de différents secteurs, notamment la construction, l’architecture et l’industrie manufacturière. Notre objectif est de fournir des services d'analyse de bâtiment parfaitement adaptés à vos besoins.",
+    "h4: Étude structurelle et de toiture pour l'ajout de charpente en acier",
+    "h4: Scan 3D et modélisation 3D des façades d’un bâtiment",
+    "h3: Pour quels secteurs fournissez-vous des services d'analyse de bâtiment?",
+    "h3: Quels types de services d'analyse de bâtiment proposez-vous ?",
+    "h3: Quelle est la précision de vos analyses ?",
+    "h3: Quelles informations vos analyses peuvent-elles fournir ?",
+    "h3: Comment vos relevés sont-ils réalisés ?",
+    "h3: Qu’est-ce que BOMA ?"
+  ],
+  "nav": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/building-analysis"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Obtenir une soumission →",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "Travaillez avec nous 🡒",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Obtenez un devis 🡒",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/etude-de-cas/etude-structurelle-et-toiture"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/etude-de-cas/Scan-3D-et-modélisation-3D-des-façades-dun-bâtiment"
+    },
+    {
+      "text": "Contactez-nous",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "BOMA",
+      "href": "/fr-ca/services/boma"
+    },
+    {
+      "text": "la création de plans tels-que-construits BOMA",
+      "href": "/fr-ca/services/boma"
+    },
+    {
+      "text": "BOMA",
+      "href": "/fr-ca/services/boma"
+    },
+    {
+      "text": "un maillage polygonal texturé",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "une maquette BIM (Building Information Modeling)",
+      "href": "/fr-ca/services/bim"
+    },
+    {
+      "text": "des plans architecturaux ou techniques",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "des analyses de bâtiment",
+      "href": "/fr-ca/services/analyse"
+    },
+    {
+      "text": "Préparation d’un relevé : numérisation 3D",
+      "href": "http://www.pointspace.ca/fr-ca/preparation-technique-dun-releve-numerisation-3d"
+    },
+    {
+      "text": "La numérisation 3D : le processus de numérisation",
+      "href": "http://www.pointspace.ca/fr-ca/la-numerisation-3d-le-processus-de-numerisation"
+    },
+    {
+      "text": "BOMA",
+      "href": "/fr-ca/services/boma"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jcb.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://idxdesign.com/"
+    },
+    {
+      "text": "",
+      "href": "https://tla-architectes.com/"
+    },
+    {
+      "text": "",
+      "href": "https://vacaero.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.nelmar.com/"
+    },
+    {
+      "text": "",
+      "href": "https://stdenisthompson.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.benoy.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupemach.com/en/home.html"
+    },
+    {
+      "text": "",
+      "href": "https://dallaireconsultants.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.cominar.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.broccolini.com/en"
+    },
+    {
+      "text": "",
+      "href": "https://groupecdf.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://lainco.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://renfort.com/home/"
+    },
+    {
+      "text": "",
+      "href": "https://musesolution.ca/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://fr.oktodev.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://shellex.ca/fr/accueil/"
+    },
+    {
+      "text": "",
+      "href": "https://navada.com/fr"
+    },
+    {
+      "text": "",
+      "href": "https://www.kolostat.com/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    }
+  ],
+  "body": "Accueil\nÀ propos\nSecteurs\nManufacturier et industriel\nArchitecture et Bâtiments\nServices\nNumérisation LiDAR 3D\nModélisation BIM\nAs-Built Drafting\nModélisation 3D\nAnalyse du bâtiment\nMise en plan BOMA\nVisites virtuelles 3D Matterport\nJumeaux numériques\nBlogue\nÉtudes de cas\nContact\nCarrières\nContactez-nous\n(514) 606-9604\nFrançais\nfr\nEnglish\nen\nSERVICE D'ANALYSE DU BÂTIMENT\nObtenez des informations précieuses sur l'état de votre bâtiment, notamment les déformations, la planéité, la verticalité, etc.\nTravaillez avec nous 🡒\nLorsque vous travaillez avec nous\nVOUS POUVEZ VOUS ATTENDRE À\nÀ partir de\nrelevés précis de votre bâtiment, nous produisons des\nanalyses techniques détaillées des conditions existantes. Nos\nservices d’analyse du bâtiment incluent le\nmesurage BOMA, les\nétudes de planéité et de verticalité, l’\nanalyse des déformations structurelles, ainsi que la\nreproduction détaillée des façades.\nPRÉCISION\nNos outils équipés de la technologie LiDAR offrent une précision millimétrique. Ils garantissent que les données géospatiales utilisées pour la création de nos plans, modèles 3D et rapports soient extrêmement précises. Ce qui permet de réduire les erreurs, d’éviter les reprises coûteuses et d’assurer une représentation fidèle de la réalité.\nSERVICE CLÉ EN MAIN\nDe la capture des données à l’analyse, notre équipe s’occupe de tout. Nous collectons les données géospatiales de votre bâtiment afin de produire des rapports, plans et modèles de qualité dans les formats de votre choix. Des plans BOMA aux analyses de déformations structurelles, nous transformons la donnée en fichiers numériques précis et faciles à utiliser.\nEFFICACITÉ\nAvec nos services d’analyse du bâtiment, vous pouvez vous concentrer sur les tâches à forte valeur ajoutée. Notre équipe transforme les données relevées de votre espace en rapports et plans précis et détaillés, vous permettant de gagner du temps et d’éviter les erreurs coûteuses associées aux méthodes traditionnelles, afin d’assurer une efficacité maximale.\nObtenez un devis 🡒\nNous proposons une large gamme de\nServices d'analyse de bâtiments\nNous collaborons avec des clients de divers secteurs, notamment la construction, l'architecture, l'industrie et la fabrication, et leur proposons une gamme de solutions d'analyse du bâtiment adaptées à leurs besoins.\nFAÇADES DÉTAILLÉES\nBOMA\nVERTICALITÉ\nDÉFORMATIONS STRUCTURELLES\nCONSERVATION DU PATRIMOINE\nPLANÉITUDE\nNos services d'analyse de bâtiments\nGARANTISSENT\nNos services d'analyse de bâtiments s'appuient sur des données 3D précises et une évaluation structurée. En combinant la numérisation 3D haute résolution avec la modélisation numérique et l'analyse ciblée, nous fournissons une compréhension fiable des conditions existantes afin de faciliter les évaluations techniques, les rénovations et la prise de décisions éclairées.\n1\nObjectifs d'analyse clairs\nNous commençons par identifier l'objectif de l'analyse du bâtiment, tel que l'examen structurel, la planification de la rénovation, l'évaluation de l'enveloppe ou l'évaluation spatiale. À ce stade, nous définissons les exigences en matière de précision, les domaines d'intérêt et le type d'analyse requis, en veillant à ce que les données collectées soient appropriées pour une utilisation à des fins d'ingénierie et de conception.\n2\nCapture précise des conditions\nNous utilisons des technologies de numérisation 3D haute précision pour documenter la géométrie, la structure et les composants critiques du bâtiment. Les numérisations sont effectuées à partir de plusieurs positions afin d'assurer une couverture complète et un chevauchement suffisant, capturant ainsi les géométries complexes et les zones difficiles d'accès avec un minimum de perturbation des opérations.\n3\nDonnées propres et structurées\nToutes les données numérisées sont enregistrées et alignées dans un nuage de points unifié. Le bruit, les reflets et les éléments non pertinents sont supprimés afin d'obtenir un ensemble de données propre et précis. Le nuage de points sert d'enregistrement numérique précis des conditions existantes et constitue la base de toutes les analyses ultérieures.\n4\nModèles conçus pour l'analyse\nEn fonction des besoins du projet, le nuage de points est converti en modèles 3D ou en ensembles de données analytiques. Les éléments architecturaux, structurels et clés du bâtiment sont identifiés et modélisés selon les besoins, ce qui permet d'évaluer avec précision les mesures, les relations spatiales et les conditions géométriques.\n5\nAnalyse technique approfondie\nÀ l'aide des modèles numériques et des données de nuages de points, nous analysons les dimensions, les alignements, les écarts et les contraintes spatiales. Cette étape facilite les évaluations telles que la vérification structurelle, les contrôles d'espace libre, l'évaluation de l'enveloppe et la coordination entre les systèmes de construction existants.\n6\nRésultats validés et assistance\nTous les résultats analytiques sont vérifiés par rapport aux données de numérisation originales afin d'en garantir la cohérence et l'exactitude. Les livrables finaux, notamment les modèles numériques, les dessins et les ensembles de données d'analyse, sont fournis dans des formats compatibles avec les flux de travail d'ingénierie et de conception. Notre équipe reste à votre disposition pour vous aider dans l'interprétation et les phases en aval du projet.\nÉtudes de cas\nDes résultats prouvés à travers plus de 400 projets\nNous collaborons avec des clients de différents secteurs, notamment la construction, l’architecture et l’industrie manufacturière. Notre objectif est de fournir des services d'analyse de bâtiment parfaitement adaptés à vos besoins.\nÉtude structurelle et de toiture pour l'ajout de charpente en acier\nSecteur industriel\nVoir l'étude de cas\nScan 3D et modélisation 3D des façades d’un bâtiment\nSt-Denis Thompson Inc.\nVoir l'étude de cas\nContactez-nous\nFAQ\nVous souhaitez en savoir plus sur nos services d'analyse du bâtiment ? Contactez notre équipe pour obtenir des réponses rapides et des conseils personnalisés.\nPour quels secteurs fournissez-vous des services d'analyse de bâtiment?\nNous proposons des services d’analyse de bâtiment destinés aux secteurs de la construction, de l’architecture, de l’industrie et de la fabrication. Nos services sont adaptés à chaque projet et incluent la création de plans tels-que-construits BOMA\n, les études de planéité et de verticalité, l’analyse des déformations structurelles, ainsi que la reproduction détaillée des façades.\nQuels types de services d'analyse de bâtiment proposez-vous ?\nNous proposons des services d'analyse de bâtiment, adaptés à chaque projet. Ils comprennent le dessin détaillé des façades, la création de plans tels-que-construits BOMA\n, les études de verticalité et de planéité, l'analyse des déformations structurelles et la conservation patrimoniale. Chaque service fournit des données fiables et précises, offrant aux équipes des informations utiles sur l’état actuel de leur bâtiment, tout en facilitant la planification et l’anticipation des problèmes potentiels.\nQuelle est la précision de vos analyses ?\nNous utilisons des scanners LiDAR de précision millimétrique pour capturer les données géospatiales des bâtiments et des équipements, garantissant des analyses très précises. Bien que la précision millimétrique absolue ne puisse être garantie, nos analyses offrent systématiquement un haut niveau de fiabilité, facilitant la planification, la compréhension de l’état réel du bâtiment et l’identification des problèmes potentiels.\nQuelles informations vos analyses peuvent-elles fournir ?\nNos analyses offrent une vision précise de l’état actuel du bâtiment, incluant la planéité et la verticalité des structures ainsi que les déformations présentes. Nous réalisons également la création de plans tels-que-construits BOMA\nselon les normes officielles, afin de fournir des superficies fiables pour les transactions immobilières ou la gestion des espaces. De plus, nos relevés peuvent détailler les façades et les éléments structurels, facilitant la planification de réparations ou de rénovations minutieuses. Ces informations permettent aux équipes de mieux comprendre l’état du bâtiment, de planifier efficacement et de détecter ou anticiper les problèmes potentiels.\nComment vos relevés sont-ils réalisés ?\nNos relevés se déroule en plusieurs étapes. Nous commençons par choisir l’outil le mieux adapté à la situation, puis capturons le site sous différents angles afin de couvrir l’ensemble de sa surface et de générer un nuage de points. Ces données brutes sont ensuite traitées dans des logiciels spécialisés (alignement, nettoyage, fusion).\nLe produit final peut prendre différentes formes : un maillage polygonal texturé\nreprésentant fidèlement l’objet avec ses textures, une maquette BIM (Building Information Modeling)\nintégrant des informations détaillées sur les composants et caractéristiques du bâtiment, des plans architecturaux ou techniques\n, ainsi que des analyses de bâtiment\n, telles que le mesurage BOMA, les études de planéité et de verticalité ou l’analyse des déformations structurelles.\nLes scanners/capteurs lasers que nous utilisons offrent un retour visuel en temps réel, permettant de vérifier que toute la surface a bien été capturée. En bref, nous « photographions » l’environnement en 3D et traitons les données pour reconstituer fidèlement sa forme numérique.\nPour plus d’informations sur notre processus de scan/numérisation 3D, vous pouvez consulter ces articles :\nPréparation d’un relevé : numérisation 3D\nLa numérisation 3D : le processus de numérisation\nQu’est-ce que BOMA ?\nBOMA\nfait référence au mesurage des superficies selon les normes de la Building Owners and Managers Association (BOMA). Elle permet de déterminer de manière précise la superficie locative ou utile d’un bâtiment, en suivant des standards reconnus internationalement. Cette méthode est particulièrement utilisée pour les transactions immobilières, la gestion des espaces ou la répartition des charges entre locataires, afin d’assurer des mesures fiables et comparables.\npointSpace a été un partenaire essentiel dans nos projets. En combinant notre savoir-faire avec celui de pointSpace, le projet a bénéficié d'une précision inégalée et d'une efficacité opérationnelle remarquable.\n- Jean-François Wragg,\nDirecteur des Estimations et de la Surveillance,\nGroupe CDF\nShare by:",
+  "faq": [
+    {
+      "q": "Pour quels secteurs fournissez-vous des services d'analyse de bâtiment?",
+      "a": "Nous proposons des services d’analyse de bâtiment destinés aux secteurs de la construction, de l’architecture, de l’industrie et de la fabrication. Nos services sont adaptés à chaque projet et incluent la création de plans tels-que-construits BOMA, les études de planéité et de verticalité, l’analyse des déformations structurelles, ainsi que la reproduction détaillée des façades."
+    },
+    {
+      "q": "Quels types de services d'analyse de bâtiment proposez-vous ?",
+      "a": "Nous proposons des services d'analyse de bâtiment, adaptés à chaque projet. Ils comprennent le dessin détaillé des façades, la création de plans tels-que-construits BOMA, les études de verticalité et de planéité, l'analyse des déformations structurelles et la conservation patrimoniale. Chaque service fournit des données fiables et précises, offrant aux équipes des informations utiles sur l’état actuel de leur bâtiment, tout en facilitant la planification et l’anticipation des problèmes potentiels."
+    },
+    {
+      "q": "Quelle est la précision de vos analyses ?",
+      "a": "Nous utilisons des scanners LiDAR de précision millimétrique pour capturer les données géospatiales des bâtiments et des équipements, garantissant des analyses très précises. Bien que la précision millimétrique absolue ne puisse être garantie, nos analyses offrent systématiquement un haut niveau de fiabilité, facilitant la planification, la compréhension de l’état réel du bâtiment et l’identification des problèmes potentiels."
+    },
+    {
+      "q": "Quelles informations vos analyses peuvent-elles fournir ?",
+      "a": "Nos analyses offrent une vision précise de l’état actuel du bâtiment, incluant la planéité et la verticalité des structures ainsi que les déformations présentes. Nous réalisons également la création de plans tels-que-construits BOMA selon les normes officielles, afin de fournir des superficies fiables pour les transactions immobilières ou la gestion des espaces. De plus, nos relevés peuvent détailler les façades et les éléments structurels, facilitant la planification de réparations ou de rénovations minutieuses. Ces informations permettent aux équipes de mieux comprendre l’état du bâtiment, de planifier efficacement et de détecter ou anticiper les problèmes potentiels."
+    },
+    {
+      "q": "Comment vos relevés sont-ils réalisés ?",
+      "a": "Nos relevés se déroule en plusieurs étapes. Nous commençons par choisir l’outil le mieux adapté à la situation, puis capturons le site sous différents angles afin de couvrir l’ensemble de sa surface et de générer un nuage de points. Ces données brutes sont ensuite traitées dans des logiciels spécialisés (alignement, nettoyage, fusion). Le produit final peut prendre différentes formes : un maillage polygonal texturé représentant fidèlement l’objet avec ses textures, une maquette BIM (Building Information Modeling) intégrant des informations détaillées sur les composants et caractéristiques du bâtiment, des plans architecturaux ou techniques, ainsi que des analyses de bâtiment, telles que le mesurage BOMA, les études de planéité et de verticalité ou l’analyse des déformations structurelles. Les scanners/capteurs lasers que nous utilisons offrent un retour visuel en temps réel, permettant de vérifier que toute la surface a bien été capturée. En bref, nous « photographions » l’environnement en 3D et traitons les données pour reconstituer fidèlement sa forme numérique. Pour plus d’informations sur notre processus de scan/numérisation 3D, vous pouvez consulter ces articles : Préparation d’un relevé : numérisation 3D La numérisation 3D : le processus de numérisation"
+    },
+    {
+      "q": "Qu’est-ce que BOMA ?",
+      "a": "BOMA fait référence au mesurage des superficies selon les normes de la Building Owners and Managers Association (BOMA). Elle permet de déterminer de manière précise la superficie locative ou utile d’un bâtiment, en suivant des standards reconnus internationalement. Cette méthode est particulièrement utilisée pour les transactions immobilières, la gestion des espaces ou la répartition des charges entre locataires, afin d’assurer des mesures fiables et comparables."
+    }
+  ],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo PointSpace avec barres verticales dorées et texte gris clair sur fond blanc"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/nuage+-+videotron-1920w.webp",
+      "alt": "3D point cloud rendering of a room with colored data points representing walls, floor, and objects."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Templates+publications+LI+%289%29-1920w.png",
+      "alt": "Exterior of a retail store with glass windows, featuring mannequins, an open entrance, and visible merchandise inside."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot_16-7-2024_102652_--281-29-1d1d9314-1920w.png",
+      "alt": "Multi-story brown, teal, and white apartment building with balconies, glass entrance, and blue sky."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+      "alt": "Logo de Jessica Daoust Architectes en lettres blanches."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+      "alt": "Abstract cream-colored wavy pattern, similar to the letter \"M\" repeated several times."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+      "alt": "Logo of Théâtre St James with ornate design and \"S\" in the center."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+      "alt": "Connx logo with text \"FUSION W/ TAG NUT\". Company name underneath."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+      "alt": "The word \"aedifica\" in a light-yellow, elegant font."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+      "alt": "JCB Construction Canada logo: light text with initials 'jcb' and company name."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    }
+  ],
+  "jsonLd": [
+    "{\"@context\":\"http://schema.org/\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Pour quels secteurs fournissez-vous des services d'analyse de bâtiment?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Nous proposons des services d&rsquo;analyse de b&acirc;timent destin&eacute;s aux secteurs de la construction, de l&rsquo;architecture, de l&rsquo;industrie et de la fabrication. Nos services sont adapt&eacute;s &agrave; chaque projet et incluent la cr&eacute;ation de plans tels-que-construits BOMA, les &eacute;tudes de plan&eacute;it&eacute; et de verticalit&eacute;, l&rsquo;analyse des d&eacute;formations structurelles, ainsi que la reproduction d&eacute;taill&eacute;e des fa&ccedil;ades.\"}},{\"@type\":\"Question\",\"name\":\"Quels types de services d'analyse de bâtiment proposez-vous ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Nous proposons des services d'analyse de b&acirc;timent, adapt&eacute;s &agrave; chaque projet. Ils comprennent le dessin d&eacute;taill&eacute; des fa&ccedil;ades, la cr&eacute;ation de plans tels-que-construits BOMA, les &eacute;tudes de verticalit&eacute; et de plan&eacute;it&eacute;, l'analyse des d&eacute;formations structurelles et la conservation patrimoniale. Chaque service fournit des donn&eacute;es fiables et pr&eacute;cises, offrant aux &eacute;quipes des informations utiles sur l&rsquo;&eacute;tat actuel de leur b&acirc;timent, tout en facilitant la planification et l&rsquo;anticipation des probl&egrave;mes potentiels.\"}},{\"@type\":\"Question\",\"name\":\"Quelle est la précision de vos analyses ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Nous utilisons des scanners LiDAR de pr&eacute;cision millim&eacute;trique pour capturer les donn&eacute;es g&eacute;ospatiales des b&acirc;timents et des &eacute;quipements, garantissant des analyses tr&egrave;s pr&eacute;cises. Bien que la pr&eacute;cision millim&eacute;trique absolue ne puisse &ecirc;tre garantie, nos analyses offrent syst&eacute;matiquement un haut niveau de fiabilit&eacute;, facilitant la planification, la compr&eacute;hension de l&rsquo;&eacute;tat r&eacute;el du b&acirc;timent et l&rsquo;identification des probl&egrave;mes potentiels.\"}},{\"@type\":\"Question\",\"name\":\"Quelles informations vos analyses peuvent-elles fournir ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Nos analyses offrent une vision pr&eacute;cise de l&rsquo;&eacute;tat actuel du b&acirc;timent, incluant la plan&eacute;it&eacute; et la verticalit&eacute; des structures ainsi que les d&eacute;formations pr&eacute;sentes. Nous r&eacute;alisons &eacute;galement la cr&eacute;ation de plans tels-que-construits BOMA selon les normes officielles, afin de fournir des superficies fiables pour les transactions immobili&egrave;res ou la gestion des espaces. De plus, nos relev&eacute;s peuvent d&eacute;tailler les fa&ccedil;ades et les &eacute;l&eacute;ments structurels, facilitant la planification de r&eacute;parations ou de r&eacute;novations minutieuses. Ces informations permettent aux &eacute;quipes de mieux comprendre l&rsquo;&eacute;tat du b&acirc;timent, de planifier efficacement et de d&eacute;tecter ou anticiper les probl&egrave;mes potentiels.\"}},{\"@type\":\"Question\",\"name\":\"Comment vos relevés sont-ils réalisés ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Nos relev&eacute;s se d&eacute;roule en plusieurs &eacute;tapes. Nous commen&ccedil;ons par choisir l&rsquo;outil le mieux adapt&eacute; &agrave; la situation, puis capturons le site sous diff&eacute;rents angles afin de couvrir l&rsquo;ensemble de sa surface et de g&eacute;n&eacute;rer un nuage de points. Ces donn&eacute;es brutes sont ensuite trait&eacute;es dans des logiciels sp&eacute;cialis&eacute;s (alignement, nettoyage, fusion). Le produit final peut prendre diff&eacute;rentes formes : un maillage polygonal textur&eacute; repr&eacute;sentant fid&egrave;lement l&rsquo;objet avec ses textures, une maquette BIM (Building Information Modeling) int&eacute;grant des informations d&eacute;taill&eacute;es sur les composants et caract&eacute;ristiques du b&acirc;timent, des plans architecturaux ou techniques, ainsi que des analyses de b&acirc;timent, telles que le mesurage BOMA, les &eacute;tudes de plan&eacute;it&eacute; et de verticalit&eacute; ou l&rsquo;analyse des d&eacute;formations structurelles. Les scanners/capteurs lasers que nous utilisons offrent un retour visuel en temps r&eacute;el, permettant de v&eacute;rifier que toute la surface a bien &eacute;t&eacute; captur&eacute;e. En bref, nous &laquo; photographions &raquo; l&rsquo;environnement en 3D et traitons les donn&eacute;es pour reconstituer fid&egrave;lement sa forme num&eacute;rique. Pour plus d&rsquo;informations sur notre processus de scan/num&eacute;risation 3D, vous pouvez consulter ces articles : Pr&eacute;paration d&rsquo;un relev&eacute; : num&eacute;risation 3D La num&eacute;risation 3D : le processus de num&eacute;risation\"}},{\"@type\":\"Question\",\"name\":\"Qu’est-ce que BOMA ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"BOMA fait r&eacute;f&eacute;rence au mesurage des superficies selon les normes de la Building Owners and Managers Association (BOMA). Elle permet de d&eacute;terminer de mani&egrave;re pr&eacute;cise la superficie locative ou utile d&rsquo;un b&acirc;timent, en suivant des standards reconnus internationalement. Cette m&eacute;thode est particuli&egrave;rement utilis&eacute;e pour les transactions immobili&egrave;res, la gestion des espaces ou la r&eacute;partition des charges entre locataires, afin d&rsquo;assurer des mesures fiables et comparables.\"}}]}"
+  ],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/nuage+-+videotron-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/nuage+-+videotron.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Templates+publications+LI+%289%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Templates+publications+LI+%289%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot_16-7-2024_102652_--281-29-1d1d9314-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Screenshot_16-7-2024_102652_--281-29-1d1d9314.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/17+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/21+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/13+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/23+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/12+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/16+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/14+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/8+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/10+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-c0d7ef18-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/3-100388f4-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4-31dab3f9-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/5-7617cdb3-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6-b66f75f9-1920w.png"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/fr-ca/services/analyse-du-b%C3%A2timent"
+}

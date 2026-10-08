@@ -1,0 +1,27 @@
+---
+// Numbered process. The rising bars echo the logo mark and show progression.
+interface Props { steps: { title: string; text: string }[]; columns?: number }
+const { steps, columns = 3 } = Astro.props;
+---
+<ol class="steps" style={`--cols:${columns}`}>
+  {steps.map((s, i) => (
+    <li class="step" data-reveal style={`--i:${i};--n:${steps.length}`}>
+      <div class="step__marker" aria-hidden="true">
+        <span class="step__bar"></span>
+      </div>
+      <p class="step__num t-label t-num">{String(i + 1).padStart(2, '0')}</p>
+      <h3 class="step__title t-h4">{s.title}</h3>
+      <p class="step__text t-small">{s.text}</p>
+    </li>
+  ))}
+</ol>
+
+<style>
+  .steps { list-style: none; display: grid; grid-template-columns: repeat(var(--cols), 1fr); gap: var(--sp-7) var(--sp-6); counter-reset: step; }
+  .step { position: relative; padding-top: var(--sp-5); border-top: 1px solid var(--line); }
+  .step__marker { position: absolute; top: -41px; left: 0; height: 40px; display: flex; align-items: flex-end; }
+  .step__bar { display: block; width: 3px; height: calc(10px + 30px * (var(--i) + 1) / var(--n)); background: var(--ps-gold); border-radius: 2px 2px 0 0; }
+  .step__num { color: var(--fg-muted); margin-bottom: 10px; }
+  .step__title { margin-bottom: 8px; }
+  .step__text { color: var(--fg-muted); max-width: 40ch; }
+</style>

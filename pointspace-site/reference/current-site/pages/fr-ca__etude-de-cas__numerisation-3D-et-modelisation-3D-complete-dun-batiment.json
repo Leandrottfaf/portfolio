@@ -1,0 +1,412 @@
+{
+  "url": "https://www.pointspace.ca/fr-ca/etude-de-cas/numerisation-3D-et-modelisation-3D-complete-dun-batiment",
+  "lang": "fr",
+  "title": "Scan 3D et Modélisation Revit | Étude de cas | pointSpace",
+  "metaDescription": "Scan 3D complet et modèle Revit détaillé incluant architecture, structure et systèmes mécaniques pour Broccolini. Contactez-nous pour des solutions sur mesure.",
+  "ogTitle": "Scan 3D et Modélisation Revit | Étude de cas | pointSpace",
+  "ogDescription": "Scan 3D complet et modèle Revit détaillé incluant architecture, structure et systèmes mécaniques pour Broccolini. Contactez-nous pour des solutions sur mesure.",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/fr-ca/etude-de-cas/numerisation-3D-et-modelisation-3D-complete-dun-batiment",
+  "hreflang": [
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/etude-de-cas/numerisation-3D-et-modelisation-3D-complete-dun-batiment"
+    },
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/case-studies/Comprehensive-Building-3D-Scanning-and-3D-Modeling"
+    }
+  ],
+  "h1": [
+    "Numérisation 3D et modélisation 3D complète d'un bâtiment"
+  ],
+  "headings": [
+    "h5: Broccolini",
+    "h1: Numérisation 3D et modélisation 3D complète d'un bâtiment",
+    "h2: Mise en plan",
+    "h2: Solutions proposées",
+    "h2: Gains",
+    "h3: Plans architecturaux tels-que-construits d’un espace commercial",
+    "h3: Contactez-nous !",
+    "h4: Louis Dallaire",
+    "h3: Contactez-nous"
+  ],
+  "nav": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/etude-de-cas/numerisation-3D-et-modelisation-3D-complete-dun-batiment"
+    },
+    {
+      "text": "English\nen",
+      "href": "/case-studies/Comprehensive-Building-3D-Scanning-and-3D-Modeling"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Obtenir une soumission →",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/etude-de-cas/numerisation-3D-et-modelisation-3D-complete-dun-batiment"
+    },
+    {
+      "text": "English\nen",
+      "href": "/case-studies/Comprehensive-Building-3D-Scanning-and-3D-Modeling"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "bâtiment existant",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "équipes d’architecture",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "numérisation 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "modélisation Revit",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "documentation des éléments architecturaux, structurels et MEP",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "conditions existantes",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Louis Dallaire",
+      "href": "/fr-ca/louis-dallaire-president"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/case-studies/Plans-architecturaux-tels-que-construits-dun-espace-commercial"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "",
+      "href": "mailto:ldallaire@pointspace.ca"
+    }
+  ],
+  "body": "Accueil\nÀ propos\nSecteurs\nManufacturier et industriel\nArchitecture et Bâtiments\nServices\nNumérisation LiDAR 3D\nModélisation BIM\nAs-Built Drafting\nModélisation 3D\nAnalyse du bâtiment\nMise en plan BOMA\nVisites virtuelles 3D Matterport\nJumeaux numériques\nBlogue\nÉtudes de cas\nContact\nCarrières\nContactez-nous\n(514) 606-9604\nFrançais\nfr\nEnglish\nen\nBroccolini\nNumérisation 3D et modélisation 3D complète d'un bâtiment\nM\nise en plan\nAllant de la construction neuve et des projets clés en main de conception-construction, jusqu'aux expansions, aux rénovations et aux travaux d'aménagement intérieur, Broccolini peut visualiser, planifier et construire l'espace.\nAu cours des dernières années, Broccolini a diversifié ses activités pour ajouter un volet développement immobilier. En tant que propriétaire et promoteur doté d'un portefeuille impressionnant et diversifié de terrains et de biens immobiliers, Broccolini conçoit, construit et gère des bâtiments et des complexes industriels, de bureaux et à usage mixte.\nIls sont présentement en pleine construction du Sherbrooke et cherchaient à modéliser le restaurant voisin pour analyser son architecture et ses éléments MEP. C'est pourquoi ils ont appelé l'équipe pointSp\nace.\nLorsqu’un\nbâtiment existant\ndoit être analysé, rénové ou intégré à un projet de conception, la qualité des données de départ est essentielle. Les plans peuvent être incomplets, obsolètes ou ne pas refléter les interventions réalisées au fil du temps, ce qui peut créer des incertitudes importantes pour les\néquipes d’architecture\n, d’ingénierie et de construction.\nGrâce à la\nnumérisation 3D\n, à la\nmodélisation Revit\net à la\ndocumentation des éléments architecturaux, structurels et MEP\n, pointSpace fournit une représentation fiable des\nconditions existantes\n. Cette base technique permet de mieux comprendre le bâtiment, de coordonner les interventions, d’anticiper les contraintes et de réduire les risques d’imprévus pendant les phases de conception et de construction.\nCette approche répond aux besoins de Scan to BIM, de Revit modeling, d’as-built documentation et de building documentation, particulièrement stratégiques pour les promoteurs immobiliers, entrepreneurs généraux, architectes et équipes techniques qui gèrent des projets à l’échelle du Canada.\nSolutions proposées\nNumérisation complète\ndu bâtiment au LIDAR.\nConstruction d'une maquette Revit du bâtiment.\nArchitecture, structure, mécanique, électricité et plomberie.\nGains\nDes gains en temps, précision et qualité. C'est ce que Broccolini recherchait et c'est ce que pointSpace leur a offert.\nLa numérisation a été complétée en une demi-journée, ce qui n'a pas impacté les opérations du restaurant. Le modèle Revit a été réalisé dans les délais requis par le client et compatible avec leurs outils déjà utilisés pour un agencement des processus simple et rapide.\nBroccolini est donc sûr de repartir avec un modèle solide sur lequel ils peuvent se fier pour poursuivre la conception et la construction de leur bâtisse.\n« Le travail de pointSpace nous a permis de démystifier l'état actuel d'un bâtiment qui, depuis sa construction en 1960, a subi plusieurs interventions non documentées. La mise en plan détaillée fournie par l'équipe va nous éviter plusieurs imprévues lors de la phase de construction.»\n- Jacob Marquis, coordonnateur du développement immobilier\nBroccolini\nArticle de\nLouis Dallaire\nDiplômé de l'ÉTS en génie des opérations et de la logistique, Louis est passionné par le monde industriel. Avec pointSpace, son objectif est de rendre la gestion et l'utilisation des données accessibles, car il n'est pas toujours nécessaire d'utiliser des outils complexes pour résoudre des problèmes simples !\nPlans architecturaux tels-que-construits d’un espace commercial\nVoir l'étude de cas\nContactez-nous !\nLouis Dallaire\nldallaire@pointspace.ca\n(514) 606-9604\nContactez-nous\nPrénom\nNom de famille\nE-mail\nMessage\nMerci de nous avoir contactés. Nous vous répondrons dans les plus brefs délais.\nOups, une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard.\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo PointSpace avec barres verticales dorées et texte gris clair sur fond blanc"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4_Model_6000px+%281%29-1920w.webp",
+      "alt": "Interior view of a dimly lit store with shelves, a narrow aisle, and red hanging lights."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Cr%C3%A9ation-sans-titre-%281%29-1920w.png",
+      "alt": "Man wearing a plaid shirt, quilted vest, and watch, standing with folded hands."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%282%29-1920w.webp",
+      "alt": "Modèle 3D d'un bâtiment en pierre se détachant sur un ciel bleu dégradé."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    }
+  ],
+  "jsonLd": [
+    "\n{\n  \"@context\" : {\n    \"@vocab\" : \"http://schema.org/\"\n  },\n  \"@type\" : \"VideoObject\",\n  \"name\" : \"Numérisation 3D et modélisation 3D Revit detaillée\",\n  \"thumbnailUrl\" : \"https://irp.cdn-website.com/5767f5b6/dms3rep/multi/I1Ds4zuTMeUdRNqizPOA_AnimationBeatrice+%281%29.v2.0000000.jpg\",\n  \"uploadDate\" : \"2025-11-26T15:25:23\",\n  \"contentUrl\" : \"https://vid.cdn-website.com/5767f5b6/videos/I1Ds4zuTMeUdRNqizPOA_AnimationBeatrice+%281%29-v.mp4\",\n  \"description\" : \"Numérisation 3D et modèle Revit tel que construit du restaurant Béatrice pour Broccolini. Découvrez la transformation du nuage de points en un modèle 3D Revit détaillé et précis.\"\n}\n"
+  ],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4_Model_6000px+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/4_Model_6000px+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Cr%C3%A9ation-sans-titre-%281%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Cr%C3%A9ation-sans-titre-%281%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/I1Ds4zuTMeUdRNqizPOA_AnimationBeatrice+%281%29.v2.0000000.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sous-titre-545a2f08-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%286%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot-2025-04-03-163540-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot_16-7-2024_102652_+%281%29-1920w.jpeg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2023-10-17+104620+%283%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Vac+Aero_5+%284%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%288%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%289%29-1920w.webp"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/fr-ca/etude-de-cas/numerisation-3D-et-modelisation-3D-complete-dun-batiment"
+}

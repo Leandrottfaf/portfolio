@@ -1,0 +1,315 @@
+{
+  "url": "https://www.pointspace.ca/thank-you",
+  "lang": "en",
+  "title": "3D Scanning Services | Pointspace",
+  "metaDescription": "Thank you for connecting! Our team will reach out soon to discuss our 3D scanning solutions for the building & manufacturing industries.",
+  "ogTitle": "3D Scanning Services | Pointspace",
+  "ogDescription": "Thank you for connecting! Our team will reach out soon to discuss our 3D scanning solutions for the building & manufacturing industries.",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/thank-you",
+  "hreflang": [
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/thank-you"
+    },
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca"
+    }
+  ],
+  "h1": [
+    "Thank you!"
+  ],
+  "headings": [
+    "h1: Thank you!"
+  ],
+  "nav": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/thank-you"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contact us",
+      "href": "/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/thank-you"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "",
+      "href": "/"
+    }
+  ],
+  "body": "Home\nAbout us\nIndustries\nManufacturing and industrial\nArchitecture and Buildings\nServices\nScanning\nScan to BIM\nAs-Built Drafting\n3D Modeling\nBuilding analysis\nBOMA As-Built Digital Plans\nMatterport 3D Virtual Tours\nDigital Twins\nBlog\nCase studies\nContact\nGet in touch\n(514) 606-9604\nEnglish\nen\nFrançais\nfr\nThank you!\nA member of our team will contact you shortly.\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold and light gray text and vertical gold bars above it"
+    }
+  ],
+  "jsonLd": [],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29-1920w.png"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/thank-you"
+}

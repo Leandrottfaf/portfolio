@@ -1,0 +1,31 @@
+---
+// "Ce que vous recevez": a spec-sheet list of deliverables with file-format chips.
+interface Item { title: string; text: string; formats?: string[] }
+interface Props { items: Item[] }
+const { items } = Astro.props;
+---
+<ul class="deliv">
+  {items.map((it, i) => (
+    <li class="deliv__row" data-reveal>
+      <span class="deliv__num t-label t-num">{String(i + 1).padStart(2, '0')}</span>
+      <div class="deliv__main">
+        <h3 class="deliv__title t-h4">{it.title}</h3>
+        <p class="deliv__text">{it.text}</p>
+      </div>
+      {it.formats && (
+        <ul class="chips deliv__formats" aria-label="Formats">
+          {it.formats.map((f) => <li class="chip chip--solid">{f}</li>)}
+        </ul>
+      )}
+    </li>
+  ))}
+</ul>
+
+<style>
+  .deliv { list-style: none; border-top: 1px solid var(--line); }
+  .deliv__row { display: grid; grid-template-columns: 64px 1fr 260px; gap: var(--sp-6); align-items: start; padding: var(--sp-6) 0; border-bottom: 1px solid var(--line); }
+  .deliv__num { color: var(--fg-muted); padding-top: 6px; }
+  .deliv__title { margin-bottom: 6px; font-size: 1.375rem; font-weight: 400; }
+  .deliv__text { color: var(--fg-muted); max-width: 60ch; }
+  .deliv__formats { justify-content: flex-end; padding-top: 4px; }
+</style>

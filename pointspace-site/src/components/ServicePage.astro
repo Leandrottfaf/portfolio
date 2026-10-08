@@ -1,0 +1,247 @@
+---
+// Service page pattern (brief): ① hero (H1, one-line value, quote CTA) · ② intro · ③ what you receive
+// (deliverables + formats) · ④ process · ⑤ related case studies · ⑥ FAQ · ⑦ closing CTA.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Picture from './Picture.astro';
+import SectionHeading from './SectionHeading.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Deliverables from './Deliverables.astro';
+import ProcessSteps from './ProcessSteps.astro';
+import CompareSlider from './CompareSlider.astro';
+import CaseCard from './CaseCard.astro';
+import Testimonial from './Testimonial.astro';
+import Faq from './Faq.astro';
+import ServiceCard from './ServiceCard.astro';
+import CtaBand from './CtaBand.astro';
+import { ROUTES, type Lang, type RouteId } from '../data/routes';
+import { UI } from '../data/ui';
+import { caseById } from '../data/caseStudies';
+import { serviceById } from '../data/services';
+import { TESTIMONIALS, type TestimonialId } from '../data/testimonials';
+import { serviceLd, faqLd, breadcrumbLd } from '../lib/seo';
+import type { ServiceContent } from '../content/types';
+
+interface Props { id: RouteId; lang: Lang; c: ServiceContent }
+const { id, lang, c } = Astro.props;
+const t = UI[lang];
+const label = serviceById(id)[lang].label;
+const crumbs = [
+  { name: t.home, path: ROUTES.home[lang] },
+  { name: t.services, path: ROUTES.home[lang] + '#services' },
+  { name: label, path: ROUTES[id][lang] },
+];
+const jsonLd = [
+  serviceLd({ id, lang, name: c.hero.h1, serviceType: c.serviceType, description: c.seo.description }),
+  ...(c.faq ? [faqLd(c.faq.items.map(({ q, a }) => ({ q, a })))] : []),
+  breadcrumbLd(crumbs.map((cr) => ({ name: cr.name, path: cr.path.split('#')[0] }))),
+];
+const cases = (c.cases?.ids ?? []).map(caseById);
+const related = (c.related ?? []).map(serviceById);
+const quote = c.testimonial ? TESTIMONIALS[c.testimonial as TestimonialId] : undefined;
+const anyFeatureImage = !!c.features?.items.some((f) => f.image);
+---
+<BaseLayout lang={lang} route={id} title={c.seo.title} description={c.seo.description} jsonLd={jsonLd} ogImage={`/images/${c.hero.image}-1600.webp`}>
+
+  <section class="phero theme-green" aria-labelledby="h1">
+    <div class="container phero__grid">
+      <div class="phero__copy">
+        <Breadcrumbs lang={lang} items={crumbs} />
+        <p class="eyebrow t-label phero__eyebrow">{c.hero.eyebrow}</p>
+        <h1 id="h1" class="t-h1">{c.hero.h1}</h1>
+        <p class="t-lead phero__lead">{c.hero.lead}</p>
+        <div class="phero__actions">
+          <a class="btn btn--primary" href={ROUTES.quote[lang]}>{t.quote}<span class="btn__arrow" aria-hidden="true">→</span></a>
+          {c.deliverables && <a class="btn btn--secondary" href="#livrables">{lang === 'fr' ? 'Voir les livrables' : 'See deliverables'}</a>}
+        </div>
+        {c.hero.chips && (
+          <ul class="chips phero__chips" aria-label={lang === 'fr' ? 'Formats livrés' : 'Delivered formats'}>
+            {c.hero.chips.map((f) => <li class="chip">{f}</li>)}
+          </ul>
+        )}
+      </div>
+      <div class="phero__media">
+        <Picture name={c.hero.image} lang={lang} eager sizes="(min-width:1280px) 50vw" position={c.hero.position} fit={c.hero.fit} />
+      </div>
+    </div>
+  </section>
+
+  <section class="section theme-cream" aria-labelledby="intro-title">
+    <div class="container grid-12">
+      <div class="intro">
+        <h2 id="intro-title" class="t-h2">{c.intro.h2}</h2>
+        <div class="prose t-lead intro__lead"><p set:html={c.intro.lead} /></div>
+        <div class="prose">{c.intro.body.map((p) => <p set:html={p} />)}</div>
+      </div>
+      {c.intro.glance && (
+        <aside class="glance" aria-label={lang === 'fr' ? 'En bref' : 'At a glance'}>
+          <dl>{c.intro.glance.map((g) => <div><dt class="t-label">{g.k}</dt><dd>{g.v}</dd></div>)}</dl>
+        </aside>
+      )}
+    </div>
+  </section>
+
+  {c.features && (
+    <section class="section theme-green" aria-labelledby="features-title">
+      <div class="container">
+        <SectionHeading eyebrow={c.features.eyebrow} title={c.features.title} id="features-title" align="split" intro={c.features.intro} />
+        <ul class="features" style={`--cols:${c.features.cols ?? 3}`}>
+          {c.features.items.map((f, i) => (
+            <li class="feature" data-reveal>
+              {f.image ? <Picture name={f.image} lang={lang} ratio="4/3" sizes="(min-width:1280px) 30vw" /> : anyFeatureImage && (
+                <div class="feature__ph" aria-hidden="true"><span class="feature__ph-bars">{Array.from({ length: 9 }, (_, k) => <span style={`--h:${20 + k * 9}%`}></span>)}</span><span class="feature__ph-label">{f.title}</span></div>
+              )}
+              <span class="t-label t-num feature__num">{String(i + 1).padStart(2, '0')}</span>
+              <h3 class="t-h4">{f.title}</h3>
+              <p class="t-small t-muted">{f.text}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+
+  {c.deliverables && (
+    <section class="section theme-cream-50" id="livrables" aria-labelledby="deliv-title">
+      <div class="container">
+        <SectionHeading eyebrow={lang === 'fr' ? 'Ce que vous recevez' : 'What you receive'} title={c.deliverables.title} id="deliv-title" align="split" intro={c.deliverables.intro} />
+        <div class="deliv-layout">
+          <Deliverables items={c.deliverables.items} />
+          <div class="deliv-visuals">
+            {c.deliverables.visuals.map((v) => <Picture name={v.image} lang={lang} ratio="16/10" sizes="(min-width:1280px) 35vw" caption={v.caption} fit={v.fit} />)}
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {c.compare && (
+    <section class="section theme-green" aria-labelledby="cmp-title">
+      <div class="container">
+        <SectionHeading eyebrow={c.compare.eyebrow} title={c.compare.title} id="cmp-title" align="split" intro={c.compare.intro} />
+        <CompareSlider lang={lang} before={c.compare.before} after={c.compare.after} beforeLabel={c.compare.beforeLabel} afterLabel={c.compare.afterLabel} sliderLabel={c.compare.sliderLabel} caption={c.compare.caption} />
+      </div>
+    </section>
+  )}
+
+  {c.process && (
+    <section class="section theme-cream" aria-labelledby="process-title">
+      <div class="container">
+        <SectionHeading eyebrow={lang === 'fr' ? 'Processus' : 'Process'} title={c.process.title} id="process-title" />
+        <ProcessSteps steps={c.process.steps} columns={c.process.steps.length === 4 ? 4 : 3} />
+      </div>
+    </section>
+  )}
+
+  {(cases.length > 0 || quote) && (
+    <section class="section theme-cream-50" aria-labelledby="cases-title">
+      <div class="container">
+        {cases.length > 0 && (
+          <>
+            <div class="cases-head">
+              <SectionHeading eyebrow={t.caseStudies} title={c.cases!.title} id="cases-title" />
+              <a class="link-arrow" href={ROUTES.caseStudies[lang]}>{lang === 'fr' ? 'Toutes les études de cas' : 'All case studies'}<span aria-hidden="true">→</span></a>
+            </div>
+            <div class="cases">{cases.map((cs) => <CaseCard cs={cs} lang={lang} />)}</div>
+          </>
+        )}
+        {cases.length === 0 && <h2 id="cases-title" class="visually-hidden">{lang === 'fr' ? 'Témoignage' : 'Testimonial'}</h2>}
+        {quote && (
+          <div class:list={['quote-wrap', { 'quote-wrap--solo': cases.length === 0 }]}>
+            <Testimonial lang={lang} quote={quote[lang].quote} name={quote.name} role={quote[lang].role} company={quote.company} />
+          </div>
+        )}
+      </div>
+    </section>
+  )}
+
+  {c.faq && (
+    <section class="section theme-cream" aria-labelledby="faq-title">
+      <div class="container faq-layout">
+        <div>
+          <SectionHeading eyebrow="FAQ" title={c.faq.title} id="faq-title" />
+          <p class="t-muted faq-aside">{lang === 'fr' ? 'Une autre question ? Écrivez-nous ou appelez-nous : nous vous guiderons vers la solution adaptée à votre projet.' : 'Another question? Write or call us and we will point you to the right solution for your project.'}</p>
+          <a class="link-arrow" href={ROUTES.contact[lang]}>{lang === 'fr' ? 'Nous joindre' : 'Contact us'}<span aria-hidden="true">→</span></a>
+        </div>
+        <Faq items={c.faq.items} />
+      </div>
+    </section>
+  )}
+
+  {(related.length > 0 || c.reading) && (
+    <section class="section--tight theme-cream-50" aria-labelledby="related-title">
+      <div class:list={['container related', { 'related--solo': !c.reading }]}>
+        <div>
+          <h2 id="related-title" class="t-label related__h">{lang === 'fr' ? 'Services liés' : 'Related services'}</h2>
+          <div class="related__services">{related.map((s) => <ServiceCard service={s} lang={lang} variant="compact" />)}</div>
+        </div>
+        {c.reading && (
+          <div>
+            <h2 class="t-label related__h">{lang === 'fr' ? 'À lire sur le blogue' : 'From the blog'}</h2>
+            <ul class="reading">
+              {c.reading.map((r) => <li><a href={r.href}><span class="t-h4">{r.title}</span><span class="t-small t-muted">{r.meta} · {t.liveLink} <span class="go go--ext" aria-hidden="true">↗</span></span></a></li>)}
+            </ul>
+          </div>
+        )}
+      </div>
+    </section>
+  )}
+
+  <CtaBand lang={lang} title={c.cta.title} text={c.cta.text} avoid={[c.hero.image, ...(c.features?.items.map((f) => f.image ?? '') ?? []), ...(c.deliverables?.visuals.map((v) => v.image) ?? []), ...cases.map((cs) => cs.image ?? '')]} />
+</BaseLayout>
+
+<style>
+  .phero { overflow: hidden; }
+  .phero__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-8); min-height: 640px; }
+  .phero__copy { padding: var(--sp-7) 0 var(--sp-9); display: flex; flex-direction: column; }
+  .phero__eyebrow { margin-top: auto; padding-top: var(--sp-8); }
+  .phero h1 { max-width: 14ch; }
+  .phero__lead { margin: var(--sp-5) 0 var(--sp-7); color: var(--ps-cream-80); max-width: 38ch; }
+  .phero__actions { display: flex; gap: var(--sp-4); margin-bottom: var(--sp-6); }
+  .phero__chips .chip { color: var(--ps-cream-80); }
+  .phero__media { position: relative; margin-right: calc(-1 * max(var(--gutter), (100vw - var(--container)) / 2)); }
+  .phero__media :global(.pic) { position: absolute; inset: 0; border-radius: 0; }
+
+  .intro { grid-column: 1 / span 8; }
+  .intro h2 { max-width: 20ch; margin-bottom: var(--sp-6); }
+  .intro__lead { margin-bottom: var(--sp-5); color: var(--ps-green-900); }
+  .intro :global(strong) { font-weight: 500; }
+  .glance { grid-column: 10 / span 3; align-self: start; margin-top: 8px; border-top: 3px solid var(--ps-green-900); }
+  .glance dl { margin: 0; }
+  .glance div { padding: var(--sp-4) 0; border-bottom: 1px solid var(--line); }
+  .glance dt { color: var(--ps-green-600); margin-bottom: 6px; }
+  .glance dd { margin: 0; font-size: var(--fs-small); }
+
+  .features { list-style: none; display: grid; grid-template-columns: repeat(var(--cols), 1fr); gap: var(--sp-7) var(--sp-6); }
+  .feature { display: flex; flex-direction: column; gap: 10px; padding-top: var(--sp-5); border-top: 1px solid var(--ps-cream-line); }
+  .feature :global(.pic) { margin-bottom: var(--sp-3); }
+  .feature__num { color: var(--ps-gold); }
+  .feature__ph { aspect-ratio: 4/3; margin-bottom: var(--sp-3); display: flex; align-items: flex-end; justify-content: space-between; padding: 24px; border-radius: var(--radius-media); background: rgb(237 231 218 / 0.06); border: 1px solid var(--ps-cream-line); }
+  .feature__ph-bars { display: flex; align-items: flex-end; gap: 8px; height: 55%; }
+  .feature__ph-bars span { width: 3px; height: var(--h); background: rgb(237 231 218 / 0.35); border-radius: 2px 2px 0 0; }
+  .feature__ph-bars span:nth-child(n+7) { background: var(--ps-gold); }
+  .feature__ph-label { font-size: 1.25rem; font-weight: 300; color: var(--ps-cream-80); text-align: right; max-width: 60%; }
+
+  .deliv-layout { display: grid; grid-template-columns: 1.6fr 1fr; gap: var(--sp-8); align-items: start; }
+  .deliv-layout :global(.deliv__row) { grid-template-columns: 48px 1fr 150px; }
+  .deliv-visuals { display: grid; gap: var(--sp-6); position: sticky; top: calc(var(--header-h) + 24px); }
+
+  .cases-head { display: flex; justify-content: space-between; align-items: flex-end; }
+  .cases-head .link-arrow { margin-bottom: var(--sp-8); }
+  .cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-6); }
+  .quote-wrap { margin-top: var(--sp-9); padding-top: var(--sp-8); border-top: 1px solid var(--line); max-width: 980px; }
+  .quote-wrap--solo { margin-top: 0; padding-top: 0; border-top: 0; }
+
+  .faq-layout { display: grid; grid-template-columns: 4fr 7fr; gap: var(--sp-9); align-items: start; }
+  .faq-layout > div:first-child { position: sticky; top: calc(var(--header-h) + 24px); }
+  .faq-aside { margin: calc(-1 * var(--sp-5)) 0 var(--sp-5); max-width: 34ch; }
+
+  .related { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-9); }
+  .related--solo { grid-template-columns: 1fr; }
+  .related--solo .related__services { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: var(--sp-6); }
+  .related__h { color: var(--ps-green-600); margin-bottom: var(--sp-4); }
+  .related__services { border-top: 1px solid var(--line); }
+  .reading { list-style: none; border-top: 1px solid var(--line); }
+  .reading a { display: flex; flex-direction: column; gap: 6px; padding: 22px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+  .reading a:hover .t-h4 { text-decoration: underline; text-underline-offset: 4px; }
+  .reading .t-h4 { font-weight: 400; }
+</style>

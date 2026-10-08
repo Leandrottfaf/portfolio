@@ -1,0 +1,604 @@
+{
+  "url": "https://www.pointspace.ca/fr-ca/services/mise-en-plan-boma",
+  "lang": "fr",
+  "title": "Services de mise en plan BOMA | pointSpace",
+  "metaDescription": "Mesurage selon les normes BOMA &amp; mise en plan pour garantir la conformité, optimiser la gestion des espaces &amp; soutenir vos projets immobiliers.",
+  "ogTitle": "Services de mise en plan BOMA | pointSpace",
+  "ogDescription": "Mesurage selon les normes BOMA &amp; mise en plan pour garantir la conformité, optimiser la gestion des espaces &amp; soutenir vos projets immobiliers.",
+  "ogImage": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/fr-ca/services/mise-en-plan-boma",
+  "hreflang": [
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/services/BOMA_As-Built_Digital_Plans"
+    }
+  ],
+  "h1": [
+    "CERTIFICAT DE MESURAGE BOMA"
+  ],
+  "headings": [
+    "h1: CERTIFICAT DE MESURAGE BOMA",
+    "h4: Calculs de superficie standardisés idéaux pour les gestionnaires immobiliers et les propriétaires d'espaces commerciaux, industriels et locatifs",
+    "h4: Nous aidons les\ngestionnaires et propriétaires de bâtiments à mieux visualiser et gérer leurs espaces grâce à des\nplans tels-que-construits certifiés BOMA. En appliquant les\nnormes BOMA à la production de vos plans, vous bénéficiez de\nlivrables fiables et reconnus internationalement, idéaux pour la\nvente ou l’achat d’actifs immobiliers ainsi que pour leur\ngestion.",
+    "h4: Des\ntours de bureaux aux\ninstallations industrielles, nos\nservices de mise en plan BOMA s’adressent aux\npropriétaires, gestionnaires et agences immobilières. Ils garantissent une\nrépartition précise des espaces, facilitent les\nnégociations de baux et simplifient la\ngestion immobilière.",
+    "h2: ENVIRONNEMENTS DE VENTE AU DÉTAIL",
+    "h2: TOURS DE BUREAUX",
+    "h2: ESPACES COMMERCIAUX",
+    "h2: DÉVELOPPEMENTS À USAGE MIXTE",
+    "h2: ESPACES INDUSTRIELS",
+    "h2: QUARTIERS RÉSIDENTIELS",
+    "h3: Alignement sur la norme BOMA",
+    "h3: Capture des conditions existantes",
+    "h3: Calculs de zones défendables",
+    "h3: Plans BOMA clairs et normalisés",
+    "h3: Résultats vérifiés et mesurables",
+    "h3: Livrables et assistance continu",
+    "h2: Des résultats prouvés à travers plus de 400 projets",
+    "h4: Plans architecturaux tels-que-construits d’un espace commercial",
+    "h4: Scan 3D et mise en plan du Théâtre St-James",
+    "h4: Plans tels-que-construits - Espace Le FouFou",
+    "h3: Qu'est-ce que sont les normes BOMA?",
+    "h3: Comment les normes BOMA peuvent-elles m’aider à optimiser l’utilisation de mon espace?",
+    "h3: Les services BOMA sont-ils conformes aux réglementations locales ?",
+    "h3: Quel est votre processus pour créer des plans BOMA conformes à l'exécution ?",
+    "h3: Les plans BOMA conformes à l'exécution sont-ils obligatoires pour la location commerciale ?",
+    "h3: Quand les plans conformes aux normes BOMA doivent-ils être mis à jour ?",
+    "h2: « Un service de qualité, rapide et efficace. »"
+  ],
+  "nav": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Obtenir une soumission →",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "Travaillez avec nous 🡒",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Obtenez un devis 🡒",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "numérisation 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/case-studies/Plans-architecturaux-tels-que-construits-dun-espace-commercial"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/etude-de-cas/scan-3d-et-mise-en-plan-du-theatre-st-james"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/etude-de-cas/Plans-tels-que-construits-Le-FouFou"
+    },
+    {
+      "text": "Contactez-nous",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "capture de données 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Préparation technique d'un relevé par numérisation 3D",
+      "href": "https://www.pointspace.ca/fr-ca/preparation-technique-dun-releve-numerisation-3d"
+    },
+    {
+      "text": "Le processus de numérisation 3D",
+      "href": "https://www.pointspace.ca/fr-ca/la-numerisation-3d-le-processus-de-numerisation"
+    },
+    {
+      "text": "Le processus de modélisation 3D",
+      "href": "https://www.pointspace.ca/fr-ca/la-numerisation-3d-le-processus-de-modelisation3d-et-mise-en-plan"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jcb.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://idxdesign.com/"
+    },
+    {
+      "text": "",
+      "href": "https://tla-architectes.com/"
+    },
+    {
+      "text": "",
+      "href": "https://vacaero.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.nelmar.com/"
+    },
+    {
+      "text": "",
+      "href": "https://stdenisthompson.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.benoy.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupemach.com/en/home.html"
+    },
+    {
+      "text": "",
+      "href": "https://dallaireconsultants.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.cominar.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.broccolini.com/en"
+    },
+    {
+      "text": "",
+      "href": "https://groupecdf.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://lainco.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://renfort.com/home/"
+    },
+    {
+      "text": "",
+      "href": "https://musesolution.ca/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://fr.oktodev.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://shellex.ca/fr/accueil/"
+    },
+    {
+      "text": "",
+      "href": "https://navada.com/fr"
+    },
+    {
+      "text": "",
+      "href": "https://www.kolostat.com/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    }
+  ],
+  "body": "Accueil\nÀ propos\nSecteurs\nManufacturier et industriel\nArchitecture et Bâtiments\nServices\nNumérisation LiDAR 3D\nModélisation BIM\nAs-Built Drafting\nModélisation 3D\nAnalyse du bâtiment\nMise en plan BOMA\nVisites virtuelles 3D Matterport\nJumeaux numériques\nBlogue\nÉtudes de cas\nContact\nCarrières\nContactez-nous\n(514) 606-9604\nFrançais\nfr\nEnglish\nen\nCERTIFICAT DE MESURAGE BOMA\nCalculs de superficie standardisés idéaux pour les gestionnaires immobiliers et les propriétaires d'espaces commerciaux, industriels et locatifs\nTravaillez avec nous 🡒\nLorsque vous travaillez avec nous\nVOUS POUVEZ VOUS ATTENDRE À\nNous aidons les\ngestionnaires et propriétaires de bâtiments à mieux visualiser et gérer leurs espaces grâce à des\nplans tels-que-construits certifiés BOMA. En appliquant les\nnormes BOMA à la production de vos plans, vous bénéficiez de\nlivrables fiables et reconnus internationalement, idéaux pour la\nvente ou l’achat d’actifs immobiliers ainsi que pour leur\ngestion.\nPRÉCISION\nNos outils équipés de la technologie LiDAR offrent une précision millimétrique. Ils garantissent que les données géospatiales utilisées pour la création de plans BOMA soient extrêmement précises. Ce qui permet de réduire les erreurs et d’assurer une représentation fidèle de la réalité.\nSIMPLICITÉ\nL’utilisation de plans certifiés BOMA permet de simplifier la gestion et la vente de vos actifs. Grâce à l’application de normes reconnues internationalement, vous disposez de plans fiables sur lesquels baser vos décisions, faciles à partager et à utiliser.\nEFFICACITÉ\nGrâce à nos services d’analyse BOMA, vous bénéficiez de plans précis et fiables qui facilitent la négociation des baux, simplifient la gestion immobilière et permettent d’identifier les espaces sous-utilisés afin d’en maximiser la valeur ou de les réaffecter efficacement.\nObtenez un devis 🡒\nNos services sont adaptés à\nTOUS LES ENVIRONNEMENTS\nDes\ntours de bureaux aux\ninstallations industrielles, nos\nservices de mise en plan BOMA s’adressent aux\npropriétaires, gestionnaires et agences immobilières. Ils garantissent une\nrépartition précise des espaces, facilitent les\nnégociations de baux et simplifient la\ngestion immobilière.\nENVIRONNEMENTS DE VENTE AU DÉTAIL\nTOURS DE BUREAUX\nESPACES COMMERCIAUX\nDÉVELOPPEMENTS À USAGE MIXTE\nESPACES INDUSTRIELS\nQUARTIERS RÉSIDENTIELS\nCOMMENT NOUS PRODUISONS DES PLANS TELS-QUE-CONSTRUITS CERTIFIÉS BOMA\nNotre processus de plan numérique conforme à l'exécution BOMA est conçu pour produire des mesures de surface cohérentes et défendables basées sur des conditions existantes vérifiées. Chaque étape suit un flux de travail structuré qui combine la capture de données 3D de haute précision avec les directives de mesure BOMA, garantissant que les surfaces au sol sont calculées, documentées et présentées de manière claire et reproductible, adaptée à la révision et à une utilisation à long terme.\n1\nAlignement sur la norme BOMA\nNous commençons par confirmer la norme BOMA applicable et comprendre comment les mesures seront utilisées, par exemple pour la location, l'évaluation, les rapports internes ou la conformité. Les limites, les inclusions et les exclusions des mesures sont clairement définies dès le départ afin de garantir la cohérence et la transparence.\n2\nCapture des conditions existantes\nGrâce à la numérisation 3D\n, nous capturons toute la géométrie intérieure du bâtiment, y compris les dalles de plancher, les noyaux et les zones de circulation. Cette approche minimise les hypothèses et garantit que les mesures sont basées sur les conditions réelles.\n3\nCalculs de zones défendables\nLes surfaces au sol sont calculées directement à partir des données numériques, conformément aux définitions BOMA. Les mesures étant dérivées d'un modèle numérique précis, les résultats sont reproductibles, vérifiables et moins sujets à des erreurs d'interprétation.\n4\nPlans BOMA clairs et normalisés\nNous produisons des plans conformes aux normes BOMA qui illustrent clairement les classifications des zones, les limites et la logique de mesure. Les dessins sont organisés de manière à faciliter leur consultation.\n5\nRésultats vérifiés et mesurables\nToutes les mesures et tous les dessins sont vérifiés en interne afin de confirmer leur conformité avec la norme BOMA et la géométrie du bâtiment enregistrée. Cette étape de vérification garantit que les plans sont prêts à être utilisés en externe.\n6\nLivrables et assistance continu\nLes plans finalisés BOMA sont fournis sous forme numérique, adaptés aux contrats de location, aux rapports et à la gestion de portefeuille. Notre équipe reste à votre disposition pour vous aider à effectuer les mises à jour, les changements de locataires et les futurs besoins en matière de mesure.\nÉtudes de cas\nDes résultats prouvés à travers plus de 400 projets\nNous collaborons avec des clients de différents secteurs, notamment la construction, l’architecture et l’industrie manufacturière. Notre objectif est de fournir des services de mise en plan BOMA parfaitement adaptés à vos besoins.\nPlans architecturaux tels-que-construits d’un espace commercial\nWestcliff\nVoir l'étude de cas\nScan 3D et mise en plan du Théâtre St-James\nGroupe Carosielli inc.\nVoir l'étude de cas\nPlans tels-que-construits - Espace Le FouFou\nJCB Construction Canada\nVoir l'étude de cas\nContactez-nous\nFAQ\nVous souhaitez en savoir plus sur nos services de mise en plan BOMA ? Contactez notre équipe pour obtenir des réponses rapides et des conseils personnalisés.\nQu'est-ce que sont les normes BOMA?\nLes normes BOMA (Building Owners and Managers Association) sont reconnues internationalement pour leur précision et leur cohérence dans l'évaluation des espaces immobiliers et industriels. Approuvées par l'American National Standards Institute (ANSI), ces normes offrent une méthode fiable de calcul des surfaces de plancher, facilitant ainsi la gestion, la location et la vente de biens immobiliers. Utilisées par les propriétaires, les gestionnaires immobiliers et les professionnels de la conception, les normes BOMA garantissent une évaluation cohérente et transparente des espaces dans le monde entier.\nComment les normes BOMA peuvent-elles m’aider à optimiser l’utilisation de mon espace?\nLes normes BOMA fournissent des mesures précises et standardisées qui éliminent les approximations dans le calcul des espaces. Elles permettent une répartition équitable des espaces communs, garantissant des coûts proportionnels pour les locataires et les utilisateurs. Grâce à des données précises, vous pouvez mieux planifier l'aménagement, optimiser l'utilisation des espaces et rationaliser la gestion des installations. Ces normes soutiennent également la rénovation, l'agrandissement et la planification à long terme des actifs. Grâce à la reconnaissance générale des mesures conformes aux normes BOMA, elles facilitent la transparence des transactions avec les acheteurs et les locataires.\nLes services BOMA sont-ils conformes aux réglementations locales ?\nOui. Nos services sont conformes aux normes BOMA internationalement reconnues et approuvées par l'ANSI. Ce qui garantit un haut niveau de fiabilité et assure la conformité aux réglementations locales et internationales, ainsi qu'aux normes légales et sectorielles.\nQuel est votre processus pour créer des plans BOMA conformes à l'exécution ?\nPour créer nos plans BOMA conformes à l'exécution, nous commençons par la capture de données 3D\n. Tout d'abord, nous sélectionnons l'outil de numérisation le plus adapté au projet. Le site est ensuite numérisé sous plusieurs angles afin de couvrir toute sa surface et de générer un nuage de points. Ces données brutes sont traitées à l'aide d'un logiciel spécialisé pour l'alignement, le nettoyage et la fusion, ce qui permet d'obtenir des plans BOMA conformes à l'exécution détaillés.\nNos scanners laser fournissent un retour visuel en temps réel pendant la capture, ce qui nous permet de vérifier que chaque zone a été entièrement documentée. En termes simples, nous capturons l'environnement en 3D de la même manière qu'un appareil photo capture des photos, puis nous traitons les données pour reconstruire une version numérique précise des conditions existantes.\nPour plus d'informations sur notre processus de numérisation, de dessin et de modélisation 3D\n, vous pouvez consulter les articles suivants :\n- Préparation technique d'un relevé par numérisation 3D\n- Le processus de numérisation 3D\n- Le processus de modélisation 3D\nLes plans BOMA conformes à l'exécution sont-ils obligatoires pour la location commerciale ?\nBien que les plans tels-que-construits certifiés BOMA ne soient pas obligatoires sur le plan juridique, ils sont largement reconnus comme la norme industrielle pour mesurer les espaces commerciaux. De nombreux propriétaires, courtiers et locataires s'appuient sur des plans conformes à la norme BOMA pour garantir la transparence et la cohérence des négociations de bail, des calculs de surface louable et des rapports de portefeuille.\nQuand les plans conformes aux normes BOMA doivent-ils être mis à jour ?\nLes plans tels-que-construits certifiés BOMA doivent être mis à jour chaque fois que des modifications sont apportées à la configuration d'un immeuble, telles que des améliorations locatives, des rénovations ou des reconfigurations des parties communes. La mise à jour des plans BOMA garantit l'exactitude des calculs de surface utile à des fins de location, d'évaluation et de gestion d'actifs, et permet d'éviter les divergences lors des transactions immobilières.\n« Un service de qualité, rapide et efficace. »\n- Juliano Rodriguez-Daoust,\nVice-président du développement\ncommercial et des acquisitions\nGroupe Carosielli\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo PointSpace avec barres verticales dorées et texte gris clair sur fond blanc"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Boma-logo-in-beige-1920w.png",
+      "alt": "Logo BOMA Canada beige, avec « BOMA » en gras au-dessus de « Canada » et une ligne en dessous."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/IMG_1360-1920w.webp",
+      "alt": "Tripod-mounted device in empty warehouse with high ceiling, gray floor, yellow support poles."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%282%29-1920w.webp",
+      "alt": "Modèle 3D d'un bâtiment en pierre avec un toit clair sur fond de ciel bleu."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%286%29-1920w.webp",
+      "alt": "A grayscale 3D model of a large building with columns and many windows, set against a black background."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sous-titre-545a2f08-1920w.webp",
+      "alt": "3D architectural rendering of a warehouse interior with blue piping, metal beams, and shadows."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+      "alt": "Logo de Jessica Daoust Architectes en lettres blanches."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+      "alt": "Abstract cream-colored wavy pattern, similar to the letter \"M\" repeated several times."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+      "alt": "Logo of Théâtre St James with ornate design and \"S\" in the center."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+      "alt": "Connx logo with text \"FUSION W/ TAG NUT\". Company name underneath."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+      "alt": "The word \"aedifica\" in a light-yellow, elegant font."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+      "alt": "JCB Construction Canada logo: light text with initials 'jcb' and company name."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    }
+  ],
+  "jsonLd": [],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Boma-logo-in-beige-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Boma-logo-in-beige.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/IMG_1360-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/IMG_1360.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/11+%282%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%286%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Pr%C3%A9sentation+source+%286%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sous-titre-545a2f08-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Sous-titre-545a2f08.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/17+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/21+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/13+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/23+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/12+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/16+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/14+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/8+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/10+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-c0d7ef18-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/3-100388f4-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4-31dab3f9-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/5-7617cdb3-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6-b66f75f9-1920w.png"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/fr-ca/services/mise-en-plan-boma"
+}

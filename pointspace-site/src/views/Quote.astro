@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import StaticForm from '../components/StaticForm.astro';
+import { PROJECT_FORM } from '../data/projectForm';
+import Picture from '../components/Picture.astro';
+import { ROUTES, PRIVACY, type Lang } from '../data/routes';
+import { UI } from '../data/ui';
+import { SITE } from '../data/site';
+import { breadcrumbLd } from '../lib/seo';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = UI[lang];
+const T = {
+  fr: {
+    title: 'Obtenir une soumission – numérisation 3D | pointSpace',
+    description: 'Demandez une soumission pour la numérisation 3D, les plans tels que construits, le Scan-to-BIM ou le mesurage BOMA de votre bâtiment ou installation.',
+    h1: 'Obtenir une soumission', lead: 'Parlez-nous de votre projet : les lieux, les livrables attendus et votre échéancier.',
+    helpTitle: 'Pour une soumission plus précise', help: ["L'adresse et le type de bâtiment ou d'installation", 'La superficie approximative et le nombre d\'étages', 'Les livrables et les formats attendus', 'Votre échéancier'],
+    call: 'Vous préférez en parler ?', privacy: 'Politique de confidentialité',
+  },
+  en: {
+    title: 'Get a Quote – 3D Scanning & BIM | pointSpace',
+    description: 'Request a quote for 3D scanning, as-built drawings, Scan-to-BIM or BOMA measurement of your building or facility.',
+    h1: 'Get a quote', lead: 'Tell us about your project: the site, the deliverables you need and your timeline.',
+    helpTitle: 'For a more accurate quote', help: ['The address and type of building or facility', 'The approximate area and number of floors', 'The deliverables and formats you need', 'Your timeline'],
+    call: 'Prefer to talk?', privacy: 'Privacy policy',
+  },
+}[lang];
+const F = PROJECT_FORM[lang];
+const crumbs = [{ name: t.home, path: ROUTES.home[lang] }, { name: T.h1, path: ROUTES.quote[lang] }];
+---
+<BaseLayout lang={lang} route="quote" title={T.title} description={T.description} jsonLd={[breadcrumbLd(crumbs.map((c) => ({ name: c.name, path: c.path })))]}>
+  <PageHero lang={lang} crumbs={crumbs} h1={T.h1} lead={T.lead} compact />
+  <section class="section theme-cream">
+    <div class="container layout">
+      <div>
+        <StaticForm id="quote-form" fields={F.fields} submit={F.submit} notice={F.notice} requiredNote={F.req} />
+        <p class="t-small t-muted privacy"><a href={PRIVACY[lang]}>{T.privacy}</a></p>
+      </div>
+      <aside class="side">
+        <Picture name="scanner-laser-3d-entrepot-vide" lang={lang} ratio="4/3" sizes="(min-width:1280px) 30vw" />
+        <h2 class="t-h4 side__h">{T.helpTitle}</h2>
+        <ul class="side__list">{T.help.map((h) => <li>{h}</li>)}</ul>
+        <div class="side__call">
+          <p class="t-label t-muted">{T.call}</p>
+          <p class="t-h3"><a class="t-num" href={`tel:${SITE.phoneE164}`}>{SITE.phone}</a></p>
+          <p><a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .layout { display: grid; grid-template-columns: 1.6fr 1fr; gap: var(--sp-9); align-items: start; }
+  .privacy { margin-top: var(--sp-5); }
+  .side { position: sticky; top: calc(var(--header-h) + 24px); display: grid; gap: var(--sp-4); }
+  .side__h { margin-top: var(--sp-4); }
+  .side__list { padding-left: 1.2em; display: grid; gap: 8px; color: var(--ps-green-600); }
+  .side__call { margin-top: var(--sp-5); padding-top: var(--sp-5); border-top: 1px solid var(--line); }
+  .side__call a { text-decoration: none; }
+</style>

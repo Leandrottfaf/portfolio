@@ -1,0 +1,218 @@
+---
+// Case-study template, built on the public Gare Windsor / Laurier Capital case study.
+// Copy comes from the live case study (reference/current-site/pages/*case-study-windsor*), restructured.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Picture from '../components/Picture.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Testimonial from '../components/Testimonial.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import CaseCard from '../components/CaseCard.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { ROUTES, type Lang } from '../data/routes';
+import { UI } from '../data/ui';
+import { serviceById } from '../data/services';
+import { caseById } from '../data/caseStudies';
+import { TESTIMONIALS } from '../data/testimonials';
+import { breadcrumbLd, absUrl } from '../lib/seo';
+import { SITE } from '../data/site';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = UI[lang];
+const T = {
+  fr: {
+    title: 'Gare Windsor : numérisation 3D et plans à jour | pointSpace',
+    description: "Étude de cas : numérisation LiDAR 3D de la Gare Windsor à Montréal et plans tels que construits à jour pour Laurier Capital, avec superficies et pièces MEP.",
+    h1: 'Numérisation 3D et mise à jour de plans : la Gare Windsor à Montréal',
+    lead: "Un édifice patrimonial converti en bureaux, sans plans reflétant l'état réel des lieux. pointSpace a relevé chaque étage pour livrer des plans fidèles et à jour.",
+    meta: [['Client', 'Laurier Capital'], ['Bâtiment', 'Gare Windsor, Montréal'], ['Secteur', 'Immobilier commercial et patrimonial'], ['Services', 'Numérisation LiDAR 3D · Nuage de points · Plans tels que construits']],
+    challengeEyebrow: 'Le défi', challengeTitle: 'Des plans qui ne suivaient plus le bâtiment',
+    challenge: [
+      "Lorsque Laurier Capital a fait l'acquisition de la Gare Windsor, un édifice patrimonial montréalais et ancienne gare ferroviaire convertie en espaces à bureaux, l'entreprise s'est retrouvée sans plans reflétant l'état réel des lieux. Au fil des années, de nombreux locaux avaient été ajoutés, modifiés ou agrandis sans que la documentation ne suive.",
+      "L'objectif était de documenter avec précision chaque étage afin d'illustrer les séparations des locaux loués, leur superficie et l'emplacement des pièces MEP (mécanique, électricité et plomberie). Dans un immeuble locatif, une documentation imprécise complique la gestion des baux, le calcul des superficies locatives et la planification de tout réaménagement, un enjeu d'autant plus délicat dans un bâtiment patrimonial où chaque intervention doit composer avec l'existant.",
+    ],
+    solutionEyebrow: 'Notre approche', solutionTitle: 'Trois livrables, un seul relevé',
+    solutions: [
+      { h: 'Numérisation LiDAR 3D complète', p: "Relevé par balayage laser de l'ensemble des étages afin de documenter avec précision la géométrie existante des locaux, des corridors et des espaces communs, y compris les éléments architecturaux propres à l'ancienne gare.", img: 'gare-windsor-numerisation-facade' },
+      { h: 'Nuage de points 3D haute résolution', p: "Traitement des données dans Cyclone pour générer un nuage de points détaillé, permettant de visualiser fidèlement les conditions existantes et de mesurer chaque espace avec exactitude.", img: 'gare-windsor-nuage-points-vue-dessus' },
+      { h: 'Plans 2D à jour', p: "Production de plans 2D illustrant clairement les séparations des locaux loués, les superficies et l'emplacement des pièces MEP.", img: 'gare-windsor-plan-tel-que-construit' },
+    ],
+    galleryTitle: 'Du relevé aux plans',
+    gallery: [
+      { img: 'gare-windsor-nuage-points-exterieur', cap: "Nuage de points couleur de l'extérieur de la gare." },
+      { img: 'gare-windsor-coupe-nuage-points', cap: "Coupe horizontale du nuage de points d'un étage." },
+      { img: 'gare-windsor-plan-superficies-etage', cap: "Plan d'étage avec les superficies par zone." },
+    ],
+    resultsEyebrow: 'Résultats', resultsTitle: 'Ce que le client a obtenu',
+    results: [
+      { h: 'Des plans fiables et à jour', p: "Laurier Capital dispose désormais de plans reflétant l'état réel du bâtiment, incluant tous les locaux ajoutés, modifiés ou agrandis au fil des années." },
+      { h: 'Des espaces locatifs connus avec précision', p: 'Le rapport a permis d\'établir avec exactitude les superficies locatives, offrant une base solide pour la gestion des baux et la valorisation de l\'actif.' },
+      { h: 'Une gestion et une planification simplifiées', p: 'La documentation claire des séparations de locaux et des pièces MEP facilite la gestion quotidienne de l\'immeuble et la planification de tout réaménagement futur.' },
+      { h: 'De meilleures décisions', p: 'Grâce à une représentation 3D détaillée et à des plans précis, les gestionnaires analysent rapidement les conditions existantes et décident en toute confiance.' },
+    ],
+    servicesTitle: 'Services utilisés', moreTitle: 'Autres études de cas', author: 'Étude de cas rédigée par Louis Dallaire, président de pointSpace.',
+    ctaTitle: 'Vos plans ne reflètent plus votre immeuble ?', ctaText: 'Parlez-nous du bâtiment et des étages à relever. Nous vous préparons une soumission.',
+  },
+  en: {
+    title: 'Windsor Station: 3D Scanning and Plan Updates | pointSpace',
+    description: 'Case study: 3D LiDAR scanning of Windsor Station in Montreal and up-to-date as-built drawings for Laurier Capital, showing leased areas and MEP rooms.',
+    h1: '3D Scanning and Plan Updating: Windsor Station in Montreal',
+    lead: 'A heritage building converted into offices, with no drawings reflecting actual conditions. pointSpace surveyed every floor to deliver accurate, up-to-date drawings.',
+    meta: [['Client', 'Laurier Capital'], ['Building', 'Windsor Station, Montréal'], ['Sector', 'Commercial and heritage real estate'], ['Services', 'LiDAR 3D scanning · Point cloud · As-built drawings']],
+    challengeEyebrow: 'The challenge', challengeTitle: 'Drawings that no longer matched the building',
+    challenge: [
+      'When Laurier Capital acquired Windsor Station, a heritage building in Montreal and a former railway station converted into office space, the company found itself without drawings reflecting the actual state of the premises. Over the years, many units had been added, modified or expanded without the documentation keeping pace.',
+      'The objective was to accurately document each floor to show the separations between leased units, their area and the location of MEP rooms (mechanical, electrical and plumbing). In a rental building, imprecise documentation complicates lease management, the calculation of rentable areas and the planning of any redevelopment, a challenge that is all the more delicate in a heritage building where every intervention must work with the existing structure.',
+    ],
+    solutionEyebrow: 'Our approach', solutionTitle: 'Three deliverables, one survey',
+    solutions: [
+      { h: 'Complete 3D LiDAR scanning', p: 'Laser scanning survey of all floors to accurately document the existing geometry of units, corridors and common areas, including the architectural features specific to the former station.', img: 'gare-windsor-numerisation-facade' },
+      { h: 'High-resolution 3D point cloud', p: 'Data processed in Cyclone to generate a detailed point cloud, faithfully showing existing conditions and allowing every space to be measured precisely.', img: 'gare-windsor-nuage-points-vue-dessus' },
+      { h: 'Up-to-date 2D drawings', p: '2D drawings clearly showing the separations between leased units, their areas and the location of MEP rooms.', img: 'gare-windsor-plan-tel-que-construit' },
+    ],
+    galleryTitle: 'From survey to drawings',
+    gallery: [
+      { img: 'gare-windsor-nuage-points-exterieur', cap: 'Colour point cloud of the station exterior.' },
+      { img: 'gare-windsor-coupe-nuage-points', cap: 'Horizontal slice of a floor’s point cloud.' },
+      { img: 'gare-windsor-plan-superficies-etage', cap: 'Floor plan with areas by zone.' },
+    ],
+    resultsEyebrow: 'Results', resultsTitle: 'What the client gained',
+    results: [
+      { h: 'Reliable, up-to-date drawings', p: 'Laurier Capital now has drawings reflecting the actual state of the building, including every unit added, modified or expanded over the years.' },
+      { h: 'Precise knowledge of leasable space', p: 'The report accurately established the rentable areas, providing a solid basis for lease management and for enhancing the value of the asset.' },
+      { h: 'Simpler management and planning', p: 'Clear documentation of unit separations and MEP rooms makes day-to-day building management and future redevelopment planning easier.' },
+      { h: 'Better decisions', p: 'With a detailed 3D representation and precise drawings, managers can quickly analyse existing conditions and decide with confidence.' },
+    ],
+    servicesTitle: 'Services used', moreTitle: 'More case studies', author: 'Case study written by Louis Dallaire, CEO of pointSpace.',
+    ctaTitle: 'Do your drawings still match your building?', ctaText: 'Tell us about the building and the floors to survey. We will prepare a quote.',
+  },
+}[lang];
+const crumbs = [
+  { name: t.home, path: ROUTES.home[lang] },
+  { name: t.caseStudies, path: ROUTES.caseStudies[lang] },
+  { name: 'Gare Windsor', path: ROUTES.caseWindsor[lang] },
+];
+if (lang === 'en') crumbs[2].name = 'Windsor Station';
+const q = TESTIMONIALS.bakayoko;
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'Article', headline: T.h1, description: T.description, inLanguage: lang === 'fr' ? 'fr-CA' : 'en-CA',
+    author: { '@type': 'Person', name: 'Louis Dallaire' }, publisher: { '@id': `${SITE.url}/#organization` },
+    image: absUrl('/images/gare-windsor-numerisation-facade-1600.webp'), mainEntityOfPage: absUrl(ROUTES.caseWindsor[lang]) },
+  breadcrumbLd(crumbs.map((c) => ({ name: c.name, path: c.path }))),
+];
+---
+<BaseLayout lang={lang} route="caseWindsor" title={T.title} description={T.description} jsonLd={jsonLd} ogImage="/images/gare-windsor-numerisation-facade-1600.webp">
+  <section class="cshero theme-green" aria-labelledby="h1">
+    <div class="container">
+      <Breadcrumbs lang={lang} items={crumbs} />
+      <div class="cshero__grid">
+        <div>
+          <p class="eyebrow t-label cshero__eyebrow">{t.caseStudies} · Laurier Capital</p>
+          <h1 id="h1" class="t-h1">{T.h1}</h1>
+          <p class="t-lead cshero__lead">{T.lead}</p>
+        </div>
+        <dl class="cshero__meta">
+          {T.meta.map(([k, v]) => <div><dt class="t-label">{k}</dt><dd>{v}</dd></div>)}
+        </dl>
+      </div>
+    </div>
+    <div class="container cshero__media">
+      <Picture name="gare-windsor-numerisation-facade" lang={lang} eager ratio="21/9" sizes="100vw" position="50% 40%" />
+    </div>
+  </section>
+
+  <section class="section theme-cream" aria-labelledby="challenge-title">
+    <div class="container grid-12">
+      <div class="col-l">
+        <p class="eyebrow t-label">{T.challengeEyebrow}</p>
+        <h2 id="challenge-title" class="t-h2">{T.challengeTitle}</h2>
+      </div>
+      <div class="col-r prose t-lead">{T.challenge.map((p) => <p>{p}</p>)}</div>
+    </div>
+  </section>
+
+  <section class="section theme-cream-50" aria-labelledby="solution-title">
+    <div class="container">
+      <SectionHeading eyebrow={T.solutionEyebrow} title={T.solutionTitle} id="solution-title" />
+      <ol class="sol">
+        {T.solutions.map((s, i) => (
+          <li data-reveal>
+            <Picture name={s.img} lang={lang} ratio="4/3" sizes="(min-width:1280px) 30vw" />
+            <p class="t-label t-num sol__n">{String(i + 1).padStart(2, '0')}</p>
+            <h3 class="t-h3">{s.h}</h3>
+            <p class="t-muted">{s.p}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section theme-green" aria-labelledby="gallery-title">
+    <div class="container">
+      <h2 id="gallery-title" class="t-h2 gallery__title">{T.galleryTitle}</h2>
+      <div class="gallery">
+        {T.gallery.map((g, i) => <Picture name={g.img} lang={lang} ratio={i === 0 ? '16/10' : '4/3'} caption={g.cap} sizes="(min-width:1280px) 45vw" class={i === 0 ? 'gallery__lead' : ''} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section theme-cream" aria-labelledby="results-title">
+    <div class="container">
+      <SectionHeading eyebrow={T.resultsEyebrow} title={T.resultsTitle} id="results-title" />
+      <ul class="results">
+        {T.results.map((r) => <li data-reveal><h3 class="t-h4">{r.h}</h3><p class="t-muted">{r.p}</p></li>)}
+      </ul>
+      <div class="quote-wrap">
+        <Testimonial lang={lang} quote={q[lang].quote} name={q.name} role={q[lang].role} company={q.company} />
+      </div>
+      <p class="t-small t-muted author">{T.author}</p>
+    </div>
+  </section>
+
+  <section class="section--tight theme-cream-50" aria-labelledby="svc-title">
+    <div class="container related">
+      <div>
+        <h2 id="svc-title" class="t-label related__h">{T.servicesTitle}</h2>
+        <div class="related__list">{(['scanning', 'asBuilt'] as const).map((id) => <ServiceCard service={serviceById(id)} lang={lang} variant="compact" />)}</div>
+      </div>
+      <div>
+        <h2 class="t-label related__h">{T.moreTitle}</h2>
+        <div class="more">{['st-james', 'westcliff'].map((id) => <CaseCard cs={caseById(id)} lang={lang} />)}</div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand lang={lang} title={T.ctaTitle} text={T.ctaText} avoid={['gare-windsor-numerisation-facade', 'theatre-st-james-numerisation-facade']} />
+</BaseLayout>
+
+<style>
+  .cshero { padding-top: var(--sp-7); }
+  .cshero__grid { display: grid; grid-template-columns: 7fr 4fr; gap: var(--sp-9); align-items: end; padding: var(--sp-8) 0 var(--sp-8); }
+  .cshero h1 { max-width: 20ch; }
+  .cshero__lead { margin-top: var(--sp-5); color: var(--ps-cream-80); max-width: 52ch; }
+  .cshero__meta { margin: 0; border-top: 3px solid var(--ps-gold); }
+  .cshero__meta div { padding: 14px 0; border-bottom: 1px solid var(--ps-cream-line); }
+  .cshero__meta dt { color: var(--ps-cream-80); margin-bottom: 4px; }
+  .cshero__meta dd { margin: 0; }
+  .cshero__media { padding-bottom: 0; }
+  .cshero__media :global(.pic) { border-radius: var(--radius-media) var(--radius-media) 0 0; }
+  .col-l { grid-column: 1 / span 5; }
+  .col-l h2 { max-width: 16ch; }
+  .col-r { grid-column: 7 / span 6; }
+  .sol { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-6); }
+  .sol li { display: flex; flex-direction: column; gap: 10px; }
+  .sol__n { margin-top: var(--sp-4); color: var(--ps-green-600); }
+  .gallery__title { margin-bottom: var(--sp-7); }
+  .gallery { display: grid; grid-template-columns: 1.4fr 1fr; grid-template-rows: auto auto; gap: var(--sp-6); }
+  .gallery :global(.gallery__lead) { grid-row: span 2; }
+  .gallery :global(figcaption) { color: var(--ps-cream-80); background: transparent; }
+  .results { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-6); }
+  .results li { padding-top: var(--sp-5); border-top: 3px solid var(--ps-green-900); display: flex; flex-direction: column; gap: 10px; }
+  .quote-wrap { margin-top: var(--sp-9); padding-top: var(--sp-8); border-top: 1px solid var(--line); max-width: 1040px; }
+  .author { margin-top: var(--sp-6); }
+  .related { display: grid; grid-template-columns: 1fr 1.4fr; gap: var(--sp-9); }
+  .related__h { color: var(--ps-green-600); margin-bottom: var(--sp-4); }
+  .related__list { border-top: 1px solid var(--line); }
+  .more { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-6); }
+</style>

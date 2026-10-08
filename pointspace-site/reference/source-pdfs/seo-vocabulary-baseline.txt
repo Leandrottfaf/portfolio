@@ -1,0 +1,749 @@
+pointSpace -- SEO Vocabulary Baseline
+
+pointSpace -- SEO Vocabulary Baseline
+
+ Sep 30, 2026 · @ Leandro
+
+Summary
+
+pointSpace already offers the right services and uses most of the right vocabulary. The
+biggest gains are clearer French labels, headings that name the deliverable, and checking
+Québec field terms against real search data before choosing final keywords.
+
+    Field vocabulary (section 3) lists candidate expressions suggested during this
+    research, not terms collected from clients or staff. Each one needs confirmation by
+    Louis and the team, then a volume check in Keyword Planner.
+    Core service vocabulary (section 4) is ranked by service fit and buying intent. The
+    priorities are editorial, not measured search volume.
+    Competitor coverage (appendix) shows how many of 8 sampled competitor pages use
+    each term. It reflects standard industry wording, not what buyers type.
+
+Not yet verified: Google Maps and organic rankings by city, and competitor traffic. Direct
+Google checks were blocked during the research, so these are listed as next steps for
+Thierry.
+
+Quick website fixes
+
+Item 1 is a verified error to fix now. Items 2­6 are wording recommendations for Louis to
+review, not proven SEO gains. All were checked on the live site on September 30, 2026.
+
+# Issue                                Where                         Suggested fix
+
+1  BIM is expanded as                  EN Scan to BIM page,          Change to "Building
+                                       teaser for the article "BIM:  Information Modeling", as
+   "Building Intergrated               Definitions, Benefits,        the FAQ on the same page
+                                       Maturity Levels and           already says. Check the
+   Modeling" (typo and                 Sustainability"               article itself too.
+
+   wrong term)
+
+                                                                                    Page 1 of 15
+pointSpace -- SEO Vocabulary Baseline
+
+# Issue                                Where                     Suggested fix
+
+2  English label "As-Built             FR navigation: Services   Use "Plans tels que
+
+   Drafting" appears in the dropdown in the top                  construits" (25 characters,
+
+   French menu                         menu, and the footer      shorter than "Visites
+
+                                       "Liens utiles" list (the  virtuelles 3D Matterport").
+
+                                       homepage service cards DCMS, UNIQ Dimensions
+
+                                       are already in French)    and MESUR all lead with
+
+                                                                 "tels que construits"; none
+
+                                                                 of the sampled French
+
+                                                                 competitor pages uses
+
+                                                                 "mise en plan".
+
+3  The drafting page                   FR homepage card and      Use the same label as item
+                                                                 2 on the card and in the H1,
+   heading does not say                drafting page H1          e.g. "Plans tels que
+                                                                 construits (as-built)";
+   what the client receives                                      ARTOP uses "plans as-
+                                                                 built", so keep "as-built" in
+                                                                 the H1 or intro. Keep
+                                                                 "conformes à l'exécution",
+                                                                 which the site already
+                                                                 uses, in the description.
+
+4  "Modélisation BIM" does FR homepage card and                  Menu and card title: "Scan-
+                                                                 to-BIM". H1: "Scan-to-BIM :
+   not say the model shows BIM page H1                           modélisation BIM de
+                                                                 l'existant". Mention Revit
+   existing conditions                                           and IFC in the card
+                                                                 description and intro.
+                                                                 "L'existant" matches
+                                                                 ARTOP, DCMS and the SQI
+                                                                 requirements.
+
+                                                                                        Page 2 of 15
+pointSpace -- SEO Vocabulary Baseline
+
+# Issue                                Where                   Suggested fix
+
+5  The BOMA service has                FR menu and card "Mise Use one name everywhere.
+
+   four different names, and en plan BOMA", page title FR menu, card and title:
+
+   the body uses "surface              "Services de mise en plan "Mesurage BOMA"; H1:
+
+   louable" instead of the             BOMA", H1 "Certificat de "Mesurage BOMA : calcul
+
+   usual Québec term                   mesurage BOMA"; EN      de superficie locative". EN:
+
+                                       "BOMA As-Built Digital  "BOMA Measurement"; H1:
+
+                                       Plans"                  "BOMA Measurement:
+
+                                                               Rentable and Usable
+
+                                                               Area". Replace "surface
+
+                                                               louable" with "superficie
+
+                                                               locative". Keep "certificat
+
+                                                               de mesurage" in the intro
+
+                                                               or FAQ, since clients likely
+
+                                                               search for it? (Check with
+
+                                                               Louis.) See the BOMA
+
+                                                               comparison below.
+
+6  The quote button                    FR homepage hero        Use "Obtenir une
+
+   alternates between                  "Obtenir un devis" vs.  soumission" everywhere. It
+
+   "devis" and "soumission". bottom banner "Obtenir matches the page URL and
+
+   Both are correct French une soumission"; BOMA DCMS, MESUR and
+
+   for a quote, but mixing             page "Obtenez un devis". ARTOP's buttons (UNIQ
+
+   them looks inconsistent The quote page URL itself uses "Devis gratuit"). It is
+
+                                       is /obtenir-une-        also less ambiguous for
+
+                                       soumission              architects and engineers,
+
+                                                               for whom "devis" also
+
+                                                               means the specifications
+
+                                                               in "plans et devis".
+
+On the English As-Built Drafting page, also add buyer synonyms where they read
+naturally: as-built drawings, existing conditions drawings, measured drawings.
+
+BOMA wording compared
+
+No competitor calls it "mise en plan BOMA". The common pattern is "mesurage" plus
+"superficie locative" or "espaces locatifs". In Montréal, most BOMA providers found are
+land surveyors (arpenteurs-géomètres), who sell a "certificat de mesurage".
+
+                                                                                       Page 3 of 15
+pointSpace -- SEO Vocabulary Baseline
+
+Term                                   BOMA          pointSpace      Recommendation           Search
+                                       providers     uses it                                  volume
+Mesurage BOMA /                        using it (of                                           (Thierry)
+mesurage                               4)
+d'espaces locatifs                                   Only in the     Main service name
+Espaces locatifs                       3 -- ARTOP,   meta            Use in the H1 or intro
+                                       Tessier,      description
+Certificat de                          ARPLG
+mesurage                                             No
+Superficie locative                    3 -- ARTOP,
+                                       Tessier,      Yes, H1         Keep in intro or FAQ if
+Superficie /                           ARPLG         No              Louis confirms
+surface louable                                      Yes
+Surface utile                          2 -- ARTOP,   Yes             Use in place of
+                                       ARPLG                         "surface louable"
+                                                     No
+                                       2 -- ARTOP,   No              Secondary; keep out
+                                       Tessier                       of headings
+
+                                       1 -- ARTOP                    Keep in body,
+                                       (once)                        explained next to
+                                                                     superficie locative
+                                       1 -- UNIQ
+                                                                     Optional, in the
+Plans de location                      1 -- UNIQ                     deliverables list
+
+Analyse de la                          1 -- UNIQ                     Not as the main name
+superficie                             1 -- ARPLG
+                                                     No              Only if pointSpace
+ICSC (centres
+commerciaux)                                                         measures shopping
+
+                                                                     centres
+
+Mise en plan                           0             Yes, menu       Replace
+
+BOMA                                                 and page title
+
+Plans tels-que-                        0             Yes, body       Replace with "plans
+                                                                     conformes aux
+construits certifiés                                                 normes BOMA"
+
+BOMA
+
+                                                                                              Page 4 of 15
+pointSpace -- SEO Vocabulary Baseline
+
+Counts are from one BOMA page per provider: ARTOP, UNIQ Dimensions, Christian
+Tessier and ARPLG. They show what providers write, not what clients search. BOMA
+Québec also uses "mesurage". The last column is for Thierry to fill from Keyword Planner
+(Greater Montréal); if search volume disagrees with competitor usage, search volume
+wins.
+
+For Louis to confirm:
+
+    One pointSpace drafter is described as BOMA certified. Confirm the exact training
+    and who issued it (e.g. a BOMA Québec measurement workshop). BOMA International
+    (Best Practice #7 on boma.org) says it does not certify any individual or firm for floor
+    measurement, so "formé aux normes de mesurage BOMA" is safer than "certifié
+    BOMA". Replace "plans certifiés BOMA" with "plans conformes aux normes BOMA". No
+    sampled competitor names a BOMA credential: ARTOP and the surveyors lean on
+    being arpenteurs-géomètres, and UNIQ only says it follows the standards.
+    Does pointSpace measure retail centres? If so, add the ICSC shopping-centre method
+    alongside BOMA.
+
+Candidate field expressions -- pending team validation
+
+Clients in Québec may use English or shortened terms where the website uses formal
+French. These are the words to test in Keyword Planner next to the formal versions (e.g.
+"plan as built Montréal" vs "plans tels que construits Montréal").
+
+These are candidate expressions, not observations from clients or staff. Louis and the
+team should mark in the last column which ones clients actually use.
+
+Formal French                          Possible spoken         Written by            English     Likely context
+                                       variants                competitors (of 4 FR
+                                                               pages)                            Quote requests,
+                                                                                                 calls (ARTOP
+Plans tels que                         "les as-built", "plans  4 -- DCMS, UNIQ,      As-built    writes "plans as-
+construits (TQC),                      as-built", "plans       MESUR ("tels que      drawings    built")
+plans conformes à                      TQC"                    construits"), ARTOP
+l'exécution                                                    ("as-built")                      Architects, RFPs
+                                                                                                 (DCMS writes
+Relevé de l'existant                   "un relevé",            3 -- ARTOP ("relevé   Existing    "état existant")
+                                       "l'existant", "les      de l'existant"),      conditions
+                                       conditions              DCMS ("état           survey
+                                       existantes", "l'état    existant"), MESUR
+                                       existant"               ("conditions
+                                                               existantes")
+
+                                                                                                 Page 5 of 15
+pointSpace -- SEO Vocabulary Baseline
+
+Formal French                          Possible spoken        Written by            English         Likely context
+                                       variants               competitors (of 4 FR
+Numérisation 3D,                                              pages)                                Calls, first contact
+balayage laser                         "un scan", "scanner
+                                       le bâtiment", "le      3 -- ARTOP, DCMS,     3D laser        Technical clients
+Nuage de points                        scan 3D"               UNIQ ("scan 3D" or    scanning
+                                       "le nuage", "le point  "scan laser")                         Architects,
+Modélisation BIM                       cloud"                                                       engineers
+de l'existant                          "le Scan-to-BIM",      3 -- ARTOP, DCMS,     Point cloud     (ARTOP and
+                                       "scan to BIM"          MESUR                                 DCMS use it as-
+Maquette BIM,                                                                                       is)
+modèle BIM                             "le modèle Revit",     3 -- ARTOP, DCMS,     Scan-to-BIM     Architects,
+Fichiers de dessin                     "le Revit", "le RVT"   UNIQ ("scan 3D vers                   engineers
+CAO                                    "des plans             BIM")                                 Architects, plant
+                                       AutoCAD", "des                                               engineers
+Plan de plafond                        DWG", "du CAD"         3 -- ARTOP, DCMS,     Revit model
+réfléchi                               "le RCP", "plans de    MESUR
+                                       plafond"                                     DWG / CAD
+Entreplafond                                                  4 -- all (AutoCAD,    files
+                                       "l'entre-plafond"      DWG or CAD)
+Mécanique,
+électricité,                           "le MEP", "la          1 -- UNIQ ("plans de  Reflected       Retail and
+plomberie                              mécanique du           plafond réfléchis")   ceiling plan    commercial fit-
+                                       bâtiment"                                    (RCP)           outs
+Chauffage,                                                    0                     Above-ceiling   MEP scope,
+ventilation et air                     "CVAC", "la                                  space / plenum  concealed
+climatisé                              ventilation"           2 -- DCMS, UNIQ                       elements
+Salle mécanique                                               (mécanique /          MEP             Engineering firms
+                                       "la salle méca"        électrique); none
+Gicleurs,                                                     write "MEP"           HVAC            Mechanical scope
+protection                             "les gicleurs"         1 -- UNIQ, written
+incendie                                                      "CVC"
+Niveau de                              "LOD 200", "LOD
+développement /                        300"                   0                     Mechanical      MEP
+de détail
+                                                                                    room            documentation
+
+                                                              0                     Sprinklers / fire Industrial projects
+
+                                                                                    protection
+
+                                                              2 -- ARTOP, DCMS      LOD             RFPs, BIM
+                                                                                                    execution plans
+
+                                                                                                         Page 6 of 15
+pointSpace -- SEO Vocabulary Baseline
+
+Formal French                          Possible spoken        Written by            English          Likely context
+                                       variants               competitors (of 4 FR
+                                                              pages)
+
+Détection des                          "clash", "clash        0                     Clash            Coordination,
+conflits                               detection"
+                                                                                    detection        general
+
+                                                                                                     contractors
+
+Assemblage des                         "la registration"      1 -- ARTOP            Scan             Technical buyers
+scans                                                         ("assemblage          registration
+                                                              (registration)")
+
+Cibles, points de                      "les targets", "les    1 -- ARTOP ("points   Targets /        RFP
+contrôle                               cibles"                de contrôle")         control points   specifications
+
+Géoréférencement "géoréférencé"                               1 -- ARTOP            Georeferencing Public RFPs (SQI)
+
+Aménagement                            "le fit-out",          0                     Tenant fit-out   Retail and
+locatif                                "l'aménagement"
+                                                                                                     commercial
+
+Aménagement                            "le layout", "le       0 for "layout";       Plant layout     Manufacturing
+d'usine                                layout de l'usine"     ARTOP and DCMS
+                                                              write "plans /
+                                                              documentation
+                                                              d'usine"
+
+Superficie locative,                   "le mesurage           See the BOMA table    Rentable area /  Property
+espaces locatifs                       BOMA", "le             in section 2          BOMA             managers
+(BOMA)                                 certificat BOMA",                            measurement
+                                       "les pi² BOMA"
+
+Soumission, appel                      "une soumission",      3 -- ARTOP, DCMS,     Quote or bid /   Quote requests,
+d'offres                               "l'appel d'offres",    MESUR (quote          RFP              procurement
+                                       "SEAO"                 buttons)
+                                                                                    Quote, or        Means both: a
+Devis                                  "le devis", "plans et  2 -- ARTOP, UNIQ      specifications   quote from a
+                                       devis"                 (as a quote)                           supplier, or the
+                                                                                                     specifications in
+                                                                                                     RFP documents
+
+Please add rows for any wording heard on calls or in emails that is missing here.
+
+How to weigh the evidence, strongest first:
+1. What clients say: the "Confirmed by team" column and the enquiry review.
+2. What clients search: the search volume column, from Keyword Planner and Search
+
+    Console.
+
+                                                                                                                    Page 7 of 15
+pointSpace -- SEO Vocabulary Baseline
+
+3. What competitors write: useful for spotting established terms, but not proof of
+    demand. None of these four companies has been verified as a traffic leader, and a 0
+    here often just means a spoken term rarely appears in marketing copy.
+
+Competitors are one page each: ARTOP, DCMS, UNIQ Dimensions, MESUR.
+
+Core service vocabulary
+
+P1 terms describe the main services and should appear in page titles and headings. P2
+terms describe specific deliverables and use cases for body copy, FAQs and blog posts.
+City names are added only where pointSpace actually serves that market. These terms
+were suggested in the first research pass; they are not taken from pointSpace's site. The
+two middle columns check each one against pointSpace's French pages and the four
+competitor pages, on September 30, 2026.
+
+Priority French                        English   On pointSpace (FR)     Competitors          Best page
+                                                 today                  writing it (of 4 FR
+                                                                        pages)
+
+P1  Numérisation 3D Building 3D                  Yes -- homepage        4 write              Scanning
+
+    de bâtiments                       laser scanning title "numérisation "numérisation 3D"
+
+                                                 3D bâtiment";          -- ARTOP (H1),
+
+                                                 scanning page H1       DCMS (body),
+
+                                                 "Numérisation LiDAR UNIQ (menu),
+
+                                                 3D"                    MESUR (service
+
+                                                                        heading); only
+
+                                                                        ARTOP pairs it
+
+                                                                        with "bâtiment"
+
+                                                                        (heading)
+
+P1  Relevé laser 3D 3D laser survey No -- uses "relevés" 1 -- ARTOP (title, Scanning
+
+                                                 and "numérisation H1)
+
+                                                 LiDAR"
+
+P1  Plans tels que As-built                      Yes -- drafting page   4 -- DCMS (title,    Drafting
+                                                 title and subheading;  H1), UNIQ (menu,
+    construits                         drawings  scanning page body     H1), MESUR
+                                                                        (service heading),
+                                                                        ARTOP as "plans
+                                                                        as-built" (FAQ)
+
+                                                                                                        Page 8 of 15
+pointSpace -- SEO Vocabulary Baseline
+
+Priority French                        English        On pointSpace (FR)      Competitors          Best page
+                                                      today                   writing it (of 4 FR
+                                                                              pages)
+
+P1  Relevé de                          Existing       Partly -- "conditions   3 -- ARTOP           Scanning,
+                                       conditions     existantes" in          (body), DCMS         drafting
+    l'existant                         survey         scanning and BIM        ("état existant",
+                                                      page body               headings), MESUR
+                                                                              ("conditions
+                                                                              existantes", body)
+
+P1  Relevé                             Measured       No -- only "plans       2 -- DCMS (H1), Drafting,
+
+    architectural                      building survey architecturaux"        UNIQ (H1)            architects
+
+P1  Scan-to-BIM                        Scan-to-BIM    Yes, but only in BIM 3 -- ARTOP (title, BIM
+
+                                                      page body and FAQ; H1), DCMS (FAQ),
+
+                                                      the H1 is "Service de UNIQ (FAQ, "scan
+
+                                                      modélisation BIM" 3D vers BIM")
+
+P1  Modélisation                       As-built BIM   Close -- BIM FAQ        1 -- ARTOP           BIM
+
+    BIM de l'existant modelling                       "modélisation BIM tel (heading "intégrer
+
+                                                      que construit"; body l'existant en BIM")
+
+                                                      "fidèles à l'existant"
+
+P1  Modélisation                       Point cloud to Separately -- Revit 3 describe it, none BIM
+
+    Revit à partir de Revit                           and nuage de points with this phrase
+
+    nuages de points                                  both in body            -- ARTOP
+
+                                                                              (heading), DCMS
+
+                                                                              (FAQ), MESUR
+
+                                                                              (process)
+
+P1  Numérisation 3D Industrial laser Close -- industrial 0 exact; ARTOP Manufacturing
+
+    industrielle                       scanning       page title              heading "Scan 3D and industrial
+
+                                                      "Numérisation 3D et bâtiment,
+
+                                                      modélisation |          industriel &
+
+                                                      industrie               infrastructures"
+
+                                                      manufacturière"
+
+P2  Plans d'étage                      Dimensioned No                         2 write "plans       Drafting
+                                                                              d'étage" -- DCMS     deliverables
+    cotés                              floor plans                            (FAQ), UNIQ
+                                                                              (headings); none
+                                                                              write "cotés"
+
+P2  Élévations et                      Elevations and No -- "coupes"          3 -- ARTOP           Drafting
+
+    coupes                             sections       appears once in a       (body), DCMS         deliverables
+
+                                                      scanning FAQ, not as (FAQ), UNIQ
+
+                                                      a deliverable           (FAQ)
+
+P2  Plans de                           Reflected      No                      1 -- UNIQ (FAQ)      Drafting
+                                                                                                   deliverables
+    plafonds                           ceiling plans
+
+    réfléchis
+
+                                                                                                               Page 9 of 15
+pointSpace -- SEO Vocabulary Baseline
+
+Priority French                        English        On pointSpace (FR)  Competitors          Best page
+                                                      today               writing it (of 4 FR
+                                                                          pages)
+
+P2  Scan-to-CAD,                       Scan-to-CAD Partly -- "CAO/BIM" 3 -- DCMS (H1           Drafting
+
+    conversion en                                     in scanning and BIM "plans CAO/BIM"),
+
+    plans CAO                                         page body           UNIQ (heading
+
+                                                                          "Numérisation 3D
+
+                                                                          vers CAD"),
+
+                                                                          MESUR (process)
+
+P2  Livraison de                       Point-cloud-   Partly -- BIM FAQ   3 list point clouds Scanning
+
+    nuages de points only delivery                    "génération de      as a deliverable --
+
+                                                      nuages de points"   ARTOP, DCMS,
+
+                                                                          MESUR
+
+P2  Mesurage                           BOMA           Only in the BOMA    See the BOMA         BOMA
+
+    BOMA, calcul de measurement, page meta                                table in section 2
+
+    superficies                        rentable area description
+
+    locatives
+
+P2  Plans d'usine,                     Plant layout   Yes --              2 -- ARTOP           Manufacturing
+
+    aménagement                                       "aménagement d'une ("plans d'usine", and industrial
+
+    d'usine                                           usine" in the banner body), DCMS
+
+                                                      on every page;      ("documentation
+
+                                                      "réaménagement      d'usine", service
+
+                                                      d'usines" in scanning card)
+
+                                                      FAQ
+
+P2  Relevé de                          As-built piping No                 1 -- ARTOP           Manufacturing
+                                       survey                             ("tuyauterie",       and industrial
+    tuyauterie                                                            body)
+
+    existante
+
+P2  Documentation Mechanical                          No -- only          1 close -- DCMS      BIM, MEP
+                                                                          ("systèmes
+    de salles                          room           "mécanique"         mécaniques/
+                                                                          électriques",
+    mécaniques                         documentation                      service card)
+
+P2  Relevé avant                       Pre-renovation Partly -- "rénovation" 3 mention         Architecture
+
+    rénovation                         survey         in BIM page meta and renovation --       and buildings
+
+                                                      FAQ                 ARTOP ("relevé
+
+                                                                          3D avant
+
+                                                                          rénovation",
+
+                                                                          body), DCMS
+
+                                                                          (service card),
+
+                                                                          MESUR (H1)
+
+                                                                                                         Page 10 of 15
+pointSpace -- SEO Vocabulary Baseline
+
+Priority French                        English          On pointSpace (FR)  Competitors           Best page
+                                                        today               writing it (of 4 FR
+                                                                            pages)
+                                                        Yes -- homepage
+P2  Analyse de                         Floor flatness,  card "déformations  3 -- ARTOP (menu      Building
+                                                        structurelles,      "Analyse              analysis
+    planéité, analyse deformation                       planéité"           planéité"), DCMS
+                                                                            ("déflexion",
+    de déformation analysis                             Yes -- homepage     service card),
+                                                        card                MESUR (service
+                                                                            heading)
+                                                        Yes -- homepage
+P2  Suivi                              Construction     card "Photo 360°"   1 close -- UNIQ       Progress
+                                                                            ("suivent             reports
+    d'avancement progress                               Yes -- menu and     l'avancement",
+                                                        homepage card       body)
+                                       tracking
+                                                        Yes -- menu and
+P2  Photo 360° de 360° site                             homepage card       1 -- UNIQ ("à         Photo 360°
+                                                                            360°", virtual tour
+    chantier                           photography                          body)
+
+P2  Visite virtuelle Matterport                                             2 -- UNIQ (menu;      Virtual tours
+                                                                            "Matterport
+    Matterport                         virtual tour                         Pro3"), ARTOP
+                                                                            ("visite virtuelle",
+                                                                            body)
+
+P2  Jumeau                             Digital twin                         3 -- ARTOP            Digital twins
+                                                                            (heading), DCMS
+    numérique                                                               (service card),
+                                                                            MESUR
+                                                                            (deliverables)
+
+Technical terms (RVT, IFC, DWG, E57, RCP/RCS, LOD, control points, registration) belong
+in deliverables sections and FAQs, where they explain what the client receives.
+
+Client phrases and RFP language
+
+Clients describe a problem before they name a service, so blog posts and FAQs should
+start from these phrases. They are typical requests to confirm against real enquiries, not
+quotes from pointSpace clients.
+
+What the client says                                    Service vocabulary it maps to
+                                                        Plans de l'existant, as-built drawings
+"Nous n'avons pas de plans à jour." / "We don't
+have up-to-date plans."
+
+                                                                                                            Page 11 of 15
+pointSpace -- SEO Vocabulary Baseline
+
+What the client says                            Service vocabulary it maps to
+"Pouvez-vous mesurer le bâtiment et nous        Relevé architectural, as-built DWG
+envoyer des fichiers AutoCAD?"
+"On a besoin d'un modèle Revit avant la réno."  Scan-to-BIM, as-built Revit model
+"Pouvez-vous scanner pendant que l'usine        Industrial laser scanning, occupied
+roule?"                                         facilities
+"Est-ce que le nouvel équipement va entrer?"    Plant layout, clearances, equipment
+                                                installation
+"Pouvez-vous mesurer nos espaces locatifs?"     Mesurage BOMA, rentable area
+"On a déjà le nuage de points, pouvez-vous le   Point cloud to Revit, modelling-only
+modéliser?"                                     service
+
+Public RFPs in Québec use more formal wording. The SQI BIM project requirements use
+relevés numériques 3D, conditions existantes, modélisation de l'existant, nuages de
+points, géoréférencement, points de contrôle and assurance et contrôle qualité. These
+terms fit technical pages and FAQs aimed at public-sector buyers.
+
+Next steps
+
+Final keywords should be chosen from pointSpace's own search data and enquiries, with
+competitor wording as background only.
+
+Thierry
+
+    Export Search Console queries and landing pages for Canada, last 12­16 months,
+    branded and non-branded separated.
+    Check Keyword Planner volumes for sections 3 and 4, set separately for Greater
+    Montréal, Québec and Toronto/GTA. Include the field variants (e.g. "plan as built", "scan
+    to BIM Montréal").
+    Share a dated competitor export from the SEO platform (estimated traffic, top landing
+    pages, non-branded keywords), labelled as estimates.
+    Run a local ranking baseline: 15­20 agreed queries per market, Maps results recorded
+    separately from organic results.
+
+Louis
+
+    Rank services by profitability and strategic priority.
+
+                                                                                      Page 12 of 15
+pointSpace -- SEO Vocabulary Baseline
+
+    Confirm which markets pointSpace serves outside Québec, especially Toronto/GTA.
+    Confirm the services listed in section 4 that are less visible on the site (piping surveys,
+    heritage documentation, point-cloud-only delivery).
+    Choose "soumission" or "devis" for the quote button.
+
+pointSpace team
+
+    Fill the "Confirmed by team" column in section 3 and add missing terms.
+    Review 20­30 recent enquiries and quotes (won and lost): client's original wording,
+    language, role, requested deliverable, city and outcome. Keep client names out of
+    anything public.
+    Pick one representative project per priority service for the blog, with approved photos
+    or anonymized plans.
+
+Appendix: competitor sample and search observations
+
+Eight competitor service pages were read on September 29, 2026: four French, four
+English. They were chosen because they sell scanning and Scan-to-BIM, so terms like BIM
+are expected on all of them. Coverage means "found on this many of the 8 pages"; it is not
+search volume, traffic or market share.
+
+Term family                            Pages using it (of 8)
+
+As-built / tel(s) que construit(s)     8
+
+BIM                                    8
+
+Scan-to-BIM / scan 3D vers BIM         7
+
+Point cloud / nuage de points          7
+
+Revit                                  5
+
+LiDAR                                  5
+
+LOD                                    5
+
+Digital twin / jumeau numérique        4
+
+Reality capture / capture de la réalité 3
+
+DWG                                    3
+
+                                                              Page 13 of 15
+pointSpace -- SEO Vocabulary Baseline
+
+Term family                            Pages using it (of 8)
+E57                                    3
+IFC                                    2
+MEP                                    2
+
+Pages sampled: ARTOP, DCMS, UNIQ Dimensions, MESUR, Point3D, Lightbound 3D, IY
+Design, Kona North.
+
+Companies that appeared in search results for each query are below. The order is not a
+Google ranking, and Maps results were not checked.
+
+Query                                  Companies found
+
+numérisation 3D bâtiment Montréal ARTOP, UTAG 3D Vision, Keovia Solutions, HLS,
+                                                      Dimensions GL
+
+relevé laser 3D Québec bâtiment        ARTOP, iSCAN3D, Multi-Précision, DCMS
+
+plans tels que construits Montréal DCMS, UNIQ Dimensions, MESUR
+
+mesurage BOMA Montréal                 Cusson-Létourneau, KIVA
+
+3D laser scanning Toronto building     Applied Precision 3D, CasaBuilt, IY Design, iScano,
+                                       Lightbound 3D
+
+scan to BIM Toronto                    SmartScanz, SiteScanStudio, Point3D, Lightbound
+                                       3D, Axisco, IY Design, Kona North
+
+as built drawings Toronto              Echometrics, 828 Design, Rendimension, Creative
+                                       Angle, Pathak Design
+
+industrial laser scanning Canada       Balonbay, J-Tech Laser Scan, Arc Measurements,
+                                       True Point Precision
+
+Searches without "bâtiment" or "building" also returned object scanning and 3D printing
+companies, so building-specific wording matters.
+
+Sources
+
+    pointSpace -- Accueil (FR) and Scan to BIM (EN), checked September 30, 2026
+    Google Search Console performance report
+
+                                                                                       Page 14 of 15
+pointSpace -- SEO Vocabulary Baseline
+
+      Google Keyword Planner historical metrics
+      Google local ranking guidance
+      SQI -- Cahier des exigences BIM de projet
+
+                                                                                                                                                                                                                                                  Page 15 of 15
+

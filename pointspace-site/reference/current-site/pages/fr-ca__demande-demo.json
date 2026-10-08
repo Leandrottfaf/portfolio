@@ -1,0 +1,332 @@
+{
+  "url": "https://www.pointspace.ca/fr-ca/demande-demo",
+  "lang": "fr",
+  "title": "Obtenez une démo | Solutions Prevu 3D | pointSpace",
+  "metaDescription": "Découvrez comment les solutions Prevu 3D facilitent la visualisation, coordination et planification de vos projets grâce à une interface simple et interactive.",
+  "ogTitle": "Obtenez une démo | Solutions Prevu 3D | pointSpace",
+  "ogDescription": "Découvrez comment les solutions Prevu 3D facilitent la visualisation, coordination et planification de vos projets grâce à une interface simple et interactive.",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/fr-ca/demande-demo",
+  "hreflang": [
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/demande-demo"
+    },
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/get-a-demo"
+    }
+  ],
+  "h1": [
+    "Découvrez la puissance de Prevu3D"
+  ],
+  "headings": [
+    "h1: Découvrez la puissance de Prevu3D",
+    "h3: Contactez-nous"
+  ],
+  "nav": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/demande-demo"
+    },
+    {
+      "text": "English\nen",
+      "href": "/get-a-demo"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Obtenir une soumission →",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/demande-demo"
+    },
+    {
+      "text": "English\nen",
+      "href": "/get-a-demo"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca"
+    }
+  ],
+  "body": "Accueil\nÀ propos\nSecteurs\nManufacturier et industriel\nArchitecture et Bâtiments\nServices\nNumérisation LiDAR 3D\nModélisation BIM\nAs-Built Drafting\nModélisation 3D\nAnalyse du bâtiment\nMise en plan BOMA\nVisites virtuelles 3D Matterport\nJumeaux numériques\nBlogue\nÉtudes de cas\nContact\nCarrières\nContactez-nous\n(514) 606-9604\nFrançais\nfr\nEnglish\nen\nDécouvrez la puissance de Prevu3D\nRéservez une démonstration avec l'un de nos experts en jumeaux numériques\nContactez-nous\nPrénom et nom\nE-mail\nDescription du projet\nMerci de nous avoir contacté. Nous vous répondrons dans les plus brefs délais.\nOups, une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard.\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo PointSpace avec barres verticales dorées et texte gris clair sur fond blanc"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    }
+  ],
+  "jsonLd": [],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/fr-ca/demande-demo"
+}

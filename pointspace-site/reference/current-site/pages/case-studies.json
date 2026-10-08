@@ -1,0 +1,487 @@
+{
+  "url": "https://www.pointspace.ca/case-studies",
+  "lang": "en",
+  "title": "Case Studies | 3D Scan, Modeling & More | pointSpace",
+  "metaDescription": "Explore how pointSpace delivers precise 3D scanning, modeling, and more solutions across architecture, manufacturing, and industry. See our projects in action.",
+  "ogTitle": "Case Studies | 3D Scan, Modeling & More | pointSpace",
+  "ogDescription": "Explore how pointSpace delivers precise 3D scanning, modeling, and more solutions across architecture, manufacturing, and industry. See our projects in action.",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/case-studies",
+  "hreflang": [
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/case-studies"
+    },
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/etudes-de-cas"
+    }
+  ],
+  "h1": [
+    "CASE STUDIES"
+  ],
+  "headings": [
+    "h1: CASE STUDIES",
+    "h4: Comprehensive 3D scan of retail spaces",
+    "h4: 3D Scan and 3D modeling of building facades",
+    "h4: 3D Scan and digital plans of critical areas on a production line",
+    "h4: As-built architectural plans for a retail space",
+    "h4: Structural and roofing analysis ahead of steel frame installation",
+    "h4: Health and safety issue in an\nindustrial site",
+    "h4: 3D scan and as-built plans of the St-James Theatre",
+    "h4: As-built plans - Le FouFou",
+    "h4: 3D scan and 3D modeling of a sawmill",
+    "h4: Comprehensive building 3D scanning and 3D modeling",
+    "h4: 3D scan and 3D modeling of an industrial facility",
+    "h4: Industrial 3D Scanning for Marine Retrofit: the Toronto Express at the Port of Montreal",
+    "h4: 3D scanning a bus factory",
+    "h4: Prevost",
+    "h4: 3D Scanning and Plan Updating: Windsor Station in Montreal",
+    "h4: Laurier Capital"
+  ],
+  "nav": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/etudes-de-cas"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contact us",
+      "href": "/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "",
+      "href": "/"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/Comprehensive_3D_Scan_of_retail_spaces"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/3D-Scan-and-3D-Modeling-of-Building-Facades"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/3D-Scan-and-as-built-plans-of-Critical-Areas-on-a-Production-Line"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/As-built_architectural_plans_for_a_retail_space"
+    },
+    {
+      "text": "tructural and roofing analysis ahead of steel frame installation",
+      "href": "/fr-ca/etude-de-cas/etude-structurelle-et-toiture"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/Structural-and-Roofing-Analysis-Ahead-of-Steel-Frame-Installation"
+    },
+    {
+      "text": "Health and safety issue in an",
+      "href": "/fr-ca/etude-de-cas/etude-structurelle-et-toiture"
+    },
+    {
+      "text": "ndustrial site",
+      "href": "/fr-ca/etude-de-cas/etude-structurelle-et-toiture"
+    },
+    {
+      "text": "Groupe Renfort",
+      "href": "http://www.renfort.com/"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/Health-and-safety-issue-in-an-industrial-site"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/3D_Scan_and_As-Built_plans_of_the_st-james_theater"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/As-Built-plans-le-foufou"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/fire-protection-for-a-sawmill"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/Comprehensive-Building-3D-Scanning-and-3D-Modeling"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/3D-Scan-and-3D-Modeling-of-an-Industrial-Facility"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/hapag-lloyd"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/copy-of-case-study-nadco"
+    },
+    {
+      "text": "View case study",
+      "href": "/case-studies/case-study-windsor"
+    }
+  ],
+  "body": "Home\nAbout us\nIndustries\nManufacturing and industrial\nArchitecture and Buildings\nServices\nScanning\nScan to BIM\nAs-Built Drafting\n3D Modeling\nBuilding analysis\nBOMA As-Built Digital Plans\nMatterport 3D Virtual Tours\nDigital Twins\nBlog\nCase studies\nContact\nGet in touch\n(514) 606-9604\nEnglish\nen\nFrançais\nfr\nCASE STUDIES\nComprehensive 3D scan of retail spaces\nReitmans Canada Ltd.\nView case study\n3D Scan and 3D modeling of building facades\nSt. Denis Thompson Inc.\nView case study\n3D Scan and digital plans of critical areas on a production line\nNelmar\nView case study\nAs-built architectural plans for a retail space\nWestcliff\nView case study\nS\ntructural and roofing analysis ahead of steel frame installation\nIndustrial Sector\nView case study\nHealth and safety issue in an\ni\nndustrial site\nGroupe Renfort\nView case study\n3D scan and as-built plans of the St-James Theatre\nCarosielli Group inc.\nView case study\nAs-built plans - Le FouFou\nJCB Construction Canada\nView case study\n3D scan and 3D modeling of a sawmill\nCDF Group\nView case study\nComprehensive building 3D scanning and 3D modeling\nBroccolini\nView case study\n3D scan and 3D modeling of an industrial facility\nVAC AERO International Inc.\nView case study\nIndustrial 3D Scanning for Marine Retrofit: the Toronto Express at the Port of Montreal\nHapag-Lloyd\nView case study\n3D scanning a bus factory\nPrevost\nView case study\n3D Scanning and Plan Updating: Windsor Station in Montreal\nLaurier Capital\nView case study\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot-2025-04-03-163540-1920w.webp",
+      "alt": "Storefront with large window displays and mannequins in a modern shopping mall corridor"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot_16-7-2024_102652_--281-29-1d1d9314-1920w.png",
+      "alt": "Modern apartment buildings with curved balconies and glass storefronts at street level"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%287%29-1920w.webp",
+      "alt": "Yellow industrial robot arm loading cardboard boxes on a factory conveyor belt"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%282%29-1920w.webp",
+      "alt": "3D model of a gray stone building on a blue sky background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Templates+publications+LI+%289%29-1920w.png",
+      "alt": "Colorful 3D heatmap of a rectangular surface with scattered markers and a small structure at one end"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Balcan-2-1920w.png",
+      "alt": "Gray industrial machine assembly with hopper, frame, and control box on a white background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%286%29-1920w.webp",
+      "alt": "Black-and-white image of a classical building facade with columns against a dark background"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sous-titre-545a2f08-1920w.webp",
+      "alt": "Empty industrial interior with exposed ceiling pipes and sunlight through large windows"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2023-10-17+104620+%283%29-1920w.webp",
+      "alt": "Industrial factory interior with metal machinery, beams, and a high ceiling of lights"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4_Model_6000px+%281%29-1920w.webp",
+      "alt": "Modern indoor corridor with black railings, hanging red lights, and bright windows at the end"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Vac-Aero_5--282-29-1920w.webp",
+      "alt": "Industrial facility with large pipes and tanks, orange-lit building at dusk"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/8521980c-7480-4020-b5e5-5b9f73fcd841-1920w.jpg",
+      "alt": "Toronto Express ferry docked at a ramp, with orange deckhouse and sun reflecting on the water"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20260316_105800-1920w.jpg",
+      "alt": "Modern indoor corridor with black railings, hanging red lights, and bright windows at the end"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Image--289-29-1920w.png",
+      "alt": "Modern indoor corridor with black railings, hanging red lights, and bright windows at the end"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold and light gray text and vertical gold bars above it"
+    }
+  ],
+  "jsonLd": [],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot-2025-04-03-163540-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Screenshot-2025-04-03-163540.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot_16-7-2024_102652_--281-29-1d1d9314-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Screenshot_16-7-2024_102652_--281-29-1d1d9314.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Pr%C3%A9sentation+source+%287%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/11+%282%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Templates+publications+LI+%289%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Templates+publications+LI+%289%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Balcan-2-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Balcan-2.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%286%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Pr%C3%A9sentation+source+%286%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sous-titre-545a2f08-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Sous-titre-545a2f08.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2023-10-17+104620+%283%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Screenshot+2023-10-17+104620+%283%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4_Model_6000px+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/4_Model_6000px+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Vac-Aero_5--282-29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Vac-Aero_5--282-29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/8521980c-7480-4020-b5e5-5b9f73fcd841-1920w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/8521980c-7480-4020-b5e5-5b9f73fcd841.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20260316_105800-1920w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/20260316_105800.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Image--289-29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Image--289-29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%286%29-1920w.png"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/case-studies"
+}

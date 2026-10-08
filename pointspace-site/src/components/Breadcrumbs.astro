@@ -1,0 +1,22 @@
+---
+import { UI } from '../data/ui';
+import type { Lang } from '../data/routes';
+interface Props { lang: Lang; items: { name: string; path?: string }[] }
+const { lang, items } = Astro.props;
+---
+<nav class="crumbs t-small" aria-label={UI[lang].breadcrumb}>
+  <ol>
+    {items.map((it, i) => (
+      <li>
+        {it.path && i < items.length - 1 ? <a href={it.path}>{it.name}</a> : <span aria-current="page">{it.name}</span>}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; color: var(--fg-muted); }
+  .crumbs li + li::before { content: '/'; margin-right: 10px; opacity: 0.6; }
+  .crumbs a { text-decoration: none; }
+  .crumbs a:hover { text-decoration: underline; text-underline-offset: 4px; }
+</style>

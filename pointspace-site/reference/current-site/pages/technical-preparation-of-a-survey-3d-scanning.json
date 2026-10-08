@@ -1,0 +1,376 @@
+{
+  "url": "https://www.pointspace.ca/technical-preparation-of-a-survey-3d-scanning",
+  "lang": "en",
+  "title": "Technical preparation of a survey: 3D scanning | pointSpace",
+  "metaDescription": "At pointSpace, we know that good technical preparation is the key to high-quality 3D scanning surveys. Indeed, understanding the purpose of the survey and preparing accordingly is the key to a successful result that captures all the essential information.",
+  "ogTitle": "Technical preparation of a survey: 3D scanning | pointSpace",
+  "ogDescription": "At pointSpace, we know that good technical preparation is the key to high-quality 3D scanning surveys. Indeed, understanding the purpose of the survey and preparing accordingly is the key to a successful result that captures all the essential information.",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Cr%C3%A9ation-sans-titre-%286%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/technical-preparation-of-a-survey-3d-scanning",
+  "hreflang": [],
+  "h1": [
+    "Technical Preparation of a 3D Scanning Survey"
+  ],
+  "headings": [
+    "h1: Technical Preparation of a 3D Scanning Survey",
+    "h2: 1. Analysis of obstructions",
+    "h2: 2. Brightness management",
+    "h2: 3. Security and site access",
+    "h2: 4. Equipment verification and calibration",
+    "h2: 5. Documentation and planning",
+    "h2: 6. Weather conditions",
+    "h2: 7. Technical preparation of the team",
+    "h4: Louis Dallaire",
+    "h4: Follow us!",
+    "h4: About us",
+    "h4: Contact us"
+  ],
+  "nav": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contact us",
+      "href": "/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About us",
+      "href": "/about-us"
+    },
+    {
+      "text": "Industries",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturing and industrial",
+      "href": "/manufacturing-industrial"
+    },
+    {
+      "text": "Architecture and Buildings",
+      "href": "/architecture-buildings"
+    },
+    {
+      "text": "Services",
+      "href": "/#services"
+    },
+    {
+      "text": "Scanning",
+      "href": "/services/LiDAR-3D-Scanning"
+    },
+    {
+      "text": "Scan to BIM",
+      "href": "/services/scan-to-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/services/As-Built-Drafting"
+    },
+    {
+      "text": "3D Modeling",
+      "href": "/services/3D-modeling"
+    },
+    {
+      "text": "Building analysis",
+      "href": "/services/building-analysis"
+    },
+    {
+      "text": "BOMA As-Built Digital Plans",
+      "href": "/services/BOMA_As-Built_Digital_Plans"
+    },
+    {
+      "text": "Matterport 3D Virtual Tours",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "Digital Twins",
+      "href": "/services/prevu3d"
+    },
+    {
+      "text": "Blog",
+      "href": "/blog"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "text": "English\nen",
+      "href": "/"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "",
+      "href": "/"
+    },
+    {
+      "text": "contact us!",
+      "href": "/contact"
+    },
+    {
+      "text": "Louis Dallaire",
+      "href": "https://www.pointspace.ca/fr-ca/a-propos-louis-dallaire-president"
+    },
+    {
+      "text": "< Previous Post",
+      "href": "/fr-ca/preparation-technique-dun-releve-numerisation-3d"
+    },
+    {
+      "text": "Next Post >",
+      "href": "/fr-ca/la-numerisation-3d-le-processus-de-numerisation"
+    },
+    {
+      "text": "",
+      "href": "/"
+    },
+    {
+      "text": "",
+      "href": "https://www.linkedin.com/company/pointspace/"
+    },
+    {
+      "text": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "text": "Careers",
+      "href": "/careers"
+    },
+    {
+      "text": "Security and privacy policy",
+      "href": "/security-and-privacy-policy"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    }
+  ],
+  "body": "Home\nAbout us\nIndustries\nManufacturing and industrial\nArchitecture and Buildings\nServices\nScanning\nScan to BIM\nAs-Built Drafting\n3D Modeling\nBuilding analysis\nBOMA As-Built Digital Plans\nMatterport 3D Virtual Tours\nDigital Twins\nBlog\nCase studies\nContact\nGet in touch\n(514) 606-9604\nEnglish\nen\nFrançais\nfr\nLouis Dallaire • March 11, 2024\nTechnical Preparation of a 3D Scanning Survey\nAt pointSpace, we know that good technical preparation is the key to high-quality 3D scanning surveys. Indeed, understanding the purpose of the survey and preparing accordingly is the key to a successful result that captures all the essential information. Here's how we prepare for our surveys and what we offer to meet your 3D scanning needs.\n1. Analysis of obstructions\nObstructions can affect the accuracy of our surveys. This is why we conduct a preliminary site survey to identify potential obstructions such as fixed furniture, clearance heights, ceiling spaces or the amount of equipment on the floor. We then carefully plan the scanning positions to take account of these obstructions and determine the equipment required to meet these working conditions. This step guarantees efficient measurement while ensuring we deliver a product that meets your needs.\n2. Brightness management\nLighting is a crucial factor for the quality of 3D scans. Although LiDAR technology can operate in complete darkness, interpreting the scan becomes more challenging under such conditions. That's why we assess the site's lighting conditions to determine the best time for scanning. If needed, we bring in additional light sources to improve visibility in dark areas. Our equipment is adjusted according to the lighting environment to maximize the accuracy of the data capture.\n3. Security and site access\nYour safety and that of our team are top priorities. Before getting started, we identify potential on-site risks such as confined spaces, elevated areas, or moving equipment. We make sure all necessary permits are obtained and follow the site's specific safety procedures. Our equipment is also adapted to these conditions—for example, using floor mounts, safety harnesses, or more mobile devices when needed.\n4. Equipment verification and calibration\nTo ensure accurate data capture, we inspect and calibrate our equipment before every project. All components are checked to make sure they’re in proper working condition, and we run preliminary tests to verify the quality of the recorded data. This level of rigor allows us to deliver reliable and precise results, without any hassle on-site.\n5. Documentation and planning\nGood preparation starts with thorough documentation and planning. We develop a detailed scanning plan that outlines the areas to be covered and the control points to be used. A checklist of all necessary equipment and accessories is prepared to ensure nothing is overlooked. We also make sure the entire team is fully briefed on the plan and their specific roles for optimal coordination. That’s why having access to existing floor plans ahead of our visit is always preferred.\n6. Weather conditions\nWeather conditions can have a direct impact on our data capture. Rain, snow, or extreme heat can all affect both the equipment and the quality of the scan. That’s why we closely monitor weather forecasts to choose the best time for our work. Our team is also prepared to adjust the plan in response to unexpected weather changes, ensuring the continuity and reliability of our services.\n7. Technical preparation of the team\nOur team stays up to date with the latest 3D scanning technologies and techniques. We invest in ongoing training and regularly carry out simulations and exercises to maintain a high level of expertise. This ensures we deliver accurate, high-quality scans every time.\nTechnical preparation is a key step in the success of any 3D scanning project. By accounting for site obstructions, lighting conditions, safety measures, equipment calibration, proper documentation, weather conditions, and team expertise, we maximize the efficiency and accuracy of every scan.\nFor more information about our 3D scanning services, please\ncontact us!\nArticle by\nLouis Dallaire\nA graduate of ÉTS in operations and logistics engineering, Louis is passionate about the industrial world. His goal with pointSpace is to make data management and use accessible, because it's not always necessary to use complex tools to solve simple problems!\n< Previous Post\nNext Post >\nFollow us!\nAbout us\nCase studies\nCareers\nSecurity and privacy policy\nContact us\nLouis Dallaire\nldallaire@pointspace.ca\n(514) 606-9604\nTechnology pointSpace, all rights reserved 2023.\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold bars above light gray text"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20221222_185010508_iOS-ba9746f8-1920w.png",
+      "alt": "Man in checkered shirt and vest standing near a window, arms crossed."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo in light gray with gold vertical bars above the text"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "PointSpace logo with gold and light gray text and vertical gold bars above it"
+    }
+  ],
+  "jsonLd": [
+    "\n\n{\n  \"@context\" : {\n    \"@vocab\" : \"http://schema.org/\"\n  },\n  \"@type\" : \"BlogPosting\",\n  \"headline\" : \"Technical preparation of a survey: 3D scanning | pointSpace\",\n  \"datePublished\" : \"2024-03-11T15:36:15\",\n  \"dateModified\" : \"2026-01-28T16:18:24\",\n  \"author\" : {\n    \"@type\" : \"Person\",\n    \"name\" : \"Louis Dallaire\"\n  },\n  \"image\" : \"https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Cr%C3%A9ation-sans-titre-%286%29.png\",\n  \"description\" : \"At pointSpace, we know that good technical preparation is the key to high-quality 3D scanning surveys. Indeed, understanding the purpose of the survey and preparing accordingly is the key to a successful result that captures all the essential information.\"\n}\n\n  "
+  ],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20221222_185010508_iOS-ba9746f8-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/20221222_185010508_iOS-ba9746f8.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Cr%C3%A9ation-sans-titre-%286%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Cr%C3%A9ation-sans-titre-%286%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/an1VOtzQpCXhLAPlP93E_Coulisses+carr%C3%A9_sans+texte.v2.0000000.jpg",
+    "https://irp.cdn-website.com/md/dmtmpl/75bc33b9-819f-4158-8fd6-6dcfe792b59c/dms3rep/multi/desktop/logo-header.svg"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/technical-preparation-of-a-survey-3d-scanning"
+}

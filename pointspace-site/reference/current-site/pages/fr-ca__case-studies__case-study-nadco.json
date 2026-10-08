@@ -1,0 +1,405 @@
+{
+  "url": "https://www.pointspace.ca/fr-ca/case-studies/case-study-nadco",
+  "lang": "fr",
+  "title": "Étude de cas Nadco | Plans as-built architecturaux",
+  "metaDescription": "Découvrez comment pointSpace a livré un scan 3D et des plans architecturaux as-built précis pour un projet de réaménagement commercial à Kitchener.",
+  "ogTitle": "Étude de cas Nadco | Plans as-built architecturaux",
+  "ogDescription": "Découvrez comment pointSpace a livré un scan 3D et des plans architecturaux as-built précis pour un projet de réaménagement commercial à Kitchener.",
+  "ogImage": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/fr-ca/case-studies/case-study-nadco",
+  "hreflang": [
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/case-studies/case-study-nadco"
+    },
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/case-studies/case-study-nadco"
+    }
+  ],
+  "h1": [
+    "Contactez-nous !"
+  ],
+  "headings": [
+    "h2: Mise en place du décor",
+    "h2: Solutions proposées",
+    "h3: Slide title",
+    "h2: Gains",
+    "h4: Louis Dallaire",
+    "h3: Numérisation et modélisation 3D complètes des bâtiments",
+    "h1: Contactez-nous !",
+    "h4: Louis Dallaire",
+    "h3: Contactez-nous"
+  ],
+  "nav": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/case-studies/case-study-nadco"
+    },
+    {
+      "text": "English\nen",
+      "href": "/case-studies/case-study-nadco"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Obtenir une soumission →",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/case-studies/case-study-nadco"
+    },
+    {
+      "text": "English\nen",
+      "href": "/case-studies/case-study-nadco"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "factory layout planning,",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "numérisation 3D industrielle",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "mise en plan",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "entreprises manufacturières",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "visualiser les contraintes",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Consulter l'étude de cas",
+      "href": "/case-studies/Comprehensive-Building-3D-Scanning-and-3D-Modeling"
+    },
+    {
+      "text": "",
+      "href": "http://linkedin.com/"
+    }
+  ],
+  "body": "Accueil\nÀ propos\nSecteurs\nManufacturier et industriel\nArchitecture et Bâtiments\nServices\nNumérisation LiDAR 3D\nModélisation BIM\nAs-Built Drafting\nModélisation 3D\nAnalyse du bâtiment\nMise en plan BOMA\nVisites virtuelles 3D Matterport\nJumeaux numériques\nBlogue\nÉtudes de cas\nContact\nCarrières\nContactez-nous\n(514) 606-9604\nFrançais\nfr\nEnglish\nen\nLes Plastiques Nadco\nPlans d’aménagement 2D d’une usine manufacturière\nMise en place du décor\nPlastiques Nadco se spécialise dans l'injection de plastique et fabrique des pièces sur mesure pour une clientèle variée, couvrant de nombreux secteurs industriels. Son usine regroupe plusieurs lignes de production et un grand nombre de machines, créant un environnement dense et en constante évolution.\nDans un contexte de croissance et d’optimisation, l’entreprise souhaitait revoir complètement l’aménagement de son usine afin d’intégrer de nouveaux équipements et améliorer l’efficacité globale des opérations.\nCependant, plusieurs défis se posaient :\nUn entrepôt rempli de machines, rendant les relevés manuels complexes\nL’absence de plans à jour et fiables\nLa difficulté de tester différents layouts sans perturber la production\nC’est dans ce contexte que pointSpace a été mandatée pour numériser l’environnement existant et fournir des outils concrets pour faciliter la reconfiguration de l’usine.\nCette intervention répond à des besoins de\nfactory layout planning,\nde\nnumérisation 3D industrielle\n, de\nmise en plan\nd’usine et de manufacturing space optimization, essentiels pour les\nentreprises manufacturières\nqui souhaitent planifier leur croissance avec des données fiables.\nEn transformant l’environnement existant en livrables exploitables, pointSpace aide les équipes à\nvisualiser les contraintes\n, tester différents scénarios d’aménagement et prendre de meilleures décisions avant d’intégrer de nouveaux équipements.\nSolutions proposées\nPour répondre aux besoins de Plastiques NADCO, pointSpace a déployé une approche complète combinant capture de données et modélisation :\nNumérisation 3D de l’usine\nScan complet de la machinerie et des lignes de production réalisé sur place par Maxime.\nCapture précise de l’environnement malgré la densité des équipements.\nPlan 2D AutoCAD (vue en plan)\nCréation d’un plan détaillé représentant fidèlement l’état actuel de l’usine.\nBase claire et structurée pour la planification des aménagements.\nCréation de blocs AutoCAD\nModélisation de chaque machine sous forme de bloc (entité).\nPossibilité de déplacer facilement les équipements dans le plan.\nOutil de simulation d’aménagement\nPlan interactif permettant au client de tester différents layouts.\nSupport direct à la prise de décision pour l’ajout de nouvelles machines.\nSlide title\nWrite your caption here\nButton\nGains\nGrâce à l’intervention de pointSpace, Plastiques NADCO a pu :\nOptimiser l’aménagement de son usine\nTester plusieurs configurations sans déplacer physiquement les équipements.\nGagner en flexibilité opérationnelle\nDéplacer virtuellement les machines et adapter rapidement le layout selon les besoins.\nRéduire les risques et les erreurs\nS’appuyer sur des données précises plutôt que sur des estimations ou des mesures manuelles.\nAccélérer la planification de croissance\nIntégrer de nouvelles machines de manière stratégique et efficace.\n« À l’écoute de nos besoins. Prise de données efficace et précise, sans affecter les opérations quotidiennes de production, avec un résultat livré sans attente. »\n- Samuel Brassard\nChargé de projet - Génie Industriel\nPlastique Nadco Inc.\nPourquoi pointSpace ?\nNotre mission est simple : rendre le bâtiment accessible directement depuis l’ordinateur de nos clients. Grâce à des données précises et un accès intuitif, nous permettons à nos partenaires, comme Reitmans, de gagner du temps, d’être plus efficaces et de mieux maîtriser leurs projets.\nArticle de\nLouis Dallaire\nDiplômé de l'ÉTS en génie des opérations et de la logistique, Louis est passionné par le monde industriel. Son objectif avec pointSpace est de rendre la gestion et l'utilisation des données accessibles, car il n'est pas toujours nécessaire d'utiliser des outils complexes pour résoudre des problèmes simples !\nNumérisation et modélisation 3D complètes des bâtiments\nConsulter l'étude de cas\nContactez-nous !\nLouis Dallaire\nldallaire@pointspace.ca\n(514) 606-9604\nContactez-nous\nPrénom\nNom de famille\nE-mail\nMessage\nMerci de nous avoir contactés. Nous vous répondrons dans les plus brefs délais.\nOups, une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard.\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo PointSpace avec barres verticales dorées et texte gris clair sur fond blanc"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logo-Nadco-1920w.png",
+      "alt": "Logo NADCO avec le texte « NADCO » en bleu et « Les Plastiques » en noir au-dessus, sur fond blanc."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/image+%286%29-1920w.jpg",
+      "alt": "Vue grand angle d'un vaste entrepôt industriel avec des machines, des barils bleus et un éclairage zénithal"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/image+%285%29-1920w.jpg",
+      "alt": "Plan d'étage CAO sombre avec contours de pièces et symboles colorés sur fond noir"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Cr%C3%A9ation-sans-titre-%281%29-1920w.png",
+      "alt": "Personne debout, les mains jointes, portant une chemise à carreaux et un gilet foncé, sur fond uni."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4_Model_6000px+%281%29-1920w.webp",
+      "alt": "Interior view of a modern building with shelves and lights. Empty hallway with dark gray walls and ceiling."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    }
+  ],
+  "jsonLd": [],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logo-Nadco-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Logo-Nadco.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/image+%286%29-1920w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/image+%286%29.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/image+%285%29-1920w.jpg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Cr%C3%A9ation-sans-titre-%281%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Cr%C3%A9ation-sans-titre-%281%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4_Model_6000px+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Sous-titre-545a2f08-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%286%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot-2025-04-03-163540-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot_16-7-2024_102652_+%281%29-1920w.jpeg",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2023-10-17+104620+%283%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Vac+Aero_5+%284%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%288%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation+source+%289%29-1920w.webp"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/fr-ca/case-studies/case-study-nadco"
+}

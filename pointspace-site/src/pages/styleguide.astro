@@ -1,0 +1,146 @@
+---
+// Internal design-system reference (noindex). Not part of the public sitemap.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import CaseCard from '../components/CaseCard.astro';
+import Deliverables from '../components/Deliverables.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import Faq from '../components/Faq.astro';
+import Testimonial from '../components/Testimonial.astro';
+import Picture from '../components/Picture.astro';
+import StatsBand from '../components/StatsBand.astro';
+import { serviceById } from '../data/services';
+import { caseById } from '../data/caseStudies';
+
+const lang = 'fr';
+const colors = [
+  { name: '--ps-green-900', hex: '#004225', role: 'Primaire · fonds foncés, texte sur clair', fg: '#EDE7DA', ratio: 'Crème dessus : 9,44:1' },
+  { name: '--ps-green-700', hex: '#036238', role: 'Fonds verts secondaires', fg: '#EDE7DA', ratio: 'Crème dessus : 6,07:1' },
+  { name: '--ps-green-600', hex: '#2F634A', role: 'Bordures, texte secondaire sur crème', fg: '#EDE7DA', ratio: 'Sur crème : 5,67:1' },
+  { name: '--ps-gold', hex: '#E3AB38', role: 'Accent · bouton principal (texte vert)', fg: '#004225', ratio: 'Vert dessus : 5,62:1' },
+  { name: '--ps-cream', hex: '#EDE7DA', role: 'Fond clair principal', fg: '#004225', ratio: 'Vert dessus : 9,44:1' },
+  { name: '--ps-cream-50', hex: '#FAF6EA', role: 'Surfaces surélevées sur crème', fg: '#004225', ratio: 'Vert dessus : 10,76:1' },
+];
+const type = [
+  ['t-display', 'Display · 88/90 · Light 300', 'Numérisation 3D'],
+  ['t-h1', 'H1 · 72/75 · Light 300', 'Scan-to-BIM : modélisation BIM'],
+  ['t-h2', 'H2 · 48/52 · Roman 400', 'Livrables et formats de fichiers'],
+  ['t-h3', 'H3 · 28/33 · Roman 400', 'Nuage de points assemblé'],
+  ['t-h4', 'H4 · 20/26 · Medium 500', 'Plans tels que construits'],
+  ['t-lead', 'Lead · 22/32 · Light 300', 'Un modèle Revit fidèle à votre bâtiment.'],
+  ['', 'Corps · 18/28 · Roman 400', 'Plans d\'étage, élévations et coupes en DWG.'],
+  ['t-small', 'Petit · 15/23', 'Légendes, métadonnées, pied de page.'],
+  ['t-label', 'Étiquette · 13 · Medium · 0,14em', 'Ce que vous recevez'],
+];
+const spacing = [4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 160];
+---
+<BaseLayout lang={lang} route="styleguide" noindex title="Système de design | pointSpace (interne)" description="Référence interne du système de design du prototype pointSpace.">
+  <section class="section theme-green">
+    <div class="container">
+      <p class="eyebrow t-label">Interne · non indexé</p>
+      <h1 class="t-h1">Système de design pointSpace</h1>
+      <p class="t-lead t-muted sg-intro">Couleurs extraites du site actuel (voir reference/brand.md), typographie Neue Haas Grotesk Display, espacement sur une base de 4 px. Le motif des barres ascendantes du logo sert de fil conducteur graphique.</p>
+    </div>
+  </section>
+
+  <section class="section theme-cream" aria-labelledby="c">
+    <div class="container">
+      <SectionHeading eyebrow="01" title="Couleurs" id="c" intro="Les six valeurs de la marque, sans modification. L'or n'est jamais utilisé comme couleur de texte sur fond crème (1,68:1)." />
+      <div class="swatches">
+        {colors.map((c) => (
+          <div class="sw">
+            <div class="sw__chip" style={`background:${c.hex};color:${c.fg}`}><span class="t-h3">Aa</span><span class="t-small">{c.ratio}</span></div>
+            <p class="t-small"><strong>{c.hex}</strong><br /><code>{c.name}</code><br /><span class="t-muted">{c.role}</span></p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section theme-cream-50" aria-labelledby="ty">
+    <div class="container">
+      <SectionHeading eyebrow="02" title="Typographie" id="ty" intro="Neue Haas Grotesk Display (fichiers du site actuel). Titres en casse de phrase, graisse légère pour les grands titres." />
+      <div class="type">
+        {type.map(([cls, meta, sample]) => (
+          <div class="type__row"><p class="t-label t-muted">{meta}</p><p class={cls}>{sample}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section theme-cream" aria-labelledby="sp">
+    <div class="container">
+      <SectionHeading eyebrow="03" title="Espacement et grille" id="sp" intro="Base de 4 px. Conteneur de 1440 px maximum, marges de 64 px, grille de 12 colonnes (gouttière de 32 px). Sections : 128 px en haut et en bas." />
+      <div class="spacing">
+        {spacing.map((s) => <div class="spacing__item"><span style={`width:${s}px`}></span><code class="t-small">{s}px</code></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section theme-cream-50" aria-labelledby="b">
+    <div class="container">
+      <SectionHeading eyebrow="04" title="Boutons, liens et étiquettes" id="b" />
+      <div class="row">
+        <a class="btn btn--primary" href="#b">Obtenir une soumission<span class="btn__arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--secondary" href="#b">Voir les livrables</a>
+        <a class="btn btn--primary btn--sm" href="#b">Petit bouton</a>
+        <a class="link-arrow" href="#b">Lien fléché<span aria-hidden="true">→</span></a>
+      </div>
+      <div class="row on-dark-demo theme-green">
+        <a class="btn btn--primary" href="#b">Obtenir une soumission<span class="btn__arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--secondary" href="#b">Secondaire sur vert</a>
+        <ul class="chips">{['E57', 'RCP/RCS', 'DWG', 'RVT', 'IFC'].map((f) => <li class="chip">{f}</li>)}</ul>
+      </div>
+      <div class="row">
+        <ul class="chips">{['E57', 'RCP/RCS', 'DWG'].map((f) => <li class="chip">{f}</li>)}</ul>
+        <ul class="chips">{['RVT', 'IFC'].map((f) => <li class="chip chip--solid">{f}</li>)}</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section theme-cream" aria-labelledby="cards">
+    <div class="container">
+      <SectionHeading eyebrow="05" title="Cartes" id="cards" />
+      <div class="cards">
+        <ServiceCard service={serviceById('scanToBim')} lang={lang} index={5} />
+        <ServiceCard service={serviceById('boma')} lang={lang} index={7} />
+        <CaseCard cs={caseById('windsor')} lang={lang} />
+        <div>
+          <Picture name="gare-windsor-nuage-points-vue-dessus" lang={lang} ratio="4/3" caption="Figure avec légende : nuage de points, vue du dessus." />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section theme-cream-50" aria-labelledby="pat">
+    <div class="container">
+      <SectionHeading eyebrow="06" title="Modèles de section" id="pat" intro="Page de service : ① héros (H1, proposition en une ligne, « Obtenir une soumission ») · ② introduction · ③ ce que vous recevez · ④ processus · ⑤ études de cas · ⑥ FAQ · ⑦ appel à l'action final." />
+      <h3 class="t-label sg-sub">Statistiques</h3>
+      <StatsBand lang={lang} />
+      <h3 class="t-label sg-sub">Livrables</h3>
+      <Deliverables items={[{ title: 'Modèle BIM Revit', text: 'Architecture, structure et MEP selon le LOD convenu.', formats: ['RVT'] }, { title: 'Nuage de points source', text: 'Assemblé et nettoyé.', formats: ['E57', 'RCP/RCS'] }]} />
+      <h3 class="t-label sg-sub">Processus</h3>
+      <ProcessSteps steps={[{ title: 'Capture', text: 'Relevé laser 3D sur site.' }, { title: 'Traitement', text: 'Assemblage et nettoyage.' }, { title: 'Livraison', text: 'Plans et modèles.' }]} />
+      <h3 class="t-label sg-sub">FAQ</h3>
+      <Faq items={[{ q: 'Question fréquente ?', a: 'Réponse courte et factuelle.' }, { q: 'Deuxième question ?', a: 'Réponse.' }]} />
+      <h3 class="t-label sg-sub">Témoignage</h3>
+      <Testimonial lang={lang} quote="Un service de grande qualité, rapide et efficace." name="Juliano Rodriguez-Daoust" role="Vice-président du développement commercial et des acquisitions" company="Groupe Carosielli" />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .sg-intro { max-width: 60ch; margin-top: var(--sp-5); }
+  .swatches { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--sp-5); }
+  .sw__chip { height: 160px; border-radius: var(--radius-card); padding: 16px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--ps-green-line); margin-bottom: 12px; }
+  .type__row { display: grid; grid-template-columns: 280px 1fr; gap: var(--sp-6); align-items: baseline; padding: var(--sp-5) 0; border-bottom: 1px solid var(--line); }
+  .spacing { display: grid; gap: 10px; }
+  .spacing__item { display: flex; align-items: center; gap: 16px; }
+  .spacing__item span { height: 16px; background: var(--ps-green-700); border-radius: 2px; }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-5); padding: var(--sp-5) 0; }
+  .on-dark-demo { padding: var(--sp-6); border-radius: var(--radius-card); margin: var(--sp-4) 0; }
+  .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-5); align-items: start; }
+  .sg-sub { color: var(--ps-green-600); margin: var(--sp-8) 0 var(--sp-5); }
+  code { font-family: ui-monospace, Consolas, monospace; font-size: 0.85em; }
+</style>

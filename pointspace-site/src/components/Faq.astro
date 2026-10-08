@@ -1,0 +1,41 @@
+---
+// Accessible FAQ built on <details>. The same items feed the FAQPage JSON-LD on the page.
+// Exclusive accordion: opening one question closes the others (native `name` grouping + script fallback).
+interface Props { items: { q: string; a: string }[] }
+const { items } = Astro.props;
+const group = `faq-${Math.random().toString(36).slice(2, 8)}`;
+---
+<div class="faq" data-faq>
+  {items.map((it, i) => (
+    <details class="faq__item" name={group} open={i === 0}>
+      <summary class="faq__q"><h3 class="t-h4">{it.q}</h3><span class="faq__icon" aria-hidden="true"></span></summary>
+      <div class="faq__a">
+        <p>{it.a}</p>
+      </div>
+    </details>
+  ))}
+</div>
+
+<script>
+  // Fallback for browsers without exclusive <details name>: close siblings when one opens.
+  document.querySelectorAll<HTMLElement>('[data-faq]').forEach((faq) => {
+    const items = [...faq.querySelectorAll<HTMLDetailsElement>('details')];
+    items.forEach((d) => d.addEventListener('toggle', () => {
+      if (d.open) items.forEach((o) => { if (o !== d && o.open) o.open = false; });
+    }));
+  });
+</script>
+
+<style>
+  .faq { border-top: 1px solid var(--line); }
+  .faq__item { border-bottom: 1px solid var(--line); }
+  .faq__q { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: var(--sp-6); padding: 26px 0; cursor: pointer; }
+  .faq__q::-webkit-details-marker { display: none; }
+  .faq__q h3 { font-weight: 400; font-size: 1.3125rem; }
+  .faq__q:hover h3 { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+  .faq__icon { position: relative; flex: none; width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; }
+  .faq__icon::before, .faq__icon::after { content: ''; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.5px; background: currentColor; translate: -50% -50%; transition: transform var(--dur) var(--ease); }
+  .faq__icon::after { transform: rotate(90deg); }
+  .faq__item[open] .faq__icon::after { transform: rotate(0deg); }
+  .faq__a { padding: 0 72px 28px 0; color: var(--fg-muted); max-width: 80ch; }
+</style>

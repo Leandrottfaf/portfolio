@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CaseCard from '../components/CaseCard.astro';
+import Testimonial from '../components/Testimonial.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { CASE_STUDIES } from '../data/caseStudies';
+import { serviceById } from '../data/services';
+import { TESTIMONIALS } from '../data/testimonials';
+import { ROUTES, type Lang, type RouteId } from '../data/routes';
+import { UI } from '../data/ui';
+import { breadcrumbLd } from '../lib/seo';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = UI[lang];
+const T = {
+  fr: {
+    title: 'Études de cas : numérisation 3D et BIM | pointSpace',
+    description: "Découvrez comment pointSpace applique la numérisation 3D, les plans tels que construits et la modélisation BIM en architecture, en immobilier et en industrie.",
+    h1: 'Études de cas',
+    lead: "Des résultats prouvés à travers plus de 400 projets : bâtiments patrimoniaux, commerces de détail, usines et navires, relevés au scanner laser puis livrés en plans, modèles et nuages de points.",
+    all: 'Tous', allServices: 'Tous les services', sectorLabel: 'Secteur', serviceLabel: 'Service', clear: 'Effacer les filtres', empty: 'Aucune étude de cas ne correspond à ces filtres.', manufacturing: 'Manufacturier et industriel', architecture: 'Architecture et bâtiments',
+    count: (n: number) => `${n} étude${n > 1 ? 's' : ''} de cas`, filters: 'Filtrer les études de cas',
+    ctaTitle: 'Votre projet pourrait être le prochain', ctaText: 'Parlez-nous de votre bâtiment ou de votre installation. Nous vous préparons une soumission.',
+  },
+  en: {
+    title: 'Case Studies: 3D Scanning and BIM Projects | pointSpace',
+    description: 'See how pointSpace applies 3D scanning, as-built drawings and BIM modelling across architecture, real estate, manufacturing and industry.',
+    h1: 'Case Studies',
+    lead: 'Proven results across 400+ projects: heritage buildings, retail stores, plants and vessels, laser scanned then delivered as drawings, models and point clouds.',
+    all: 'All', allServices: 'All services', sectorLabel: 'Industry', serviceLabel: 'Service', clear: 'Clear filters', empty: 'No case study matches these filters.', manufacturing: 'Manufacturing & Industrial', architecture: 'Architecture & Buildings',
+    count: (n: number) => `${n} case stud${n > 1 ? 'ies' : 'y'}`, filters: 'Filter case studies',
+    ctaTitle: 'Your project could be next', ctaText: 'Tell us about your building or facility. We will prepare a quote.',
+  },
+}[lang];
+const services = [...new Set(CASE_STUDIES.flatMap((c) => c.services))] as RouteId[];
+const countFor = (id: RouteId) => CASE_STUDIES.filter((c) => c.services.includes(id)).length;
+const sectors = [['', T.all], ['architecture', T.architecture], ['manufacturing', T.manufacturing]] as const;
+const crumbs = [{ name: t.home, path: ROUTES.home[lang] }, { name: T.h1, path: ROUTES.caseStudies[lang] }];
+const quotes = [TESTIMONIALS.carosielliShort, TESTIMONIALS.nelmar];
+---
+<BaseLayout lang={lang} route="caseStudies" title={T.title} description={T.description} jsonLd={[breadcrumbLd(crumbs.map((c) => ({ name: c.name, path: c.path! })))]}>
+  <PageHero lang={lang} crumbs={crumbs} h1={T.h1} lead={T.lead} compact />
+
+  <section class="section theme-cream" aria-labelledby="list-title">
+    <div class="container">
+      <h2 id="list-title" class="visually-hidden">{T.h1}</h2>
+      <div class="filters" data-filters role="search" aria-label={T.filters}>
+        <fieldset class="seg">
+          <legend class="visually-hidden">{T.sectorLabel}</legend>
+          {sectors.map(([v, label]) => (
+            <label class="seg__opt"><input type="radio" name="sector" value={v} checked={v === ''} /><span>{label}</span></label>
+          ))}
+        </fieldset>
+        <label class="select">
+          <span class="visually-hidden">{T.serviceLabel}</span>
+          <select class="ps-select" name="service" data-service>
+            <button type="button"><selectedcontent></selectedcontent></button>
+            <option value=""><span class="opt__label">{T.allServices}</span> <span class="opt__count"><span class="opt__paren">(</span><span class="opt__n">{CASE_STUDIES.length}</span><span class="opt__paren">)</span></span></option>
+            {services.map((s) => <option value={s}><span class="opt__label">{serviceById(s)[lang].label}</span> <span class="opt__count"><span class="opt__paren">(</span><span class="opt__n">{countFor(s)}</span><span class="opt__paren">)</span></span></option>)}
+          </select>
+          <svg width="12" height="8" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        </label>
+        <div class="filters__meta">
+          <p class="t-small filters__count" aria-live="polite" data-count data-fr={lang}>{T.count(CASE_STUDIES.length)}</p>
+          <button type="button" class="filters__clear t-small" data-clear hidden>{T.clear}</button>
+        </div>
+      </div>
+      <ul class="grid">
+        {CASE_STUDIES.map((cs) => (
+          <li data-case data-sector={cs.sector} data-services={cs.services.join(' ')}><CaseCard cs={cs} lang={lang} /></li>
+        ))}
+      </ul>
+      <p class="empty t-lead" data-empty hidden>{T.empty}</p>
+    </div>
+  </section>
+
+  <section class="section theme-cream-50" aria-label={lang === 'fr' ? 'Témoignages' : 'Testimonials'}>
+    <div class="container quotes">
+      {quotes.map((q) => <Testimonial lang={lang} quote={q[lang].quote} name={q.name} role={q[lang].role} company={q.company} />)}
+    </div>
+  </section>
+
+  <CtaBand lang={lang} title={T.ctaTitle} text={T.ctaText} avoid={CASE_STUDIES.map((c) => c.image ?? '')} />
+</BaseLayout>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-filters]');
+  if (root) {
+    const cards = [...document.querySelectorAll<HTMLElement>('[data-case]')];
+    const count = root.querySelector<HTMLElement>('[data-count]')!;
+    const select = root.querySelector<HTMLSelectElement>('[data-service]')!;
+    const clear = root.querySelector<HTMLButtonElement>('[data-clear]')!;
+    const empty = document.querySelector<HTMLElement>('[data-empty]')!;
+    const fr = count.dataset.fr === 'fr';
+    const apply = () => {
+      const sector = root.querySelector<HTMLInputElement>('input[name="sector"]:checked')?.value ?? '';
+      const service = select.value;
+      let n = 0;
+      for (const c of cards) {
+        const ok = (!sector || c.dataset.sector === sector) && (!service || (c.dataset.services ?? '').split(' ').includes(service));
+        c.hidden = !ok; if (ok) n++;
+      }
+      count.textContent = fr ? `${n} étude${n > 1 ? 's' : ''} de cas` : `${n} case stud${n > 1 ? 'ies' : 'y'}`;
+      clear.hidden = !sector && !service;
+      select.classList.toggle('is-set', !!service);
+      empty.hidden = n > 0;
+      // Option counts follow the selected sector; services with no match in that sector are disabled
+      for (const o of select.options) {
+        const k = cards.filter((c) => (!sector || c.dataset.sector === sector) && (!o.value || (c.dataset.services ?? '').split(' ').includes(o.value))).length;
+        const n = o.querySelector('.opt__n');
+        if (n) n.textContent = String(k);
+        if (o.value) o.disabled = k === 0 && o.value !== service;
+      }
+    };
+    root.addEventListener('change', apply);
+    clear.addEventListener('click', () => {
+      root.querySelector<HTMLInputElement>('input[name="sector"][value=""]')!.checked = true;
+      select.value = '';
+      apply();
+    });
+  }
+</script>
+
+<style>
+  /* Filter bar: segmented sector control + service dropdown + live count; sticks under the header */
+  .filters {
+    position: sticky; top: var(--header-h); z-index: 5;
+    display: flex; align-items: center; gap: var(--sp-4);
+    margin: 0 0 var(--sp-8); padding: var(--sp-4) 0;
+    background: var(--ps-cream); border-bottom: 1px solid var(--line);
+  }
+  .seg { display: inline-flex; gap: 4px; margin: 0; padding: 4px; border: 0; border-radius: var(--radius-pill); background: rgb(0 66 37 / 0.07); }
+  .seg__opt { position: relative; cursor: pointer; }
+  .seg__opt input { position: absolute; opacity: 0; pointer-events: none; }
+  .seg__opt span { display: inline-flex; align-items: center; height: 40px; padding: 0 18px; border-radius: var(--radius-pill); font-size: 0.9375rem; font-weight: 500; color: var(--ps-green-600); transition: background var(--dur) var(--ease), color var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
+  .seg__opt:hover span { color: var(--ps-green-900); }
+  .seg__opt input:checked + span { background: var(--ps-cream-50); color: var(--ps-green-900); box-shadow: 0 1px 2px rgb(0 30 17 / 0.12), 0 4px 12px -6px rgb(0 30 17 / 0.25); }
+  .seg__opt input:focus-visible + span { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .select { position: relative; display: inline-flex; align-items: center; }
+  .select select {
+    height: 48px; padding: 0 44px 0 20px; min-width: 260px;
+    border: 1px solid rgb(0 66 37 / 0.25); border-radius: var(--radius-pill); background: transparent;
+    color: var(--ps-green-900); font: 500 0.9375rem/1 var(--font); cursor: pointer; transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+  }
+  .select select:hover { border-color: var(--ps-green-900); }
+  .select select.is-set { background: var(--ps-green-900); color: var(--ps-cream); border-color: var(--ps-green-900); }
+  .select select.is-set + svg { color: var(--ps-cream); }
+  .select svg { position: absolute; right: 18px; pointer-events: none; color: var(--ps-green-900); }
+  .filters__meta { margin-left: auto; display: flex; align-items: center; gap: var(--sp-4); }
+  .filters__count { margin: 0; color: var(--ps-green-600); font-variant-numeric: tabular-nums; }
+  .filters__clear { background: none; border: 0; padding: 0; color: var(--ps-green-900); font-weight: 500; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+  .empty { padding: var(--sp-8) 0; color: var(--ps-green-600); }
+  .grid { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-8) var(--sp-6); }
+  .grid li[hidden] { display: none; }
+  .quotes { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-9); }
+</style>

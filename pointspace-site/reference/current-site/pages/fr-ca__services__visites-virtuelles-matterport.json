@@ -1,0 +1,583 @@
+{
+  "url": "https://www.pointspace.ca/fr-ca/services/visites-virtuelles-matterport",
+  "lang": "fr",
+  "title": "Services visites virtuelles 3D Matterport | pointSpace",
+  "metaDescription": "Donnez vie à vos espaces avec nos visites virtuelles 3D : visualisez des zones inaccessibles et suivez l’avancement de vos chantiers —partout, à tout moment.",
+  "ogTitle": "Services visites virtuelles 3D Matterport | pointSpace",
+  "ogDescription": "Donnez vie à vos espaces avec nos visites virtuelles 3D : visualisez des zones inaccessibles et suivez l’avancement de vos chantiers —partout, à tout moment.",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/fr-ca/services/visites-virtuelles-matterport",
+  "hreflang": [
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/services/Matterport-3D-Virtual-Tours"
+    }
+  ],
+  "h1": [
+    "VISITES VIRTUELLES 3D MATTERPORT"
+  ],
+  "headings": [
+    "h1: VISITES VIRTUELLES 3D MATTERPORT",
+    "h4: Obtenez une\nvisite virtuelle Matterport 3D complète de votre environnement et\naccédez-y à tout moment, de n’importe où.",
+    "h4: Nous réalisons des\nvisites virtuelles Matterport immersives qui permettent de\nfaire découvrir vos espaces, de\nfaciliter l’accès à des lieux difficiles et de\ncollaborer efficacement à distance. Grâce à des visites virtuelles\nde haute qualité, vous pouvez\nmettre en valeur vos propriétés et\nsimplifier la collaboration à distance.",
+    "h2: VERSATILITÉ",
+    "h2: ACCESSIBILITÉ",
+    "h2: SIMPLICITÉ",
+    "h2: Notre processus de capture Matterport",
+    "h3: Planification et préparation du projet",
+    "h3: Capture Matterport sur site",
+    "h3: Contrôle qualité et cohérence de la capture",
+    "h3: Structure de la visite et navigation",
+    "h3: Paramètres de partage et présentation",
+    "h3: Livraison, intégration et support",
+    "h2: Des résultats prouvés à travers plus de 400 projets",
+    "h4: Scan 3D et modélisation 3D d’une scierie",
+    "h4: Scan 3D et modélisation 3D d'une usine",
+    "h4: Numérisation 3D et modélisation 3D complète d'un bâtiment",
+    "h3: Les visites virtuelles sont-elles sécurisées ?",
+    "h3: Comment puis-je accéder à la visite virtuelle de mon projet ?",
+    "h3: Les visites virtuelles peuvent-elles être intégrées dans des sites Web et des présentations ?",
+    "h3: Qu’est-ce que les visites virtuelles et comment fonctionnent-elles ?",
+    "h3: Pouvez-vous capturer des zones difficiles d’accès ou restreintes ?",
+    "h2: « Un service de qualité, rapide et efficace. »"
+  ],
+  "nav": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Obtenir une soumission →",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "English\nen",
+      "href": "/services/Matterport-3D-Virtual-Tours"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "Travaillez avec nous 🡒",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/etude-de-cas/Scan-3D-et-modélisation-3D-dune-scierie"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "https://www.pointspace.ca/fr-ca/etude-de-cas/vac-aero"
+    },
+    {
+      "text": "Voir l'étude de cas",
+      "href": "/fr-ca/etude-de-cas/numerisation-3D-et-modelisation-3D-complete-dun-batiment"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jcb.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://idxdesign.com/"
+    },
+    {
+      "text": "",
+      "href": "https://tla-architectes.com/"
+    },
+    {
+      "text": "",
+      "href": "https://vacaero.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.nelmar.com/"
+    },
+    {
+      "text": "",
+      "href": "https://stdenisthompson.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.benoy.com/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupemach.com/en/home.html"
+    },
+    {
+      "text": "",
+      "href": "https://dallaireconsultants.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.cominar.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.broccolini.com/en"
+    },
+    {
+      "text": "",
+      "href": "https://groupecdf.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://lainco.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://renfort.com/home/"
+    },
+    {
+      "text": "",
+      "href": "https://musesolution.ca/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://fr.oktodev.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://shellex.ca/fr/accueil/"
+    },
+    {
+      "text": "",
+      "href": "https://navada.com/fr"
+    },
+    {
+      "text": "",
+      "href": "https://www.kolostat.com/fr/"
+    },
+    {
+      "text": "",
+      "href": "https://www.jessicadaoustarchitecte.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://ateliermonarque.com/en/"
+    },
+    {
+      "text": "",
+      "href": "https://www.groupecarosielli.ca/"
+    },
+    {
+      "text": "",
+      "href": "https://www.conn-x.ca/en/"
+    },
+    {
+      "text": "",
+      "href": "https://aedifica.com/"
+    }
+  ],
+  "body": "Accueil\nÀ propos\nSecteurs\nManufacturier et industriel\nArchitecture et Bâtiments\nServices\nNumérisation LiDAR 3D\nModélisation BIM\nAs-Built Drafting\nModélisation 3D\nAnalyse du bâtiment\nMise en plan BOMA\nVisites virtuelles 3D Matterport\nJumeaux numériques\nBlogue\nÉtudes de cas\nContact\nCarrières\nContactez-nous\n(514) 606-9604\nFrançais\nfr\nEnglish\nen\nVISITES VIRTUELLES 3D MATTERPORT\nObtenez une\nvisite virtuelle Matterport 3D complète de votre environnement et\naccédez-y à tout moment, de n’importe où.\nTravaillez avec nous 🡒\nLorsque vous travaillez avec nous\nVOUS POUVEZ VOUS ATTENDRE À\nNous réalisons des\nvisites virtuelles Matterport immersives qui permettent de\nfaire découvrir vos espaces, de\nfaciliter l’accès à des lieux difficiles et de\ncollaborer efficacement à distance. Grâce à des visites virtuelles\nde haute qualité, vous pouvez\nmettre en valeur vos propriétés et\nsimplifier la collaboration à distance.\nVERSATILITÉ\nQue ce soit pour collaborer à distance, le marketing ou faciliter l’accès à des zones restreintes, notre service de visites virtuelles s’adapte à toutes les situations. Vous profitez ainsi d’un outil à la fois versatile et qualité.\nACCESSIBILITÉ\nAccédez à vos projets à tout moment et depuis n’importe quel endroit. Nos visites virtuelles Matterport sont facilement accessibles et peuvent être partagées avec votre équipe, vos partenaires ou le public.\nSIMPLICITÉ\nLes visites virtuelles Matterport sont faciles à utiliser et à protéger. Vous pouvez définir différents niveaux d’accès et sécuriser vos fichiers à l’aide d’un mot de passe.\nNotre processus de capture Matterport\nNotre flux de travail Matterport est conçu pour produire des visites claires, faciles à naviguer et prêtes à être partagées. Chaque étape suit un processus structuré afin que vos espaces soient capturés avec précision, présentés de façon cohérente, et simples à consulter pour vos clients, équipes ou parties prenantes.\n1\nPlanification et préparation du projet\nNous confirmons les espaces à numériser, les accès, l’horaire, et les contraintes du site. Nous planifions le parcours de capture afin d’assurer une couverture complète et une visite fluide.\n2\nCapture Matterport sur site\nNous numérisons l’espace avec Matterport en capturant les zones clés, pièces, corridors, et points de transition. Cela garantit une visite connectée, cohérente, et facile à parcourir.\n3\nContrôle qualité et cohérence de la capture\nNous vérifions la capture pour repérer les zones manquantes, les décalages, et les problèmes de navigation. Les éléments à corriger sont identifiés afin d’assurer un résultat final sans interruptions.\n4\nStructure de la visite et navigation\nNous organisons la visite pour plus de clarté, position de départ, enchaînement logique, et repères au besoin. L’objectif est de rendre la visite intuitive dès les premières secondes.\n5\nParamètres de partage et présentation\nNous configurons les paramètres de partage selon votre usage, public, privé, protégé par mot de passe, ou interne. Au besoin, nous ajustons la présentation pour s’aligner avec votre contexte et votre image.\n6\nLivraison, intégration et support\nVous recevez un lien de partage ainsi que les éléments nécessaires pour l’intégration sur votre site ou portail de projet. Nous restons disponibles pour des mises à jour, des ajouts d’espaces, ou de futures captures.\nÉtudes de cas\nDes résultats prouvés à travers plus de 400 projets\nNous collaborons avec des clients de différents secteurs, notamment la construction, l’architecture et l’industrie manufacturière. Notre objectif est de fournir des services de visites virtuelles 3D Matterport parfaitement adaptés à vos besoins.\nScan 3D et modélisation 3D d’une scierie\nGroupe CDF\nVoir l'étude de cas\nScan 3D et modélisation 3D d'une usine\nVAC AERO International INC.\nVoir l'étude de cas\nNumérisation 3D et modélisation 3D complète d'un bâtiment\nBroccolini\nVoir l'étude de cas\nContactez-nous 🡒\nFAQ\nVous souhaitez en savoir plus sur nos services de numérisation 3D et modélisation 3D ? Contactez notre équipe pour obtenir des réponses rapides et des conseils personnalisés.\nLes visites virtuelles sont-elles sécurisées ?\nOui, nous utilisons la plateforme de visualisation de données Matterport, qui offre de multiples options de sécurité. Vous pouvez désigner un ou plusieurs administrateurs de visites uniques via vos comptes Matterport, restreindre l'accès avec des liens protégés par mot de passe, partager des liens non sécurisés ou même rendre les visites accessibles au public. Ces options vous permettent de contrôler précisément qui peut consulter vos visites virtuelles et contribuent à la protection de vos données.\nComment puis-je accéder à la visite virtuelle de mon projet ?\nVous pouvez accéder à votre visite virtuelle via plusieurs méthodes :\nLien sécurisé : Un lien protégé par mot de passe pour un accès sécurisé.\nAdministrateurs Matterport : Les administrateurs de la visite peuvent se connecter directement à leur compte Matterport.\nLien non sécurisé : Pour un accès plus simple et ouvert sans mot de passe.\nAccès public : Rendre la visite disponible gratuitement en ligne pour que tout le monde puisse la consulter.\nCette flexibilité vous permet de choisir le niveau de sécurité et d’accessibilité qui correspond le mieux à vos besoins.\nLes visites virtuelles peuvent-elles être intégrées dans des sites Web et des présentations ?\nOui ! Les visites virtuelles Matterport s'intègrent parfaitement à différentes plateformes :\nSites Web : Intégrez la visite directement afin que les visiteurs puissent explorer sans quitter votre site.\nPrésentations : Ajoutez des liens interactifs ou des intégrations à PowerPoint ou à d'autres formats de présentation.\nMédias sociaux : Partagez les liens des visites pour augmenter la visibilité et l'engagement.\nPlateformes immobilières : Intégrez des visites dans les annonces de vente ou de location de maisons pour offrir des expériences immobilières immersives qui attirent les acheteurs ou les locataires potentiels.\nCes intégrations vous aident à présenter vos projets de manière innovante tout en améliorant la communication et la collaboration.\nQu’est-ce que les visites virtuelles et comment fonctionnent-elles ?\nLes visites virtuelles combinent plusieurs photos 360° pour créer une expérience interactive. Les utilisateurs peuvent naviguer dans différentes zones d’un site ou d’une propriété à distance, explorant chaque espace comme s’ils s’y trouvaient physiquement.\nPouvez-vous capturer des zones difficiles d’accès ou restreintes ?\nOui. Notre technologie nous permet de capturer en toute sécurité des espaces difficiles d’accès ou restreints, offrant une vue complète de votre propriété ou site sans compromettre la sécurité.\n« Un service de qualité, rapide et efficace. »\n- Juliano Rodriguez-Daoust,\nVice-président du développement\ncommercial et des acquisitions\nGroupe Carosielli\nShare by:",
+  "faq": [
+    {
+      "q": "Les visites virtuelles sont-elles sécurisées ?",
+      "a": "Oui, nous utilisons la plateforme de visualisation de données Matterport, qui offre de multiples options de sécurité. Vous pouvez désigner un ou plusieurs administrateurs de visites uniques via vos comptes Matterport, restreindre l'accès avec des liens protégés par mot de passe, partager des liens non sécurisés ou même rendre les visites accessibles au public. Ces options vous permettent de contrôler précisément qui peut consulter vos visites virtuelles et contribuent à la protection de vos données."
+    },
+    {
+      "q": "Comment puis-je accéder à la visite virtuelle de mon projet ?",
+      "a": "Vous pouvez accéder à votre visite virtuelle via plusieurs méthodes : Lien sécurisé : Un lien protégé par mot de passe pour un accès sécurisé. Administrateurs Matterport : Les administrateurs de la visite peuvent se connecter directement à leur compte Matterport. Lien non sécurisé : Pour un accès plus simple et ouvert sans mot de passe. Accès public : Rendre la visite disponible gratuitement en ligne pour que tout le monde puisse la consulter. Cette flexibilité vous permet de choisir le niveau de sécurité et d’accessibilité qui correspond le mieux à vos besoins."
+    },
+    {
+      "q": "Les visites virtuelles peuvent-elles être intégrées dans des sites Web et des présentations ?",
+      "a": "Oui ! Les visites virtuelles Matterport s'intègrent parfaitement à différentes plateformes : Sites Web : Intégrez la visite directement afin que les visiteurs puissent explorer sans quitter votre site. Présentations : Ajoutez des liens interactifs ou des intégrations à PowerPoint ou à d'autres formats de présentation. Médias sociaux : Partagez les liens des visites pour augmenter la visibilité et l'engagement. Plateformes immobilières : Intégrez des visites dans les annonces de vente ou de location de maisons pour offrir des expériences immobilières immersives qui attirent les acheteurs ou les locataires potentiels. Ces intégrations vous aident à présenter vos projets de manière innovante tout en améliorant la communication et la collaboration."
+    },
+    {
+      "q": "Qu’est-ce que les visites virtuelles et comment fonctionnent-elles ?",
+      "a": "Les visites virtuelles combinent plusieurs photos 360° pour créer une expérience interactive. Les utilisateurs peuvent naviguer dans différentes zones d’un site ou d’une propriété à distance, explorant chaque espace comme s’ils s’y trouvaient physiquement."
+    },
+    {
+      "q": "Pouvez-vous capturer des zones difficiles d’accès ou restreintes ?",
+      "a": "Oui. Notre technologie nous permet de capturer en toute sécurité des espaces difficiles d’accès ou restreints, offrant une vue complète de votre propriété ou site sans compromettre la sécurité."
+    }
+  ],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo PointSpace avec barres verticales dorées et texte gris clair sur fond blanc"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2023-10-17+104620+%283%29-1920w.webp",
+      "alt": "A large industrial machine inside a factory. The machine is grey and pipes run from it to another vessel. The interior is light grey."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Vac-Aero_5--282-29-1920w.webp",
+      "alt": "A 3D rendering of an industrial complex, featuring cylindrical structures, tanks, and orange doors. Blue sky backdrop."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4_Model_6000px+%281%29-1920w.webp",
+      "alt": "Interior view of a modern building with shelves and lights. Empty hallway with dark gray walls and ceiling."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+      "alt": "Logo de Jessica Daoust Architectes en lettres blanches."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+      "alt": "Abstract cream-colored wavy pattern, similar to the letter \"M\" repeated several times."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+      "alt": "Logo of Théâtre St James with ornate design and \"S\" in the center."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+      "alt": "Connx logo with text \"FUSION W/ TAG NUT\". Company name underneath."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+      "alt": "The word \"aedifica\" in a light-yellow, elegant font."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+      "alt": "JCB Construction Canada logo: light text with initials 'jcb' and company name."
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    }
+  ],
+  "jsonLd": [
+    "{\"@context\":\"http://schema.org/\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Les visites virtuelles sont-elles sécurisées ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Oui, nous utilisons la plateforme de visualisation de donn&eacute;es Matterport, qui offre de multiples options de s&eacute;curit&eacute;. Vous pouvez d&eacute;signer un ou plusieurs administrateurs de visites uniques via vos comptes Matterport, restreindre l'acc&egrave;s avec des liens prot&eacute;g&eacute;s par mot de passe, partager des liens non s&eacute;curis&eacute;s ou m&ecirc;me rendre les visites accessibles au public. Ces options vous permettent de contr&ocirc;ler pr&eacute;cis&eacute;ment qui peut consulter vos visites virtuelles et contribuent &agrave; la protection de vos donn&eacute;es.\"}},{\"@type\":\"Question\",\"name\":\"Comment puis-je accéder à la visite virtuelle de mon projet ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Vous pouvez acc&eacute;der &agrave; votre visite virtuelle via plusieurs m&eacute;thodes : Lien s&eacute;curis&eacute; : Un lien prot&eacute;g&eacute; par mot de passe pour un acc&egrave;s s&eacute;curis&eacute;. Administrateurs Matterport : Les administrateurs de la visite peuvent se connecter directement &agrave; leur compte Matterport. Lien non s&eacute;curis&eacute; : Pour un acc&egrave;s plus simple et ouvert sans mot de passe. Acc&egrave;s public : Rendre la visite disponible gratuitement en ligne pour que tout le monde puisse la consulter. Cette flexibilit&eacute; vous permet de choisir le niveau de s&eacute;curit&eacute; et d&rsquo;accessibilit&eacute; qui correspond le mieux &agrave; vos besoins.\"}},{\"@type\":\"Question\",\"name\":\"Les visites virtuelles peuvent-elles être intégrées dans des sites Web et des présentations ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Oui ! Les visites virtuelles Matterport s'int&egrave;grent parfaitement &agrave; diff&eacute;rentes plateformes : Sites Web : Int&eacute;grez la visite directement afin que les visiteurs puissent explorer sans quitter votre site. Pr&eacute;sentations : Ajoutez des liens interactifs ou des int&eacute;grations &agrave; PowerPoint ou &agrave; d'autres formats de pr&eacute;sentation. M&eacute;dias sociaux : Partagez les liens des visites pour augmenter la visibilit&eacute; et l'engagement. Plateformes immobili&egrave;res : Int&eacute;grez des visites dans les annonces de vente ou de location de maisons pour offrir des exp&eacute;riences immobili&egrave;res immersives qui attirent les acheteurs ou les locataires potentiels. Ces int&eacute;grations vous aident &agrave; pr&eacute;senter vos projets de mani&egrave;re innovante tout en am&eacute;liorant la communication et la collaboration.\"}},{\"@type\":\"Question\",\"name\":\"Qu’est-ce que les visites virtuelles et comment fonctionnent-elles ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Les visites virtuelles combinent plusieurs photos 360&deg; pour cr&eacute;er une exp&eacute;rience interactive. Les utilisateurs peuvent naviguer dans diff&eacute;rentes zones d&rsquo;un site ou d&rsquo;une propri&eacute;t&eacute; &agrave; distance, explorant chaque espace comme s&rsquo;ils s&rsquo;y trouvaient physiquement.\"}},{\"@type\":\"Question\",\"name\":\"Pouvez-vous capturer des zones difficiles d’accès ou restreintes ?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Oui. Notre technologie nous permet de capturer en toute s&eacute;curit&eacute; des espaces difficiles d&rsquo;acc&egrave;s ou restreints, offrant une vue compl&egrave;te de votre propri&eacute;t&eacute; ou site sans compromettre la s&eacute;curit&eacute;.\"}}]}"
+  ],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Screenshot+2023-10-17+104620+%283%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Screenshot+2023-10-17+104620+%283%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Vac-Aero_5--282-29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Vac-Aero_5--282-29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4_Model_6000px+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/4_Model_6000px+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos+%287%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%282%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Logos-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/20+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/17+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/21+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/13+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/23+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/11+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/12+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/16+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/14+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/8+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/10+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2-c0d7ef18-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/3-100388f4-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/4-31dab3f9-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/5-7617cdb3-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/6-b66f75f9-1920w.png"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/fr-ca/services/visites-virtuelles-matterport"
+}

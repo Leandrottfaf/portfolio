@@ -1,0 +1,39 @@
+---
+import Picture from './Picture.astro';
+import { ROUTES, type Lang } from '../data/routes';
+import type { Service } from '../data/services';
+interface Props { service: Service; lang: Lang; index?: number; variant?: 'image' | 'compact'; level?: 3 | 4 }
+const { service, lang, index, variant = 'image', level = 3 } = Astro.props;
+const H = `h${level}` as 'h3' | 'h4';
+const s = service[lang];
+---
+<a class:list={['svc is-card', `svc--${variant}`]} href={ROUTES[service.id][lang]} data-reveal>
+  {variant === 'image' && <Picture name={service.image} lang={lang} ratio="4/3" sizes="(min-width: 1280px) 25vw, 50vw" class="svc__media zoom" />}
+  <div class="svc__body">
+    {index !== undefined && <span class="svc__num t-label t-num">{String(index).padStart(2, '0')}</span>}
+    <H class="svc__title t-h4">{s.label}</H>
+    <p class="svc__text t-small">{s.card}</p>
+    <span class="svc__arrow" aria-hidden="true">→</span>
+  </div>
+</a>
+
+<style>
+  .svc {
+    position: relative; display: flex; flex-direction: column; text-decoration: none;
+    background: var(--ps-cream-50); color: var(--ps-green-900);
+    border: 1px solid var(--ps-green-line); border-radius: var(--radius-card); overflow: hidden;
+    transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+  }
+  .svc:hover { transform: var(--hover-lift); box-shadow: var(--hover-shadow); border-color: rgb(0 66 37 / 0.35); }
+  .svc :global(.svc__media) { border-radius: 0; }
+  .svc__body { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 22px 24px 28px; flex: 1; }
+  .svc__num { color: var(--ps-green-600); }
+  .svc__title { font-size: 1.3125rem; }
+  .svc__text { color: var(--ps-green-600); max-width: 42ch; }
+  .svc__arrow { position: absolute; right: 22px; top: 20px; font-size: 1.25rem; transition: transform var(--dur) var(--ease); }
+  .svc:hover .svc__arrow { transform: translateX(4px); }
+  .svc--compact { border-width: 0 0 1px; border-radius: 0; background: transparent; }
+  .svc--compact:hover { transform: none; box-shadow: none; }
+  .svc--compact:hover .svc__title { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+  .svc--compact .svc__body { padding: 22px 48px 22px 0; }
+</style>

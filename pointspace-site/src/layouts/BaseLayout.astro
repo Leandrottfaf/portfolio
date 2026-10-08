@@ -1,0 +1,86 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { UI } from '../data/ui';
+import type { Lang, RouteId } from '../data/routes';
+import { absUrl, alternates, organizationLd } from '../lib/seo';
+import { ROUTES } from '../data/routes';
+
+interface Props {
+  lang: Lang;
+  route: RouteId;
+  title: string;
+  description: string;
+  jsonLd?: object[];
+  ogImage?: string;
+  /** Header starts transparent over a dark hero */
+  overlayHeader?: boolean;
+  noindex?: boolean;
+}
+const { lang, route, title, description, jsonLd = [], ogImage = '/images/scanner-leica-rtc360-toit-industriel-1600.webp', overlayHeader = false, noindex = false } = Astro.props;
+const t = UI[lang];
+const alt = alternates(route);
+const canonical = absUrl(ROUTES[route][lang]);
+const ld = [organizationLd(lang), ...jsonLd];
+---
+<!doctype html>
+<html lang={lang === 'fr' ? 'fr-CA' : 'en-CA'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1280" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="fr-CA" href={alt.fr} />
+    <link rel="alternate" hreflang="en-CA" href={alt.en} />
+    <link rel="alternate" hreflang="x-default" href={alt.fr} />
+    {(noindex || import.meta.env.PUBLIC_SHARE === '1') && <meta name="robots" content="noindex, nofollow" />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="pointSpace" />
+    <meta property="og:locale" content={lang === 'fr' ? 'fr_CA' : 'en_CA'} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={absUrl(ogImage)} />
+    <meta name="theme-color" content="#004225" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="/fonts/NeueHaasDisplay-Roman.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/fonts/NeueHaasDisplay-Light.ttf" as="font" type="font/ttf" crossorigin />
+    {ld.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">{t.skip}</a>
+    <Header lang={lang} route={route} overlay={overlayHeader} />
+    <main id="contenu" tabindex="-1">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+    <script>
+      // Dropdowns open below their field. If there isn't room, scroll the page first, then open.
+      document.querySelectorAll<HTMLSelectElement>('select.ps-select').forEach((sel) => {
+        const need = () => Math.min(sel.options.length * 38 + 40, 480);
+        const room = () => window.innerHeight - sel.getBoundingClientRect().bottom;
+        const openWithRoom = (e: Event) => {
+          if (sel.matches(':open') || room() >= need() || typeof sel.showPicker !== 'function') return;
+          e.preventDefault();
+          window.scrollBy({ top: need() - room() + 24, behavior: 'smooth' });
+          const open = () => { try { sel.focus(); sel.showPicker(); } catch {} };
+          if ('onscrollend' in window) window.addEventListener('scrollend', open, { once: true }); else setTimeout(open, 350);
+        };
+        sel.addEventListener('mousedown', openWithRoom);
+        sel.addEventListener('keydown', (e) => { if (['Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(e.key)) openWithRoom(e); });
+      });
+    </script>
+    <script>
+      // Restrained reveal-on-scroll; disabled when the user prefers reduced motion (CSS handles that case).
+      const els = document.querySelectorAll('[data-reveal]');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          for (const e of entries) if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+        }, { rootMargin: '0px 0px -8% 0px' });
+        els.forEach((el) => io.observe(el));
+      } else els.forEach((el) => el.classList.add('is-visible'));
+    </script>
+  </body>
+</html>

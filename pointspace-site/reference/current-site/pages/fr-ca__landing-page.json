@@ -1,0 +1,412 @@
+{
+  "url": "https://www.pointspace.ca/fr-ca/landing-page",
+  "lang": "fr",
+  "title": "Service de numérisation 3D et de modélisation | pointSpace",
+  "metaDescription": "Pointspace offre des solutions de numérisation 3D et modélisation pour la construction. Contactez-nous pour des analyses précises!",
+  "ogTitle": "Service de numérisation 3D et de modélisation | pointSpace",
+  "ogDescription": "Pointspace offre des solutions de numérisation 3D et modélisation pour la construction. Contactez-nous pour des analyses précises!",
+  "ogImage": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29-1920w.png",
+  "canonical": "https://www.pointspace.ca/fr-ca/landing-page",
+  "hreflang": [
+    {
+      "lang": "fr-ca",
+      "href": "https://www.pointspace.ca/fr-ca/landing-page"
+    },
+    {
+      "lang": "en-ca",
+      "href": "https://www.pointspace.ca/landing-page"
+    }
+  ],
+  "h1": [
+    "SCAN 3D ET MODÉLISATION 3D"
+  ],
+  "headings": [
+    "h1: SCAN 3D ET MODÉLISATION 3D",
+    "h2: Pour chacun de vos besoins, il y a pointSpace.",
+    "h3: Numérisation 3D",
+    "h3: Analyse du bâtiment",
+    "h3: Visites photographiques et visuelles à 360°",
+    "h3: Modélisation 3D",
+    "h3: Un large éventail de possibilités",
+    "h3: Réaménagement industriel",
+    "h3: « Un service de grande qualité, rapide et efficace. »",
+    "h3: « Le service était impeccable, nous avons apporté plusieurs modifications et celles-ci ont toujours été effectuées rapidement. »",
+    "h2: CONTACTEZ-NOUS",
+    "h3: Contactez-nous"
+  ],
+  "nav": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/landing-page"
+    },
+    {
+      "text": "English\nen",
+      "href": "/landing-page"
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "Obtenir une soumission →",
+      "href": "/fr-ca/obtenir-une-soumission"
+    },
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "ldallaire@pointspace.ca",
+      "href": "mailto:ldallaire@pointspace.ca"
+    },
+    {
+      "text": "(514) 606-9604",
+      "href": "tel:(514) 606 9604"
+    },
+    {
+      "text": "Contactez-nous 🡒",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Sparkweb.ca",
+      "href": "http://www.sparkweb.ca"
+    }
+  ],
+  "links": [
+    {
+      "text": "Accueil",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "À propos",
+      "href": "/fr-ca/a-propos"
+    },
+    {
+      "text": "Secteurs",
+      "href": "#"
+    },
+    {
+      "text": "Manufacturier et industriel",
+      "href": "/fr-ca/manufacturier-industriel"
+    },
+    {
+      "text": "Architecture et Bâtiments",
+      "href": "/fr-ca/architecture-batiments"
+    },
+    {
+      "text": "Services",
+      "href": "/fr-ca#Serives"
+    },
+    {
+      "text": "Numérisation LiDAR 3D",
+      "href": "/fr-ca/services/numerisation-LiDAR-3D"
+    },
+    {
+      "text": "Modélisation BIM",
+      "href": "/fr-ca/services/modélisation-bim"
+    },
+    {
+      "text": "As-Built Drafting",
+      "href": "/fr-ca/services/mise-en-plan"
+    },
+    {
+      "text": "Modélisation 3D",
+      "href": "/fr-ca/services/modelisation-3d"
+    },
+    {
+      "text": "Analyse du bâtiment",
+      "href": "/fr-ca/services/analyse-du-bâtiment"
+    },
+    {
+      "text": "Mise en plan BOMA",
+      "href": "/fr-ca/services/mise-en-plan-boma"
+    },
+    {
+      "text": "Visites virtuelles 3D Matterport",
+      "href": "/fr-ca/services/visites-virtuelles-matterport"
+    },
+    {
+      "text": "Jumeaux numériques",
+      "href": "/fr-ca/services/prevu3d"
+    },
+    {
+      "text": "Blogue",
+      "href": "/fr-ca/blogue"
+    },
+    {
+      "text": "Études de cas",
+      "href": "/fr-ca/etudes-de-cas"
+    },
+    {
+      "text": "Contact",
+      "href": "/fr-ca/contact"
+    },
+    {
+      "text": "Carrières",
+      "href": "/fr-ca/carrieres"
+    },
+    {
+      "text": "Français\nfr",
+      "href": "/fr-ca/landing-page"
+    },
+    {
+      "text": "English\nen",
+      "href": "/landing-page"
+    },
+    {
+      "text": "",
+      "href": "/fr-ca"
+    },
+    {
+      "text": "Contactez-nous",
+      "href": "/fr-ca/landing-page#scroll_to_bottom"
+    },
+    {
+      "text": "Bouton",
+      "href": ""
+    },
+    {
+      "text": "Bouton",
+      "href": ""
+    },
+    {
+      "text": "Bouton",
+      "href": ""
+    },
+    {
+      "text": "Bouton",
+      "href": ""
+    },
+    {
+      "text": "Bouton",
+      "href": ""
+    }
+  ],
+  "body": "Accueil\nÀ propos\nSecteurs\nManufacturier et industriel\nArchitecture et Bâtiments\nServices\nNumérisation LiDAR 3D\nModélisation BIM\nAs-Built Drafting\nModélisation 3D\nAnalyse du bâtiment\nMise en plan BOMA\nVisites virtuelles 3D Matterport\nJumeaux numériques\nBlogue\nÉtudes de cas\nContact\nCarrières\nContactez-nous\n(514) 606-9604\nFrançais\nfr\nEnglish\nen\nSCAN 3D ET MODÉLISATION 3D\nNous sommes une entreprise de pointe spécialisée dans la modélisation et la numérisation 3D, active partout au Canada à des fins industrielles, immobilières et de construction.\nContactez-nous\nPour chacun de vos besoins, il y a pointSpace.\nNumérisation 3D\nNous utilisons la technologie LiDAR, rapide et précise, pour scanner chaque centimètre carré de n'importe quel bâtiment, y compris ses dimensions exactes, ses murs, son infrastructure et même la configuration des réseaux mécaniques, électriques et de plomberie, à l'intérieur comme à l'extérieur.\nAnalyse du bâtiment\nNotre technologie nous permet de vous donner une idée précise et complète de l'état de votre bâtiment s'il est déjà construit. Sinon, nous pouvons vous fournir des rapports détaillés pour chaque étape de votre projet de construction.\nVisites photographiques et visuelles à 360°\nPhotographies de site à 360° précises et haute résolution, convertibles en visites virtuelles Matterport immersives et interactives. Idéales pour les actions marketing, les présentations et l'accès à distance aux projets.\nModélisation 3D\nNous réalisons des rendus 2D et 3D de modèles et de plans à partir de numérisations vers les formats BIM, CAO, Revit, STEP et SAT. Nous utilisons également les relevés BOMA pour créer des plans numériques conformes à l'existant.\nUn large éventail de possibilités\nQue vous soyez architecte, entrepreneur en construction, ingénieur, propriétaire/gestionnaire/exploitant immobilier ou même si vous travaillez dans le secteur industriel, nous aurons toujours une solution parfaitement adaptée à vos besoins.\nRéaménagement industriel\nBesoin de repenser l'agencement de votre usine au fur et à mesure que vous la parcourez ? Grâce à une copie numérique de votre site, vous pouvez trouver l'emplacement idéal pour chaque machine avant même qu'elle ne soit déplacée d'un seul pouce.\nBouton\nCe que les gens disent de nous\n« Un service de grande qualité, rapide et efficace. »\n- Juliano Rodriguez-Daoust, vice-président du développement commercial et des acquisitions du groupe Carosielli\n« Le service était impeccable, nous avons apporté plusieurs modifications et celles-ci ont toujours été effectuées rapidement. »\n— Olivier Tremblay, responsable de l'amélioration des processus et de la maintenance chez Nelmar\nCONTACTEZ-NOUS\nDites-nous plus de détails sur la manière dont nous pouvons vous aider et nous vous contacterons dès que possible.\nContactez-nous\nNom\nAdresse email\nVotre message\nMerci de nous avoir contactés. Nous vous répondrons dans les plus brefs délais.\nOups, une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard.\nShare by:",
+  "faq": [],
+  "images": [
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    },
+    {
+      "src": "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo PointSpace avec barres verticales dorées et texte gris clair sur fond blanc"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "Français"
+    },
+    {
+      "src": "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+      "alt": "English"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-1920w.webp",
+      "alt": "Logo discret de Dallaire Consultants en beige clair sur fond blanc"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+      "alt": "Logo de JCB Construction Canada en or pâle sur fond blanc"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%281%29-1920w.webp",
+      "alt": "Logo abstrait beige clair en forme de « M » sur fond blanc"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+      "alt": "Logo beige 3D St. Denis Thompson avec bâtiment stylisé et texte discret"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+      "alt": "Logo doré pâle du théâtre « Theatre St James » sur fond blanc"
+    },
+    {
+      "src": "https://irt-cdn.multiscreensite.com/md/dmtmpl/dms3rep/multi/transparent_background.png",
+      "alt": "Image blanche vide"
+    },
+    {
+      "src": "https://irt-cdn.multiscreensite.com/md/dmtmpl/dms3rep/multi/transparent_background.png",
+      "alt": "Image blanche vide"
+    },
+    {
+      "src": "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+      "alt": "Logo crème et jaune de pointSpace"
+    }
+  ],
+  "jsonLd": [],
+  "allImageUrls": [
+    "https://dd-cdn.multiscreensite.com/flags/flags_iso/32/ca.png",
+    "https://lirp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-1920w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-1920w.webp",
+    "https://irt-cdn.multiscreensite.com/md/dmtmpl/dms3rep/multi/transparent_background.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Green_Background_Logo-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Green_Background_Logo.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/15+%281%29-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/22+%281%29-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/25+%281%29-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/2+%281%29-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/18+%281%29-640w.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Pr%C3%A9sentation-source-%2811%29-2880w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/IMG_1360-2880w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/opt/Favicon+%2848+x+48+px%29+%281200+x+630+px%29+%281200+x+1200+px%29+%282%29-1920w.png",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/15+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/22+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/25+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/2+%281%29.webp",
+    "https://irp.cdn-website.com/5767f5b6/dms3rep/multi/18+%281%29.webp"
+  ],
+  "status": 200,
+  "finalUrl": "https://www.pointspace.ca/fr-ca/landing-page"
+}

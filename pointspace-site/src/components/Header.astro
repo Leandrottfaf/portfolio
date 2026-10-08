@@ -1,0 +1,173 @@
+---
+import { UI } from '../data/ui';
+import { SERVICES } from '../data/services';
+import { ROUTES, type Lang, type RouteId } from '../data/routes';
+import { SITE } from '../data/site';
+
+interface Props { lang: Lang; route: RouteId; overlay?: boolean }
+const { lang, route, overlay = false } = Astro.props;
+const t = UI[lang];
+const other: Lang = lang === 'fr' ? 'en' : 'fr';
+const u = (id: RouteId) => ROUTES[id][lang];
+const capture = SERVICES.filter((s) => s.group === 'capture');
+const deliver = SERVICES.filter((s) => s.group === 'deliver');
+const isService = SERVICES.some((s) => s.id === route);
+const sectorIds: RouteId[] = ['manufacturing', 'architecture'];
+const sectorLabel = { manufacturing: { fr: 'Manufacturier et industriel', en: 'Manufacturing & Industrial' }, architecture: { fr: 'Architecture et bâtiments', en: 'Architecture & Buildings' } } as const;
+---
+<header class:list={['site-header', { 'is-overlay': overlay }]} data-header>
+  <div class="container site-header__inner">
+    <a class="brand" href={u('home')} aria-label={lang === 'fr' ? 'pointSpace – Accueil' : 'pointSpace – Home'}>
+      <img src="/images/logo-pointspace-on-green.svg" alt="pointSpace" width="150" height="68" />
+    </a>
+
+    <nav class="nav" aria-label={t.mainNav}>
+      <ul class="nav__list">
+        <li class="nav__item nav__item--mega has-menu" data-menu>
+          <button class:list={['nav__link', { 'is-current': isService }]} aria-expanded="false" aria-controls="menu-services" data-menu-button>
+            {t.services}<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+          <div class="mega" id="menu-services" data-menu-panel>
+            <div class="mega__col">
+              <p class="t-label mega__title">{t.groupCapture}</p>
+              <ul>
+                {capture.map((s) => <li><a href={u(s.id)} aria-current={route === s.id ? 'page' : undefined}>{s[lang].label}</a></li>)}
+              </ul>
+            </div>
+            <div class="mega__col mega__col--wide">
+              <p class="t-label mega__title">{t.groupDeliver}</p>
+              <ul class="mega__two">
+                {deliver.map((s) => <li><a href={u(s.id)} aria-current={route === s.id ? 'page' : undefined}>{s[lang].label}</a></li>)}
+              </ul>
+            </div>
+            <div class="mega__aside">
+              <p class="mega__aside-text">{lang === 'fr' ? 'Un projet de relevé, de plans ou de modèle BIM ?' : 'Planning a survey, drawings or a BIM model?'}</p>
+              <a class="btn btn--primary btn--sm" href={u('quote')}>{t.quote}<span class="btn__arrow" aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="nav__item has-menu" data-menu>
+          <button class:list={['nav__link', { 'is-current': sectorIds.includes(route) }]} aria-expanded="false" aria-controls="menu-sectors" data-menu-button>
+            {t.sectors}<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+          <div class="dropdown" id="menu-sectors" data-menu-panel>
+            <ul>
+              {sectorIds.map((id) => <li><a href={u(id)} aria-current={route === id ? 'page' : undefined}>{sectorLabel[id as 'manufacturing'][lang]}</a></li>)}
+            </ul>
+          </div>
+        </li>
+        <li class="nav__item"><a class:list={['nav__link', { 'is-current': route === 'caseStudies' || route === 'caseWindsor' }]} href={u('caseStudies')}>{t.caseStudies}</a></li>
+        <li class="nav__item"><a class:list={['nav__link', { 'is-current': route === 'blog' || route === 'blogScanToBim' }]} href={u('blog')}>{t.blog}</a></li>
+        <li class="nav__item"><a class:list={['nav__link', { 'is-current': route === 'about' }]} href={u('about')}>{t.about}</a></li>
+        <li class="nav__item"><a class:list={['nav__link', { 'is-current': route === 'contact' }]} href={u('contact')}>{t.contact}</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="phone t-num" href={`tel:${SITE.phoneE164}`}>{SITE.phone}</a>
+      <a class="lang" href={ROUTES[route][other]} hreflang={other === 'fr' ? 'fr-CA' : 'en-CA'} lang={other === 'fr' ? 'fr-CA' : 'en-CA'}>
+        <span aria-hidden="true">{t.switchShort}</span><span class="visually-hidden">{t.switchLabel}</span>
+      </a>
+      <a class="btn btn--primary btn--sm" href={u('quote')}>{t.quote}</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const header = document.querySelector<HTMLElement>('[data-header]');
+  const menus = [...document.querySelectorAll<HTMLElement>('[data-menu]')];
+  const close = (except?: HTMLElement) => menus.forEach((m) => {
+    if (m === except) return;
+    m.removeAttribute('data-open');
+    m.querySelector('[data-menu-button]')?.setAttribute('aria-expanded', 'false');
+  });
+  for (const m of menus) {
+    const btn = m.querySelector<HTMLButtonElement>('[data-menu-button]')!;
+    btn.addEventListener('click', () => {
+      const open = m.hasAttribute('data-open');
+      close(m);
+      m.toggleAttribute('data-open', !open);
+      btn.setAttribute('aria-expanded', String(!open));
+    });
+    m.addEventListener('mouseenter', () => { close(m); m.setAttribute('data-open', ''); btn.setAttribute('aria-expanded', 'true'); });
+    m.addEventListener('mouseleave', () => { m.removeAttribute('data-open'); btn.setAttribute('aria-expanded', 'false'); });
+    m.addEventListener('focusout', (e) => { if (!m.contains(e.relatedTarget as Node)) { m.removeAttribute('data-open'); btn.setAttribute('aria-expanded', 'false'); } });
+  }
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { const openMenu = menus.find((m) => m.hasAttribute('data-open')); close(); openMenu?.querySelector<HTMLElement>('[data-menu-button]')?.focus(); } });
+  if (header?.classList.contains('is-overlay')) {
+    const onScroll = () => header.classList.toggle('is-solid', window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+</script>
+
+<style>
+  .site-header {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--ps-green-900); color: var(--ps-cream);
+    border-bottom: 1px solid var(--ps-cream-line);
+    transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease);
+  }
+  .site-header.is-overlay { position: fixed; inset: 0 0 auto 0; background: linear-gradient(rgb(0 30 17 / 0.55), rgb(0 30 17 / 0)); border-bottom-color: transparent; }
+  .site-header.is-overlay.is-solid { background: var(--ps-green-900); border-bottom-color: var(--ps-cream-line); }
+  .site-header__inner { position: relative; height: var(--header-h); display: flex; align-items: center; gap: var(--sp-6); }
+  .brand img { width: 132px; height: auto; }
+  .nav { flex: 1; }
+  .nav__list { list-style: none; display: flex; justify-content: center; gap: 4px; }
+  .nav__item { position: relative; }
+  .nav__item--mega { position: static; } /* mega panel is centred on the header container */
+
+  /* Triggers: pill on hover/open; current section = thin gold underline under the label */
+  .nav__link {
+    position: relative; display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px;
+    background: none; border: 0; color: inherit; font: 400 1rem/1 var(--font); text-decoration: none; cursor: pointer;
+    border-radius: var(--radius-pill); transition: background var(--dur) var(--ease);
+  }
+  .nav__link:hover, [data-open] > .nav__link { background: rgb(237 231 218 / 0.1); }
+  .nav__link.is-current::after { content: ''; position: absolute; left: 14px; right: 14px; bottom: 6px; height: 2px; border-radius: 2px; background: var(--ps-gold); }
+  .nav__link svg { transition: transform var(--dur) var(--ease); }
+  [data-open] > .nav__link svg { transform: rotate(180deg); }
+
+  /* Panels */
+  .mega, .dropdown {
+    position: absolute; z-index: 60;
+    background: var(--ps-cream-50); color: var(--ps-green-900);
+    border-radius: var(--radius-card); box-shadow: 0 24px 60px -20px rgb(0 30 17 / 0.45), 0 0 0 1px rgb(0 66 37 / 0.06);
+    opacity: 0; visibility: hidden; transform: translateY(-6px);
+    transition: opacity 180ms var(--ease), transform 180ms var(--ease), visibility 0s linear 180ms;
+  }
+  [data-open] > .mega, [data-open] > .dropdown { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  /* Invisible hover bridge between trigger and panel */
+  .mega::before, .dropdown::before { content: ''; position: absolute; left: 0; right: 0; bottom: 100%; height: 32px; }
+
+  .dropdown { top: calc(100% + 12px); left: 0; min-width: 300px; padding: 8px; }
+  .mega {
+    top: calc(100% - 4px); left: 50%; width: 1040px; margin-left: -520px;
+    display: grid; grid-template-columns: 210px 1fr 280px; gap: var(--sp-6); padding: var(--sp-5);
+  }
+  .mega ul, .dropdown ul { list-style: none; margin: 0; padding: 0; }
+  .mega__title { color: var(--ps-green-600); margin: 8px 12px 8px; }
+  .mega__two { display: grid; grid-template-columns: 1fr 1fr; column-gap: 4px; }
+
+  /* Items: rows with a soft hover fill; current page marked with a gold bar */
+  .mega li a, .dropdown li a {
+    position: relative; display: block; padding: 10px 12px; border-radius: 6px;
+    font-size: 1rem; line-height: 1.3; text-decoration: none; transition: background var(--dur) var(--ease);
+  }
+  .mega li a:hover, .dropdown li a:hover { background: rgb(0 66 37 / 0.07); }
+  .mega li a[aria-current], .dropdown li a[aria-current] { font-weight: 500; background: rgb(0 66 37 / 0.05); }
+  .mega li a[aria-current]::before, .dropdown li a[aria-current]::before { content: ''; position: absolute; left: 0; top: 10px; bottom: 10px; width: 3px; border-radius: 2px; background: var(--ps-gold); }
+  .mega li a:focus-visible, .dropdown li a:focus-visible { outline-offset: -2px; }
+  .mega__aside { background: var(--ps-green-900); color: var(--ps-cream); border-radius: var(--radius-card); padding: var(--sp-5); display: flex; flex-direction: column; justify-content: space-between; gap: var(--sp-5); }
+  .mega__aside-text { font-size: 1.125rem; line-height: 1.35; }
+  .mega__aside .btn { align-self: flex-start; max-width: 100%; }
+
+  .site-header__actions { display: flex; align-items: center; gap: var(--sp-5); }
+  .phone { text-decoration: none; font-size: 0.9375rem; color: var(--ps-cream-80); }
+  .phone:hover { color: var(--ps-cream); }
+  .lang {
+    display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+    border: 1px solid rgb(237 231 218 / 0.4); text-decoration: none; font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.06em;
+  }
+  .lang:hover { background: var(--ps-cream); color: var(--ps-green-900); }
+</style>
