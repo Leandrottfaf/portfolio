@@ -1,0 +1,13 @@
+# Netlify: builds the pointSpace website prototype (pointspace-site/) as a review
+# copy for the team. `npm run share` copies the film from bim-to-cad/, builds every
+# page as noindex and blocks crawlers, so the review link never competes with
+# www.pointspace.ca in search results. The portfolio itself is not part of this deploy.
+[build]
+  base = "pointspace-site"
+  command = "npm run share"
+  publish = "dist-share"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # The build needs none of the dev tools' install scripts (ffmpeg, image tools)
+  NPM_FLAGS = "--ignore-scripts"
