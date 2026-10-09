@@ -1,1474 +1,1554 @@
 {
- "scan-to-bim-revit-model-cutaway-light": {
-  "width": 1672,
-  "height": 941,
-  "files": [
-   {
-    "w": 800,
-    "file": "scan-to-bim-revit-model-cutaway-light-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "scan-to-bim-revit-model-cutaway-light-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: bim v1.png"
- },
- "scan-to-bim-revit-model-cutaway-dark": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "scan-to-bim-revit-model-cutaway-dark-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "scan-to-bim-revit-model-cutaway-dark-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: bim.png"
- },
- "mesurage-boma-plan-superficie-entrepot": {
-  "width": 3600,
-  "height": 2025,
-  "files": [
-   {
-    "w": 800,
-    "file": "mesurage-boma-plan-superficie-entrepot-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "mesurage-boma-plan-superficie-entrepot-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: boma-floor-area-analysis.png (client non identifié)"
- },
- "analyse-batiment-nuage-points-toiture": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "analyse-batiment-nuage-points-toiture-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "analyse-batiment-nuage-points-toiture-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: building-analysis.png (client non identifié)"
- },
- "numerisation-3d-eglise-tribune-orgue": {
-  "width": 11859,
-  "height": 7380,
-  "files": [
-   {
-    "w": 800,
-    "file": "numerisation-3d-eglise-tribune-orgue-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "numerisation-3d-eglise-tribune-orgue-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: church-2.jpg (église non identifiée)"
- },
- "numerisation-3d-eglise-nef-nuage-points": {
-  "width": 11670,
-  "height": 7380,
-  "files": [
-   {
-    "w": 800,
-    "file": "numerisation-3d-eglise-nef-nuage-points-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "numerisation-3d-eglise-nef-nuage-points-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: church.jpg (église non identifiée)"
- },
- "modele-revit-etage-laboratoire": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "modele-revit-etage-laboratoire-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "modele-revit-etage-laboratoire-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: Création sans titre (1).png (client non identifié)"
- },
- "scanner-leica-rtc360-toit-industriel": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "scanner-leica-rtc360-toit-industriel-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "scanner-leica-rtc360-toit-industriel-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: Création sans titre (2).png"
- },
- "theatre-st-james-facade-nuage-points": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "theatre-st-james-facade-nuage-points-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "theatre-st-james-facade-nuage-points-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: Création sans titre (3).png"
- },
- "nuage-points-etage-interieur-coupe": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "nuage-points-etage-interieur-coupe-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "nuage-points-etage-interieur-coupe-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: Création sans titre (4).png (client non identifié)"
- },
- "modele-bim-tuyauterie-mecanique-vanne": {
-  "width": 1920,
-  "height": 1076,
-  "files": [
-   {
-    "w": 800,
-    "file": "modele-bim-tuyauterie-mecanique-vanne-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "modele-bim-tuyauterie-mecanique-vanne-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: Création sans titre (5).png"
- },
- "modele-3d-tuyauterie-salle-mecanique": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "modele-3d-tuyauterie-salle-mecanique-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "modele-3d-tuyauterie-salle-mecanique-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: Création sans titre (6).png"
- },
- "modele-bim-salle-mecanique-vue-ensemble": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "modele-bim-salle-mecanique-vue-ensemble-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "modele-bim-salle-mecanique-vue-ensemble-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: Création sans titre (7).png"
- },
- "nuage-points-salle-couleur": {
-  "width": 3600,
-  "height": 2025,
-  "files": [
-   {
-    "w": 800,
-    "file": "nuage-points-salle-couleur-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "nuage-points-salle-couleur-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: Création sans titre.png (Vidéotron, non nommé sur le site)"
- },
- "plans-tels-que-construits-plan-etage-gare-windsor": {
-  "width": 4000,
-  "height": 2400,
-  "files": [
-   {
-    "w": 800,
-    "file": "plans-tels-que-construits-plan-etage-gare-windsor-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "plans-tels-que-construits-plan-etage-gare-windsor-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: EStruxture (4).png (= plan Gare Windsor, à confirmer)"
- },
- "assemblage-scans-reseau-stations": {
-  "width": 4000,
-  "height": 2400,
-  "files": [
-   {
-    "w": 800,
-    "file": "assemblage-scans-reseau-stations-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "assemblage-scans-reseau-stations-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: EStruxture (5).png (eStruxture)"
- },
- "nuage-points-salle-mecanique-haute-densite": {
-  "width": 4000,
-  "height": 2400,
-  "files": [
-   {
-    "w": 800,
-    "file": "nuage-points-salle-mecanique-haute-densite-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "nuage-points-salle-mecanique-haute-densite-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: EStruxture (8).png (eStruxture)"
- },
- "nuage-points-salle-mecanique-2": {
-  "width": 4000,
-  "height": 2400,
-  "files": [
-   {
-    "w": 800,
-    "file": "nuage-points-salle-mecanique-2-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "nuage-points-salle-mecanique-2-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: EStruxture (9).png (eStruxture)"
- },
- "plan-cao-dwg-mecanique": {
-  "width": 2000,
-  "height": 1200,
-  "files": [
-   {
-    "w": 800,
-    "file": "plan-cao-dwg-mecanique-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "plan-cao-dwg-mecanique-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: EStruxture.png (eStruxture)"
- },
- "plan-superficies-locatives-gare-windsor": {
-  "width": 2000,
-  "height": 1200,
-  "files": [
-   {
-    "w": 800,
-    "file": "plan-superficies-locatives-gare-windsor-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "plan-superficies-locatives-gare-windsor-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: Gare Windsor/2.png"
- },
- "gare-windsor-plan-superficies-etage": {
-  "width": 2000,
-  "height": 1200,
-  "files": [
-   {
-    "w": 800,
-    "file": "gare-windsor-plan-superficies-etage-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "gare-windsor-plan-superficies-etage-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: Gare Windsor/EStruxture (1).png"
- },
- "gare-windsor-plan-tel-que-construit": {
-  "width": 2000,
-  "height": 1200,
-  "files": [
-   {
-    "w": 800,
-    "file": "gare-windsor-plan-tel-que-construit-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "gare-windsor-plan-tel-que-construit-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: Gare Windsor/EStruxture (2).png"
- },
- "gare-windsor-coupe-nuage-points": {
-  "width": 1880,
-  "height": 1168,
-  "files": [
-   {
-    "w": 800,
-    "file": "gare-windsor-coupe-nuage-points-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "gare-windsor-coupe-nuage-points-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: Gare Windsor/Gare Windsor 1A.png"
- },
- "gare-windsor-nuage-points-vue-dessus": {
-  "width": 1880,
-  "height": 1163,
-  "files": [
-   {
-    "w": 800,
-    "file": "gare-windsor-nuage-points-vue-dessus-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "gare-windsor-nuage-points-vue-dessus-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: Gare Windsor/Gare Windsor 1C.png"
- },
- "technicien-releve-numerisation-usine": {
-  "width": 2448,
-  "height": 3264,
-  "files": [
-   {
-    "w": 800,
-    "file": "technicien-releve-numerisation-usine-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "technicien-releve-numerisation-usine-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: Image (2).jpg"
- },
- "centre-commercial-etage-17-nuage-points": {
-  "width": 1908,
-  "height": 1163,
-  "files": [
-   {
-    "w": 800,
-    "file": "centre-commercial-etage-17-nuage-points-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "centre-commercial-etage-17-nuage-points-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: Mall - Centre la Cite (Centre la Cité)"
- },
- "centre-commercial-sous-sol-nuage-points": {
-  "width": 1908,
-  "height": 1163,
-  "files": [
-   {
-    "w": 800,
-    "file": "centre-commercial-sous-sol-nuage-points-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "centre-commercial-sous-sol-nuage-points-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: Mall - Centre la Cite (Centre la Cité)"
- },
- "numerisation-facade-scanner-mat-centre-ville": {
-  "width": 1800,
-  "height": 2400,
-  "files": [
-   {
-    "w": 800,
-    "file": "numerisation-facade-scanner-mat-centre-ville-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "numerisation-facade-scanner-mat-centre-ville-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: Projet centre eaton-mtl trust/20260728_123313409_iOS.heic (Place Montréal Trust)"
- },
- "technicien-scanner-trottoir-centre-ville": {
-  "width": 1800,
-  "height": 2400,
-  "files": [
-   {
-    "w": 800,
-    "file": "technicien-scanner-trottoir-centre-ville-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "technicien-scanner-trottoir-centre-ville-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: Projet centre eaton-mtl trust/20260728_105803449_iOS.heic (Place Montréal Trust)"
- },
- "modele-revit-centre-aquatique": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "modele-revit-centre-aquatique-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "modele-revit-centre-aquatique-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: revit-model.png (client non identifié)"
- },
- "modele-revit-centre-aquatique-2": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "modele-revit-centre-aquatique-2-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "modele-revit-centre-aquatique-2-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: revit-model2.png (client non identifié)"
- },
- "scanner-laser-3d-entrepot-vide": {
-  "width": 1200,
-  "height": 1200,
-  "files": [
-   {
-    "w": 800,
-    "file": "scanner-laser-3d-entrepot-vide-800.webp"
-   },
-   {
-    "w": 1200,
-    "file": "scanner-laser-3d-entrepot-vide-1200.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: scanner.png"
- },
- "reitmans-vitrine-nuage-points": {
-  "width": 972,
-  "height": 543,
-  "files": [
-   {
-    "w": 800,
-    "file": "reitmans-vitrine-nuage-points-800.webp"
-   },
-   {
-    "w": 972,
-    "file": "reitmans-vitrine-nuage-points-972.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: Screenshot+2025-04-03+163540.png"
- },
- "modele-revit-etage-chemins-cables": {
-  "width": 1404,
-  "height": 595,
-  "files": [
-   {
-    "w": 800,
-    "file": "modele-revit-etage-chemins-cables-800.webp"
-   },
-   {
-    "w": 1404,
-    "file": "modele-revit-etage-chemins-cables-1404.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: Screenshot_17-6-2024_105143_.jpeg (client non identifié)"
- },
- "modele-bim-mep-entrepot": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "modele-bim-mep-entrepot-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "modele-bim-mep-entrepot-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Portfolio: Sous-titre-545a2f08.png"
- },
- "rendu-architectural-batiment-brique": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "rendu-architectural-batiment-brique-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "rendu-architectural-batiment-brique-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: SPVM (2).jpg (SPVM)"
- },
- "hero-point-cloud-to-bim-poster": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "hero-point-cloud-to-bim-poster-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "hero-point-cloud-to-bim-poster-1600.webp"
-   }
-  ],
-  "status": "pending",
-  "source": "Portfolio: Video.mp4 (client non identifié)"
- },
- "louis-dallaire-portrait": {
-  "width": 3024,
-  "height": 4032,
-  "files": [
-   {
-    "w": 800,
-    "file": "louis-dallaire-portrait-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "louis-dallaire-portrait-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "equipe-philippe-dallaire": {
-  "width": 1920,
-  "height": 2560,
-  "files": [
-   {
-    "w": 800,
-    "file": "equipe-philippe-dallaire-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "equipe-philippe-dallaire-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "equipe-portrait-3": {
-  "width": 1024,
-  "height": 874,
-  "files": [
-   {
-    "w": 800,
-    "file": "equipe-portrait-3-800.webp"
-   },
-   {
-    "w": 1024,
-    "file": "equipe-portrait-3-1024.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "equipe-thomas-sevigny": {
-  "width": 1920,
-  "height": 1920,
-  "files": [
-   {
-    "w": 800,
-    "file": "equipe-thomas-sevigny-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "equipe-thomas-sevigny-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "equipe-maxime-montreuil": {
-  "width": 1803,
-  "height": 1695,
-  "files": [
-   {
-    "w": 800,
-    "file": "equipe-maxime-montreuil-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "equipe-maxime-montreuil-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "theatre-st-james-numerisation-facade": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "theatre-st-james-numerisation-facade-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "theatre-st-james-numerisation-facade-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "theatre-st-james-elevation-nuage-points": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "theatre-st-james-elevation-nuage-points-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "theatre-st-james-elevation-nuage-points-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "theatre-st-james-elevation-dessin": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "theatre-st-james-elevation-dessin-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "theatre-st-james-elevation-dessin-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "gare-windsor-numerisation-facade": {
-  "width": 1920,
-  "height": 1571,
-  "files": [
-   {
-    "w": 800,
-    "file": "gare-windsor-numerisation-facade-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "gare-windsor-numerisation-facade-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "gare-windsor-nuage-points-exterieur": {
-  "width": 1920,
-  "height": 946,
-  "files": [
-   {
-    "w": 800,
-    "file": "gare-windsor-nuage-points-exterieur-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "gare-windsor-nuage-points-exterieur-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "analyse-planeite-dalle-carte-couleur": {
-  "width": 1111,
-  "height": 724,
-  "files": [
-   {
-    "w": 800,
-    "file": "analyse-planeite-dalle-carte-couleur-800.webp"
-   },
-   {
-    "w": 1111,
-    "file": "analyse-planeite-dalle-carte-couleur-1111.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "analyse-planeite-profil": {
-  "width": 1024,
-  "height": 248,
-  "files": [
-   {
-    "w": 800,
-    "file": "analyse-planeite-profil-800.webp"
-   },
-   {
-    "w": 1024,
-    "file": "analyse-planeite-profil-1024.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "vac-aero-modele-3d-usine": {
-  "width": 1000,
-  "height": 486,
-  "files": [
-   {
-    "w": 800,
-    "file": "vac-aero-modele-3d-usine-800.webp"
-   },
-   {
-    "w": 1000,
-    "file": "vac-aero-modele-3d-usine-1000.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "vac-aero-nuage-points-usine": {
-  "width": 1500,
-  "height": 729,
-  "files": [
-   {
-    "w": 800,
-    "file": "vac-aero-nuage-points-usine-800.webp"
-   },
-   {
-    "w": 1500,
-    "file": "vac-aero-nuage-points-usine-1500.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "scierie-modele-3d-groupe-cdf": {
-  "width": 3840,
-  "height": 2160,
-  "files": [
-   {
-    "w": 800,
-    "file": "scierie-modele-3d-groupe-cdf-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "scierie-modele-3d-groupe-cdf-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "prevost-usine-photo-360": {
-  "width": 1920,
-  "height": 1349,
-  "files": [
-   {
-    "w": 800,
-    "file": "prevost-usine-photo-360-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "prevost-usine-photo-360-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "prevost-modele-usine": {
-  "width": 1920,
-  "height": 946,
-  "files": [
-   {
-    "w": 800,
-    "file": "prevost-modele-usine-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "prevost-modele-usine-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "hapag-lloyd-toronto-express": {
-  "width": 1920,
-  "height": 2112,
-  "files": [
-   {
-    "w": 800,
-    "file": "hapag-lloyd-toronto-express-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "hapag-lloyd-toronto-express-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "hapag-lloyd-nuage-points-coque": {
-  "width": 1920,
-  "height": 1078,
-  "files": [
-   {
-    "w": 800,
-    "file": "hapag-lloyd-nuage-points-coque-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "hapag-lloyd-nuage-points-coque-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "nadco-usine-photo-360": {
-  "width": 800,
-  "height": 538,
-  "files": [
-   {
-    "w": 800,
-    "file": "nadco-usine-photo-360-800.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "nadco-plan-amenagement-cao": {
-  "width": 800,
-  "height": 470,
-  "files": [
-   {
-    "w": 800,
-    "file": "nadco-plan-amenagement-cao-800.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "westcliff-la-baie-nuage-points": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "westcliff-la-baie-nuage-points-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "westcliff-la-baie-nuage-points-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "broccolini-restaurant-nuage-points": {
-  "width": 3840,
-  "height": 2160,
-  "files": [
-   {
-    "w": 800,
-    "file": "broccolini-restaurant-nuage-points-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "broccolini-restaurant-nuage-points-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "broccolini-modele-revit": {
-  "width": 1920,
-  "height": 944,
-  "files": [
-   {
-    "w": 800,
-    "file": "broccolini-modele-revit-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "broccolini-modele-revit-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "reitmans-magasin-numerisation": {
-  "width": 1920,
-  "height": 1279,
-  "files": [
-   {
-    "w": 800,
-    "file": "reitmans-magasin-numerisation-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "reitmans-magasin-numerisation-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "entreplafond-nuage-points": {
-  "width": 1920,
-  "height": 986,
-  "files": [
-   {
-    "w": 800,
-    "file": "entreplafond-nuage-points-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "entreplafond-nuage-points-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "modele-3d-tours-residentielles": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "modele-3d-tours-residentielles-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "modele-3d-tours-residentielles-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "plan-elevation-tour": {
-  "width": 750,
-  "height": 733,
-  "files": [
-   {
-    "w": 750,
-    "file": "plan-elevation-tour-750.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "releve-manuel-croquis": {
-  "width": 1920,
-  "height": 1484,
-  "files": [
-   {
-    "w": 800,
-    "file": "releve-manuel-croquis-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "releve-manuel-croquis-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "equipement-releve-pointspace": {
-  "width": 1050,
-  "height": 600,
-  "files": [
-   {
-    "w": 800,
-    "file": "equipement-releve-pointspace-800.webp"
-   },
-   {
-    "w": 1050,
-    "file": "equipement-releve-pointspace-1050.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "equipement-modele-3d-renfort": {
-  "width": 1322,
-  "height": 936,
-  "files": [
-   {
-    "w": 800,
-    "file": "equipement-modele-3d-renfort-800.webp"
-   },
-   {
-    "w": 1322,
-    "file": "equipement-modele-3d-renfort-1322.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "prevu3d-interface-jumeau-numerique": {
-  "width": 1114,
-  "height": 715,
-  "files": [
-   {
-    "w": 800,
-    "file": "prevu3d-interface-jumeau-numerique-800.webp"
-   },
-   {
-    "w": 1114,
-    "file": "prevu3d-interface-jumeau-numerique-1114.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca"
- },
- "st-denis-thompson-tours-nuage-points": {
-  "width": 1920,
-  "height": 1080,
-  "files": [
-   {
-    "w": 800,
-    "file": "st-denis-thompson-tours-nuage-points-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "st-denis-thompson-tours-nuage-points-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (St-Denis Thompson case study)"
- },
- "nelmar-usine-vue-aerienne": {
-  "width": 1000,
-  "height": 722,
-  "files": [
-   {
-    "w": 800,
-    "file": "nelmar-usine-vue-aerienne-800.webp"
-   },
-   {
-    "w": 1000,
-    "file": "nelmar-usine-vue-aerienne-1000.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (Nelmar case study)"
- },
- "le-foufou-royalmount-modele-bim": {
-  "width": 3840,
-  "height": 2160,
-  "files": [
-   {
-    "w": 800,
-    "file": "le-foufou-royalmount-modele-bim-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "le-foufou-royalmount-modele-bim-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (Le FouFou / JCB case study)"
- },
- "logo-jessica-daoust-architectes": {
-  "width": 190,
-  "height": 120,
-  "files": [
-   {
-    "w": 190,
-    "file": "logos/client-jessica-daoust-architectes.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-atelier-monarque": {
-  "width": 360,
-  "height": 108,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-atelier-monarque.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-theatre-st-james": {
-  "width": 188,
-  "height": 120,
-  "files": [
-   {
-    "w": 188,
-    "file": "logos/client-theatre-st-james.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-conn-x": {
-  "width": 360,
-  "height": 111,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-conn-x.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-aedifica": {
-  "width": 360,
-  "height": 81,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-aedifica.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-jcb-construction-canada": {
-  "width": 360,
-  "height": 116,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-jcb-construction-canada.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-idx": {
-  "width": 120,
-  "height": 120,
-  "files": [
-   {
-    "w": 120,
-    "file": "logos/client-idx.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-tla-architectes": {
-  "width": 132,
-  "height": 120,
-  "files": [
-   {
-    "w": 132,
-    "file": "logos/client-tla-architectes.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-vac-aero": {
-  "width": 192,
-  "height": 120,
-  "files": [
-   {
-    "w": 192,
-    "file": "logos/client-vac-aero.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-nelmar": {
-  "width": 360,
-  "height": 118,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-nelmar.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-st-denis-thompson": {
-  "width": 280,
-  "height": 120,
-  "files": [
-   {
-    "w": 280,
-    "file": "logos/client-st-denis-thompson.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-benoy": {
-  "width": 360,
-  "height": 86,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-benoy.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-groupe-mach": {
-  "width": 360,
-  "height": 86,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-groupe-mach.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-dallaire-consultants": {
-  "width": 102,
-  "height": 120,
-  "files": [
-   {
-    "w": 102,
-    "file": "logos/client-dallaire-consultants.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-cominar": {
-  "width": 360,
-  "height": 96,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-cominar.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-broccolini": {
-  "width": 360,
-  "height": 40,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-broccolini.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-groupe-cdf": {
-  "width": 284,
-  "height": 120,
-  "files": [
-   {
-    "w": 284,
-    "file": "logos/client-groupe-cdf.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-reitmans": {
-  "width": 360,
-  "height": 94,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-reitmans.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-lainco": {
-  "width": 360,
-  "height": 69,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-lainco.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-groupe-renfort": {
-  "width": 299,
-  "height": 120,
-  "files": [
-   {
-    "w": 299,
-    "file": "logos/client-groupe-renfort.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-muse-solution": {
-  "width": 360,
-  "height": 105,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-muse-solution.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-oktodev": {
-  "width": 360,
-  "height": 52,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-oktodev.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-shellex": {
-  "width": 360,
-  "height": 62,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-shellex.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-navada": {
-  "width": 360,
-  "height": 64,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-navada.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "logo-kolostat": {
-  "width": 360,
-  "height": 63,
-  "files": [
-   {
-    "w": 360,
-    "file": "logos/client-kolostat.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "pointspace.ca (logo strip)"
- },
- "blogue-scan-to-bim-nuage-points-maison": {
-  "width": 2266,
-  "height": 1104,
-  "files": [
-   {
-    "w": 800,
-    "file": "blogue-scan-to-bim-nuage-points-maison-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "blogue-scan-to-bim-nuage-points-maison-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Animation scan-to-BIM pointSpace (oct. 2026)"
- },
- "blogue-scan-to-bim-modele-bim-maison": {
-  "width": 2266,
-  "height": 1104,
-  "files": [
-   {
-    "w": 800,
-    "file": "blogue-scan-to-bim-modele-bim-maison-800.webp"
-   },
-   {
-    "w": 1600,
-    "file": "blogue-scan-to-bim-modele-bim-maison-1600.webp"
-   }
-  ],
-  "status": "ok",
-  "source": "Animation scan-to-BIM pointSpace (oct. 2026)"
- }
+  "scan-to-bim-revit-model-cutaway-light": {
+    "width": 1672,
+    "height": 941,
+    "files": [
+      {
+        "w": 800,
+        "file": "scan-to-bim-revit-model-cutaway-light-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "scan-to-bim-revit-model-cutaway-light-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: bim v1.png"
+  },
+  "scan-to-bim-revit-model-cutaway-dark": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "scan-to-bim-revit-model-cutaway-dark-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "scan-to-bim-revit-model-cutaway-dark-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: bim.png"
+  },
+  "mesurage-boma-plan-superficie-entrepot": {
+    "width": 3600,
+    "height": 2025,
+    "files": [
+      {
+        "w": 800,
+        "file": "mesurage-boma-plan-superficie-entrepot-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "mesurage-boma-plan-superficie-entrepot-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: boma-floor-area-analysis.png (client non identifié)"
+  },
+  "analyse-batiment-nuage-points-toiture": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "analyse-batiment-nuage-points-toiture-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "analyse-batiment-nuage-points-toiture-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: building-analysis.png (client non identifié)"
+  },
+  "numerisation-3d-eglise-tribune-orgue": {
+    "width": 11859,
+    "height": 7380,
+    "files": [
+      {
+        "w": 800,
+        "file": "numerisation-3d-eglise-tribune-orgue-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "numerisation-3d-eglise-tribune-orgue-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: church-2.jpg (église non identifiée)"
+  },
+  "numerisation-3d-eglise-nef-nuage-points": {
+    "width": 11670,
+    "height": 7380,
+    "files": [
+      {
+        "w": 800,
+        "file": "numerisation-3d-eglise-nef-nuage-points-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "numerisation-3d-eglise-nef-nuage-points-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: church.jpg (église non identifiée)"
+  },
+  "modele-revit-etage-laboratoire": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "modele-revit-etage-laboratoire-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "modele-revit-etage-laboratoire-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: Création sans titre (1).png (client non identifié)"
+  },
+  "scanner-leica-rtc360-toit-industriel": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "scanner-leica-rtc360-toit-industriel-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "scanner-leica-rtc360-toit-industriel-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: Création sans titre (2).png"
+  },
+  "theatre-st-james-facade-nuage-points": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "theatre-st-james-facade-nuage-points-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "theatre-st-james-facade-nuage-points-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: Création sans titre (3).png"
+  },
+  "nuage-points-etage-interieur-coupe": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "nuage-points-etage-interieur-coupe-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "nuage-points-etage-interieur-coupe-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: Création sans titre (4).png (client non identifié)"
+  },
+  "modele-bim-tuyauterie-mecanique-vanne": {
+    "width": 1920,
+    "height": 1076,
+    "files": [
+      {
+        "w": 800,
+        "file": "modele-bim-tuyauterie-mecanique-vanne-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "modele-bim-tuyauterie-mecanique-vanne-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: Création sans titre (5).png"
+  },
+  "modele-3d-tuyauterie-salle-mecanique": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "modele-3d-tuyauterie-salle-mecanique-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "modele-3d-tuyauterie-salle-mecanique-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: Création sans titre (6).png"
+  },
+  "modele-bim-salle-mecanique-vue-ensemble": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "modele-bim-salle-mecanique-vue-ensemble-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "modele-bim-salle-mecanique-vue-ensemble-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: Création sans titre (7).png"
+  },
+  "nuage-points-salle-couleur": {
+    "width": 3600,
+    "height": 2025,
+    "files": [
+      {
+        "w": 800,
+        "file": "nuage-points-salle-couleur-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "nuage-points-salle-couleur-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: Création sans titre.png (Vidéotron, non nommé sur le site)"
+  },
+  "plans-tels-que-construits-plan-etage-gare-windsor": {
+    "width": 4000,
+    "height": 2400,
+    "files": [
+      {
+        "w": 800,
+        "file": "plans-tels-que-construits-plan-etage-gare-windsor-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "plans-tels-que-construits-plan-etage-gare-windsor-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: EStruxture (4).png (= plan Gare Windsor, à confirmer)"
+  },
+  "assemblage-scans-reseau-stations": {
+    "width": 4000,
+    "height": 2400,
+    "files": [
+      {
+        "w": 800,
+        "file": "assemblage-scans-reseau-stations-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "assemblage-scans-reseau-stations-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: EStruxture (5).png (eStruxture)"
+  },
+  "nuage-points-salle-mecanique-haute-densite": {
+    "width": 4000,
+    "height": 2400,
+    "files": [
+      {
+        "w": 800,
+        "file": "nuage-points-salle-mecanique-haute-densite-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "nuage-points-salle-mecanique-haute-densite-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: EStruxture (8).png (eStruxture)"
+  },
+  "nuage-points-salle-mecanique-2": {
+    "width": 4000,
+    "height": 2400,
+    "files": [
+      {
+        "w": 800,
+        "file": "nuage-points-salle-mecanique-2-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "nuage-points-salle-mecanique-2-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: EStruxture (9).png (eStruxture)"
+  },
+  "plan-cao-dwg-mecanique": {
+    "width": 2000,
+    "height": 1200,
+    "files": [
+      {
+        "w": 800,
+        "file": "plan-cao-dwg-mecanique-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "plan-cao-dwg-mecanique-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: EStruxture.png (eStruxture)"
+  },
+  "plan-superficies-locatives-gare-windsor": {
+    "width": 2000,
+    "height": 1200,
+    "files": [
+      {
+        "w": 800,
+        "file": "plan-superficies-locatives-gare-windsor-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "plan-superficies-locatives-gare-windsor-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: Gare Windsor/2.png"
+  },
+  "gare-windsor-plan-superficies-etage": {
+    "width": 2000,
+    "height": 1200,
+    "files": [
+      {
+        "w": 800,
+        "file": "gare-windsor-plan-superficies-etage-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "gare-windsor-plan-superficies-etage-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: Gare Windsor/EStruxture (1).png"
+  },
+  "gare-windsor-plan-tel-que-construit": {
+    "width": 2000,
+    "height": 1200,
+    "files": [
+      {
+        "w": 800,
+        "file": "gare-windsor-plan-tel-que-construit-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "gare-windsor-plan-tel-que-construit-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: Gare Windsor/EStruxture (2).png"
+  },
+  "gare-windsor-coupe-nuage-points": {
+    "width": 1880,
+    "height": 1168,
+    "files": [
+      {
+        "w": 800,
+        "file": "gare-windsor-coupe-nuage-points-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "gare-windsor-coupe-nuage-points-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: Gare Windsor/Gare Windsor 1A.png"
+  },
+  "gare-windsor-nuage-points-vue-dessus": {
+    "width": 1880,
+    "height": 1163,
+    "files": [
+      {
+        "w": 800,
+        "file": "gare-windsor-nuage-points-vue-dessus-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "gare-windsor-nuage-points-vue-dessus-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: Gare Windsor/Gare Windsor 1C.png"
+  },
+  "technicien-releve-numerisation-usine": {
+    "width": 2448,
+    "height": 3264,
+    "files": [
+      {
+        "w": 800,
+        "file": "technicien-releve-numerisation-usine-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "technicien-releve-numerisation-usine-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: Image (2).jpg"
+  },
+  "centre-commercial-etage-17-nuage-points": {
+    "width": 1908,
+    "height": 1163,
+    "files": [
+      {
+        "w": 800,
+        "file": "centre-commercial-etage-17-nuage-points-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "centre-commercial-etage-17-nuage-points-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: Mall - Centre la Cite (Centre la Cité)"
+  },
+  "centre-commercial-sous-sol-nuage-points": {
+    "width": 1908,
+    "height": 1163,
+    "files": [
+      {
+        "w": 800,
+        "file": "centre-commercial-sous-sol-nuage-points-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "centre-commercial-sous-sol-nuage-points-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: Mall - Centre la Cite (Centre la Cité)"
+  },
+  "numerisation-facade-scanner-mat-centre-ville": {
+    "width": 1800,
+    "height": 2400,
+    "files": [
+      {
+        "w": 800,
+        "file": "numerisation-facade-scanner-mat-centre-ville-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "numerisation-facade-scanner-mat-centre-ville-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: Projet centre eaton-mtl trust/20260728_123313409_iOS.heic (Place Montréal Trust)"
+  },
+  "technicien-scanner-trottoir-centre-ville": {
+    "width": 1800,
+    "height": 2400,
+    "files": [
+      {
+        "w": 800,
+        "file": "technicien-scanner-trottoir-centre-ville-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "technicien-scanner-trottoir-centre-ville-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: Projet centre eaton-mtl trust/20260728_105803449_iOS.heic (Place Montréal Trust)"
+  },
+  "modele-revit-centre-aquatique": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "modele-revit-centre-aquatique-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "modele-revit-centre-aquatique-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: revit-model.png (client non identifié)"
+  },
+  "modele-revit-centre-aquatique-2": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "modele-revit-centre-aquatique-2-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "modele-revit-centre-aquatique-2-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: revit-model2.png (client non identifié)"
+  },
+  "scanner-laser-3d-entrepot-vide": {
+    "width": 1200,
+    "height": 1200,
+    "files": [
+      {
+        "w": 800,
+        "file": "scanner-laser-3d-entrepot-vide-800.webp"
+      },
+      {
+        "w": 1200,
+        "file": "scanner-laser-3d-entrepot-vide-1200.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: scanner.png"
+  },
+  "reitmans-vitrine-nuage-points": {
+    "width": 972,
+    "height": 543,
+    "files": [
+      {
+        "w": 800,
+        "file": "reitmans-vitrine-nuage-points-800.webp"
+      },
+      {
+        "w": 972,
+        "file": "reitmans-vitrine-nuage-points-972.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: Screenshot+2025-04-03+163540.png"
+  },
+  "modele-revit-etage-chemins-cables": {
+    "width": 1404,
+    "height": 595,
+    "files": [
+      {
+        "w": 800,
+        "file": "modele-revit-etage-chemins-cables-800.webp"
+      },
+      {
+        "w": 1404,
+        "file": "modele-revit-etage-chemins-cables-1404.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: Screenshot_17-6-2024_105143_.jpeg (client non identifié)"
+  },
+  "modele-bim-mep-entrepot": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "modele-bim-mep-entrepot-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "modele-bim-mep-entrepot-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Portfolio: Sous-titre-545a2f08.png"
+  },
+  "rendu-architectural-batiment-brique": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "rendu-architectural-batiment-brique-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "rendu-architectural-batiment-brique-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: SPVM (2).jpg (SPVM)"
+  },
+  "hero-point-cloud-to-bim-poster": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "hero-point-cloud-to-bim-poster-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "hero-point-cloud-to-bim-poster-1600.webp"
+      }
+    ],
+    "status": "pending",
+    "source": "Portfolio: Video.mp4 (client non identifié)"
+  },
+  "louis-dallaire-portrait": {
+    "width": 3024,
+    "height": 4032,
+    "files": [
+      {
+        "w": 800,
+        "file": "louis-dallaire-portrait-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "louis-dallaire-portrait-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "equipe-philippe-dallaire": {
+    "width": 1920,
+    "height": 2560,
+    "files": [
+      {
+        "w": 800,
+        "file": "equipe-philippe-dallaire-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "equipe-philippe-dallaire-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "equipe-portrait-3": {
+    "width": 1024,
+    "height": 874,
+    "files": [
+      {
+        "w": 800,
+        "file": "equipe-portrait-3-800.webp"
+      },
+      {
+        "w": 1024,
+        "file": "equipe-portrait-3-1024.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "equipe-thomas-sevigny": {
+    "width": 1920,
+    "height": 1920,
+    "files": [
+      {
+        "w": 800,
+        "file": "equipe-thomas-sevigny-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "equipe-thomas-sevigny-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "equipe-maxime-montreuil": {
+    "width": 1803,
+    "height": 1695,
+    "files": [
+      {
+        "w": 800,
+        "file": "equipe-maxime-montreuil-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "equipe-maxime-montreuil-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "theatre-st-james-numerisation-facade": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "theatre-st-james-numerisation-facade-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "theatre-st-james-numerisation-facade-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "theatre-st-james-elevation-nuage-points": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "theatre-st-james-elevation-nuage-points-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "theatre-st-james-elevation-nuage-points-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "theatre-st-james-elevation-dessin": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "theatre-st-james-elevation-dessin-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "theatre-st-james-elevation-dessin-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "gare-windsor-numerisation-facade": {
+    "width": 1920,
+    "height": 1571,
+    "files": [
+      {
+        "w": 800,
+        "file": "gare-windsor-numerisation-facade-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "gare-windsor-numerisation-facade-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "gare-windsor-nuage-points-exterieur": {
+    "width": 1920,
+    "height": 946,
+    "files": [
+      {
+        "w": 800,
+        "file": "gare-windsor-nuage-points-exterieur-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "gare-windsor-nuage-points-exterieur-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "analyse-planeite-dalle-carte-couleur": {
+    "width": 1111,
+    "height": 724,
+    "files": [
+      {
+        "w": 800,
+        "file": "analyse-planeite-dalle-carte-couleur-800.webp"
+      },
+      {
+        "w": 1111,
+        "file": "analyse-planeite-dalle-carte-couleur-1111.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "analyse-planeite-profil": {
+    "width": 1024,
+    "height": 248,
+    "files": [
+      {
+        "w": 800,
+        "file": "analyse-planeite-profil-800.webp"
+      },
+      {
+        "w": 1024,
+        "file": "analyse-planeite-profil-1024.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "vac-aero-modele-3d-usine": {
+    "width": 1000,
+    "height": 486,
+    "files": [
+      {
+        "w": 800,
+        "file": "vac-aero-modele-3d-usine-800.webp"
+      },
+      {
+        "w": 1000,
+        "file": "vac-aero-modele-3d-usine-1000.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "vac-aero-nuage-points-usine": {
+    "width": 1500,
+    "height": 729,
+    "files": [
+      {
+        "w": 800,
+        "file": "vac-aero-nuage-points-usine-800.webp"
+      },
+      {
+        "w": 1500,
+        "file": "vac-aero-nuage-points-usine-1500.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "scierie-modele-3d-groupe-cdf": {
+    "width": 3840,
+    "height": 2160,
+    "files": [
+      {
+        "w": 800,
+        "file": "scierie-modele-3d-groupe-cdf-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "scierie-modele-3d-groupe-cdf-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "prevost-usine-photo-360": {
+    "width": 1920,
+    "height": 1349,
+    "files": [
+      {
+        "w": 800,
+        "file": "prevost-usine-photo-360-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "prevost-usine-photo-360-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "prevost-modele-usine": {
+    "width": 1920,
+    "height": 946,
+    "files": [
+      {
+        "w": 800,
+        "file": "prevost-modele-usine-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "prevost-modele-usine-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "hapag-lloyd-toronto-express": {
+    "width": 1920,
+    "height": 2112,
+    "files": [
+      {
+        "w": 800,
+        "file": "hapag-lloyd-toronto-express-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "hapag-lloyd-toronto-express-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "hapag-lloyd-nuage-points-coque": {
+    "width": 1920,
+    "height": 1078,
+    "files": [
+      {
+        "w": 800,
+        "file": "hapag-lloyd-nuage-points-coque-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "hapag-lloyd-nuage-points-coque-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "nadco-usine-photo-360": {
+    "width": 800,
+    "height": 538,
+    "files": [
+      {
+        "w": 800,
+        "file": "nadco-usine-photo-360-800.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "nadco-plan-amenagement-cao": {
+    "width": 800,
+    "height": 470,
+    "files": [
+      {
+        "w": 800,
+        "file": "nadco-plan-amenagement-cao-800.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "westcliff-la-baie-nuage-points": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "westcliff-la-baie-nuage-points-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "westcliff-la-baie-nuage-points-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "broccolini-restaurant-nuage-points": {
+    "width": 3840,
+    "height": 2160,
+    "files": [
+      {
+        "w": 800,
+        "file": "broccolini-restaurant-nuage-points-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "broccolini-restaurant-nuage-points-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "broccolini-modele-revit": {
+    "width": 1920,
+    "height": 944,
+    "files": [
+      {
+        "w": 800,
+        "file": "broccolini-modele-revit-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "broccolini-modele-revit-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "reitmans-magasin-numerisation": {
+    "width": 1920,
+    "height": 1279,
+    "files": [
+      {
+        "w": 800,
+        "file": "reitmans-magasin-numerisation-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "reitmans-magasin-numerisation-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "entreplafond-nuage-points": {
+    "width": 1920,
+    "height": 986,
+    "files": [
+      {
+        "w": 800,
+        "file": "entreplafond-nuage-points-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "entreplafond-nuage-points-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "modele-3d-tours-residentielles": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "modele-3d-tours-residentielles-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "modele-3d-tours-residentielles-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "plan-elevation-tour": {
+    "width": 750,
+    "height": 733,
+    "files": [
+      {
+        "w": 750,
+        "file": "plan-elevation-tour-750.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "releve-manuel-croquis": {
+    "width": 1920,
+    "height": 1484,
+    "files": [
+      {
+        "w": 800,
+        "file": "releve-manuel-croquis-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "releve-manuel-croquis-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "equipement-releve-pointspace": {
+    "width": 1050,
+    "height": 600,
+    "files": [
+      {
+        "w": 800,
+        "file": "equipement-releve-pointspace-800.webp"
+      },
+      {
+        "w": 1050,
+        "file": "equipement-releve-pointspace-1050.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "equipement-modele-3d-renfort": {
+    "width": 1322,
+    "height": 936,
+    "files": [
+      {
+        "w": 800,
+        "file": "equipement-modele-3d-renfort-800.webp"
+      },
+      {
+        "w": 1322,
+        "file": "equipement-modele-3d-renfort-1322.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "prevu3d-interface-jumeau-numerique": {
+    "width": 1114,
+    "height": 715,
+    "files": [
+      {
+        "w": 800,
+        "file": "prevu3d-interface-jumeau-numerique-800.webp"
+      },
+      {
+        "w": 1114,
+        "file": "prevu3d-interface-jumeau-numerique-1114.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca"
+  },
+  "st-denis-thompson-tours-nuage-points": {
+    "width": 1920,
+    "height": 1080,
+    "files": [
+      {
+        "w": 800,
+        "file": "st-denis-thompson-tours-nuage-points-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "st-denis-thompson-tours-nuage-points-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (St-Denis Thompson case study)"
+  },
+  "nelmar-usine-vue-aerienne": {
+    "width": 1000,
+    "height": 722,
+    "files": [
+      {
+        "w": 800,
+        "file": "nelmar-usine-vue-aerienne-800.webp"
+      },
+      {
+        "w": 1000,
+        "file": "nelmar-usine-vue-aerienne-1000.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (Nelmar case study)"
+  },
+  "le-foufou-royalmount-modele-bim": {
+    "width": 3840,
+    "height": 2160,
+    "files": [
+      {
+        "w": 800,
+        "file": "le-foufou-royalmount-modele-bim-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "le-foufou-royalmount-modele-bim-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (Le FouFou / JCB case study)"
+  },
+  "logo-jessica-daoust-architectes": {
+    "width": 190,
+    "height": 120,
+    "files": [
+      {
+        "w": 190,
+        "file": "logos/client-jessica-daoust-architectes.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-atelier-monarque": {
+    "width": 360,
+    "height": 108,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-atelier-monarque.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-theatre-st-james": {
+    "width": 188,
+    "height": 120,
+    "files": [
+      {
+        "w": 188,
+        "file": "logos/client-theatre-st-james.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-conn-x": {
+    "width": 360,
+    "height": 111,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-conn-x.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-aedifica": {
+    "width": 360,
+    "height": 81,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-aedifica.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-jcb-construction-canada": {
+    "width": 360,
+    "height": 116,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-jcb-construction-canada.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-idx": {
+    "width": 120,
+    "height": 120,
+    "files": [
+      {
+        "w": 120,
+        "file": "logos/client-idx.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-tla-architectes": {
+    "width": 132,
+    "height": 120,
+    "files": [
+      {
+        "w": 132,
+        "file": "logos/client-tla-architectes.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-vac-aero": {
+    "width": 192,
+    "height": 120,
+    "files": [
+      {
+        "w": 192,
+        "file": "logos/client-vac-aero.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-nelmar": {
+    "width": 360,
+    "height": 118,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-nelmar.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-st-denis-thompson": {
+    "width": 280,
+    "height": 120,
+    "files": [
+      {
+        "w": 280,
+        "file": "logos/client-st-denis-thompson.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-benoy": {
+    "width": 360,
+    "height": 86,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-benoy.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-groupe-mach": {
+    "width": 360,
+    "height": 86,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-groupe-mach.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-dallaire-consultants": {
+    "width": 102,
+    "height": 120,
+    "files": [
+      {
+        "w": 102,
+        "file": "logos/client-dallaire-consultants.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-cominar": {
+    "width": 360,
+    "height": 96,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-cominar.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-broccolini": {
+    "width": 360,
+    "height": 40,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-broccolini.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-groupe-cdf": {
+    "width": 284,
+    "height": 120,
+    "files": [
+      {
+        "w": 284,
+        "file": "logos/client-groupe-cdf.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-reitmans": {
+    "width": 360,
+    "height": 94,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-reitmans.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-lainco": {
+    "width": 360,
+    "height": 69,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-lainco.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-groupe-renfort": {
+    "width": 299,
+    "height": 120,
+    "files": [
+      {
+        "w": 299,
+        "file": "logos/client-groupe-renfort.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-muse-solution": {
+    "width": 360,
+    "height": 105,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-muse-solution.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-oktodev": {
+    "width": 360,
+    "height": 52,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-oktodev.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-shellex": {
+    "width": 360,
+    "height": 62,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-shellex.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-navada": {
+    "width": 360,
+    "height": 64,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-navada.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "logo-kolostat": {
+    "width": 360,
+    "height": 63,
+    "files": [
+      {
+        "w": 360,
+        "file": "logos/client-kolostat.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "pointspace.ca (logo strip)"
+  },
+  "blogue-scan-to-bim-nuage-points-maison": {
+    "width": 2266,
+    "height": 1104,
+    "files": [
+      {
+        "w": 800,
+        "file": "blogue-scan-to-bim-nuage-points-maison-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "blogue-scan-to-bim-nuage-points-maison-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Animation scan-to-BIM pointSpace (oct. 2026)"
+  },
+  "blogue-scan-to-bim-modele-bim-maison": {
+    "width": 2266,
+    "height": 1104,
+    "files": [
+      {
+        "w": 800,
+        "file": "blogue-scan-to-bim-modele-bim-maison-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "blogue-scan-to-bim-modele-bim-maison-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Animation scan-to-BIM pointSpace (oct. 2026)"
+  },
+  "blogue-chaine-nuage-points": {
+    "width": 2266,
+    "height": 1104,
+    "files": [
+      {
+        "w": 800,
+        "file": "blogue-chaine-nuage-points-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "blogue-chaine-nuage-points-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Film scan → BIM → CAD pointSpace (oct. 2026)"
+  },
+  "blogue-chaine-modele-revit": {
+    "width": 2266,
+    "height": 1104,
+    "files": [
+      {
+        "w": 800,
+        "file": "blogue-chaine-modele-revit-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "blogue-chaine-modele-revit-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Film scan → BIM → CAD pointSpace (oct. 2026)"
+  },
+  "blogue-chaine-couverture": {
+    "width": 2266,
+    "height": 1104,
+    "files": [
+      {
+        "w": 800,
+        "file": "blogue-chaine-couverture-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "blogue-chaine-couverture-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Film scan → BIM → CAD pointSpace (oct. 2026)"
+  },
+  "blogue-chaine-elevation": {
+    "width": 2266,
+    "height": 1104,
+    "files": [
+      {
+        "w": 800,
+        "file": "blogue-chaine-elevation-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "blogue-chaine-elevation-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Film scan → BIM → CAD pointSpace (oct. 2026)"
+  },
+  "blogue-chaine-plan-etage": {
+    "width": 2266,
+    "height": 1104,
+    "files": [
+      {
+        "w": 800,
+        "file": "blogue-chaine-plan-etage-800.webp"
+      },
+      {
+        "w": 1600,
+        "file": "blogue-chaine-plan-etage-1600.webp"
+      }
+    ],
+    "status": "ok",
+    "source": "Film scan → BIM → CAD pointSpace (oct. 2026)"
+  }
 }

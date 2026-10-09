@@ -21,7 +21,7 @@ export const ROUTES = {
   caseStudies: { fr: '/fr-ca/etudes-de-cas', en: '/case-studies' },
   caseWindsor: { fr: '/fr-ca/case-studies/case-study-windsor', en: '/case-studies/case-study-windsor' },
   blog: { fr: '/fr-ca/blogue', en: '/blog' },
-  blogScanToBim: { fr: '/fr-ca/blogue/scan-3d-batiment-existant-plans-tels-que-construits-bim', en: '/blog/3d-scan-existing-building-as-built-drawings-bim' },
+  blogScanToBim: { fr: '/fr-ca/blogue/numerisation-3d-scan-to-bim-plans-tels-que-construits', en: '/blog/3d-scanning-scan-to-bim-as-built-drawings' },
   about: { fr: '/fr-ca/a-propos', en: '/about-us' },
   contact: { fr: '/fr-ca/contact', en: '/contact' },
   quote: { fr: '/fr-ca/obtenir-une-soumission', en: '/get-a-quote' },

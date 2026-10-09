@@ -23,7 +23,8 @@ const toRoute = (file) => {
 };
 const exists = async (p) => fs.access(p).then(() => true, () => false);
 
-const files = await walk(DIST);
+// public/film/ is the film embedded in the blog article (scripts/sync-film.mjs), not a site page
+const files = (await walk(DIST)).filter((f) => toRoute(f) !== '/film');
 const pages = new Map();
 const problems = [];
 const warn = (route, msg) => problems.push(`${route}: ${msg}`);

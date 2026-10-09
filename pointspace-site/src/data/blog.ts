@@ -6,7 +6,7 @@ export type Article = { id: string; title: string; date: string; iso: string; au
 
 export const BLOG: { fr: Article[]; en: Article[] } = {
   fr: [
-    { id: 'scan-to-bim-maison', title: "Scan 3D d'un bâtiment existant : du nuage de points aux plans tels que construits et au modèle BIM", date: '7 octobre 2026', iso: '2026-10-07', author: 'Leandro Lazaretti', url: '/fr-ca/blogue/scan-3d-batiment-existant-plans-tels-que-construits-bim', topic: 'Scan-to-BIM', internal: true },
+    { id: 'scan-bim-cad', title: 'Numérisation 3D, Scan to BIM ou plans tels que construits : quelle différence, et lequel choisir ?', date: '8 octobre 2026', iso: '2026-10-08', author: 'Leandro Lazaretti', url: '/fr-ca/blogue/numerisation-3d-scan-to-bim-plans-tels-que-construits', topic: "Relevé de l'existant", internal: true },
     { id: 'ia-autodesk', title: "L'IA dans Autodesk 2027 et son rôle dans le futur de l'industrie", date: '30 avril 2026', iso: '2026-04-30', author: 'Marketing pointSpace', url: `${L}/l-ia-dans-autodesk-2027-et-son-role-dans-le-futur-de-l-industrie`, topic: 'BIM' },
     { id: 'glossaire', title: 'Glossaire du monde de la numérisation et de la modélisation 3D', date: '26 mars 2026', iso: '2026-03-26', author: 'Marketing pointSpace', url: `${L}/glossaire-du-monde-de-la-numerisation-et-de-la-modelisation-3d`, topic: 'Ressources' },
     { id: 'materiel', title: 'Le matériel qui différencie pointSpace', date: '26 février 2026', iso: '2026-02-26', url: `${L}/le-materiel-qui-differencie-pointspace`, topic: 'Numérisation' },
@@ -18,7 +18,7 @@ export const BLOG: { fr: Article[]; en: Article[] } = {
     { id: 'preparation', title: "Préparation technique d'un relevé de numérisation 3D", date: '11 mars 2024', iso: '2024-03-11', author: 'Louis Dallaire', url: `${L}/fr-ca/preparation-technique-dun-releve-numerisation-3d`, topic: 'Numérisation' },
   ],
   en: [
-    { id: 'scan-to-bim-maison', title: '3D Scanning an Existing Building: From Point Cloud to As-Built Drawings and a BIM Model', date: 'October 7, 2026', iso: '2026-10-07', author: 'Leandro Lazaretti', url: '/blog/3d-scan-existing-building-as-built-drawings-bim', topic: 'Scan-to-BIM', internal: true },
+    { id: 'scan-bim-cad', title: "3D Scanning, Scan to BIM or As-Built Drawings: What's the Difference, and Which One Do You Need?", date: 'October 8, 2026', iso: '2026-10-08', author: 'Leandro Lazaretti', url: '/blog/3d-scanning-scan-to-bim-as-built-drawings', topic: 'Existing conditions', internal: true },
     { id: 'materiel', title: 'The Material Differentiating pointSpace', date: 'March 19, 2026', iso: '2026-03-19', author: 'Louis Dallaire', url: `${L}/the-material-differentiating-pointspace`, topic: 'Scanning' },
     { id: 'workflow', title: 'How 3D Scanning Streamlines and Elevates Your Workflow', date: 'March 12, 2026', iso: '2026-03-12', author: 'Louis Dallaire', url: `${L}/how-3d-scanning-streamlined-and-elevates-your-workflow`, topic: 'Scanning' },
     { id: 'modelisation', title: 'The 3D Modeling Process', date: 'February 28, 2025', iso: '2025-02-28', author: 'Louis Dallaire', url: `${L}/3d-modeling-process`, topic: 'Modeling' },

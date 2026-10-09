@@ -2,3 +2,6 @@ node_modules/
 dist/
 .astro/
 dist-share/
+
+# Copied from ../bim-to-cad at build time (scripts/sync-film.mjs)
+public/film/

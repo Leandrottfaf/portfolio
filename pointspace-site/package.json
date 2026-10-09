@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "prebuild": "node scripts/sync-film.mjs",
+    "predev": "node scripts/sync-film.mjs",
+    "preshare": "node scripts/sync-film.mjs",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
